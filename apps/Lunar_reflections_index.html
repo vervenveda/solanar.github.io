@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunar Reflections — Interactive Plera Protocol v2</title>
+<style>
+  /* Container card */
+  #lunar-reflections-card {
+    max-width: 555px;
+    max-height: 555px;
+    margin: 24px auto 44px;
+    padding: 24px 24px 24px;
+    border-radius: 7px;
+    background: radial-gradient(circle at top, #232534 0%, #111114 70%);
+    box-shadow: 0 0 22px rgba(0,0,0,0.5);
+    color: #f8f3e6;
+    font-family: Georgia, serif;
+  }
+  #lunar-reflections-card h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 11px 7px 11px;
+  }
+  #lunar-reflections-card .lunar-subtitle {
+    text-align: center;
+    font-size: 0.88rem;
+    color: #d9cfba;
+    margin-bottom: 24px;
+  }
+  .lunar-panel {
+    border-radius: 7px;
+    background: linear-gradient(180deg,#3b3d4b,#262633);
+    padding: 24px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+    margin-bottom: 33px;
+  }
+  .lunar-panel + .lunar-panel {
+    background: linear-gradient(180deg,#f5ecda,#e1d1b5);
+    color: #2e2212;
+  }
+
+  /* Moon canvas + info */
+  #lunar-moonCanvas {
+    display: block;
+    width: 333px;
+    height: 333px;
+    margin: 7px auto 7px;
+    border-radius: 50%;
+    background:#000;
+    box-shadow: 0 0 33px rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: transform .4s ease;
+  }
+  #lunar-moonCanvas:hover {
+    transform: scale(1.05);
+  }
+  .lunar-moon-line {
+    text-align: center;
+    font-size: 0.88rem;
+    margin: 11px;
+  }
+  #lunar-date-line { font-weight: 555; }
+  #lunar-clock-line { color:#e0d5c4; font-size:1rem; }
+  #lunar-phase-line { color:#ffde7e; }
+  #lunar-message-line { font-style:italic; color:#d9cfba; }
+
+  .lunar-moon-times {
+    font-size:0.88rem;
+    margin-top:11px;
+    text-align:center;
+    color:#f6e6be;
+  }
+
+  /* Controls under moon */
+  .lunar-controls {
+    margin-top:11px;
+    text-align:center;
+    font-size:1rem;
+  }
+  .lunar-slider-row {
+    margin-top:11px;
+  }
+  #lunar-freqSlider {
+    width:90%;
+  }
+
+  .lunar-link-row {
+    margin-top:11px;
+    text-align:center;
+    font-size:0.88rem;
+  }
+  .lunar-link-row a {
+    color:#ffde7e;
+    text-decoration:underline;
+  }
+
+  /* Buttons */
+  .lunar-btn,
+  .lunar-btn-secondary {
+    border-radius: 7px;
+    border:none;
+    padding:24px 24px;
+    font-size:0.99rem;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .lunar-btn {
+    background:#7c5cff;
+    color:#fff;
+    box-shadow:0 0 12px rgba(124,92,255,0.6);
+  }
+  .lunar-btn:hover { background:#9a7dff; }
+  .lunar-btn-secondary {
+    background:#f5ecda;
+    color:#2b2012;
+    border:1px solid rgba(0,0,0,0.2);
+  }
+  .lunar-btn-secondary:hover { background:#fff4de; }
+
+  /* Journal panel */
+  #lunar-reflections-card h2 {
+    font-size:1rem;
+    margin:11px;
+    text-align:center;
+  }
+  #lunar-journal {
+    width:100%;
+    min-height:111px;
+    border-radius:7px;
+    border:none;
+    padding:3px;
+    font-size:0.99rem;
+    resize:vertical;
+    font-family:inherit;
+    background:rgba(255,255,255,0.9);
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08);
+  }
+  #lunar-journal:focus { outline:3px solid #7c5cff; }
+
+  #lunar-releaseList {
+    list-style-type:"✶ ";
+    padding-left:14px;
+    margin:11px 7px 11px;
+    max-height:222px;
+    overflow-y:auto;
+    font-size:0.99rem;
+  }
+  #lunar-releaseList li {
+    margin:7px 0;
+  }
+
+  /* Calendar modal */
+  .lunar-modal {
+    position:center;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    pointer-events:none;
+    opacity:0;
+    transition:opacity 0.25s ease;
+    font-family:inherit;
+  }
+  .lunar-modal.lunar-open {
+    pointer-events:auto;
+    opacity:1;
+  }
+  .lunar-modal-backdrop {
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+  }
+  .lunar-modal-card {
+    position:relative;
+    width:90vw;
+    max-width:444px;
+    max-height:88vh;
+    background:#14141d;
+    color:#f8f3e6;
+    border-radius:11px;
+    padding:14px 24px 11px;
+    box-shadow:0 0 33px rgba(0,0,0,0.7);
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .lunar-modal-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+  }
+  .lunar-modal-header h2 {
+    font-size:1.1rem;
+    margin:7px 14px 11px;
+  }
+  .lunar-close-btn {
+    border:none;
+    background:transparent;
+    color:#f8f3e6;
+    font-size:1.2rem;
+    cursor:pointer;
+  }
+  .lunar-month-row {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+    font-size:0.9rem;
+    margin-bottom:24px;
+  }
+  .lunar-nav-btn {
+    border-radius:7px;
+    border:none;
+    width:33px;
+    height:33px;
+    cursor:pointer;
+    background:#2b2b3c;
+    color:#f8f3e6;
+  }
+  .lunar-weekdays {
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    font-size:0.72rem;
+    text-align:center;
+    margin-bottom:33px;
+    color:#d0c6b7;
+  }
+  .lunar-calendar-grid {
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:11px;
+    font-size:0.88rem;
+  }
+  .lunar-day-cell {
+    border-radius:7px;
+    padding:7px;
+    background:#262637;
+    text-align:center;
+    cursor:pointer;
+    min-height:88px;
+    max-width:333px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    transition:background 0.2s ease, transform 0.1s;
+  }
+  .lunar-day-cell span {
+    line-height:1.1;
+  }
+  .lunar-day-cell .lunar-day-num {
+    font-weight:555;
+  }
+  .lunar-day-cell .lunar-day-icon {
+    font-size:1.1rem;
+    margin-top:7px;
+  }
+  .lunar-day-cell.lunar-major {
+    box-shadow:0 0 0 1px #ffde7e;
+  }
+  .lunar-day-cell.lunar-has-note::after {
+    content:"•";
+    color:#9efc9e;
+    font-size:0.7rem;
+    margin-top:11px;
+  }
+  .lunar-day-cell:hover {
+    background:#34344a;
+    transform:translateY(-1px);
+  }
+  .lunar-day-cell.lunar-selected {
+    background:#7c5cff;
+    box-shadow:0 0 0 7px #cbb8ff;
+  }
+  .lunar-modal-note {
+    font-size:0.75rem;
+    margin:11px;
+    color:#d0c6b7;
+    text-align:center;
+  }
+
+  /* Day detail modal */
+  .lunar-day-phase {
+    font-size:0.9rem;
+    margin:4px 0;
+  }
+  .lunar-day-meaning {
+    font-size:0.8rem;
+    color:#d0c6b7;
+    margin-bottom:6px;
+  }
+  #lunar-day-note {
+    width:100%;
+    min-height:80px;
+    border-radius:10px;
+    border:none;
+    padding:8px;
+    font-size:0.88rem;
+    resize:vertical;
+    font-family:inherit;
+    background:#f8f3e6;
+    color:#20140c;
+  }
+  .lunar-day-footer {
+    margin-top:6px;
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .lunar-day-footer a {
+    font-size:0.78rem;
+    color:#ffde7e;
+  }
+
+  /* Tiny starfield behind card (optional) */
+  #lunar-starfield {
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+  }
+
+  @media (max-width:444px) {
+    #lunar-reflections-card { margin-top:18px; }
+  }
+</style>
+
+<section id="lunar-reflections-card">
+  <h1>🌕 Lunar Reflections</h1>
+  <div class="lunar-subtitle">
+    Track the Moon, tune your tone, and write what you are ready to release.
+  </div>
+
+  <!-- Moon panel -->
+  <div class="lunar-panel">
+    <canvas id="lunar-moonCanvas" width="260" height="260" aria-label="Moon visualization"></canvas>
+    <div id="lunar-date-line" class="lunar-moon-line"></div>
+    <div id="lunar-clock-line" class="lunar-moon-line"></div>
+    <div id="lunar-phase-line" class="lunar-moon-line"></div>
+    <div id="lunar-message-line" class="lunar-moon-line"></div>
+
+    <div class="lunar-moon-times">
+      Moonrise: <span id="lunar-moonrise">--:--</span> ·
+      Moonset: <span id="lunar-moonset">--:--</span>
+    </div>
+
+    <div class="lunar-controls">
+      <div class="lunar-slider-row">
+        Tone frequency: <span id="lunar-freqValue">440</span> Hz
+        <br>
+        <input type="range" id="lunar-freqSlider" min="100" max="1200" value="440" step="1">
+      </div>
+      <div style="margin-top:6px;">
+        <button type="button" id="lunar-openCalendar" class="lunar-btn-secondary">
+          📅 Open Lunar Calendar
+        </button>
+      </div>
+    </div>
+
+    <div class="lunar-link-row">
+      World time reference:
+      <a href="https://www.timeanddate.com/worldclock/" target="_blank" rel="noopener">
+        World Clock
+      </a>
+    </div>
+  </div>
+
+  <!-- Journal panel -->
+  <div class="lunar-panel">
+    <h2>💧 What can I let go of tonight?</h2>
+    <textarea id="lunar-journal" placeholder="Type your thoughts here…"></textarea>
+    <div style="text-align:center; margin-top:8px;">
+      <button type="button" id="lunar-releaseBtn" class="lunar-btn">Release</button>
+    </div>
+
+    <div style="margin-top:10px;">
+      <div style="font-weight:600; font-size:0.9rem; text-align:center;">📜 Mystic Chronicle</div>
+      <ul id="lunar-releaseList"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- Starfield (behind everything, optional) -->
+<canvas id="lunar-starfield"></canvas>
+
+<!-- Calendar modal -->
+<div id="lunar-calendarModal" class="lunar-modal" aria-hidden="true">
+  <div class="lunar-modal-backdrop"></div>
+  <div class="lunar-modal-card" role="dialog" aria-modal="true" aria-labelledby="lunar-calendar-title">
+    <div class="lunar-modal-header">
+      <h2 id="lunar-calendar-title">Lunar Calendar</h2>
+      <button class="lunar-close-btn" id="lunar-calendarClose" aria-label="Close calendar">×</button>
+    </div>
+    <div class="lunar-month-row">
+      <button class="lunar-nav-btn" id="lunar-prevMonth" aria-label="Previous month">‹</button>
+      <div id="lunar-monthLabel"></div>
+      <button class="lunar-nav-btn" id="lunar-nextMonth" aria-label="Next month">›</button>
+    </div>
+    <div class="lunar-weekdays">
+      <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+    </div>
+    <div id="lunar-calendarGrid" class="lunar-calendar-grid"></div>
+    <div class="lunar-modal-note">
+      Tap a day to add a note or see its moon meaning. Days with a dot have saved notes.
+    </div>
+  </div>
+</div>
+
+<!-- Day detail modal -->
+<div id="lunar-dayModal" class="lunar-modal" aria-hidden="true">
+  <div class="lunar-modal-backdrop"></div>
+  <div class="lunar-modal-card" role="dialog" aria-modal="true" aria-labelledby="lunar-day-title">
+    <div class="lunar-modal-header">
+      <h2 id="lunar-day-title">Selected Day</h2>
+      <button class="lunar-close-btn" id="lunar-dayClose" aria-label="Close day details">×</button>
+    </div>
+    <div id="lunar-day-date" style="font-size:0.9rem; margin-bottom:4px;"></div>
+    <div id="lunar-day-phase" class="lunar-day-phase"></div>
+    <div id="lunar-day-meaning" class="lunar-day-meaning"></div>
+
+    <label for="lunar-day-note" style="font-size:0.82rem; margin-bottom:2px;">Your note or reminder:</label>
+    <textarea id="lunar-day-note"></textarea>
+
+    <div class="lunar-day-footer">
+      <button type="button" id="lunar-day-save" class="lunar-btn">Save note</button>
+      <a id="lunar-day-link" href="https://moon.nasa.gov/moon-in-motion/moon-phases/" target="_blank" rel="noopener">
+        Learn more about this moon ↗
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ========= Basic data ========= */
+  const phaseNames = [
+    "New Moon","Waxing Crescent","First Quarter","Waxing Gibbous",
+    "Full Moon","Waning Gibbous","Last Quarter","Waning Crescent"
+  ];
+  const phaseIcons = ["🌑","🌒","🌓","🌔","🌕","🌖","🌗","🌘"];
+  const phaseMessages = {
+    "New Moon":"A time for new beginnings and quiet intentions.",
+    "Waxing Crescent":"Nurture what you've planted; growth is stirring.",
+    "First Quarter":"Take action; trust your direction.",
+    "Waxing Gibbous":"Refine your path; patience brings fullness.",
+    "Full Moon":"Illumination and gratitude; celebrate what is complete.",
+    "Waning Gibbous":"Share your light; release what’s no longer needed.",
+    "Last Quarter":"Rest and reflect; prepare to renew.",
+    "Waning Crescent":"Let go; surrender into stillness."
+  };
+  const phaseTones = {
+    "New Moon":396,"Waxing Crescent":417,"First Quarter":528,
+    "Waxing Gibbous":639,"Full Moon":741,"Waning Gibbous":852,
+    "Last Quarter":285,"Waning Crescent":174
+  };
+
+  /* ========= DOM refs ========= */
+  const moonCanvas = document.getElementById("lunar-moonCanvas");
+  const mCtx = moonCanvas.getContext("2d");
+  const dateLine = document.getElementById("lunar-date-line");
+  const clockLine = document.getElementById("lunar-clock-line");
+  const phaseLine = document.getElementById("lunar-phase-line");
+  const messageLine = document.getElementById("lunar-message-line");
+  const moonriseEl = document.getElementById("lunar-moonrise");
+  const moonsetEl = document.getElementById("lunar-moonset");
+  const freqSlider = document.getElementById("lunar-freqSlider");
+  const freqValue = document.getElementById("lunar-freqValue");
+  const openCalBtn = document.getElementById("lunar-openCalendar");
+
+  const journalTextarea = document.getElementById("lunar-journal");
+  const releaseBtn = document.getElementById("lunar-releaseBtn");
+  const releaseList = document.getElementById("lunar-releaseList");
+
+  const calendarModal = document.getElementById("lunar-calendarModal");
+  const calendarClose = document.getElementById("lunar-calendarClose");
+  const monthLabel = document.getElementById("lunar-monthLabel");
+  const prevMonthBtn = document.getElementById("lunar-prevMonth");
+  const nextMonthBtn = document.getElementById("lunar-nextMonth");
+  const calendarGrid = document.getElementById("lunar-calendarGrid");
+
+  const dayModal = document.getElementById("lunar-dayModal");
+  const dayClose = document.getElementById("lunar-dayClose");
+  const dayTitle = document.getElementById("lunar-day-title");
+  const dayDateLine = document.getElementById("lunar-day-date");
+  const dayPhaseLine = document.getElementById("lunar-day-phase");
+  const dayMeaningLine = document.getElementById("lunar-day-meaning");
+  const dayNote = document.getElementById("lunar-day-note");
+  const daySaveBtn = document.getElementById("lunar-day-save");
+  const dayLink = document.getElementById("lunar-day-link");
+
+  const starCanvas = document.getElementById("lunar-starfield");
+  const sCtx = starCanvas.getContext("2d");
+
+  /* ========= State ========= */
+  let currentDate = new Date();
+  let currentPhase = null;
+  let currentLat = null, currentLon = null;
+  let currentMonth = currentDate.getMonth();
+  let currentYear = currentDate.getFullYear();
+  let dayModalKey = null;
+
+  const EVENT_KEY = "lunar_reflections_events_v1";
+  const JOURNAL_DB = "LunarJournalDB_v2";
+  let eventStore = {};
+  try {
+    eventStore = JSON.parse(localStorage.getItem(EVENT_KEY) || "{}");
+  } catch(e) { eventStore = {}; }
+
+  let userFreq = Number(freqSlider.value || 440);
+
+  /* ========= Moon phase calculation ========= */
+  function phaseFraction(y,m,d){
+    const n = Math.floor(12.37 * (y - 1900 + (m - 0.5) / 12));
+    const RAD = Math.PI/180;
+    const t = n / 1236.85, t2 = t*t;
+    const as = 359.2242 + 29.105356 * n;
+    const am = 306.0253 + 385.816918 * n + 0.010730 * t2;
+    const x1 = as * RAD, x2 = am * RAD;
+    const c1 = (0.1734 - 0.000393 * t) * Math.sin(x1)
+              + 0.0021 * Math.sin(2 * x1)
+              - 0.4068 * Math.sin(x2)
+              + 0.0161 * Math.sin(2 * x2)
+              - 0.0004 * Math.sin(3 * x2);
+    const jd = 2415020 + 29.53058868 * n + c1;
+    const days = (Date.UTC(y,m-1,d)/86400000 + 2440587.5) - jd;
+    let frac = (days % 29.53058868) / 29.53058868;
+    if(frac < 0) frac += 1;
+    return frac;
+  }
+
+  function getMoonPhaseForDate(date){
+    const y = date.getFullYear(), m = date.getMonth()+1, d = date.getDate();
+    const frac = phaseFraction(y,m,d);
+    const idx = Math.floor(frac*8 + 0.5) % 8;
+    const name = phaseNames[idx];
+    const icon = phaseIcons[idx];
+    const msg = phaseMessages[name];
+    const phi = 2*Math.PI*frac;
+    const illum = 0.5*(1 - Math.cos(phi));  // 0..1
+    const waxing = frac < 0.5;
+    return { frac, index:idx, name, icon, message:msg, illumination:illum, waxing };
+  }
+
+  /* ========= Moon drawing ========= */
+  const moonTex = new Image();
+  moonTex.crossOrigin = "anonymous";
+  moonTex.src = "https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004806/moon_8k.jpg";
+
+  function drawMoon(phase) {
+    const w = moonCanvas.width;
+    const h = moonCanvas.height;
+    const cx = w/2, cy = h/2;
+    const r = Math.min(cx,cy) - 2;
+
+    mCtx.clearRect(0,0,w,h);
+
+    // Clip to circle
+    mCtx.save();
+    mCtx.beginPath();
+    mCtx.arc(cx, cy, r, 0, Math.PI*2);
+    mCtx.closePath();
+    mCtx.clip();
+
+    // Base disc: NASA texture or gradient fallback
+    if (moonTex.complete && moonTex.naturalWidth) {
+      // Simple centered draw
+      mCtx.drawImage(moonTex, cx-r, cy-r, r*2, r*2);
+    } else {
+      const g = mCtx.createRadialGradient(cx-r*0.3, cy-r*0.3, r*0.2, cx,cy,r);
+      g.addColorStop(0,"#fdfdf5");
+      g.addColorStop(1,"#777");
+      mCtx.fillStyle = g;
+      mCtx.fillRect(cx-r, cy-r, r*2, r*2);
+    }
+
+    // Apply shadow to mimic current phase
+    const illum = phase.illumination;
+    if (illum <= 0.02) {
+      // New moon: almost fully dark
+      mCtx.globalCompositeOperation = "source-atop";
+      mCtx.fillStyle = "rgba(0,0,0,0.9)";
+      mCtx.fillRect(cx-r, cy-r, r*2, r*2);
+    } else if (illum >= 0.98) {
+      // Full moon: tiny limb shading only
+      const gradFull = mCtx.createRadialGradient(cx,cy,r*0.3,cx,cy,r);
+      gradFull.addColorStop(0,"rgba(0,0,0,0)");
+      gradFull.addColorStop(1,"rgba(0,0,0,0.25)");
+      mCtx.globalCompositeOperation = "source-atop";
+      mCtx.fillStyle = gradFull;
+      mCtx.fillRect(cx-r, cy-r, r*2, r*2);
+    } else {
+      // Crescent / gibbous shading using horizontal gradient
+      const center = 0.5;
+      const halfLit = Math.max(0.05, Math.min(0.5, illum/2));
+      const leftStop = Math.max(0, center - halfLit);
+      const rightStop = Math.min(1, center + halfLit);
+
+      let grad;
+      if (phase.waxing) {
+        // bright on the right
+        grad = mCtx.createLinearGradient(cx-r, cy, cx+r, cy);
+      } else {
+        // bright on the left
+        grad = mCtx.createLinearGradient(cx+r, cy, cx-r, cy);
+      }
+      grad.addColorStop(0, "rgba(0,0,0,0.95)");
+      grad.addColorStop(leftStop, "rgba(0,0,0,0.95)");
+      grad.addColorStop(rightStop, "rgba(0,0,0,0)");
+      grad.addColorStop(1, "rgba(0,0,0,0)");
+
+      mCtx.globalCompositeOperation = "source-atop";
+      mCtx.fillStyle = grad;
+      mCtx.fillRect(cx-r, cy-r, r*2, r*2);
+    }
+
+    mCtx.restore();
+
+    // Rim highlight
+    mCtx.beginPath();
+    mCtx.arc(cx, cy, r, 0, Math.PI*2);
+    mCtx.strokeStyle = "rgba(255,255,255,0.4)";
+    mCtx.lineWidth = 1.2;
+    mCtx.stroke();
+  }
+
+  function updateMoonUI(date) {
+    currentDate = date;
+    currentPhase = getMoonPhaseForDate(date);
+    drawMoon(currentPhase);
+
+    const illumPct = Math.round(currentPhase.illumination * 100);
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
+
+    dateLine.textContent = date.toLocaleDateString(undefined, {
+      weekday:"long", year:"numeric", month:"long", day:"numeric"
+    });
+    phaseLine.textContent = `${currentPhase.icon} ${currentPhase.name} • ${illumPct}% illuminated`;
+    messageLine.textContent = currentPhase.message;
+    // tone default
+    const baseTone = phaseTones[currentPhase.name] || 440;
+    userFreq = baseTone;
+    freqSlider.value = baseTone;
+    freqValue.textContent = baseTone;
+
+    // moonrise/moonset
+    fetchMoonTimes(date);
+
+    // update clock immediately
+    updateClock(tz);
+  }
+
+  /* ========= Clock ========= */
+  function updateClock(tzOverride) {
+    const tz = tzOverride || (Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time");
+    const now = new Date();
+    clockLine.textContent = now.toLocaleTimeString([], {
+      hour:"2-digit", minute:"2-digit", second:"2-digit"
+    }) + " · " + tz;
+  }
+  setInterval(updateClock, 1000);
+
+  /* ========= Moonrise / Moonset via Open-Meteo ========= */
+  function fetchMoonTimes(date){
+    const targetISO = date.toISOString().split("T")[0];
+
+    function callAPI(lat, lon){
+      const url = `https://api.open-meteo.com/v1/astronomy?latitude=${lat}&longitude=${lon}&start_date=${targetISO}&end_date=${targetISO}&timezone=auto`;
+      fetch(url).then(r => r.ok ? r.json() : Promise.reject())
+        .then(json => {
+          const rise = json.moonrise || (json.daily && json.daily.moonrise && json.daily.moonrise[0]);
+          const set  = json.moonset || (json.daily && json.daily.moonset && json.daily.moonset[0]);
+          const fmt = t => t ? new Date(t).toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"}) : "--:--";
+          moonriseEl.textContent = fmt(rise);
+          moonsetEl.textContent  = fmt(set);
+        })
+        .catch(() => {
+          moonriseEl.textContent = "--:--";
+          moonsetEl.textContent  = "--:--";
+        });
+    }
+
+    if (currentLat != null && currentLon != null) {
+      callAPI(currentLat, currentLon);
+      return;
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(pos => {
+        currentLat = pos.coords.latitude;
+        currentLon = pos.coords.longitude;
+        callAPI(currentLat, currentLon);
+      }, () => {
+        currentLat = 51.4769; currentLon = 0.0005; // Greenwich fallback
+        callAPI(currentLat, currentLon);
+      });
+    } else {
+      currentLat = 51.4769; currentLon = 0.0005;
+      callAPI(currentLat, currentLon);
+    }
+  }
+
+  /* ========= Tone playback ========= */
+  freqSlider.addEventListener("input", () => {
+    userFreq = Number(freqSlider.value || 440);
+    freqValue.textContent = userFreq;
+  });
+
+  function playTone(freq){
+    try{
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      const audioCtx = new AudioCtx();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 1.5);
+      osc.onended = () => audioCtx.close();
+    } catch(e){
+      console.warn("Audio not supported", e);
+    }
+  }
+
+  moonCanvas.addEventListener("click", () => {
+    playTone(userFreq);
+  });
+
+  /* ========= Journal storage (localStorage, simple) ========= */
+  const JOURNAL_KEY = "lunar_reflections_entries_v1";
+
+  function loadJournal(){
+    let entries = [];
+    try {
+      entries = JSON.parse(localStorage.getItem(JOURNAL_KEY) || "[]");
+    } catch(e){ entries = []; }
+    renderJournal(entries);
+  }
+
+  function renderJournal(entries){
+    releaseList.innerHTML = "";
+    if (!entries.length) {
+      releaseList.innerHTML = "<li>No entries yet.</li>";
+      return;
+    }
+    entries.sort((a,b) => new Date(b.when) - new Date(a.when));
+    entries.forEach(e => {
+      const li = document.createElement("li");
+      const d = new Date(e.when);
+      li.textContent = `${d.toLocaleDateString()} – ${e.text}`;
+      releaseList.appendChild(li);
+    });
+  }
+
+  releaseBtn.addEventListener("click", () => {
+    const txt = journalTextarea.value.trim();
+    if (!txt) { alert("Please enter something to release."); return; }
+    let entries = [];
+    try { entries = JSON.parse(localStorage.getItem(JOURNAL_KEY) || "[]"); } catch(e){ entries = []; }
+    entries.push({ text: txt, when: new Date().toISOString() });
+    localStorage.setItem(JOURNAL_KEY, JSON.stringify(entries));
+    journalTextarea.value = "";
+    renderJournal(entries);
+  });
+
+  /* ========= Calendar + events ========= */
+  function dateKey(date){
+    return date.toISOString().split("T")[0];
+  }
+
+  function openCalendar(){
+    calendarModal.classList.add("lunar-open");
+    calendarModal.setAttribute("aria-hidden","false");
+    buildCalendar();
+  }
+  function closeCalendar(){
+    calendarModal.classList.remove("lunar-open");
+    calendarModal.setAttribute("aria-hidden","true");
+  }
+
+  function buildCalendar(){
+    calendarGrid.innerHTML = "";
+    const first = new Date(currentYear, currentMonth, 1);
+    const last = new Date(currentYear, currentMonth+1, 0);
+    const monthName = first.toLocaleDateString(undefined, {month:"long", year:"numeric"});
+    monthLabel.textContent = monthName;
+
+    const startWeekday = first.getDay(); // 0–6
+    for (let i=0;i<startWeekday;i++){
+      const empty = document.createElement("div");
+      calendarGrid.appendChild(empty);
+    }
+
+    for (let day=1; day<=last.getDate(); day++){
+      const d = new Date(currentYear, currentMonth, day);
+      const key = dateKey(d);
+      const phase = getMoonPhaseForDate(d);
+      const cell = document.createElement("button");
+      cell.type = "button";
+      cell.className = "lunar-day-cell";
+      if (phase.name === "New Moon" || phase.name === "First Quarter" ||
+          phase.name === "Full Moon" || phase.name === "Last Quarter") {
+        cell.classList.add("lunar-major");
+      }
+      if (eventStore[key]) {
+        cell.classList.add("lunar-has-note");
+      }
+      if (d.toDateString() === currentDate.toDateString()) {
+        cell.classList.add("lunar-selected");
+      }
+
+      const daySpan = document.createElement("span");
+      daySpan.className = "lunar-day-num";
+      daySpan.textContent = day;
+
+      const iconSpan = document.createElement("span");
+      iconSpan.className = "lunar-day-icon";
+      iconSpan.textContent = phase.icon;
+
+      cell.appendChild(daySpan);
+      cell.appendChild(iconSpan);
+
+      cell.addEventListener("click", () => {
+        // update moon to this date
+        updateMoonUI(d);
+        // open detail modal
+        openDayModal(d, phase);
+        // refresh selection highlight
+        currentMonth = d.getMonth();
+        currentYear = d.getFullYear();
+        buildCalendar();
+      });
+
+      calendarGrid.appendChild(cell);
+    }
+  }
+
+  function openDayModal(date, phase){
+    const key = dateKey(date);
+    const stored = eventStore[key] || { note:"" };
+    const illumPct = Math.round(phase.illumination*100);
+
+    dayModalKey = key;
+    dayTitle.textContent = "Lunar Day";
+    dayDateLine.textContent = date.toLocaleDateString(undefined, {
+      weekday:"long", year:"numeric", month:"long", day:"numeric"
+    });
+    dayPhaseLine.textContent = `${phase.icon} ${phase.name} • ${illumPct}% illuminated`;
+    dayMeaningLine.textContent = phase.message;
+    dayNote.value = stored.note || "";
+
+    dayModal.classList.add("lunar-open");
+    dayModal.setAttribute("aria-hidden","false");
+  }
+  function closeDayModal(){
+    dayModal.classList.remove("lunar-open");
+    dayModal.setAttribute("aria-hidden","true");
+    dayModalKey = null;
+  }
+
+  daySaveBtn.addEventListener("click", () => {
+    if (!dayModalKey) { closeDayModal(); return; }
+    const note = dayNote.value.trim();
+    if (note) {
+      eventStore[dayModalKey] = { note };
+    } else {
+      delete eventStore[dayModalKey];
+    }
+    localStorage.setItem(EVENT_KEY, JSON.stringify(eventStore));
+    buildCalendar();
+    closeDayModal();
+  });
+
+  /* ========= Starfield ========= */
+  function initStarfield(){
+    starCanvas.width = window.innerWidth;
+    starCanvas.height = window.innerHeight;
+    const w = starCanvas.width, h = starCanvas.height;
+    const count = Math.floor((w*h)/2500);
+    const stars = [];
+    for (let i=0;i<count;i++){
+      stars.push({
+        x: Math.random()*w,
+        y: Math.random()*h,
+        r: Math.random()*1.5+0.5,
+        a: Math.random(),
+        da: (Math.random()*0.02)+0.005
+      });
+    }
+    function loop(){
+      sCtx.clearRect(0,0,w,h);
+      stars.forEach(s => {
+        s.a += s.da;
+        if (s.a > 1) { s.a = 1; s.da *= -1; }
+        else if (s.a < 0) { s.a = 0; s.da *= -1; }
+        sCtx.beginPath();
+        sCtx.arc(s.x,s.y,s.r,0,Math.PI*2);
+        sCtx.fillStyle = `rgba(255,255,255,${s.a})`;
+        sCtx.fill();
+      });
+      requestAnimationFrame(loop);
+    }
+    loop();
+  }
+  window.addEventListener("resize", () => {
+    initStarfield();
+  });
+
+  /* ========= Event wiring ========= */
+  openCalBtn.addEventListener("click", openCalendar);
+  calendarClose.addEventListener("click", closeCalendar);
+  calendarModal.addEventListener("click", e => {
+    if (e.target === calendarModal || e.target.classList.contains("lunar-modal-backdrop")) {
+      closeCalendar();
+    }
+  });
+
+  prevMonthBtn.addEventListener("click", () => {
+    currentMonth--;
+    if (currentMonth < 0){ currentMonth = 11; currentYear--; }
+    buildCalendar();
+  });
+  nextMonthBtn.addEventListener("click", () => {
+    currentMonth++;
+    if (currentMonth > 11){ currentMonth = 0; currentYear++; }
+    buildCalendar();
+  });
+
+  dayClose.addEventListener("click", closeDayModal);
+  dayModal.addEventListener("click", e => {
+    if (e.target === dayModal || e.target.classList.contains("lunar-modal-backdrop")) {
+      closeDayModal();
+    }
+  });
+
+  /* ========= Init ========= */
+  initStarfield();
+  loadJournal();
+  updateMoonUI(currentDate);
+})();
+</script>
+</body>
+</html>
