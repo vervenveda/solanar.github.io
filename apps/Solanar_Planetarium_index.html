@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Solanar Planetarium™ — Advanced Weather Service</title>
+
+<style>
+:root{
+  --bg:#050b1f;
+  --panel:#0c1a3a;
+  --ink:#eaf4ff;
+  --muted:#9cb6d8;
+  --accent:#4dd2ff;
+  --warn:#ffcc66;
+  --bad:#ff6b6b;
+  --ok:#6df0a0;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Arial,sans-serif;
+  background:radial-gradient(circle at top, #0a1c4d, #020614);
+  color:var(--ink);
+}
+header{
+  padding:16px;
+  text-align:center;
+  border-bottom:2px solid var(--accent);
+}
+header h1{
+  margin:0;
+  font-family:serif;
+  letter-spacing:.04em;
+}
+
+.wrap{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  padding:14px;
+}
+@media(min-width:768px){
+  .wrap{grid-template-columns:1.1fr 1fr}
+}
+@media(min-width:1100px){
+  .wrap{grid-template-columns:1.2fr 1fr}
+}
+
+.panel{
+  background:var(--panel);
+  border-radius:var(--radius);
+  padding:14px;
+  box-shadow:0 10px 30px #00000060;
+}
+
+h2{
+  margin:.2em 0 .4em;
+  font-family:serif;
+  color:var(--accent);
+}
+
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+
+input{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  font-size:16px;
+  background:#08152f;
+  color:var(--ink);
+}
+
+button{
+  padding:10px 14px;
+  border-radius:12px;
+  border:none;
+  background:#1d7fbf;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+}
+button:active{transform:scale(.96)}
+button:disabled{opacity:.6;cursor:wait}
+
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:.85em;
+  border:1px solid #355a8a;
+  margin:3px 4px 0 0;
+}
+.badge.warn{color:#ffe1a8;border-color:#c49b3c}
+.badge.bad{color:#ffd0d0;border-color:#c44}
+.badge.ok{color:#caffdf;border-color:#4a8}
+
+.forecast{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+  gap:10px;
+  margin-top:10px;
+}
+.day{
+  background:#08152f;
+  border-radius:12px;
+  padding:8px;
+  text-align:center;
+  font-size:.9em;
+}
+.day b{
+  display:block;
+  margin-bottom:2px;
+}
+.day small{
+  display:block;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+
+.alert{
+  border-radius:12px;
+  padding:10px;
+  margin-top:8px;
+  font-size:.9em;
+}
+.alert.extreme{
+  background:#3b1020;
+  border:1px solid #ff4d6a;
+}
+.alert.severe{
+  background:#3b1a10;
+  border:1px solid #ff9248;
+}
+.alert.watch{
+  background:#2b2b10;
+  border:1px solid #ffd95c;
+}
+.alert.info{
+  background:#102235;
+  border:1px solid #4dd2ff;
+}
+.alert b{display:block;margin-bottom:4px}
+.alert .meta{font-size:.78em;color:var(--muted);margin-top:4px}
+
+footer{
+  text-align:center;
+  padding:14px;
+  font-size:.85em;
+  color:var(--muted);
+}
+
+/* Today & Tonight card */
+.today-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:12px;
+}
+@media(max-width:720px){
+  .today-grid{grid-template-columns:1fr}
+}
+.today-main{
+  background:#08152f;
+  border-radius:12px;
+  padding:10px;
+}
+.today-main h3{
+  margin:0 0 6px;
+  font-size:1rem;
+  color:var(--accent);
+}
+.today-main p{margin:3px 0;font-size:.9em}
+.today-extra{
+  background:#08152f;
+  border-radius:12px;
+  padding:10px;
+  font-size:.85em;
+}
+.today-extra p{margin:2px 0}
+
+/* unit toggle */
+.unit-toggle{
+  display:inline-flex;
+  border-radius:999px;
+  border:1px solid #355a8a;
+  overflow:hidden;
+}
+.unit-toggle button{
+  background:transparent;
+  border-radius:0;
+  border:none;
+  padding:7px 10px;
+  font-size:.85em;
+}
+.unit-toggle button.active{
+  background:#173462;
+}
+
+/* feature toggles */
+.feature-toggle{
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:.85em;
+  color:var(--muted);
+}
+.feature-toggle span.label{
+  font-weight:600;
+  color:#d0e0ff;
+}
+.feature-toggle label{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:#08152f;
+}
+
+/* hazard maps launcher */
+.hazard-note{
+  font-size:.85em;
+  color:var(--muted);
+  margin:4px 0 8px;
+}
+.hazard-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:8px;
+}
+.hazard-tile{
+  background:#08152f;
+  border:1px solid #355a8a;
+  border-radius:12px;
+  padding:10px;
+  text-align:left;
+  font-size:.86em;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.hazard-tile span.title{font-weight:600}
+.hazard-tile span.desc{font-size:.8em;color:var(--muted)}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>🌌 Solanar Planetarium™ <br> Advanced Weather</h1>
+</header>
+
+<div class="wrap">
+
+  <!-- CURRENT WEATHER + CONTROLS -->
+  <div class="panel">
+    <h2>Current Weather</h2>
+    <div class="row" style="margin-bottom:6px">
+      <input id="zip" placeholder="Enter ZIP (e.g. 34667)" />
+      <button id="searchBtn">Search</button>
+
+      <div class="unit-toggle" style="margin-left:auto">
+        <button id="uImperial">°F · mph</button>
+        <button id="uMetric">°C · km/h</button>
+      </div>
+    </div>
+
+    <p><b>Location:</b> <span id="loc">—</span></p>
+    <p><b>Now:</b> <span id="temp">—</span>
+       · <span id="cond">—</span>
+       · <span id="windNow">—</span>
+    </p>
+    <div id="badges"></div>
+
+    <div class="feature-toggle">
+      <span class="label">Show panels:</span>
+      <label><input type="checkbox" data-target="todayPanel" checked>Today & Tonight</label>
+      <label><input type="checkbox" data-target="forecastPanel" checked>14-Day Outlook</label>
+      <label><input type="checkbox" data-target="alertsPanel" checked>Severe Alerts</label>
+      <label><input type="checkbox" data-target="hazardPanel" checked>Hazard Maps</label>
+    </div>
+  </div>
+
+  <!-- TODAY & TONIGHT PANEL -->
+  <div class="panel" id="todayPanel">
+    <h2>Today & Tonight</h2>
+    <div class="today-grid">
+      <div class="today-main">
+        <h3 id="todayLabel">—</h3>
+        <p><b>High:</b> <span id="todayHigh">—</span> ·
+           <b>Low:</b> <span id="todayLow">—</span></p>
+        <p><b>Precipitation:</b> <span id="todayPop">—</span></p>
+        <p><b>Feels like now:</b> <span id="todayFeels">—</span></p>
+        <p><b>Wind:</b> <span id="todayWind">—</span></p>
+      </div>
+      <div class="today-extra">
+        <p><b>Sunrise:</b> <span id="sunrise">—</span></p>
+        <p><b>Sunset:</b> <span id="sunset">—</span></p>
+        <p><b>UV Index:</b> <span id="uvIndex">—</span>
+           <span id="uvDescriptor"></span></p>
+        <p><b>Day Summary:</b> <span id="todaySummary">—</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14-DAY FORECAST -->
+  <div class="panel" id="forecastPanel">
+    <h2>14-Day Day & Night Forecast</h2>
+    <div id="forecast" class="forecast"></div>
+  </div>
+
+  <!-- SEVERE WEATHER & CIVIC ALERTS -->
+  <div class="panel" id="alertsPanel" style="display:none">
+    <h2>🚨 Severe Weather & Civic Alerts</h2>
+    <p style="font-size:.85em;color:var(--muted);margin-top:0">
+      Highlighting warnings and high-impact events near this location.
+    </p>
+    <div id="alerts"></div>
+  </div>
+
+  <!-- HAZARD MAPS LAUNCHER -->
+  <div class="panel" id="hazardPanel">
+    <h2>Hazard Maps & Trackers</h2>
+    <p class="hazard-note">
+      Tap a tile to open a live interactive map in a new tab
+      (hurricanes, fires, tornadoes, earthquakes, radar & more).
+    </p>
+    <div class="hazard-grid">
+      <button class="hazard-tile" data-url="https://www.nhc.noaa.gov/">
+        <span class="title">🌀 Hurricanes & Tropics</span>
+        <span class="desc">National Hurricane Center outlook & active storms.</span>
+      </button>
+      <button class="hazard-tile" data-url="https://www.spc.noaa.gov/">
+        <span class="title">🌪 Tornado & Severe Storms</span>
+        <span class="desc">Storm Prediction Center convective outlooks.</span>
+      </button>
+      <button class="hazard-tile" data-url="https://firms.modaps.eosdis.nasa.gov/">
+        <span class="title">🔥 Wildfire Activity</span>
+        <span class="desc">NASA FIRMS active fire and smoke maps.</span>
+      </button>
+      <button class="hazard-tile" data-url="https://www.weather.gov/radar">
+        <span class="title">🌧 U.S. Radar</span>
+        <span class="desc">National Weather Service radar viewer.</span>
+      </button>
+      <button class="hazard-tile" data-url="https://earthquake.usgs.gov/earthquakes/map/">
+        <span class="title">🌍 Earthquakes</span>
+        <span class="desc">USGS real-time earthquake map.</span>
+      </button>
+      <button class="hazard-tile" data-url="https://www.airnow.gov/">
+        <span class="title">🌫 Air Quality</span>
+        <span class="desc">EPA AirNow air-quality index maps.</span>
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Solanar™ · Civic Weather Interface · Sovereign & Educational - © 2026 Jennifer Pearl
+</footer>
+
+<script>
+let unit = localStorage.getItem('solanar_adv_unit') || 'imperial'; // 'imperial' or 'metric'
+let lastCoords = null; // {lat,lon,label}
+
+// helpers
+function tempUnitSymbol(){ return unit==='imperial' ? '°F' : '°C'; }
+function windUnitLabel(){ return unit==='imperial' ? 'mph' : 'km/h'; }
+function toUnitThreshold(f){
+  // convert Fahrenheit threshold into current unit threshold
+  return unit==='imperial' ? f : (f-32)*5/9;
+}
+
+// unit toggle wiring
+const btnImp = document.getElementById('uImperial');
+const btnMet = document.getElementById('uMetric');
+function paintUnitButtons(){
+  btnImp.classList.toggle('active', unit==='imperial');
+  btnMet.classList.toggle('active', unit==='metric');
+}
+btnImp.addEventListener('click',()=>{
+  unit='imperial'; localStorage.setItem('solanar_adv_unit',unit);
+  paintUnitButtons();
+  if(lastCoords) fetchWeather(lastCoords);
+});
+btnMet.addEventListener('click',()=>{
+  unit='metric'; localStorage.setItem('solanar_adv_unit',unit);
+  paintUnitButtons();
+  if(lastCoords) fetchWeather(lastCoords);
+});
+paintUnitButtons();
+
+// feature toggles
+document.querySelectorAll('.feature-toggle input').forEach(ch=>{
+  ch.addEventListener('change',()=>{
+    const target = ch.dataset.target;
+    const el = document.getElementById(target);
+    if(!el) return;
+    el.style.display = ch.checked ? '' : 'none';
+  });
+});
+
+// hazard tiles → new tab
+document.querySelectorAll('.hazard-tile').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const url = btn.dataset.url;
+    if(url) window.open(url,'_blank','noopener');
+  });
+});
+
+// search wiring
+document.getElementById('searchBtn').addEventListener('click', lookup);
+document.getElementById('zip').addEventListener('keydown', e=>{
+  if(e.key==='Enter') lookup();
+});
+
+async function lookup(){
+  const zip = document.getElementById('zip').value.trim();
+  if(!zip){
+    alert("Enter a ZIP code");
+    return;
+  }
+  try{
+    const zResp = await fetch(`https://api.zippopotam.us/us/${zip}`);
+    if(!zResp.ok) throw new Error("ZIP not found");
+    const z = await zResp.json();
+    const lat = parseFloat(z.places[0].latitude);
+    const lon = parseFloat(z.places[0].longitude);
+    const label = `${z.places[0]['place name']}, ${z.places[0].state}`;
+
+    lastCoords = {lat,lon,label};
+    document.getElementById('loc').textContent = label;
+
+    await fetchWeather(lastCoords);
+    loadAlerts(lat,lon);
+  }catch(err){
+    console.error(err);
+    alert("Unable to locate that ZIP right now. Please check it and try again.");
+  }
+}
+
+async function fetchWeather(coords){
+  const {lat,lon,label} = coords;
+  const searchBtn = document.getElementById('searchBtn');
+  searchBtn.disabled = true;
+
+  try{
+    const url =
+      `https://api.open-meteo.com/v1/forecast` +
+      `?latitude=${lat}&longitude=${lon}` +
+      `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m` +
+      `&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,` +
+      `weather_code,sunrise,sunset,uv_index_max` +
+      `&forecast_days=14` +
+      `&temperature_unit=${unit==='imperial'?'fahrenheit':'celsius'}` +
+      `&wind_speed_unit=${unit==='imperial'?'mph':'kmh'}` +
+      `&timezone=auto`;
+
+    const wResp = await fetch(url);
+    if(!wResp.ok) throw new Error("Weather service unavailable");
+    const w = await wResp.json();
+    if(!w.current || !w.daily) throw new Error("Incomplete weather data");
+
+    renderCurrent(w);
+    renderBadges(w);
+    renderToday(w, label);
+    renderForecast(w);
+  }catch(err){
+    console.error(err);
+    alert("Unable to load weather data. Please try again in a moment.");
+  }finally{
+    searchBtn.disabled = false;
+  }
+}
+
+function codeText(c){
+  const map = {
+    0:"Clear",1:"Mostly Clear",2:"Partly Cloudy",3:"Cloudy",
+    45:"Fog",48:"Fog",
+    51:"Drizzle",53:"Drizzle",55:"Heavy Drizzle",
+    61:"Rain",63:"Rain",65:"Heavy Rain",
+    71:"Snow",73:"Snow",75:"Heavy Snow",
+    80:"Showers",81:"Showers",
+    95:"Thunderstorm",96:"Storm w/ Hail",99:"Severe Storm"
+  };
+  return map[c] || "Weather";
+}
+
+function iconFromCode(c){
+  if(c===0) return "☀️";
+  if(c===1 || c===2) return "🌤";
+  if(c===3) return "☁️";
+  if(c===45 || c===48) return "🌫";
+  if([51,53,55,61,63,65,80,81].includes(c)) return "🌧";
+  if([71,73,75].includes(c)) return "❄️";
+  if([95,96,99].includes(c)) return "⛈";
+  return "🌍";
+}
+
+function renderCurrent(w){
+  const t = Math.round(w.current.temperature_2m);
+  document.getElementById('temp').textContent = `${t}${tempUnitSymbol()}`;
+  document.getElementById('cond').textContent = codeText(w.current.weather_code);
+  if(typeof w.current.wind_speed_10m === 'number'){
+    document.getElementById('windNow').textContent =
+      `${Math.round(w.current.wind_speed_10m)} ${windUnitLabel()} wind`;
+  }else{
+    document.getElementById('windNow').textContent = '—';
+  }
+}
+
+function renderBadges(w){
+  const box = document.getElementById('badges');
+  box.innerHTML = "";
+  const todayPop = w.daily.precipitation_probability_max[0] ?? 0;
+  const nowTemp = w.current.temperature_2m;
+
+  if(todayPop > 60){
+    box.innerHTML += `<span class="badge warn">Rain likely today (${todayPop}% )</span>`;
+  }else if(todayPop > 30){
+    box.innerHTML += `<span class="badge ok">Chance of showers (${todayPop}% )</span>`;
+  }
+
+  if(nowTemp > toUnitThreshold(90)){
+    box.innerHTML += `<span class="badge warn">Heat risk</span>`;
+  }
+  if(nowTemp < toUnitThreshold(32)){
+    box.innerHTML += `<span class="badge bad">Freeze / frost risk</span>`;
+  }
+}
+function parseForecastDate(dateStr){
+  const [y, m, d] = dateStr.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d));
+}
+function renderToday(w, label){
+  const d0 = w.daily;
+ const time0 = d0.time[0];
+const date = parseForecastDate(time0);
+const weekday = date.toLocaleDateString([], {
+  weekday: 'long',
+  timeZone: 'UTC'
+});
+
+  document.getElementById('todayLabel').textContent =
+    `${weekday} — local forecast`;
+
+  const hi = Math.round(d0.temperature_2m_max[0]);
+  const lo = Math.round(d0.temperature_2m_min[0]);
+  const pop = d0.precipitation_probability_max[0] ?? 0;
+
+  document.getElementById('todayHigh').textContent = `${hi}${tempUnitSymbol()}`;
+  document.getElementById('todayLow').textContent  = `${lo}${tempUnitSymbol()}`;
+  document.getElementById('todayPop').textContent  = `${pop}% precip chance`;
+
+  const feels = typeof w.current.apparent_temperature === 'number'
+    ? Math.round(w.current.apparent_temperature)
+    : Math.round(w.current.temperature_2m);
+  document.getElementById('todayFeels').textContent = `${feels}${tempUnitSymbol()}`;
+
+  const wind = typeof w.current.wind_speed_10m === 'number'
+    ? `${Math.round(w.current.wind_speed_10m)} ${windUnitLabel()}`
+    : '—';
+  document.getElementById('todayWind').textContent = wind;
+
+  const sunrise = d0.sunrise && d0.sunrise[0]
+    ? new Date(d0.sunrise[0]).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})
+    : '—';
+  const sunset  = d0.sunset && d0.sunset[0]
+    ? new Date(d0.sunset[0]).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})
+    : '—';
+  document.getElementById('sunrise').textContent = sunrise;
+  document.getElementById('sunset').textContent  = sunset;
+
+  const uv = d0.uv_index_max ? d0.uv_index_max[0] : null;
+  if(uv == null){
+    document.getElementById('uvIndex').textContent = '—';
+    document.getElementById('uvDescriptor').textContent = '';
+  }else{
+    const uvInt = Math.round(uv);
+    document.getElementById('uvIndex').textContent = uvInt;
+    let desc = '';
+    if(uvInt <= 2) desc = '(Low)';
+    else if(uvInt <= 5) desc = '(Moderate)';
+    else if(uvInt <= 7) desc = '(High)';
+    else if(uvInt <= 10) desc = '(Very High)';
+    else desc = '(Extreme)';
+    document.getElementById('uvDescriptor').textContent = ' ' + desc;
+  }
+
+  const c0 = d0.weather_code[0];
+  const summary = iconFromCode(c0) + ' ' + codeText(c0);
+  document.getElementById('todaySummary').textContent = summary;
+}
+
+function renderForecast(w){
+  const f = document.getElementById('forecast');
+  f.innerHTML = "";
+
+  const d = w.daily;
+  const n = d.time.length;
+
+  for(let i=0;i<n;i++){
+    const date = parseForecastDate(d.time[i]);
+const dow  = date.toLocaleDateString([], {
+  weekday: 'short',
+  timeZone: 'UTC'
+});
+const md   = date.toLocaleDateString([], {
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC'
+});
+
+    const hi   = Math.round(d.temperature_2m_max[i]);
+    const lo   = Math.round(d.temperature_2m_min[i]);
+    const pop  = d.precipitation_probability_max[i] ?? 0;
+    const code = d.weather_code[i];
+    const icon = iconFromCode(code);
+    const desc = codeText(code);
+
+    f.innerHTML += `
+      <div class="day">
+        <b>${dow}</b>
+        <small>${md}</small>
+        <div>${icon} ${desc}</div>
+        <div>☀️ ${hi}${tempUnitSymbol()} · 🌙 ${lo}${tempUnitSymbol()}</div>
+        <div>🌧️ ${pop}% precip</div>
+      </div>
+    `;
+  }
+}
+
+// Severe alerts (NWS)
+async function loadAlerts(lat,lon){
+  const box = document.getElementById('alerts');
+  const panel = document.getElementById('alertsPanel');
+  box.innerHTML = "";
+  panel.style.display = "none";
+
+  try{
+    const r = await fetch(`https://api.weather.gov/alerts/active?point=${lat},${lon}`);
+    if(!r.ok) throw new Error("NWS alerts unavailable");
+    const j = await r.json();
+    if(!j.features || !j.features.length) return;
+
+    // categorize and keep most relevant first
+    const alerts = j.features.map(a=>{
+      const p = a.properties || {};
+      return {level:alertLevel(p), props:p};
+    });
+
+    alerts.sort((a,b)=>levelRank(b.level)-levelRank(a.level));
+
+    alerts.forEach(a=>{
+      const p = a.props;
+      const start = p.effective || p.onset || p.sent || '';
+      const until = p.ends || p.expires || '';
+      const issued = start ? new Date(start).toLocaleString() : '—';
+      const expires = until ? new Date(until).toLocaleString() : '—';
+
+      box.innerHTML += `
+        <div class="alert ${a.level}">
+          <b>${p.event || 'Alert'}</b>
+          ${p.headline || p.description || 'Details unavailable.'}
+          <div class="meta">
+            Severity: ${p.severity || 'Unknown'} · Certainty: ${p.certainty || '—'} · Urgency: ${p.urgency || '—'}<br>
+            Issued: ${issued} · Expires: ${expires}
+          </div>
+        </div>
+      `;
+    });
+
+    panel.style.display = "block";
+  }catch(err){
+    console.warn("Alert fetch error:", err);
+    // leave panel hidden on error
+  }
+}
+
+function alertLevel(p){
+  const ev  = (p.event || '').toLowerCase();
+  const sev = (p.severity || '').toLowerCase();
+
+  if(/\b(tornado|hurricane|flash flood|tsunami|ice storm|blizzard|fire warning)\b/.test(ev) ||
+     sev === 'extreme'){
+    return 'extreme';
+  }
+  if(sev === 'severe' || /\bwarning\b/.test(ev)){
+    return 'severe';
+  }
+  if(sev === 'moderate' || /\bwatch\b|\badvisory\b/.test(ev)){
+    return 'watch';
+  }
+  return 'info';
+}
+function levelRank(level){
+  return {extreme:3,severe:2,watch:1,info:0}[level] || 0;
+}
+</script>
+</body>
+</html>
