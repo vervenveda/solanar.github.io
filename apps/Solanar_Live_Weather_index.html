@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solanar Planetarium™ — Live Weather v2.1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Cinzel&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#06143a; --bg2:#01010b; --ink:#ecf4fb; --ink2:#a8d8ff;
+      --accent:#3ed6f6; --btn:#4db8fa; --btn2:#2d90f8; --panel:rgba(17,31,54,.95);
+      --ok:#5AF0A0; --warn:#ffbf69; --bad:#ff6b6b; --muted:#9cc;
+      --radius:12px;
+    }
+    html,body{
+      margin:0;
+      background:radial-gradient(ellipse at 60% 30%, var(--bg1) 55%, var(--bg2) 100%);
+      color:var(--ink);
+      font-family:'Segoe UI',system-ui,Arial,sans-serif
+    }
+    header{
+      padding:20px;
+      text-align:center;
+      background:#0d1b3d;
+      border-bottom:2px solid var(--accent)
+    }
+    header h1{
+      font-family:'Cinzel',serif;
+      color:#99e6fe;
+      margin:0
+    }
+    .panel{
+      background:var(--panel);
+      margin:24px auto;
+      padding:18px;
+      max-width:760px;
+      border-radius:var(--radius);
+      box-shadow:0 0 12px #17366760
+    }
+    .panel h2{
+      font-family:'Cinzel',serif;
+      color:#9ef3ff;
+      margin:0 0 8px
+    }
+    .row{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:10px
+    }
+    .search-box{
+      display:inline-block;
+    }
+    .search-box input{
+      padding:10px;
+      border-radius:8px;
+      border:none;
+      width:220px;
+      background:#0b1b33;
+      color:#e6f8ff
+    }
+    .btn{
+      background:var(--btn);
+      color:#fff;
+      padding:10px 14px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer
+    }
+    .btn:hover{background:var(--btn2)}
+    .btn:disabled{opacity:.6;cursor:wait}
+    .toggle{
+      display:inline-flex;
+      border:1px solid #2a5f8f;
+      border-radius:999px;
+      overflow:hidden
+    }
+    .toggle button{
+      background:#0b1b33;
+      color:#bfe9ff;
+      border:none;
+      padding:8px 10px;
+      cursor:pointer
+    }
+    .toggle button.active{
+      background:#164472;
+      color:#fff
+    }
+    .lab{
+      margin-top:12px;
+      font-size:1rem;
+      color:#e0f6ff
+    }
+    .lab p{margin:6px 0}
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:8px
+    }
+    .badge{
+      padding:4px 8px;
+      border-radius:999px;
+      font-size:.85rem;
+      border:1px solid #2a5f8f;
+      background:#0b1b33;
+      color:#bfe9ff
+    }
+    .badge.ok{border-color:#2e7d59;color:#d9ffea}
+    .badge.warn{border-color:#a66f00;color:#ffe9c4}
+    .badge.bad{border-color:#b33d3d;color:#ffd6d6}
+    /* layout */
+    .wrap{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      padding:0 12px 24px;
+      box-sizing:border-box;
+    }
+    @media(min-width: 980px){
+      .wrap{grid-template-columns:1fr 1fr}
+      #resources{grid-column:1 / -1}
+    }
+    /* print */
+    @media print{
+      body{background:white !important;color:black !important}
+      header,.planetarium,#resFilter,#favToggle,.chips,.toggle,.btn,button{display:none !important}
+      .panel{box-shadow:none !important;border:1px solid #ccc}
+      #printSummary{display:block !important}
+    }
+    .muted{color:var(--muted);font-size:.9rem}
+    .planetarium{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:24px;
+      background:#000814;
+      border-top:7px solid var(--accent);
+      border-bottom:7px solid var(--accent)
+    }
+    #planetCanvas{
+      background:#01010b;
+      border-radius:66%;
+      box-shadow:0 0 22px #1f74ec88;
+      image-rendering:optimizeQuality
+    }
+    #hourlyCanvas{
+      background:#0b1b33;
+      border-radius:12px;
+      box-shadow:0 0 12px #17366760;
+      width:100%;
+      max-width:720px;
+      height:180px
+    }
+    footer{
+      text-align:center;
+      padding:18px;
+      color:var(--muted);
+      font-size:.9rem
+    }
+    .sr-only{
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden
+    }
+    /* === Extras: starfield overlay === */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(2px 2px at 20% 30%, #ffffff55, transparent 60%),
+        radial-gradient(1.5px 1.5px at 60% 70%, #ffffff44, transparent 60%),
+        radial-gradient(1px 1px at 80% 20%, #a0d8ff55, transparent 60%),
+        radial-gradient(1px 1px at 30% 80%, #a0d8ff55, transparent 60%);
+      animation: twinkle 6s ease-in-out infinite alternate
+    }
+    @keyframes twinkle{from{opacity:.5}to{opacity:.9}}
+    .chips{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap
+    }
+    .chip{
+      background:#0b1b33;
+      border:1px solid #2a5f8f;
+      color:#bfe9ff;
+      border-radius:999px;
+      padding:6px 10px;
+      cursor:pointer
+    }
+    .icon-btn{
+      background:#0b1b33;
+      border:1px solid #2a5f8f;
+      color:#cfe8ff;
+      border-radius:8px;
+      padding:4px 8px;
+      cursor:pointer
+    }
+    .icon-btn.star{font-size:14px}
+    .resource-item{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      padding:4px 0
+    }
+    .resource-actions{display:inline-flex;gap:6px}
+    .planet-controls{
+      margin-top:10px;
+      display:flex;
+      gap:8px;
+      justify-content:center
+    }
+    .planet-controls .btn{padding:6px 10px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌌 Solanar Planetarium™</h1>
+  </header>
+
+  <div class="wrap">
+    <!-- Live weather panel -->
+    <div class="panel">
+      <h2>Live Weather Monitor</h2>
+      <div class="row">
+        <div class="search-box">
+          <label class="sr-only" for="locationInput">Enter a city or US ZIP</label>
+          <input id="locationInput" placeholder="e.g., Holiday, FL or 90210" />
+        </div>
+        <button class="btn" id="searchBtn">Search</button>
+        
+        <div class="toggle" role="group" aria-label="Units">
+          <button id="uImperial" class="active" aria-pressed="true">°F · mph</button>
+          <button id="uMetric" aria-pressed="false">°C · km/h</button>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn" id="shareBtn" title="Copy summary">Share</button>
+        <button class="btn" id="printBtn" title="Print / Save PDF">Print</button>
+        <button class="btn" id="saveBtn" title="Save offline snapshot">Save Snapshot</button>
+        <button class="btn" id="installBtn" style="display:none" title="Install app">Install</button>
+        <div id="recentChips" class="chips"></div>
+      </div>
+      <div class="lab" id="results" aria-live="polite">
+        <p><b>City:</b> <span id="city">—</span></p>
+        <p><b>Temperature:</b> <span id="temp">—</span> · <span id="feels">feels like —</span></p>
+        <p><b>Condition:</b> <span id="condition">—</span></p>
+        <div id="badges" class="badges" aria-live="polite"></div>
+        <p><b>Humidity:</b> <span id="humidity">—</span></p>
+        <p><b>Wind:</b> <span id="wind">—</span></p>
+        <p class="muted"><span id="extra">Last updated —</span></p>
+      </div>
+      <div id="printSummary" style="display:none"></div>
+    </div>
+
+    <!-- Hourly panel -->
+    <div class="panel" id="hourlyPanel">
+      <h2>Next 12 Hours</h2>
+      <canvas id="hourlyCanvas" width="720" height="180"></canvas>
+      <div class="muted" id="hourlyNote">Temperature line • Precipitation probability bars</div>
+    </div>
+
+    <!-- Moon panel -->
+    <div class="panel" id="moonPanel">
+      <h2>🌙 Moon & Night Sky</h2>
+      <div class="lab">
+        <p><b>Phase:</b> <span id="moonPhase">—</span> · <span id="moonIllum">—</span></p>
+        
+      </div>
+    </div>
+
+    <!-- Resources panel -->
+    <div class="panel" id="resources">
+      <h2>🔭 Educational Resources</h2>
+      <div class="row">
+        <div class="search-box">
+          <input id="resFilter" placeholder="Filter resources…" />
+        </div>
+        <button class="btn" id="favToggle" title="Show only favorites">★ Favorites</button>
+      </div>
+      <div class="lab">
+        <details>
+          <summary><b>Weather Basics & Education</b></summary>
+          <a href="https://www.weather.gov/jetstream/" target="_blank" rel="noopener">NOAA – Jetstream</a>
+          <a href="https://scijinks.gov/" target="_blank" rel="noopener">NOAA SciJinks (Kids)</a>
+          <a href="https://meted.ucar.edu/" target="_blank" rel="noopener">UCAR MetEd / COMET Program (free reg.)</a>
+          <a href="https://www.weather.gov/education" target="_blank" rel="noopener">NOAA Weather Education Portal</a>
+          <a href="https://climatekids.nasa.gov/" target="_blank" rel="noopener">NASA Climate Kids</a>
+        </details>
+
+        <details>
+          <summary><b>Current Conditions & Forecasts</b></summary>
+          <a href="https://www.weather.gov/" target="_blank" rel="noopener">National Weather Service (NWS)</a>
+          <a href="https://radar.weather.gov/" target="_blank" rel="noopener">NWS National Radar Viewer</a>
+          <a href="https://www.windy.com/" target="_blank" rel="noopener">Windy (global forecast layers)</a>
+          <a href="https://www.ventusky.com/" target="_blank" rel="noopener">Ventusky (models & air maps)</a>
+          <a href="https://www.meteoblue.com/" target="_blank" rel="noopener">meteoblue (multi-model forecasts)</a>
+          <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo (docs & dashboards)</a>
+        </details>
+
+        <details>
+          <summary><b>Radar, Satellite & Observations</b></summary>
+          <a href="https://www.star.nesdis.noaa.gov/goes/" target="_blank" rel="noopener">NOAA NESDIS GOES East/West</a>
+          <a href="https://rammb-slider.cira.colostate.edu/" target="_blank" rel="noopener">CIRA RAMMB Slider (GOES/JPSS)</a>
+          <a href="https://realearth.ssec.wisc.edu/" target="_blank" rel="noopener">SSEC RealEarth</a>
+          <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener">NASA Worldview (MODIS/VIIRS)</a>
+          <a href="https://www.ndbc.noaa.gov/" target="_blank" rel="noopener">NOAA NDBC Buoy Center</a>
+          <a href="https://tidesandcurrents.noaa.gov/" target="_blank" rel="noopener">NOAA Tides & Currents</a>
+          <a href="https://www.rainviewer.com/" target="_blank" rel="noopener">RainViewer (global radar mosaic)</a>
+          <a href="https://www.lightningmaps.org/" target="_blank" rel="noopener">LightningMaps.org (live strikes)</a>
+        </details>
+
+        <details>
+          <summary><b>Models & Analysis</b></summary>
+          <a href="https://www.tropicaltidbits.com/analysis/models/" target="_blank" rel="noopener">Tropical Tidbits (model viewer)</a>
+          <a href="https://www.pivotalweather.com/model.php" target="_blank" rel="noopener">Pivotal Weather (model maps)</a>
+          <a href="https://www.spc.noaa.gov/exper/mesoanalysis/" target="_blank" rel="noopener">NOAA SPC Mesoanalysis</a>
+          <a href="https://zoom.earth/" target="_blank" rel="noopener">Zoom Earth (near-real-time satellite)</a>
+          <a href="https://himawari8.nict.go.jp/" target="_blank" rel="noopener">NICT Himawari-8 Viewer</a>
+          <a href="https://openaq.org/" target="_blank" rel="noopener">OpenAQ (open air-quality data)</a>
+          <a href="https://suncalc.org/" target="_blank" rel="noopener">SunCalc (sun & shadow paths)</a>
+        </details>
+
+        <details>
+          <summary><b>Severe Weather, Hurricanes & Hydrology</b></summary>
+          <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NOAA National Hurricane Center</a>
+          <a href="https://www.spc.noaa.gov/" target="_blank" rel="noopener">NOAA Storm Prediction Center (SPC)</a>
+          <a href="https://www.wpc.ncep.noaa.gov/" target="_blank" rel="noopener">NOAA Weather Prediction Center (WPC)</a>
+          <a href="https://www.nssl.noaa.gov/" target="_blank" rel="noopener">NOAA National Severe Storms Lab (NSSL)</a>
+          <a href="https://water.noaa.gov/" target="_blank" rel="noopener">NWS AHPS River Observations/Forecasts</a>
+        </details>
+
+        <details>
+          <summary><b>Fire & Air Quality</b></summary>
+          <a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener">NASA FIRMS (Fire Information)</a>
+          <a href="https://www.airnow.gov/" target="_blank" rel="noopener">EPA AirNow (Air Quality Index)</a>
+          <a href="https://map.purpleair.com/" target="_blank" rel="noopener">PurpleAir Real-Time AQ Map</a>
+        </details>
+
+        <details>
+          <summary><b>Climate & Drought</b></summary>
+          <a href="https://www.ncei.noaa.gov/cdo-web/" target="_blank" rel="noopener">NOAA NCEI – Climate Data Online</a>
+          <a href="https://www.cpc.ncep.noaa.gov/" target="_blank" rel="noopener">NOAA Climate Prediction Center (CPC)</a>
+          <a href="https://droughtmonitor.unl.edu/" target="_blank" rel="noopener">U.S. Drought Monitor</a>
+          <a href="https://www.climate.gov/" target="_blank" rel="noopener">NOAA Climate.gov</a>
+        </details>
+
+        <details>
+          <summary><b>Space Weather & Aurora</b></summary>
+          <a href="https://www.swpc.noaa.gov/" target="_blank" rel="noopener">NOAA Space Weather Prediction Center</a>
+          <a href="https://www.swpc.noaa.gov/products/aurora-30-minute-forecast" target="_blank" rel="noopener">NOAA OVATION Aurora Forecast (30-min)</a>
+          <a href="https://geomag.usgs.gov/" target="_blank" rel="noopener">USGS Geomagnetism (K-index)</a>
+          <a href="https://www.helioviewer.org/" target="_blank" rel="noopener">Helioviewer – Solar Observatory</a>
+          <a href="https://sdo.gsfc.nasa.gov/" target="_blank" rel="noopener">NASA Solar Dynamics Observatory</a>
+          <a href="https://sohowww.nascom.nasa.gov/" target="_blank" rel="noopener">SOHO – Solar & Heliospheric Observatory</a>
+          <a href="https://epic.gsfc.nasa.gov/" target="_blank" rel="noopener">DSCOVR EPIC – Earth Polychromatic Camera</a>
+          <a href="https://spaceweatherlive.com/en/auroral-activity" target="_blank" rel="noopener">SpaceWeatherLive – Aurora & Indices</a>
+          <a href="https://www.aurorasaurus.org/" target="_blank" rel="noopener">Aurorasaurus (crowdsourced aurora reports)</a>
+        </details>
+
+        <details>
+          <summary><b>Astronomy & Sky Maps</b></summary>
+          <a href="https://stellarium-web.org/" target="_blank" rel="noopener">Stellarium Online Planetarium</a>
+          <a href="https://www.heavens-above.com/" target="_blank" rel="noopener">Heavens-Above (ISS & satellites)</a>
+          <a href="https://celestrak.org/" target="_blank" rel="noopener">CelesTrak (TLEs & resources)</a>
+          <a href="https://ssd.jpl.nasa.gov/horizons/app.html#/" target="_blank" rel="noopener">JPL HORIZONS (Solar-system ephemerides)</a>
+          <a href="https://minorplanetcenter.net/" target="_blank" rel="noopener">Minor Planet Center</a>
+          <a href="https://in-the-sky.org/" target="_blank" rel="noopener">In-The-Sky.org (events, maps)</a>
+          <a href="https://www.lightpollutionmap.info/" target="_blank" rel="noopener">Light Pollution Map</a>
+          <a href="https://eyes.nasa.gov/" target="_blank" rel="noopener">NASA Eyes – Earth & Solar System</a>
+        </details>
+
+        <details>
+          <summary><b>Kids & Classrooms</b></summary>
+          <a href="https://spaceplace.nasa.gov/" target="_blank" rel="noopener">NASA Space Place</a>
+          <a href="https://nasaeclips.arc.nasa.gov/" target="_blank" rel="noopener">NASA eClips Videos & Educator Tools</a>
+          <a href="https://observer.globe.gov/" target="_blank" rel="noopener">GLOBE Observer</a>
+        </details>
+      </div>
+    </div>
+  </div><!-- /.wrap -->
+
+  <div class="planetarium">
+    <div style="text-align:center">
+      <canvas id="planetCanvas" width="360" height="360" aria-label="Planet Earth visualization"></canvas>
+      <div class="planet-controls">
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <footer>Solanar™ Weather Vortex · © 2025 Jennifer Pearl</footer>
+
+  <script>
+    // ===== Utilities & Config =====
+    const els = (id => ({
+      city: document.getElementById('city'), temp: document.getElementById('temp'),
+      feels: document.getElementById('feels'), cond: document.getElementById('condition'),
+      hum: document.getElementById('humidity'), wind: document.getElementById('wind'),
+      extra: document.getElementById('extra'),
+      input: document.getElementById('locationInput'), search: document.getElementById('searchBtn'),
+      geo: document.getElementById('geoBtn'), uImp: document.getElementById('uImperial'), uMet: document.getElementById('uMetric')
+    }))();
+
+    const LS_KEY = 'solanar_planetarium_last';
+    let unit = (localStorage.getItem('solanar_units') || 'imperial'); // 'imperial' or 'metric'
+
+    function setUnits(u){
+      unit = u; localStorage.setItem('solanar_units', u);
+      els.uImp.classList.toggle('active', u==='imperial'); els.uImp.setAttribute('aria-pressed', u==='imperial');
+      els.uMet.classList.toggle('active', u==='metric'); els.uMet.setAttribute('aria-pressed', u==='metric');
+      const last = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
+      if(last){ fetchWeatherByCoords(last.lat, last.lon, last.label).catch(()=>{}); }
+    }
+
+    async function geocode(query) {
+  const q = query.trim();
+  // ZIP pattern (US ZIP)
+  const isZip = /^\d{5}$/.test(q);
+
+  // 1) Try ZIP lookup (Zippopotamus)
+  if (isZip) {
+    try {
+      const r = await fetch(`https://api.zippopotam.us/us/${q}`);
+      if (r.ok) {
+        const z = await r.json();
+        return {
+          lat: +z.places[0].latitude,
+          lon: +z.places[0].longitude,
+          label: `${z.places[0]['place name']}, ${z.places[0].state}`
+        };
+      }
+    } catch {}
+  }
+
+  // 2) Open-Meteo geocoding (name search)
+  try {
+    const omUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&language=en`;
+    const r = await fetch(omUrl);
+    const j = await r.json();
+    if (j.results && j.results.length) {
+      const c = j.results[0];
+      const label = [c.name, c.admin1, c.country_code].filter(Boolean).join(', ');
+      return { lat: c.latitude, lon: c.longitude, label };
+    }
+  } catch {}
+
+  // 3) Fallback: simple open geocode
+  try {
+    const fbUrl = `https://geocode.maps.co/search?q=${encodeURIComponent(q)}`;
+    const r = await fetch(fbUrl);
+    const j = await r.json();
+    if (Array.isArray(j) && j.length) {
+      return {
+        lat: parseFloat(j[0].lat),
+        lon: parseFloat(j[0].lon),
+        label: j[0].display_name
+      };
+    }
+  } catch {}
+
+  // 4) If all fail
+  throw new Error("Location not found (try city or ZIP)");
+}
+
+
+ async function fetchWeatherByCoords(lat, lon, label){
+  els.search.disabled = true;
+  els.search.textContent = 'Loading…';
+
+  try {
+    const url =
+      `https://api.open-meteo.com/v1/forecast` +
+      `?latitude=${lat}&longitude=${lon}` +
+      `&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code,is_day` +
+      `&hourly=temperature_2m,precipitation_probability,weather_code` +
+      `&daily=sunrise,sunset,precipitation_probability_max,temperature_2m_max,temperature_2m_min,wind_speed_10m_max` +
+      `&timezone=auto&${omUnits()}`;
+
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error('Weather service unavailable');
+
+    const data = await r.json();
+    if (!data.current) throw new Error('Incomplete weather data');
+
+    const c = data.current;
+
+    const w = {
+      city: label,
+      temp: Math.round(c.temperature_2m ?? 0),
+      feels: Math.round(c.apparent_temperature ?? c.temperature_2m ?? 0),
+      hum: c.relative_humidity_2m ?? 0,
+      wind: Math.round(c.wind_speed_10m ?? 0),
+      code: c.weather_code ?? -1,
+      isDay: Boolean(c.is_day),
+      sunrise: data.daily?.sunrise?.[0] ?? null,
+      sunset: data.daily?.sunset?.[0] ?? null,
+      dPrecipMax: data.daily?.precipitation_probability_max?.[0] ?? null,
+      dTMax: data.daily?.temperature_2m_max?.[0] ?? null,
+      dTMin: data.daily?.temperature_2m_min?.[0] ?? null,
+      dWindMax: data.daily?.wind_speed_10m_max?.[0] ?? null
+    };
+
+    // --- Hourly extraction (safe + aligned) ---
+    let hTimes = [], hTemps = [], hPops = [];
+    if (data.hourly?.time?.length) {
+      const now = new Date();
+      now.setMinutes(0,0,0); // snap to hour
+
+      const idx = data.hourly.time.findIndex(
+        t => new Date(t) >= now
+      );
+
+      const start = Math.max(0, idx);
+      hTimes = data.hourly.time.slice(start, start + 12);
+      hTemps = (data.hourly.temperature_2m || []).slice(start, start + 12);
+      hPops  = (data.hourly.precipitation_probability || []).slice(start, start + 12);
+    }
+
+    renderWeather(w);
+    renderHourly(hTimes, hTemps, hPops, unit);
+    renderBadges(w, hTemps, hPops);
+    fetchAstronomy(lat, lon).catch(()=>{});
+
+    addRecent(label, lat, lon);
+    localStorage.setItem(LS_KEY, JSON.stringify({ lat, lon, label, ts: Date.now() }));
+
+  } catch (err) {
+    console.warn('Weather error:', err);
+    showInlineError(err.message || 'Unable to load weather');
+    if (!navigator.onLine) tryLoadSnapshot();
+  } finally {
+    els.search.disabled = false;
+    els.search.textContent = 'Search';
+  }
+}
+function showInlineError(msg){
+  els.extra.textContent = `⚠️ ${msg}`;
+  els.extra.style.color = '#ffbf69';
+}
+function wmoToText(code, isDay){
+  if (code == null || code < 0) return 'Conditions unavailable';
+
+  const map = {
+    0: isDay ? 'Clear' : 'Clear night',
+    1: 'Mainly clear',
+    2: 'Partly cloudy',
+    3: 'Overcast',
+    45:'Fog', 48:'Rime fog',
+    51:'Light drizzle', 53:'Drizzle', 55:'Heavy drizzle',
+    61:'Light rain', 63:'Rain', 65:'Heavy rain',
+    71:'Light snow', 73:'Snow', 75:'Heavy snow',
+    80:'Rain showers', 81:'Heavy showers',
+    95:'Thunderstorm', 96:'Thunderstorm with hail', 99:'Severe storm'
+  };
+
+  return map[code] || `Weather code ${code}`;
+}
+function renderDailySummary(w){
+  const el = document.getElementById('dailySummary');
+  if(!el) return;
+
+  el.textContent =
+    `Today: High ${Math.round(w.dTMax)}°, Low ${Math.round(w.dTMin)}°` +
+    (w.dPrecipMax != null ? ` · Rain ${w.dPrecipMax}%` : '');
+}
+
+
+    // ===== Hourly Chart Renderer =====
+    function renderHourly(times=[], temps=[], pops=[], unit='imperial'){
+      const c = document.getElementById('hourlyCanvas'); if(!c) return;
+      const ctx = c.getContext('2d');
+      const dpr = window.devicePixelRatio||1;
+      const W = c.clientWidth||c.width;
+      const H = c.clientHeight||c.height;
+      // crisp scaling
+      if(c.width !== Math.floor(W*dpr)) {
+        c.width = Math.floor(W*dpr);
+        c.height = Math.floor(H*dpr);
+      }
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      ctx.clearRect(0,0,W,H);
+      // padding
+      const P=28, baseY=H-28;
+      const chartH = H-56;
+      const chartW = W-2*P;
+      // background
+      const g = ctx.createLinearGradient(0,0,0,H);
+      g.addColorStop(0,'#0e213f');
+      g.addColorStop(1,'#091a30');
+      ctx.fillStyle=g;
+      ctx.fillRect(0,0,W,H);
+      // grid
+      ctx.strokeStyle='#1e3a5f';
+      ctx.lineWidth=1;
+      ctx.setLineDash([4,6]);
+      for(let y=0;y<5;y++){
+        const yy=P + (y*(chartH))/4;
+        ctx.beginPath();
+        ctx.moveTo(P,yy);
+        ctx.lineTo(P+chartW,yy);
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+      // domains
+      const n = Math.min(12, temps.length||0); if(n===0) return;
+      const tMin = Math.min(...temps.slice(0,n));
+      const tMax = Math.max(...temps.slice(0,n));
+      const pad = (tMax-tMin<6)?3:2;
+      const lo=tMin-pad, hi=tMax+pad;
+      function tx(i){ return P + (i*(chartW/(n-1||1))); }
+      function ty(v){ const r=(v-lo)/(hi-lo||1); return P + (1-r)*chartH; }
+      // precip bars
+      for(let i=0;i<n;i++){
+        const pop = Math.max(0, +pops[i]||0);
+        const barH = (pop/100)*chartH*0.55;
+        const x=tx(i)-6;
+        const y=baseY-barH;
+        const cg=ctx.createLinearGradient(0,y,0,y+barH);
+        cg.addColorStop(0,'#3ed6f6');
+        cg.addColorStop(1,'#164472');
+        ctx.fillStyle = cg;
+        ctx.fillRect(x,y,12,barH);
+      }
+      // temp line
+      ctx.beginPath();
+      ctx.lineWidth=2;
+      ctx.strokeStyle='#9ef3ff';
+      for(let i=0;i<n;i++){
+        const x=tx(i), y=ty(temps[i]);
+        if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      }
+      ctx.stroke();
+      // dots
+      ctx.fillStyle='#bfe9ff';
+      for(let i=0;i<n;i++){
+        const x=tx(i), y=ty(temps[i]);
+        ctx.beginPath();
+        ctx.arc(x,y,2.5,0,Math.PI*2);
+        ctx.fill();
+      }
+      // labels every 3 hours
+      ctx.fillStyle='#9cc';
+      ctx.font='12px Segoe UI, system-ui';
+      ctx.textAlign='center';
+      for(let i=0;i<n;i+=3){
+        const label = times[i]
+          ? new Date(times[i]).toLocaleTimeString([], {hour:'numeric'})
+          : `${i}h`;
+        ctx.fillText(label, tx(i), H-8);
+      }
+      // y-axis temps
+      ctx.textAlign='right';
+      ctx.fillText(`${Math.round(hi)}${unit==='imperial'?'°F':'°C'}`, P-6, P+8);
+      ctx.fillText(`${Math.round(lo)}${unit==='imperial'?'°F':'°C'}`, P-6, P+chartH);
+    }
+
+    // ===== Canvas: Gentle Earth Rotation with Pause on Hidden Tab =====
+    (function planet(){
+      const canvas = document.getElementById('planetCanvas');
+      if(!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      function placeholder(){
+        const W=canvas.width, H=canvas.height;
+        ctx.clearRect(0,0,W,H);
+        ctx.save(); ctx.translate(W/2,H/2);
+        const r=Math.min(W,H)/2;
+        const g=ctx.createRadialGradient(0,0,r*0.2,0,0,r);
+        g.addColorStop(0,'#0b1b33'); g.addColorStop(1,'#050910');
+        ctx.fillStyle=g; ctx.beginPath(); ctx.arc(0,0,r,0,Math.PI*2); ctx.fill();
+        ctx.strokeStyle='#173667'; ctx.lineWidth=2; ctx.beginPath(); ctx.arc(0,0,r-3,0,Math.PI*2); ctx.stroke();
+        ctx.restore();
+      }
+
+      // Textures
+      let mode = 'blue';
+      const blue = new Image(); blue.crossOrigin = 'anonymous';
+      blue.src = 'https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg';
+      blue.onerror = ()=>{/* keep placeholder; will retry on next frame */};
+
+      const goes = new Image(); goes.crossOrigin = 'anonymous';
+      function loadGoes(){
+        // GOES-16 Full Disk GeoColor — latest
+        goes.src = 'https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/latest.jpg?'+Date.now();
+      }
+      loadGoes();
+      goes.onerror = ()=>{/* placeholder until next refresh */};
+
+      let angle=0, raf=null, running=true;
+      function draw(){
+        const W=canvas.width, H=canvas.height;
+        ctx.clearRect(0,0,W,H);
+        ctx.save(); ctx.translate(W/2, H/2);
+        try{
+          if(mode==='blue' && blue.complete && blue.naturalWidth){
+            ctx.rotate(angle);
+            ctx.drawImage(blue, -W/2, -H/2, W, H);
+            angle += 0.0022; if(angle>Math.PI*2) angle=0;
+        } else if(mode==='goes' && goes.complete && goes.naturalWidth){
+  const iw = goes.naturalWidth;
+  const ih = goes.naturalHeight;
+  const r  = Math.min(W, H) / 2 - 4;   // radius for our circular crop
+
+  // Soft background inside the circle so “space” isn’t pure black
+  const g = ctx.createRadialGradient(0, 0, r * 0.15, 0, 0, r);
+  g.addColorStop(0, '#0b1b33');
+  g.addColorStop(1, '#000814');
+  ctx.fillStyle = g;
+  ctx.beginPath();
+  ctx.arc(0, 0, r, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Zoom in a bit so Earth fills more of the circle
+  const scale = Math.min(W / iw, H / ih) * 1.25;  // tweak 1.25 → more/less zoom
+  const dw = iw * scale;
+  const dh = ih * scale;
+
+  ctx.save();
+  // Clip to a circle so corners of the JPG are hidden
+  ctx.beginPath();
+  ctx.arc(0, 0, r, 0, Math.PI * 2);
+  ctx.clip();
+
+  // Brighten & increase contrast for phones / dark scenes
+  ctx.filter = 'brightness(1.4) contrast(1.2)';
+  ctx.drawImage(goes, -dw / 2, -dh / 2, dw, dh);
+  ctx.filter = 'none';
+
+  ctx.restore();
+} else {
+  placeholder();
+}
+
+        }catch(e){ placeholder(); }
+        ctx.restore();
+        if(running) raf=requestAnimationFrame(draw);
+      }
+
+      blue.onload = ()=>{ if(!raf) draw(); };
+      goes.onload = ()=>{ /* will appear on next frame */ };
+
+      document.addEventListener('visibilitychange', ()=>{
+        running = !document.hidden;
+        if(running){
+          if(!raf) draw();
+        } else {
+          cancelAnimationFrame(raf);
+          raf=null;
+        }
+      });
+
+      // Controls
+      const bBlue=document.getElementById('texBlue');
+      const bGoes=document.getElementById('texGoes');
+      if(bBlue) bBlue.addEventListener('click', ()=>{ mode='blue'; });
+      if(bGoes) bGoes.addEventListener('click', ()=>{ mode='goes'; loadGoes(); });
+
+      // Refresh GOES regularly when active
+      setInterval(()=>{ if(mode==='goes') loadGoes(); }, 10*60*1000);
+
+      // Make astronomy helpers available globally for weather callbacks
+
+      // Approximate lunar phase (0–1) using a known new moon + synodic month
+      function lunarPhaseFraction(date){
+        const synodicMonth = 29.530588853;      // days
+        const knownNewMoonJD = 2451550.1;       // 2000-01-06 18:14 UT
+        const jd = date.getTime()/86400000 + 2440587.5; // Unix ms → Julian Day
+        let phase = (jd - knownNewMoonJD) / synodicMonth;
+        phase = phase - Math.floor(phase);      // wrap into 0–1
+        return phase;
+      }
+
+      window.moonNameFromPhase = function(f){
+        const phases = [
+          'New Moon',
+          'Waxing Crescent',
+          'First Quarter',
+          'Waxing Gibbous',
+          'Full Moon',
+          'Waning Gibbous',
+          'Last Quarter',
+          'Waning Crescent'
+        ];
+        // map 0–1 range into 0–7
+        return phases[Math.floor(((f % 1) + 1) % 1 * 8)] || '—';
+      };
+
+      window.fetchAstronomy = async function(lat, lon){
+        const now = new Date();
+
+        // --- Offline baseline: always works, even if API fails ---
+        let phase = lunarPhaseFraction(now);
+        let phaseName = window.moonNameFromPhase(phase);
+        let illum = Math.round(((1 - Math.cos(2 * Math.PI * phase)) / 2) * 100);
+
+        let riseTxt = '—';
+        let setTxt  = '—';
+
+        // --- Optional: try remote astronomy data if available ---
+        try{
+          const today = now.toISOString().slice(0,10);
+          const url =
+            `https://api.open-meteo.com/v1/astronomy` +
+            `?latitude=${lat}&longitude=${lon}` +
+            `&start_date=${today}&end_date=${today}` +
+            `&daily=moon_phase,moonrise,moonset&timezone=auto`;
+
+          const r = await fetch(url);
+          if (r.ok){
+            const a = await r.json();
+            const phaseVal = a?.daily?.moon_phase?.[0];
+            const riseVal  = a?.daily?.moonrise?.[0];
+            const setVal   = a?.daily?.moonset?.[0];
+
+            if (typeof phaseVal === 'number'){
+              const f = ((phaseVal % 1) + 1) % 1;
+              phase = f;
+              phaseName = window.moonNameFromPhase(f);
+              illum = Math.round(((1 - Math.cos(2 * Math.PI * f)) / 2) * 100);
+            }
+
+            const fmt = t =>
+              t ? new Date(t).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '—';
+            riseTxt = fmt(riseVal);
+            setTxt  = fmt(setVal);
+          }
+        }catch(e){
+          // If the API isn’t available, we just fall back to the offline values above.
+          console.warn('Astronomy fetch failed, using offline moon phase only.', e);
+        }
+
+        // --- Update the UI no matter what ---
+        document.getElementById('moonPhase').textContent = phaseName;
+        document.getElementById('moonIllum').textContent = `${illum}% illuminated`;
+        document.getElementById('moonRise').textContent = riseTxt;
+        document.getElementById('moonSet').textContent = setTxt;
+      };
+
+    })();
+  </script>
+
+  <script>
+    // Recents & Share
+    const REC_KEY='solanar_recent_locations';
+    function addRecent(label, lat, lon){
+      let arr = JSON.parse(localStorage.getItem(REC_KEY)||'[]');
+      arr = arr.filter(x=>x.label!==label);
+      arr.unshift({label, lat, lon});
+      if(arr.length>6) arr.length=6;
+      localStorage.setItem(REC_KEY, JSON.stringify(arr));
+      renderRecents();
+    }
+    function renderRecents(){
+      const wrap = document.getElementById('recentChips'); if(!wrap) return;
+      wrap.innerHTML='';
+      const arr = JSON.parse(localStorage.getItem(REC_KEY)||'[]');
+      arr.forEach(r=>{
+        const b=document.createElement('button');
+        b.className='chip';
+        b.textContent=r.label;
+        b.addEventListener('click', ()=> fetchWeatherByCoords(r.lat, r.lon, r.label));
+        wrap.appendChild(b);
+      });
+    }
+    const shareBtn = document.getElementById('shareBtn');
+    if(shareBtn){
+      shareBtn.addEventListener('click', ()=>{
+        const summary = `Solanar Weather — ${document.getElementById('city').textContent}: ${document.getElementById('temp').textContent} (${document.getElementById('feels').textContent}), ${document.getElementById('condition').textContent}, Humidity ${document.getElementById('humidity').textContent}, Wind ${document.getElementById('wind').textContent}. ${document.getElementById('extra').textContent}`;
+        navigator.clipboard?.writeText(summary)
+          .then(()=>alert('Summary copied to clipboard'))
+          .catch(()=>alert('Copy failed'));
+      });
+    }
+
+    // Resource enhancer (favorites + copy + filter)
+    const RES_FAV='solanar_resource_favs';
+    function enhanceResources(){
+      const resRoot=document.getElementById('resources'); if(!resRoot) return;
+      const favs = new Set(JSON.parse(localStorage.getItem(RES_FAV)||'[]'));
+      const links = resRoot.querySelectorAll('.lab a');
+      links.forEach(a=>{
+        if(a.dataset.enhanced) return;
+        a.dataset.enhanced='1';
+        const row=document.createElement('div'); row.className='resource-item';
+        const actions=document.createElement('span'); actions.className='resource-actions';
+        const href=a.href;
+        const star=document.createElement('button'); star.className='icon-btn star';
+        function paint(){ star.textContent = favs.has(href) ? '★' : '☆'; }
+        paint(); star.title='Favorite';
+        star.addEventListener('click', (e)=>{
+          e.preventDefault(); e.stopPropagation();
+          if(favs.has(href)) favs.delete(href); else favs.add(href);
+          localStorage.setItem(RES_FAV, JSON.stringify([...favs]));
+          paint(); applyResFilter();
+        });
+        const copy=document.createElement('button'); copy.className='icon-btn'; copy.title='Copy link'; copy.textContent='⧉';
+        copy.addEventListener('click', (e)=>{
+          e.preventDefault(); e.stopPropagation();
+          navigator.clipboard?.writeText(href);
+        });
+        a.parentNode.insertBefore(row, a);
+        row.appendChild(a);
+        actions.appendChild(star);
+        actions.appendChild(copy);
+        row.appendChild(actions);
+      });
+      const filter=document.getElementById('resFilter');
+      const favToggle=document.getElementById('favToggle');
+      favToggle.dataset.on='0';
+      function applyResFilter(){
+        const q=(filter?.value||'').toLowerCase();
+        const favOnly=favToggle.dataset.on==='1';
+        resRoot.querySelectorAll('.resource-item').forEach(row=>{
+          const a=row.querySelector('a');
+          const txt=(a.textContent||'').toLowerCase();
+          const href=(a.href||'').toLowerCase();
+          const okQ=!q || txt.includes(q) || href.includes(q);
+          const favArr=JSON.parse(localStorage.getItem(RES_FAV)||'[]');
+          const okFav=!favOnly || favArr.includes(a.href);
+          row.style.display=(okQ && okFav)?'':'none';
+        });
+        resRoot.querySelectorAll('details').forEach(d=>{
+          const any=d.querySelector('.resource-item:not([style*="display: none"])');
+          d.style.display=any?'':'none';
+        });
+      }
+      if(filter) filter.addEventListener('input', applyResFilter);
+      favToggle.addEventListener('click', ()=>{
+        favToggle.dataset.on = favToggle.dataset.on==='1'?'0':'1';
+        favToggle.classList.toggle('active', favToggle.dataset.on==='1');
+        applyResFilter();
+      });
+      applyResFilter();
+    }
+    // Initialize enhancements when this script runs
+    try{ enhanceResources(); }catch(e){}
+
+    // Accordion: collapse resources by default, single-open, and auto-collapse on link click
+    (function setupResourceAccordion(){
+      const groups=[...document.querySelectorAll('#resources details')];
+      // default collapsed
+      groups.forEach(d=>{ d.open=false; });
+      groups.forEach(d=>{
+        d.addEventListener('toggle', ()=>{
+          if(d.open){ groups.forEach(o=>{ if(o!==d) o.open=false; }); }
+        });
+      });
+      document.querySelectorAll('#resources .lab a').forEach(a=>{
+        a.addEventListener('click', ()=>{ groups.forEach(o=> o.open=false); });
+      });
+    })();
+    try{ renderRecents(); }catch(e){}
+
+    // Print / PDF
+    (function(){
+      const btn=document.getElementById('printBtn'); if(!btn) return;
+      btn.addEventListener('click', ()=>{
+        const city=document.getElementById('city').textContent;
+        const cond=document.getElementById('condition').textContent;
+        const temp=document.getElementById('temp').textContent;
+        const feels=document.getElementById('feels').textContent;
+        const hum=document.getElementById('humidity').textContent;
+        const wind=document.getElementById('wind').textContent;
+        const extra=document.getElementById('extra').textContent;
+        const favs = JSON.parse(localStorage.getItem('solanar_resource_favs')||'[]');
+        const wrap = document.getElementById('printSummary');
+        wrap.innerHTML = `
+          <h2 style="font-family:Cinzel,serif">Solanar Weather — Summary</h2>
+          <p><b>City:</b> ${city}</p>
+          <p><b>Condition:</b> ${cond}</p>
+          <p><b>Temperature:</b> ${temp} · ${feels}</p>
+          <p><b>Humidity:</b> ${hum} · <b>Wind:</b> ${wind}</p>
+          <p>${extra}</p>
+          <h3 style="font-family:Cinzel,serif;margin-top:12px">★ Starred Resources</h3>
+          <ul>${favs.map(h=>`<li><a href="${h}">${h}</a></li>`).join('')}</ul>
+        `;
+        window.print();
+      });
+    })();
+
+    // Snapshot save / offline restore
+    ;(function(){
+      const SNAP='solanar_snapshot_v1';
+      const saveBtn=document.getElementById('saveBtn');
+      if(saveBtn) saveBtn.addEventListener('click',()=>{
+        const payload={
+          when: Date.now(),
+          city: document.getElementById('city').textContent,
+          temp: document.getElementById('temp').textContent,
+          feels: document.getElementById('feels').textContent,
+          cond: document.getElementById('condition').textContent,
+          hum: document.getElementById('humidity').textContent,
+          wind: document.getElementById('wind').textContent,
+          extra: document.getElementById('extra').textContent
+        };
+        localStorage.setItem(SNAP, JSON.stringify(payload));
+        alert('Snapshot saved for offline view.');
+      });
+      window.tryLoadSnapshot = function(){
+        const s = JSON.parse(localStorage.getItem(SNAP)||'null'); if(!s) return false;
+        document.getElementById('city').textContent=s.city;
+        document.getElementById('temp').textContent=s.temp;
+        document.getElementById('feels').textContent=s.feels;
+        document.getElementById('condition').textContent=s.cond;
+        document.getElementById('humidity').textContent=s.hum;
+        document.getElementById('wind').textContent=s.wind;
+        document.getElementById('extra').textContent=s.extra+' · (offline snapshot)';
+        return true;
+      }
+    })();
+
+    // Install (PWA-lite prompt when eligible)
+    ;(function(){
+      let deferred;
+      const btn=document.getElementById('installBtn'); if(!btn) return;
+      window.addEventListener('beforeinstallprompt', (e)=>{
+        e.preventDefault();
+        deferred=e;
+        btn.style.display='inline-block';
+      });
+      btn.addEventListener('click', async()=>{
+        if(!deferred) return alert('Install not available in this embed.');
+        deferred.prompt();
+        deferred=null;
+      });
+    })();
+  </script>
+  <script>
+  // ==========================
+  // Unit helper for Open-Meteo
+  // ==========================
+  function omUnits(){
+    // Match the "unit" variable you already use
+    return unit === 'imperial'
+      ? 'temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch'
+      : 'temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm';
+  }
+
+  // ==========================
+  // Render current conditions
+  // ==========================
+  function renderWeather(w){
+    // City label
+    els.city.textContent = w.city || '—';
+
+    // Temperature + feels like
+    const tLabel = unit === 'imperial' ? `${w.temp} °F` : `${w.temp} °C`;
+    const fLabel = unit === 'imperial' ? `${w.feels} °F` : `${w.feels} °C`;
+    els.temp.textContent  = tLabel;
+    els.feels.textContent = `feels like ${fLabel}`;
+
+    // Text condition from WMO code
+    els.cond.textContent = wmoToText(w.code, w.isDay);
+
+    // Humidity
+    els.hum.textContent = `${w.hum}%`;
+
+    // Wind
+    const windUnit = unit === 'imperial' ? 'mph' : 'km/h';
+    els.wind.textContent = `${w.wind} ${windUnit}`;
+
+    // Last updated line
+    const now = new Date();
+    els.extra.style.color = ''; // reset in case an error changed it
+    els.extra.textContent = `Last updated ${now.toLocaleString()}`;
+  }
+
+  // ==========================
+  // Safety / comfort badges
+  // ==========================
+  function renderBadges(w, hourlyTemps = [], hourlyPops = []){
+    const box = document.getElementById('badges');
+    if(!box) return;
+    box.innerHTML = '';
+
+    function add(text, level){
+      const span = document.createElement('span');
+      span.className = 'badge ' + (level || 'ok');
+      span.textContent = text;
+      box.appendChild(span);
+    }
+
+    const temp = w.temp;
+    const wind = w.wind;
+
+    // Pick a rain probability (max of next 12h or daily)
+    let rainProb = null;
+    if (Array.isArray(hourlyPops) && hourlyPops.length){
+      const vals = hourlyPops.map(v => +v).filter(v => !Number.isNaN(v));
+      if (vals.length) rainProb = Math.max(...vals);
+    } else if (w.dPrecipMax != null) {
+      rainProb = w.dPrecipMax;
+    }
+
+    // Temp badges
+    if (unit === 'imperial') {
+      if (temp >= 95)      add('Dangerously hot — limit time outside', 'bad');
+      else if (temp >= 85) add('Hot — stay hydrated', 'warn');
+      else if (temp <= 32) add('Freezing — watch for ice', 'bad');
+      else if (temp <= 45) add('Chilly — layer up', 'warn');
+    } else {
+      if (temp >= 35)      add('Dangerously hot — limit time outside', 'bad');
+      else if (temp >= 30) add('Hot — stay hydrated', 'warn');
+      else if (temp <= 0)  add('Freezing — watch for ice', 'bad');
+      else if (temp <= 7)  add('Chilly — layer up', 'warn');
+    }
+
+    // Rain badge
+    if (typeof rainProb === 'number') {
+      if (rainProb >= 70)      add(`High rain chance (${rainProb}%)`, 'warn');
+      else if (rainProb >= 40) add(`Rain possible (${rainProb}%)`, 'ok');
+    }
+
+    // Wind badge
+    const windyThresh = unit === 'imperial' ? 25 : 40;
+    if (wind >= windyThresh) {
+      add(`Windy (${wind} ${unit === 'imperial' ? 'mph' : 'km/h'})`, 'warn');
+    }
+  }
+
+  // ==========================
+  // Search / geo handlers
+  // ==========================
+  async function handleSearch(){
+    const q = els.input.value.trim();
+    if (!q) return;
+    try{
+      const loc = await geocode(q);
+      await fetchWeatherByCoords(loc.lat, loc.lon, loc.label);
+    }catch(err){
+      console.warn(err);
+      showInlineError(err.message || 'Location not found (try city or ZIP)');
+    }
+  }
+
+  function initWeatherUI(){
+    // Unit toggles
+    els.uImp.addEventListener('click', () => setUnits('imperial'));
+    els.uMet.addEventListener('click', () => setUnits('metric'));
+
+    // Search button + Enter key
+    els.search.addEventListener('click', handleSearch);
+    els.input.addEventListener('keydown', (e)=>{
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleSearch();
+      }
+    });
+
+    // Geolocation button
+    els.geo.addEventListener('click', ()=>{
+      if (!navigator.geolocation) {
+        showInlineError('Geolocation is not supported on this device.');
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        async pos => {
+          const { latitude, longitude } = pos.coords;
+          try{
+            await fetchWeatherByCoords(latitude, longitude, 'My location');
+          }catch(err){
+            showInlineError(err.message || 'Unable to fetch weather for your location.');
+          }
+        },
+        err => {
+          console.warn(err);
+          showInlineError('Location permission denied or unavailable.');
+        }
+      );
+    });
+
+    // Apply current unit + reload last saved location if any.
+    // setUnits() already knows how to read LS_KEY and re-fetch.
+    setUnits(unit);
+  }
+
+  // Run once scripts + DOM are ready (elements are already on the page)
+  initWeatherUI();
+</script>
+</body>
+</html>
