@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Environment News App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #01101c;
+    --text: #222;
+    --card: #fff;
+    --accent: #1667c7;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+  .dark {
+    --bg: #01101c;
+    --text: #e8e8e8;
+    --card: #1c1c1c;
+    --accent: #2EC1CC;
+  }
+
+  header {
+    padding: 12px;
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+
+  #newsCard {
+    margin: 24px;
+    padding: 24px;
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    min-height: 222px;
+  }
+
+  #title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+  #desc {
+    opacity: 0.88;
+  }
+
+  .controls {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+  button {
+    padding: 14px 14px;
+    border-radius: 7px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  .tabs {
+    display: flex;
+    overflow-x: auto;
+    padding: 14px;
+    background: var(--card);
+    gap: 14px;
+  }
+
+  .tab {
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 0.9em;
+  }
+
+  #favoritesPanel {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--card);
+    display: none;
+  }
+</style>
+<body>
+<div class="app">
+  <header>🌍 Environment News</header>
+
+  <div class="tabs">
+    <button class="tab" type="button" onclick="loadNews()">⟳ Refresh</button>
+    <button class="tab active" data-cat="general">All</button>
+    <button class="tab" data-cat="climate">Climate</button>
+    <button class="tab" data-cat="energy">Energy</button>
+    <button class="tab" data-cat="wildlife">Wildlife</button>
+    <button class="tab" type="button" onclick="toggleFavorites()">⭐ Favorites</button>
+    <button class="tab" type="button" onclick="toggleDark()">🌙/☀️</button>
+    <button class="tab" type="button" onclick="toggleFullscreen()">⛶</button>
+  </div>
+
+  <div id="newsCard">
+    <div id="title">Loading environment news…</div>
+    <div id="metaLine"></div>
+    <div id="desc"></div>
+  </div>
+
+ <div class="controls">
+  <button type="button" onclick="prev()">⬅ Prev</button>
+  <button type="button" onclick="next()">Next ➡</button>
+  <button type="button" onclick="readAloud()">🔊 Read</button>
+  <button type="button" onclick="saveFavorite()">⭐ Save</button>
+  <button type="button" onclick="openArticle()">🔗 Open</button>
+</div>
+
+  <div id="statusLine"></div>
+
+  <div id="favoritesPanel"></div>
+</div>
+
+<script>
+// --- RSS SOURCES (environment-focused, free) ---
+const FEEDS = [
+  "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
+  "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+  "https://www.theguardian.com/environment/rss",
+  "https://www.unep.org/news-and-stories/rss.xml",
+  "https://www.eia.gov/rss/todayinenergy.xml",
+  "https://www.carbonbrief.org/feed",
+  "https://insideclimatenews.org/rss.xml",
+  "https://yaleclimateconnections.org/feed",
+  "https://www.canarymedia.com/rss.rss",
+  "https://news.mongabay.com/feed/?feedtype=bulletpoints&post_type=post&topic=environment",
+
+  "https://sci.esa.int/newssyndication/rss/sciweb.xml",
+  "http://sci.esa.int/newssyndication/rss/cosmicvisionweb.xml",
+  "https://cneos.jpl.nasa.gov/feed/news.xml",
+  "https://www.jpl.nasa.gov/feeds/news/",
+  "http://modis.gsfc.nasa.gov/rss/rss.xml",
+  "https://podaac.jpl.nasa.gov/PO.DAAC_RSS_Feed"
+]
+
+let articles = [];
+let index = 0;
+let currentCategory = "general";
+let isLoading = false;
+
+// Load cached offline first (if any)
+if (localStorage.envCache) {
+  try {
+    articles = JSON.parse(localStorage.envCache) || [];
+  } catch(e) {
+    articles = [];
+  }
+}
+
+// --- Helpers for category detection ---
+function normalizeCategory(title, desc, rawCat, link) {
+  const text = (title + " " + desc + " " + (rawCat || "") + " " + (link || "")).toLowerCase();
+
+  if (text.includes("wildlife") || text.includes("species") || text.includes("habitat") ||
+      text.includes("biodiversity") || text.includes("conservation") || text.includes("forest")) {
+    return "wildlife";
+  }
+  if (text.includes("solar") || text.includes("wind") || text.includes("battery") ||
+      text.includes("renewable") || text.includes("electric") || text.includes("grid") ||
+      text.includes("energy")) {
+    return "energy";
+  }
+  if (text.includes("climate") || text.includes("warming") || text.includes("emission") ||
+      text.includes("carbon") || text.includes("greenhouse")) {
+    return "climate";
+  }
+  return "general";
+}
+
+// Basic RSS fetch via AllOrigins (CORS helper)
+async function fetchRSS(url) {
+  const res = await fetch("https://api.allorigins.win/get?url=" + encodeURIComponent(url));
+  if (!res.ok) throw new Error("Feed error");
+  const data = await res.json();
+  const xml = new DOMParser().parseFromString(data.contents, "text/xml");
+  return [...xml.querySelectorAll("item")].map(item => {
+    const title = item.querySelector("title")?.textContent || "Untitled";
+    const desc  = item.querySelector("description")?.textContent || "";
+    const link  = item.querySelector("link")?.textContent || "";
+    const rawCat = item.querySelector("category")?.textContent || "";
+    const category = normalizeCategory(title, desc, rawCat, link);
+    return { title, desc, link, category };
+  });
+}
+
+// Load & cache all feeds
+async function loadNews() {
+  if (isLoading) return;
+  isLoading = true;
+  let temp = [];
+  for (let feed of FEEDS) {
+    try {
+      const items = await fetchRSS(feed);
+      temp.push(...items);
+    } catch (e) {
+      console.warn("RSS error", feed, e);
+    }
+  }
+  if (temp.length) {
+    // Save master list to cache
+    localStorage.envCache = JSON.stringify(temp);
+    articles = temp;
+    applyCategoryFilter();
+  } else if (!articles.length) {
+    document.getElementById("title").textContent = "Unable to load news.";
+    document.getElementById("desc").textContent =
+      "Please check your connection or try again later. Cached stories were not found.";
+  }
+  isLoading = false;
+}
+
+// Filter by currentCategory and show first article
+function applyCategoryFilter() {
+  let cache = [];
+  if (localStorage.envCache) {
+    try {
+      cache = JSON.parse(localStorage.envCache) || [];
+    } catch(e) {
+      cache = articles || [];
+    }
+  } else {
+    cache = articles || [];
+  }
+  if (!cache.length) return;
+
+  if (currentCategory === "general") {
+    articles = cache;
+  } else {
+    articles = cache.filter(a => a.category === currentCategory);
+    if (!articles.length) {
+      // fall back gracefully
+      articles = cache;
+      currentCategory = "general";
+    }
+  }
+  index = 0;
+  updateActiveTabs();
+  showArticle();
+}
+
+function updateActiveTabs() {
+  document.querySelectorAll(".tab[data-cat]").forEach(tab => {
+    tab.classList.toggle("active", tab.dataset.cat === currentCategory);
+  });
+}
+
+function sanitizeHtml(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  // Drop potentially unsafe elements but keep formatting/links
+  div.querySelectorAll("script,style,iframe").forEach(el => el.remove());
+  return div.innerHTML;
+}
+
+function showArticle(direction = 1) {
+  if (!articles.length) return;
+
+  const card = document.getElementById("newsCard");
+  card.style.opacity = 0;
+  card.style.transform = `translateX(${direction * 40}px)`;
+
+  setTimeout(() => {
+    const a = articles[index];
+    const titleEl = document.getElementById("title");
+    const descEl = document.getElementById("desc");
+    const metaEl = document.getElementById("metaLine");
+
+    titleEl.textContent = a.title;
+    titleEl.onclick = () => openArticle();
+
+    // derive simple source name from URL
+    let host = "";
+    try {
+      host = a.link ? new URL(a.link).hostname.replace(/^www\./, "") : "";
+    } catch(e) { host = ""; }
+
+    metaEl.textContent = host
+      ? `${host} · ${a.category.charAt(0).toUpperCase() + a.category.slice(1)}`
+      : a.category.charAt(0).toUpperCase() + a.category.slice(1);
+
+    descEl.innerHTML = sanitizeHtml(a.desc);
+
+    card.style.opacity = 1;
+    card.style.transform = "translateX(0)";
+
+    const status = document.getElementById("statusLine");
+    status.textContent = `${index + 1} of ${articles.length} stories`;
+  }, 220);
+}
+
+function next() {
+  if (!articles.length) return;
+  index = (index + 1) % articles.length;
+  showArticle(+1);
+}
+
+function prev() {
+  if (!articles.length) return;
+  index = (index - 1 + articles.length) % articles.length;
+  showArticle(-1);
+}
+
+function openArticle() {
+  if (!articles.length) return;
+  const link = articles[index].link;
+  if (link) {
+    window.open(link, "_blank", "noopener,noreferrer");
+  } else {
+    alert("No link available for this story.");
+  }
+}
+
+// --- Voice ---
+function readAloud() {
+  if (!articles.length || !("speechSynthesis" in window)) return;
+  const a = articles[index];
+  const msg = new SpeechSynthesisUtterance(
+    `${a.title}. ${stripHtml(a.desc)}`
+  );
+  speechSynthesis.speak(msg);
+}
+
+function stripHtml(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
+}
+
+// --- Favorites ---
+function saveFavorite() {
+  if (!articles.length) return;
+
+  let favs = [];
+  try {
+    favs = JSON.parse(localStorage.envFavs || "[]");
+  } catch(e) {
+    favs = [];
+  }
+
+  const current = articles[index];
+  const exists = favs.some(f => f.link === current.link);
+
+  if (exists) {
+    alert("This article is already in favorites.");
+    return;
+  }
+
+  favs.push(current);
+  localStorage.envFavs = JSON.stringify(favs);
+  alert("Saved to favorites.");
+}
+
+function toggleFavorites() {
+  const panel = document.getElementById("favoritesPanel");
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+  } else {
+    let favs = [];
+    try {
+      favs = JSON.parse(localStorage.envFavs || "[]");
+    } catch(e) {
+      favs = [];
+    }
+    panel.style.display = "block";
+    if (!favs.length) {
+      panel.innerHTML = "<p>No favorites yet.</p>";
+      return;
+    }
+    panel.innerHTML = favs.map(f => `
+      <p>
+        <b>${f.title}</b>
+        <small>${stripHtml(f.desc).slice(0,180)}${stripHtml(f.desc).length>180 ? "…" : ""}</small>
+      </p>
+    `).join("");
+  }
+}
+
+// --- Dark Mode ---
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+// --- Fullscreen ---
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.();
+  } else {
+    document.exitFullscreen?.();
+  }
+}
+
+// --- Swipe for mobile ---
+let touchStartX = 0;
+document.addEventListener("touchstart", e => {
+  if (!e.touches[0]) return;
+  touchStartX = e.touches[0].clientX;
+});
+document.addEventListener("touchend", e => {
+  if (!e.changedTouches[0]) return;
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if (dx > 40) prev();
+  if (dx < -40) next();
+});
+
+// --- Category Tabs ---
+document.querySelectorAll(".tab[data-cat]").forEach(tab => {
+  tab.addEventListener("click", () => {
+    currentCategory = tab.dataset.cat;
+    applyCategoryFilter();
+  });
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft") prev();
+  if (e.key === "ArrowRight") next();
+});
+  
+// --- Start app ---
+// Show cached stories immediately if present
+if (articles.length) {
+  applyCategoryFilter();   // will call showArticle()
+} else {
+  showArticle();
+}
+
+// Fetch fresh content now
+loadNews();
+
+// Refresh all feeds every 3 hours
+setInterval(loadNews, 3 * 60 * 60 * 1000);
+</script>
+</body>
+</html>
