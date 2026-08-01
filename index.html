@@ -5,51 +5,678 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Solanar Observatory — a free living Earth, weather, ocean, atmosphere, lunar, environmental, and space learning platform.">
 <meta name="theme-color" content="#061728">
-<title>Solanar Observatory | Earth • Sky • Ocean • Space</title>
+<meta name="color-scheme" content="dark">
+<title>Solanar Observatory | Earth · Sky · Ocean · Space</title>
 <style>
-:root{--bg:#06131f;--bg-2:#0a2233;--panel:rgba(10,35,52,.72);--line:rgba(255,255,255,.12);--text:#edf8ff;--muted:#a9c4d2;--cyan:#63d6e8;--blue:#4ba3ff;--aurora:#5fe3b3;--gold:#f0c777;--shadow:0 28px 80px rgba(0,0,0,.34);--radius:24px;--max:1240px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:300px;color:var(--text);background:radial-gradient(circle at 16% 4%,rgba(75,163,255,.15),transparent 28rem),radial-gradient(circle at 88% 8%,rgba(95,227,179,.12),transparent 24rem),linear-gradient(180deg,#06131f 0%,#081b2a 50%,#06131f 100%);font-family:Arial,Helvetica,sans-serif;line-height:1.6;overflow-x:hidden}
-a{color:inherit}button{font:inherit;cursor:pointer}.shell{width:min(calc(100% - 32px),var(--max));margin-inline:auto}.skip{position:fixed;left:12px;top:12px;z-index:9999;transform:translateY(-180%);color:#00111b;background:#fff;padding:10px 14px;border-radius:999px;text-decoration:none}.skip:focus{transform:none}
-.stars,.stars::before,.stars::after{position:fixed;inset:0;pointer-events:none;z-index:-1;content:"";background-image:radial-gradient(circle at 10% 15%,rgba(255,255,255,.75) 0 1px,transparent 1.5px),radial-gradient(circle at 22% 65%,rgba(255,255,255,.65) 0 1px,transparent 1.4px),radial-gradient(circle at 43% 22%,rgba(255,255,255,.8) 0 1px,transparent 1.5px),radial-gradient(circle at 67% 48%,rgba(255,255,255,.55) 0 1px,transparent 1.3px),radial-gradient(circle at 84% 20%,rgba(255,255,255,.7) 0 1px,transparent 1.5px),radial-gradient(circle at 92% 75%,rgba(255,255,255,.6) 0 1px,transparent 1.3px);background-size:320px 320px;opacity:.25}
-.utility{background:#03101a;border-bottom:1px solid var(--line)}.utility-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:.78rem;color:var(--muted)}.utility-links{display:flex;flex-wrap:wrap;gap:14px}.utility a{text-decoration:none}.utility a:hover{color:#fff}
-.site-header{position:sticky;top:0;z-index:1000;background:rgba(4,18,29,.88);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.mark{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 35% 30%,#9ce8ff 0 6%,#3b95c6 18%,#0b4368 55%,#061a2e 72%);box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 30px rgba(75,163,255,.32)}.mark::after{content:"";position:absolute;width:58px;height:18px;border:1px solid rgba(95,227,179,.6);border-radius:50%;transform:rotate(-15deg)}.brand-title{font:600 1.25rem Georgia,serif;letter-spacing:.04em}.brand-sub{display:block;color:var(--muted);font-size:.67rem;letter-spacing:.15em;text-transform:uppercase}.nav-links{display:flex;align-items:center;gap:4px}.nav-links a{padding:.66rem .72rem;border-radius:999px;color:#e6f3fb;text-decoration:none;font-size:.82rem;font-weight:800}.nav-links a:hover{background:rgba(255,255,255,.08)}.menu{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;color:#fff;background:transparent}.menu span,.menu::before,.menu::after{content:"";display:block;width:19px;height:2px;margin:4px auto;background:currentColor}
-.hero{position:relative;overflow:hidden}.hero-inner{min-height:850px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:36px;padding:82px 0 70px}.eyebrow,.kicker{margin:0 0 14px;color:var(--aurora);font-size:.74rem;font-weight:900;letter-spacing:.22em;text-transform:uppercase}h1,h2,h3{margin:0;font-family:Georgia,serif;font-weight:500}h1{font-size:clamp(4rem,10vw,8rem);line-height:.88;letter-spacing:-.055em}.hero-tagline{margin:20px 0 0;color:#dff7ff;font:clamp(1.25rem,3vw,2.2rem)/1.28 Georgia,serif}.hero-copy p:last-of-type{max-width:690px;color:var(--muted);font-size:1.05rem}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.btn{min-height:50px;padding:.86rem 1.2rem;display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:999px;font-weight:900;text-decoration:none}.primary{color:#052235;background:linear-gradient(135deg,#9ff2ff,#6de8ba)}.secondary{border-color:var(--line);color:#fff;background:rgba(255,255,255,.04)}.hero-meta{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}.hero-meta span{padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:#cfe5ef;background:rgba(255,255,255,.035);font-size:.78rem}
-.orbit-stage{position:relative;min-height:620px;display:grid;place-items:center}.earth{width:min(66vw,430px);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 38% 28%,rgba(255,255,255,.24),transparent 16%),radial-gradient(circle at 64% 36%,rgba(93,212,181,.92) 0 4%,transparent 5%),radial-gradient(circle at 46% 58%,rgba(82,190,152,.92) 0 9%,transparent 10%),radial-gradient(circle at 70% 67%,rgba(78,168,139,.85) 0 6%,transparent 7%),radial-gradient(circle at 35% 43%,#2d89bd 0 26%,#14618d 44%,#082e4f 72%,#041523 100%);box-shadow:inset -42px -24px 65px rgba(0,0,0,.52),inset 18px 12px 28px rgba(255,255,255,.08),0 0 40px rgba(75,163,255,.26),0 0 120px rgba(75,163,255,.18);animation:float 7s ease-in-out infinite}.earth::before{content:"";position:absolute;inset:-5%;border-radius:50%;border:2px solid rgba(120,218,255,.2);box-shadow:0 0 34px rgba(99,214,232,.22)}.earth::after{content:"";position:absolute;inset:-18%;border:1px solid rgba(255,255,255,.14);border-radius:50%;transform:rotate(-14deg)}@keyframes float{50%{transform:translateY(-10px)}}.orbit{position:absolute;width:100%;height:100%}.orbit a{position:absolute;min-width:120px;padding:11px 14px;border:1px solid var(--line);border-radius:16px;background:rgba(7,30,46,.82);backdrop-filter:blur(10px);box-shadow:var(--shadow);text-decoration:none;text-align:center;font-size:.8rem;font-weight:900}.orbit a span{display:block;color:var(--muted);font-size:.68rem;font-weight:600}.o1{top:2%;left:37%}.o2{top:20%;right:0}.o3{bottom:22%;right:1%}.o4{bottom:2%;left:38%}.o5{bottom:22%;left:0}.o6{top:20%;left:0}
-.section{padding:clamp(76px,9vw,118px) 0}.alt{background:rgba(255,255,255,.025);border-block:1px solid var(--line)}.heading{max-width:860px;margin:0 auto 40px;text-align:center}h2{font-size:clamp(2.25rem,5.2vw,4.5rem);line-height:1.02;letter-spacing:-.045em}.heading p{margin:16px 0 0;color:var(--muted)}.grid{display:grid;gap:16px}.six{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.card{padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));box-shadow:var(--shadow)}.link-card{min-height:260px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:.18s}.link-card:hover{transform:translateY(-6px);border-color:rgba(95,227,179,.68)}.icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.55rem;background:linear-gradient(145deg,rgba(75,163,255,.18),rgba(95,227,179,.14));border:1px solid rgba(255,255,255,.08)}.link-card h3{margin-top:18px;font-size:1.45rem}.link-card p{margin:10px 0 0;color:var(--muted);font-size:.93rem}.visit{margin-top:18px;color:var(--aurora);font-size:.82rem;font-weight:900}.badge{display:inline-flex;width:max-content;margin-bottom:12px;padding:5px 9px;border-radius:999px;background:rgba(95,227,179,.12);color:var(--aurora);font-size:.66rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.health-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.health{padding:21px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.health-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.health strong{font-family:Georgia,serif;font-size:1.12rem}.health small{color:var(--muted)}.meter{height:7px;margin-top:16px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}.meter span{display:block;height:100%;width:var(--w);border-radius:inherit;background:linear-gradient(90deg,var(--blue),var(--aurora))}.note{margin-top:18px;padding:16px;border:1px solid rgba(240,199,119,.2);border-radius:16px;color:#d8cfb4;background:rgba(240,199,119,.05);font-size:.85rem}
-.timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}.time-card{padding:17px 14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);text-align:center}.time-card strong{display:block;font-family:Georgia,serif}.time-card span{display:block;margin-top:5px;color:var(--muted);font-size:.76rem}.portal-row{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.portal{min-height:120px;padding:18px;border:1px solid var(--line);border-radius:18px;text-decoration:none;background:rgba(255,255,255,.025)}.portal strong{display:block;font-family:Georgia,serif;font-size:1.08rem}.portal span{display:block;margin-top:8px;color:var(--muted);font-size:.8rem}.network-card{min-height:210px;padding:22px;border-radius:20px;border:1px solid var(--line);text-decoration:none;background:linear-gradient(145deg,rgba(75,163,255,.08),rgba(95,227,179,.05))}.network-card p{color:var(--muted);font-size:.9rem}
-footer{padding:46px 0;background:#020b12;border-top:1px solid var(--line)}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}footer h3{font-size:1.08rem}footer p{margin:.55rem 0 0;color:var(--muted)}.footer-links{display:grid;gap:8px;margin-top:10px}.footer-links a{text-decoration:none;color:var(--muted)}.bottom{margin-top:30px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.82rem}.back{border:1px solid var(--line);border-radius:10px;color:#fff;background:transparent;padding:.55rem .72rem}
-@media(max-width:1100px){.hero-inner{grid-template-columns:1fr}.hero-copy{text-align:center}.hero-copy p:last-of-type{margin-inline:auto}.actions,.hero-meta{justify-content:center}.four,.health-grid{grid-template-columns:repeat(2,1fr)}.portal-row{grid-template-columns:repeat(3,1fr)}}@media(max-width:820px){.utility-inner{flex-direction:column;align-items:flex-start;padding:8px 0}.menu{display:block}.nav-links{position:absolute;top:76px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;padding:16px;background:#061b2a;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.six{grid-template-columns:repeat(2,1fr)}.timeline{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.earth{width:min(82vw,350px)}.orbit-stage{min-height:700px}.orbit a{min-width:104px;font-size:.74rem}.o1{top:1%;left:31%}.o2{top:14%;right:0}.o3{bottom:14%;right:0}.o4{bottom:0;left:31%}.o5{bottom:14%;left:0}.o6{top:14%;left:0}.six,.four,.health-grid,.portal-row,.footer-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.actions .btn{width:100%}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition-duration:.01ms!important}}
+:root{
+  --night:#04111c;
+  --night-2:#071d2d;
+  --panel:#0a2538;
+  --panel-soft:rgba(12,42,61,.74);
+  --ink:#eefaff;
+  --muted:#adc9d7;
+  --cyan:#75dff0;
+  --blue:#5aaeff;
+  --aurora:#70e7b8;
+  --gold:#efc77b;
+  --line:rgba(255,255,255,.13);
+  --line-strong:rgba(117,223,240,.32);
+  --shadow:0 22px 60px rgba(0,0,0,.30);
+  --radius:7px;
+  --max:1240px;
+  --display:"Gaspacho","Cormorant Garamond",Baskerville,Georgia,serif;
+  --sans:"Brandon Grotesque","Montserrat","Avenir Next",Avenir,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px;background:var(--night)}
+body{
+  margin:0;min-width:300px;overflow-x:hidden;color:var(--ink);
+  background:
+    radial-gradient(circle at 14% 4%,rgba(90,174,255,.17),transparent 29rem),
+    radial-gradient(circle at 88% 9%,rgba(112,231,184,.12),transparent 27rem),
+    linear-gradient(180deg,var(--night),var(--night-2) 48%,var(--night));
+  font-family:var(--sans);line-height:1.68;-webkit-font-smoothing:antialiased;
+}
+body.menu-open{overflow:hidden}
+a{color:inherit}
+button,input,select{font:inherit}
+button{color:inherit}
+[hidden]{display:none!important}
+::selection{color:#00141f;background:var(--aurora)}
+:focus-visible{outline:3px solid rgba(117,223,240,.72);outline-offset:3px}
+.shell{width:min(calc(100% - 36px),var(--max));margin-inline:auto}
+.skip{
+  position:fixed;left:12px;top:12px;z-index:5000;transform:translateY(-180%);
+  padding:10px 14px;color:#00141f;background:#fff;text-decoration:none;border-radius:var(--radius)
+}
+.skip:focus{transform:none}
+.stars,.stars::before,.stars::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.23;
+  background-image:
+    radial-gradient(circle at 10% 15%,rgba(255,255,255,.78) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 23% 63%,rgba(255,255,255,.60) 0 1px,transparent 1.4px),
+    radial-gradient(circle at 44% 20%,rgba(255,255,255,.78) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 67% 47%,rgba(255,255,255,.52) 0 1px,transparent 1.3px),
+    radial-gradient(circle at 84% 21%,rgba(255,255,255,.70) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 93% 76%,rgba(255,255,255,.58) 0 1px,transparent 1.3px);
+  background-size:320px 320px
+}
+
+/* Header */
+.utility{background:#020b12;border-bottom:1px solid var(--line)}
+.utility-inner{
+  min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  color:var(--muted);font-size:.73rem;letter-spacing:.045em
+}
+.utility-links{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.utility a{text-decoration:none}.utility a:hover{color:#fff}
+.site-header{
+  position:sticky;top:0;z-index:1200;background:rgba(4,17,28,.94);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(18px)
+}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0;text-decoration:none}
+.mark{
+  width:46px;height:46px;flex:0 0 46px;display:grid;place-items:center;position:relative;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#b5f2ff 0 6%,#4ea4d0 18%,#0b4b71 55%,#06192b 74%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.20),0 0 28px rgba(90,174,255,.30)
+}
+.mark::after{
+  content:"";position:absolute;width:58px;height:18px;border:1px solid rgba(112,231,184,.66);
+  border-radius:50%;transform:rotate(-15deg)
+}
+.brand-copy{min-width:0}
+.brand-title{
+  display:block;font-family:var(--display);font-size:1.18rem;font-weight:500;
+  letter-spacing:.055em;line-height:1.1
+}
+.brand-sub{
+  display:block;margin-top:5px;color:var(--muted);font-size:.62rem;font-weight:444;
+  letter-spacing:.16em;text-transform:uppercase
+}
+.nav-links{display:flex;align-items:center;gap:3px}
+.nav-links a{
+  padding:9px 10px;border-radius:var(--radius);color:#e4f4fb;text-decoration:none;
+  font-size:.74rem;font-weight:444;letter-spacing:.04em;text-transform:uppercase
+}
+.nav-links a:hover{background:rgba(255,255,255,.08)}
+.menu{
+  display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:var(--radius);
+  color:#fff;background:transparent;cursor:pointer
+}
+.menu-lines,.menu-lines::before,.menu-lines::after{
+  content:"";display:block;width:19px;height:1.5px;background:currentColor;transition:.18s
+}
+.menu-lines{position:relative;margin:auto}
+.menu-lines::before,.menu-lines::after{position:absolute;left:0}
+.menu-lines::before{top:-6px}.menu-lines::after{top:6px}
+.menu[aria-expanded=true] .menu-lines{background:transparent}
+.menu[aria-expanded=true] .menu-lines::before{transform:translateY(6px) rotate(45deg)}
+.menu[aria-expanded=true] .menu-lines::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* Shared */
+section[id]{scroll-margin-top:88px}
+.section{padding:clamp(64px,8vw,104px) 0}
+.alt{background:rgba(255,255,255,.025);border-block:1px solid var(--line)}
+.heading{max-width:900px;margin:0 auto 38px;text-align:center}
+.kicker,.eyebrow{
+  margin:0 0 17px;color:var(--aurora);font-size:.74rem;font-weight:444;
+  letter-spacing:.18em;line-height:1.45;text-transform:uppercase
+}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:500;text-wrap:balance}
+h2{
+  font-size:clamp(2.45rem,5.4vw,4.9rem);line-height:1.02;letter-spacing:.005em;
+  overflow-wrap:anywhere
+}
+.heading>p:last-child{
+  max-width:760px;margin:20px auto 0;color:var(--muted);font-size:1rem;line-height:1.72
+}
+.status-strip{
+  padding:13px 18px;color:#dff9ff;background:rgba(117,223,240,.07);
+  border-block:1px solid rgba(117,223,240,.20);text-align:center;font-size:.78rem
+}
+.status-strip strong{color:var(--aurora);font-weight:444}
+.grid{display:grid;gap:14px}
+.card{
+  min-width:0;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  box-shadow:var(--shadow)
+}
+.btn{
+  min-height:46px;max-width:100%;display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 15px;border:1px solid transparent;border-radius:var(--radius);text-align:center;
+  text-decoration:none;font-size:.74rem;font-weight:444;letter-spacing:.055em;line-height:1.35;
+  text-transform:uppercase;white-space:normal;overflow-wrap:anywhere;transition:.17s
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{color:#041a27;background:linear-gradient(135deg,#a8f3ff,#75e9bb)}
+.btn-secondary{color:#fff;background:rgba(255,255,255,.045);border-color:var(--line)}
+.btn-secondary:hover{border-color:var(--aurora);background:rgba(255,255,255,.075)}
+.badge{
+  display:inline-flex;width:max-content;max-width:100%;padding:5px 8px;border-radius:var(--radius);
+  color:var(--aurora);background:rgba(112,231,184,.10);border:1px solid rgba(112,231,184,.18);
+  font-size:.61rem;font-weight:444;letter-spacing:.09em;text-transform:uppercase
+}
+.badge.planned{color:var(--gold);background:rgba(239,199,123,.08);border-color:rgba(239,199,123,.22)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
+  background:linear-gradient(90deg,var(--blue),var(--aurora),var(--gold))
+}
+.hero-inner{
+  min-height:760px;display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  gap:clamp(34px,6vw,74px);padding:clamp(76px,8vw,108px) 0
+}
+.hero-copy{text-align:left}
+.hero h1{
+  font-size:clamp(4.4rem,9vw,8rem);line-height:.98;letter-spacing:.01em;
+  overflow-wrap:anywhere
+}
+.hero-tagline{
+  margin:24px 0 0;color:#dff8ff;font-family:var(--display);
+  font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.35;letter-spacing:.025em
+}
+.hero-description{max-width:680px;margin:20px 0 0;color:var(--muted);font-size:1.03rem;line-height:1.82}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.hero-meta span{
+  padding:7px 10px;border:1px solid var(--line);border-radius:var(--radius);
+  color:#d1e8f2;background:rgba(255,255,255,.03);font-size:.71rem
+}
+.orbit-stage{position:relative;min-height:600px;display:grid;place-items:center}
+.earth{
+  width:min(66vw,420px);aspect-ratio:1;position:relative;border-radius:50%;
+  background:
+    radial-gradient(circle at 38% 28%,rgba(255,255,255,.25),transparent 16%),
+    radial-gradient(circle at 64% 36%,rgba(112,231,184,.92) 0 4%,transparent 5%),
+    radial-gradient(circle at 46% 58%,rgba(89,195,160,.92) 0 9%,transparent 10%),
+    radial-gradient(circle at 70% 67%,rgba(82,170,144,.85) 0 6%,transparent 7%),
+    radial-gradient(circle at 35% 43%,#3390c1 0 26%,#176895 44%,#083656 72%,#041523 100%);
+  box-shadow:inset -42px -24px 65px rgba(0,0,0,.52),inset 18px 12px 28px rgba(255,255,255,.08),
+    0 0 42px rgba(90,174,255,.27),0 0 118px rgba(90,174,255,.18);
+  animation:float 7s ease-in-out infinite
+}
+.earth::before{content:"";position:absolute;inset:-5%;border-radius:50%;border:2px solid rgba(117,223,240,.20);box-shadow:0 0 34px rgba(117,223,240,.22)}
+.earth::after{content:"";position:absolute;inset:-18%;border:1px solid rgba(255,255,255,.14);border-radius:50%;transform:rotate(-14deg)}
+@keyframes float{50%{transform:translateY(-10px)}}
+.orbit{position:absolute;inset:0}
+.orbit a{
+  position:absolute;min-width:124px;max-width:180px;padding:11px 13px;border:1px solid var(--line);
+  border-radius:var(--radius);background:rgba(7,30,46,.88);backdrop-filter:blur(10px);
+  box-shadow:var(--shadow);text-align:center;text-decoration:none;font-size:.75rem;font-weight:444;
+  line-height:1.35
+}
+.orbit a:hover{border-color:var(--aurora);transform:translateY(-2px)}
+.orbit a span{display:block;margin-top:3px;color:var(--muted);font-size:.64rem;font-weight:333}
+.o1{top:2%;left:37%}.o2{top:20%;right:0}.o3{bottom:22%;right:1%}
+.o4{bottom:2%;left:38%}.o5{bottom:22%;left:0}.o6{top:20%;left:0}
+
+/* Live apps */
+.live-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.app-card{
+  min-height:360px;display:flex;flex-direction:column;align-items:center;padding:24px;text-align:center;
+  text-decoration:none;transition:transform .17s,border-color .17s,box-shadow .17s
+}
+.app-card:hover{transform:translateY(-5px);border-color:rgba(112,231,184,.64);box-shadow:0 28px 74px rgba(0,0,0,.38)}
+.app-icon{
+  width:58px;height:58px;display:grid;place-items:center;margin:18px auto 0;border:1px solid rgba(255,255,255,.10);
+  border-radius:var(--radius);font-size:1.55rem;background:linear-gradient(145deg,rgba(90,174,255,.17),rgba(112,231,184,.12))
+}
+.app-card h3{
+  min-height:2.65em;margin:19px 0 0;font-size:1.58rem;line-height:1.12;letter-spacing:.01em
+}
+.app-card p{max-width:340px;margin:12px auto 0;color:var(--muted);font-size:.9rem;line-height:1.62}
+.app-action{
+  width:100%;min-height:44px;display:flex;align-items:center;justify-content:center;margin-top:auto;padding:13px 8px 0;
+  color:var(--aurora);border-top:1px solid var(--line);font-size:.72rem;font-weight:444;
+  letter-spacing:.055em;line-height:1.35;text-transform:uppercase;overflow-wrap:anywhere
+}
+
+/* System map */
+.system-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.system-card{min-height:218px;display:flex;flex-direction:column;align-items:center;padding:22px;text-align:center}
+.system-symbol{font-size:1.55rem}
+.system-card h3{margin-top:13px;font-size:1.25rem;line-height:1.16}
+.system-card p{margin:10px 0 0;color:var(--muted);font-size:.84rem;line-height:1.58}
+.system-note{
+  max-width:900px;margin:18px auto 0;padding:17px 19px;border:1px solid rgba(239,199,123,.22);
+  border-radius:var(--radius);color:#e5d9bd;background:rgba(239,199,123,.05);text-align:center;font-size:.84rem
+}
+
+/* Trusted sources */
+.source-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.source-card{
+  min-height:292px;display:flex;flex-direction:column;align-items:center;padding:23px;text-align:center;text-decoration:none
+}
+.source-card:hover{border-color:var(--cyan)}
+.source-label{color:var(--gold);font-size:.61rem;font-weight:444;letter-spacing:.1em;text-transform:uppercase}
+.source-card h3{min-height:2.4em;margin:15px 0 0;font-size:1.42rem;line-height:1.15}
+.source-card p{margin:11px 0 0;color:var(--muted);font-size:.87rem;line-height:1.62}
+.source-card strong{margin-top:auto;padding-top:18px;color:var(--cyan);font-size:.71rem;letter-spacing:.05em;text-transform:uppercase}
+
+/* Timeline */
+.timeline{grid-template-columns:repeat(7,minmax(0,1fr))}
+.time-card{min-height:150px;padding:18px 14px;text-align:center}
+.time-card strong{display:block;font-family:var(--display);font-size:1.08rem;font-weight:500}
+.time-card span{display:block;margin-top:8px;color:var(--muted);font-size:.73rem;line-height:1.5}
+
+/* Planned */
+.planned-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.planned-card{min-height:280px;display:flex;flex-direction:column;align-items:center;padding:22px;text-align:center}
+.planned-card h3{min-height:2.4em;margin:16px 0 0;font-size:1.35rem;line-height:1.15}
+.planned-card p{margin:10px 0 0;color:var(--muted);font-size:.85rem;line-height:1.58}
+.planned-state{
+  width:100%;margin-top:auto;padding-top:16px;color:var(--gold);border-top:1px solid var(--line);
+  font-size:.69rem;font-weight:444;letter-spacing:.06em;text-transform:uppercase
+}
+
+/* Network */
+.network-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+.network-card{
+  min-height:220px;display:flex;flex-direction:column;align-items:center;padding:21px;text-align:center;
+  text-decoration:none;background:linear-gradient(145deg,rgba(90,174,255,.075),rgba(112,231,184,.045))
+}
+.network-card:hover{border-color:var(--aurora)}
+.network-card h3{min-height:2.2em;font-size:1.22rem;line-height:1.12}
+.network-card p{margin:10px 0 0;color:var(--muted);font-size:.81rem;line-height:1.52}
+.network-card strong{margin-top:auto;padding-top:15px;color:var(--aurora);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase}
+
+/* Footer */
+footer{padding:46px 0 24px;background:#020a11;border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:28px}
+footer h3{font-size:1.1rem}
+footer p{margin:.65rem 0 0;color:var(--muted);font-size:.84rem}
+.footer-links{display:grid;gap:8px;margin-top:11px}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem}
+.footer-links a:hover{color:#fff}
+.bottom{
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:30px;padding-top:19px;
+  color:var(--muted);border-top:1px solid var(--line);font-size:.76rem
+}
+.back{padding:7px 10px;color:#fff;background:transparent;border:1px solid var(--line);border-radius:var(--radius);cursor:pointer}
+
+@media(max-width:1080px){
+  .hero-inner{grid-template-columns:1fr}.hero-copy{text-align:center}
+  .hero-description{margin-inline:auto}.actions,.hero-meta{justify-content:center}
+  .live-grid,.source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .system-grid,.planned-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .network-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .timeline{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:820px){
+  .utility{display:none}
+  .menu{display:grid;place-items:center}
+  .nav-links{
+    position:fixed;top:72px;left:0;right:0;max-height:calc(100vh - 72px);overflow:auto;
+    display:none;flex-direction:column;align-items:stretch;padding:16px;background:#061b2a;
+    border-bottom:1px solid var(--line);box-shadow:0 22px 50px rgba(0,0,0,.35)
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{text-align:center}
+  .timeline{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .shell{width:min(calc(100% - 24px),var(--max))}
+  .brand-sub{display:none}
+  .hero-inner{min-height:auto;padding:64px 0 70px}
+  .hero h1{font-size:clamp(3.7rem,18vw,5.4rem)}
+  .orbit-stage{min-height:690px}
+  .earth{width:min(82vw,340px)}
+  .orbit a{min-width:105px;max-width:130px;padding:9px;font-size:.68rem}
+  .o1{top:1%;left:30%}.o2{top:14%;right:0}.o3{bottom:14%;right:0}
+  .o4{bottom:0;left:30%}.o5{bottom:14%;left:0}.o6{top:14%;left:0}
+  .live-grid,.source-grid,.system-grid,.planned-grid,.network-grid,.timeline,.footer-grid{grid-template-columns:1fr}
+  .app-card,.source-card,.planned-card{min-height:auto}
+  .app-card h3,.source-card h3,.planned-card h3,.network-card h3{min-height:auto}
+  .actions{display:grid}.actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+@media print{
+  .utility,.site-header,.orbit-stage,.actions,.status-strip,footer{display:none!important}
+  body{color:#111;background:#fff}.section,.hero-inner{padding:1.2rem 0}
+  .hero{color:#111;background:#fff}.hero-description,.heading>p:last-child,.app-card p,.source-card p,.system-card p{color:#333}
+  .card{box-shadow:none;border:1px solid #aaa}.live-grid,.source-grid,.system-grid{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 <body id="top">
 <div class="stars" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="utility"><div class="shell utility-inner"><div>Free Earth systems, weather, environmental, lunar, and space learning</div><nav class="utility-links" aria-label="Connected ecosystem"><a href="https://vervenveda.github.io/" target="_blank" rel="noopener">Verve N Veda</a><a href="https://vervenveda.github.io/khaemenesacademy.github.io/" target="_blank" rel="noopener">Khaemenes Academy</a><a href="https://vervenveda.github.io/Arshif.github.io/" target="_blank" rel="noopener">ARSHIF</a><a href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener">The Verifier</a></nav></div></div>
-<header class="site-header"><div class="shell nav"><a class="brand" href="#top"><span class="mark" aria-hidden="true"></span><span><span class="brand-title">Solanar Observatory</span><span class="brand-sub">Earth • Sky • Ocean • Space</span></span></a><button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="siteMenu"><span></span></button><nav class="nav-links" id="siteMenu" aria-label="Primary navigation"><a href="#apps">Explore</a><a href="#planet">Planet Health</a><a href="#timeline">Timeline</a><a href="#learning">Learning</a><a href="#network">Network</a><a href="apps/Solanar_Live_Weather_index.html">Live Weather</a></nav></div></header>
+
+<div class="utility">
+  <div class="shell utility-inner">
+    <span>Free Earth systems, weather, environmental, lunar, ocean, and space learning</span>
+    <nav class="utility-links" aria-label="Connected ecosystem">
+      <a href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer">Verve N Veda</a>
+      <a href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" target="_blank" rel="noopener noreferrer">Khaemenes Academy</a>
+      <a href="https://vervenveda.github.io/Arshif.github.io/" target="_blank" rel="noopener noreferrer">ARSHIF</a>
+      <a href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener noreferrer">The Verifier</a>
+    </nav>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="#top" aria-label="Solanar Observatory home">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="brand-copy">
+        <span class="brand-title">Solanar Observatory</span>
+        <span class="brand-sub">Earth · Sky · Ocean · Space</span>
+      </span>
+    </a>
+    <button class="menu" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="siteMenu">
+      <span class="menu-lines" aria-hidden="true"></span>
+    </button>
+    <nav class="nav-links" id="siteMenu" aria-label="Primary navigation">
+      <a href="#live">Live Apps</a>
+      <a href="#systems">Earth Systems</a>
+      <a href="#sources">Science Sources</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#future">Future Wings</a>
+      <a href="#network">Network</a>
+    </nav>
+  </div>
+</header>
+
+<div class="status-strip">
+  <strong>Solanar separates live tools, educational models, and future builds.</strong>
+  Always follow official warnings and local emergency instructions during hazardous weather.
+</div>
+
 <main id="main">
-<section class="hero"><div class="shell hero-inner"><div class="hero-copy"><p class="eyebrow">A living observatory for our shared world</p><h1>Solanar</h1><p class="hero-tagline">Earth • Sky • Ocean • Space</p><p>Observe the interconnected systems of our planet—from local weather and lunar cycles to oceans, ecosystems, climate, astronomy, and near-Earth space.</p><div class="actions"><a class="btn primary" href="apps/Solanar_Live_Weather_index.html">Check Live Weather</a><a class="btn secondary" href="#apps">Enter the Observatory</a></div><div class="hero-meta"><span>Weather</span><span>Atmosphere</span><span>Oceans</span><span>Moon</span><span>Environment</span><span>Space</span></div></div><div class="orbit-stage" aria-label="Interactive Earth systems gateway"><div class="earth" aria-hidden="true"></div><div class="orbit"><a class="o1" href="apps/Solanar_Planetarium_index.html">☀ Space <span>Sun, planets, stars</span></a><a class="o2" href="apps/Lunar_reflections_index.html">🌙 Moon <span>Phases and reflection</span></a><a class="o3" href="apps/Solanar_Live_Weather_index.html">🌦 Weather <span>Live local conditions</span></a><a class="o4" href="apps/Solanar_Platform_index.html">🌍 Planet <span>Earth systems dashboard</span></a><a class="o5" href="apps/environmental_news_index.html">🌱 Environment <span>News and stewardship</span></a><a class="o6" href="apps/Solanar_kids_skylab_index.html">🚀 Kids Skylab <span>Science through wonder</span></a></div></div></div></section>
-<section class="section alt" id="apps"><div class="shell"><div class="heading"><p class="kicker">Core observatory applications</p><h2>Six gateways into one living planet.</h2><p>Each application explores a different part of Earth and sky while remaining connected to the larger Solanar experience.</p></div><div class="grid six">
-<a class="card link-card" href="apps/Solanar_Live_Weather_index.html"><span><span class="badge">Live</span><span class="icon">🌦️</span><h3>Live Weather</h3><p>Current conditions, hourly outlooks, daily forecasts, weather awareness, and local planning.</p></span><span class="visit">Open Live Weather →</span></a>
-<a class="card link-card" href="apps/Solanar_Platform_index.html"><span><span class="badge">Command center</span><span class="icon">🌍</span><h3>Solanar Platform</h3><p>A broader Earth systems dashboard connecting weather, atmosphere, oceans, climate, hazards, and environmental intelligence.</p></span><span class="visit">Enter the Platform →</span></a>
-<a class="card link-card" href="apps/Solanar_Planetarium_index.html"><span><span class="badge">Night sky</span><span class="icon">🌌</span><h3>Planetarium</h3><p>Explore constellations, planets, deep sky, satellites, meteor showers, and the changing heavens.</p></span><span class="visit">Enter the Planetarium →</span></a>
-<a class="card link-card" href="apps/Lunar_reflections_index.html"><span><span class="badge">Moon companion</span><span class="icon">🌙</span><h3>Lunar Reflections</h3><p>Follow the Moon through its phases with reflection, journaling, astronomy, and mindful observation.</p></span><span class="visit">Open Lunar Reflections →</span></a>
-<a class="card link-card" href="apps/Solanar_kids_skylab_index.html"><span><span class="badge">For young explorers</span><span class="icon">🚀</span><h3>Kids Skylab</h3><p>Weather games, astronomy activities, experiments, missions, quizzes, and science built around curiosity.</p></span><span class="visit">Launch Kids Skylab →</span></a>
-<a class="card link-card" href="apps/environmental_news_index.html"><span><span class="badge">Current world</span><span class="icon">🌱</span><h3>Environmental News</h3><p>Climate, wildlife, conservation, oceans, weather, agriculture, discoveries, and public environmental reporting.</p></span><span class="visit">Read Environmental News →</span></a>
-</div></div></section>
-<section class="section" id="planet"><div class="shell"><div class="heading"><p class="kicker">Planet health</p><h2>One world. Many connected systems.</h2><p>This conceptual dashboard is designed to organize future public data feeds. It does not currently represent live scientific measurements.</p></div><div class="health-grid">
-<div class="health"><div class="health-top"><strong>Atmosphere</strong><small>Air • Clouds • Winds</small></div><div class="meter"><span style="--w:74%"></span></div></div><div class="health"><div class="health-top"><strong>Oceans</strong><small>Currents • Heat • Waves</small></div><div class="meter"><span style="--w:68%"></span></div></div><div class="health"><div class="health-top"><strong>Freshwater</strong><small>Rivers • Lakes • Rain</small></div><div class="meter"><span style="--w:61%"></span></div></div><div class="health"><div class="health-top"><strong>Cryosphere</strong><small>Snow • Ice • Glaciers</small></div><div class="meter"><span style="--w:48%"></span></div></div><div class="health"><div class="health-top"><strong>Ecosystems</strong><small>Forests • Wildlife • Soil</small></div><div class="meter"><span style="--w:66%"></span></div></div><div class="health"><div class="health-top"><strong>Geosphere</strong><small>Quakes • Volcanoes • Land</small></div><div class="meter"><span style="--w:79%"></span></div></div><div class="health"><div class="health-top"><strong>Solar Activity</strong><small>Wind • Flares • Aurora</small></div><div class="meter"><span style="--w:57%"></span></div></div><div class="health"><div class="health-top"><strong>Near-Earth Space</strong><small>Satellites • Debris • ISS</small></div><div class="meter"><span style="--w:71%"></span></div></div>
-</div><div class="note">Future versions can replace these illustrative bars with clearly sourced, timestamped, public scientific indicators and explanations of what each measurement means.</div></div></section>
-<section class="section alt" id="timeline"><div class="shell"><div class="heading"><p class="kicker">Planet timeline</p><h2>See Earth across many scales of time.</h2><p>Weather makes more sense when we understand the larger cycles surrounding it.</p></div><div class="timeline"><div class="time-card"><strong>Today</strong><span>Local weather, storms, daylight, Moon</span></div><div class="time-card"><strong>This Week</strong><span>Forecast patterns and changing systems</span></div><div class="time-card"><strong>This Month</strong><span>Lunar cycle, tides, seasonal signals</span></div><div class="time-card"><strong>This Season</strong><span>Migration, agriculture, climate rhythms</span></div><div class="time-card"><strong>This Year</strong><span>Heat, rainfall, wildfire, oceans, ice</span></div><div class="time-card"><strong>This Century</strong><span>Long-term environmental change</span></div><div class="time-card"><strong>Deep Time</strong><span>Geology, evolution, and planetary history</span></div></div></div></section>
-<section class="section" id="learning"><div class="shell"><div class="heading"><p class="kicker">Learning and discovery</p><h2>From first questions to advanced Earth science.</h2><p>Solanar connects observation with education, research, media literacy, and community stewardship.</p></div><div class="portal-row"><a class="portal" href="learning/elementary-weather/index.html"><strong>Elementary Weather</strong><span>Clouds, rain, seasons, wind, and safe observation</span></a><a class="portal" href="learning/middle-school-earth-science/index.html"><strong>Middle School Earth Science</strong><span>Atmosphere, oceans, climate, rocks, and ecosystems</span></a><a class="portal" href="learning/high-school-meteorology/index.html"><strong>High School Meteorology</strong><span>Forecasting, pressure, fronts, hazards, and data</span></a><a class="portal" href="learning/college-earth-systems/index.html"><strong>College Earth Systems</strong><span>Interdisciplinary planetary science and research</span></a><a class="portal" href="learning/teachers/index.html"><strong>Teacher Center</strong><span>Lessons, labs, printables, projects, and source guides</span></a></div></div></section>
-<section class="section alt"><div class="shell"><div class="heading"><p class="kicker">Future observatory wings</p><h2>A platform designed to keep growing.</h2><p>These gateways establish the structure for the next Solanar applications and learning centers.</p></div><div class="grid four">
-<a class="card link-card" href="centers/oceans/index.html"><span><span class="icon">🌊</span><h3>Ocean Center</h3><p>Currents, sea-surface temperatures, tides, buoys, waves, reefs, marine life, and ocean health.</p></span><span class="visit">Explore oceans →</span></a><a class="card link-card" href="centers/atmosphere/index.html"><span><span class="icon">☁️</span><h3>Atmosphere Center</h3><p>Clouds, pressure, wind, lightning, rainfall, air quality, jet streams, and storms.</p></span><span class="visit">Explore atmosphere →</span></a><a class="card link-card" href="centers/geosphere/index.html"><span><span class="icon">🌋</span><h3>Geosphere Center</h3><p>Earthquakes, volcanoes, mountains, minerals, plate tectonics, and the changing land.</p></span><span class="visit">Explore geosphere →</span></a><a class="card link-card" href="centers/space-weather/index.html"><span><span class="icon">☀️</span><h3>Space Weather Center</h3><p>Solar wind, sunspots, solar flares, geomagnetic storms, auroras, and satellite conditions.</p></span><span class="visit">Explore space weather →</span></a><a class="card link-card" href="centers/biosphere/index.html"><span><span class="icon">🦋</span><h3>Biosphere Center</h3><p>Wildlife, migration, pollinators, forests, habitats, seasonal change, and biodiversity.</p></span><span class="visit">Explore the biosphere →</span></a><a class="card link-card" href="centers/cryosphere/index.html"><span><span class="icon">❄️</span><h3>Cryosphere Center</h3><p>Snowpack, glaciers, sea ice, permafrost, polar systems, and water storage.</p></span><span class="visit">Explore ice and snow →</span></a><a class="card link-card" href="centers/living-atlas/index.html"><span><span class="icon">🗺️</span><h3>Living Atlas</h3><p>A future interactive knowledge globe connecting place, climate, geology, ecology, culture, and sky.</p></span><span class="visit">Enter the atlas →</span></a><a class="card link-card" href="centers/citizen-science/index.html"><span><span class="icon">🔎</span><h3>Citizen Science</h3><p>Observation logs, backyard weather, wildlife counts, water monitoring, and community research.</p></span><span class="visit">Join citizen science →</span></a>
-</div></div></section>
-<section class="section" id="network"><div class="shell"><div class="heading"><p class="kicker">Connected ecosystem</p><h2>Observe. Learn. Research. Verify. Act.</h2><p>Solanar is one part of a larger public learning ecosystem designed to connect knowledge with responsibility.</p></div><div class="grid four">
-<a class="network-card" href="https://vervenveda.github.io/khaemenesacademy.github.io/" target="_blank" rel="noopener"><h3>Khaemenes Academy</h3><p>Free lifelong education from early learning through adult study.</p><span class="visit">Learn →</span></a><a class="network-card" href="https://vervenveda.github.io/Arshif.github.io/" target="_blank" rel="noopener"><h3>ARSHIF</h3><p>Research halls, archives, history, science, law, literature, and human knowledge.</p><span class="visit">Research →</span></a><a class="network-card" href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener"><h3>The Verifier</h3><p>News, evidence, source comparison, fact-checking, and media literacy.</p><span class="visit">Verify →</span></a><a class="network-card" href="https://vervenveda.github.io/river_to_road.github.io/" target="_blank" rel="noopener"><h3>River to Road</h3><p>Environmental stewardship, community cleanup, conservation, and service.</p><span class="visit">Act →</span></a><a class="network-card" href="https://vervenveda.github.io/" target="_blank" rel="noopener"><h3>Verve N Veda</h3><p>The public home for the wider creative, educational, and community ecosystem.</p><span class="visit">Visit →</span></a><a class="network-card" href="https://vervenveda.github.io/firmament.github.io/" target="_blank" rel="noopener"><h3>Firmament</h3><p>Law, rights, governance, civic education, and constitutional learning.</p><span class="visit">Explore →</span></a><a class="network-card" href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener"><h3>One Nation for All</h3><p>Civic dialogue, public participation, unity, and shared solutions.</p><span class="visit">Participate →</span></a><a class="network-card" href="https://vervenveda.github.io/arcade.github.io/" target="_blank" rel="noopener"><h3>Arcade</h3><p>Educational games, experiments, challenges, and playful discovery.</p><span class="visit">Play →</span></a>
-</div></div></section>
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="shell hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">A living observatory for our shared world</p>
+      <h1 id="heroTitle">Solanar</h1>
+      <p class="hero-tagline">Earth · Sky · Ocean · Space</p>
+      <p class="hero-description">Observe the connected systems of our planet—from local weather and lunar cycles to oceans, ecosystems, climate, astronomy, and near-Earth space. Solanar brings active applications, trusted scientific sources, and future learning halls into one clear observatory.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="apps/Solanar_Live_Weather_index.html">Check Live Weather</a>
+        <a class="btn btn-secondary" href="#live">Enter the Observatory</a>
+        <a class="btn btn-secondary" href="#sources">Official Science Sources</a>
+      </div>
+      <div class="hero-meta" aria-label="Observatory subjects">
+        <span>Weather</span><span>Atmosphere</span><span>Oceans</span><span>Moon</span>
+        <span>Environment</span><span>Earth Science</span><span>Space Weather</span>
+      </div>
+    </div>
+
+    <div class="orbit-stage" aria-label="Interactive Earth systems gateway">
+      <div class="earth" aria-hidden="true"></div>
+      <div class="orbit">
+        <a class="o1" href="apps/Solanar_Planetarium_index.html">☀ Advanced Weather<span>Atmosphere and sky</span></a>
+        <a class="o2" href="apps/Lunar_reflections_index.html">🌙 Moon<span>Phases and reflection</span></a>
+        <a class="o3" href="apps/Solanar_Live_Weather_index.html">🌦 Weather<span>Local conditions</span></a>
+        <a class="o4" href="apps/Solanar_Platform_index.html">🌍 Planet<span>World weather platform</span></a>
+        <a class="o5" href="apps/environmental_news_index.html">🌱 Environment<span>News and stewardship</span></a>
+        <a class="o6" href="apps/Solanar_kids_skylab_index.html">🚀 Kids SkyLab<span>Science through wonder</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="live" aria-labelledby="liveTitle">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">Verified internal applications</p>
+      <h2 id="liveTitle">Six active gateways into one living planet.</h2>
+      <p>These destinations were confirmed in the Solanar repository. Each card clearly describes what the application does so weather, learning, reflection, and environmental reporting are not confused with one another.</p>
+    </div>
+
+    <div class="grid live-grid">
+      <a class="card app-card" href="apps/Solanar_Live_Weather_index.html">
+        <span class="badge">Active · Forecast tool</span><span class="app-icon" aria-hidden="true">🌦️</span>
+        <h3>Live Weather</h3>
+        <p>Local current conditions, hourly outlooks, daily forecasts, weather awareness, and planning information.</p>
+        <span class="app-action">Open Live Weather →</span>
+      </a>
+      <a class="card app-card" href="apps/Solanar_Platform_index.html">
+        <span class="badge">Active · World platform</span><span class="app-icon" aria-hidden="true">🌍</span>
+        <h3>Solanar Platform</h3>
+        <p>A broad free-access world weather platform connecting forecasts, atmosphere, environmental context, lunar information, and global time.</p>
+        <span class="app-action">Enter the Platform →</span>
+      </a>
+      <a class="card app-card" href="apps/Solanar_Planetarium_index.html">
+        <span class="badge">Active · Advanced weather</span><span class="app-icon" aria-hidden="true">🌌</span>
+        <h3>Solanar Planetarium</h3>
+        <p>An advanced weather-service environment for deeper atmospheric observation, sky context, and scientific exploration.</p>
+        <span class="app-action">Open Advanced Weather →</span>
+      </a>
+      <a class="card app-card" href="apps/Lunar_reflections_index.html">
+        <span class="badge">Active · Lunar companion</span><span class="app-icon" aria-hidden="true">🌙</span>
+        <h3>Lunar Reflections</h3>
+        <p>Follow the Moon through phases, astronomy, reflection, journaling, mindful observation, and release practices.</p>
+        <span class="app-action">Open Lunar Reflections →</span>
+      </a>
+      <a class="card app-card" href="apps/Solanar_kids_skylab_index.html">
+        <span class="badge">Active · Young explorers</span><span class="app-icon" aria-hidden="true">🚀</span>
+        <h3>Kids SkyLab</h3>
+        <p>Child-friendly weather exploration, science activities, experiments, missions, quizzes, and curiosity-led discovery.</p>
+        <span class="app-action">Launch Kids SkyLab →</span>
+      </a>
+      <a class="card app-card" href="apps/environmental_news_index.html">
+        <span class="badge">Active · Environmental media</span><span class="app-icon" aria-hidden="true">🌱</span>
+        <h3>Environmental News</h3>
+        <p>Climate, wildlife, conservation, oceans, agriculture, scientific discovery, and environmental reporting.</p>
+        <span class="app-action">Read Environmental News →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="systems" aria-labelledby="systemsTitle">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">Earth systems learning map</p>
+      <h2 id="systemsTitle">One world. Many connected systems.</h2>
+      <p>Instead of decorative percentages, this map explains what each observatory wing studies. Live measurements belong inside timestamped tools and official scientific sources.</p>
+    </div>
+    <div class="grid system-grid">
+      <article class="card system-card"><span class="system-symbol">☁️</span><h3>Atmosphere</h3><p>Air, clouds, pressure, wind, humidity, precipitation, storms, and climate circulation.</p></article>
+      <article class="card system-card"><span class="system-symbol">🌊</span><h3>Oceans</h3><p>Currents, waves, sea-surface temperature, tides, coastal processes, and marine ecosystems.</p></article>
+      <article class="card system-card"><span class="system-symbol">💧</span><h3>Freshwater</h3><p>Rainfall, rivers, lakes, groundwater, floods, drought, watersheds, and water quality.</p></article>
+      <article class="card system-card"><span class="system-symbol">❄️</span><h3>Cryosphere</h3><p>Snowpack, glaciers, sea ice, permafrost, polar systems, and frozen water storage.</p></article>
+      <article class="card system-card"><span class="system-symbol">🦋</span><h3>Biosphere</h3><p>Forests, wildlife, habitats, migration, pollinators, soils, biodiversity, and seasonal change.</p></article>
+      <article class="card system-card"><span class="system-symbol">🌋</span><h3>Geosphere</h3><p>Earthquakes, volcanoes, plate tectonics, landforms, minerals, erosion, and deep time.</p></article>
+      <article class="card system-card"><span class="system-symbol">☀️</span><h3>Solar Activity</h3><p>Sunspots, solar wind, flares, coronal mass ejections, aurora, and geomagnetic conditions.</p></article>
+      <article class="card system-card"><span class="system-symbol">🛰️</span><h3>Near-Earth Space</h3><p>Satellites, orbital conditions, debris, radiation, communications, and the space environment.</p></article>
+    </div>
+    <p class="system-note"><strong>Educational boundary:</strong> These cards are subject guides, not condition reports. Solanar should display live values only when a source, timestamp, units, and update method are clearly shown.</p>
+  </div>
+</section>
+
+<section class="section alt" id="sources" aria-labelledby="sourcesTitle">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">Trusted public science gateways</p>
+      <h2 id="sourcesTitle">Follow the observation back to its source.</h2>
+      <p>These official agencies provide forecasts, warnings, historical climate records, ocean science, Earth hazards, Moon science, and space-weather research.</p>
+    </div>
+    <div class="grid source-grid">
+      <a class="card source-card" href="https://www.weather.gov/" target="_blank" rel="noopener noreferrer">
+        <span class="source-label">United States · Official</span><h3>National Weather Service</h3>
+        <p>Local forecasts, active alerts, radar, rivers, marine conditions, fire weather, hurricanes, and safety information.</p><strong>Open Weather.gov ↗</strong>
+      </a>
+      <a class="card source-card" href="https://www.ncei.noaa.gov/" target="_blank" rel="noopener noreferrer">
+        <span class="source-label">NOAA · Data archive</span><h3>National Centers for Environmental Information</h3>
+        <p>Historical weather, climate, coastal, oceanographic, and geophysical records with data-access tools.</p><strong>Open NCEI ↗</strong>
+      </a>
+      <a class="card source-card" href="https://oceanservice.noaa.gov/" target="_blank" rel="noopener noreferrer">
+        <span class="source-label">NOAA · Ocean science</span><h3>National Ocean Service</h3>
+        <p>Ocean, coastal, tides, currents, marine hazards, navigation, ecosystems, and the ocean’s role in weather.</p><strong>Open Ocean Service ↗</strong>
+      </a>
+      <a class="card source-card" href="https://science.nasa.gov/heliophysics/focus-areas/space-weather/" target="_blank" rel="noopener noreferrer">
+        <span class="source-label">NASA · Heliophysics</span><h3>NASA Space Weather</h3>
+        <p>How solar activity shapes the space environment and affects satellites, communications, navigation, and exploration.</p><strong>Open NASA Space Weather ↗</strong>
+      </a>
+      <a class="card source-card" href="https://science.nasa.gov/moon/" target="_blank" rel="noopener noreferrer">
+        <span class="source-label">NASA · Lunar science</span><h3>NASA Moon</h3>
+        <p>Lunar phases, surface science, exploration, missions, radiation, temperatures, and the Moon’s environment.</p><strong>Open NASA Moon ↗</strong>
+      </a>
+      <a class="card source-card" href="https://www.usgs.gov/products/data/real-time-data" target="_blank" rel="noopener noreferrer">
+        <span class="source-label">USGS · Real-time science</span><h3>USGS Real-Time Data</h3>
+        <p>Earthquakes, volcanoes, water conditions, floods, drought, wildfire, landslides, and changing-land observations.</p><strong>Open USGS Data ↗</strong>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="timeline" aria-labelledby="timelineTitle">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">Planet timeline</p>
+      <h2 id="timelineTitle">Read Earth across many scales of time.</h2>
+      <p>Weather becomes more understandable when it is placed beside lunar, seasonal, climate, ecological, geological, and planetary cycles.</p>
+    </div>
+    <div class="grid timeline">
+      <article class="card time-card"><strong>Now</strong><span>Alerts, observations, radar, wind, precipitation, daylight, and local conditions</span></article>
+      <article class="card time-card"><strong>Today</strong><span>Hourly changes, heat, clouds, storms, Moon, tides, and safety planning</span></article>
+      <article class="card time-card"><strong>This Week</strong><span>Forecast patterns, fronts, pressure systems, hazards, and changing air masses</span></article>
+      <article class="card time-card"><strong>This Month</strong><span>Lunar cycle, tides, rainfall patterns, phenology, and seasonal transition</span></article>
+      <article class="card time-card"><strong>This Season</strong><span>Migration, agriculture, drought, tropical systems, snow, heat, and climate rhythms</span></article>
+      <article class="card time-card"><strong>This Year</strong><span>Temperature, rainfall, wildfire, oceans, ice, ecosystems, and annual records</span></article>
+      <article class="card time-card"><strong>Deep Time</strong><span>Geology, evolution, plate movement, climate history, and planetary development</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="future" aria-labelledby="futureTitle">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">Planned observatory architecture</p>
+      <h2 id="futureTitle">Future wings with room to grow.</h2>
+      <p>The original landing page pointed to these destinations before their files existed. They are retained as transparent construction plans rather than dead links.</p>
+    </div>
+    <div class="grid planned-grid">
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">🌊</span><h3>Ocean Center</h3><p>Currents, sea-surface temperatures, tides, buoys, waves, reefs, marine life, and ocean health.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">☁️</span><h3>Atmosphere Center</h3><p>Clouds, pressure, wind, lightning, rainfall, air quality, jet streams, and storms.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">🌋</span><h3>Geosphere Center</h3><p>Earthquakes, volcanoes, mountains, minerals, plate tectonics, and changing land.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">☀️</span><h3>Space Weather Center</h3><p>Solar wind, sunspots, flares, geomagnetic storms, auroras, and satellite conditions.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">🦋</span><h3>Biosphere Center</h3><p>Wildlife, migration, pollinators, forests, habitats, seasonal change, and biodiversity.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">❄️</span><h3>Cryosphere Center</h3><p>Snowpack, glaciers, sea ice, permafrost, polar systems, and water storage.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">🗺️</span><h3>Living Atlas</h3><p>An interactive knowledge globe connecting place, climate, geology, ecology, culture, and sky.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned center</span><span class="app-icon">🔎</span><h3>Citizen Science</h3><p>Observation logs, backyard weather, wildlife counts, water monitoring, and community research.</p><span class="planned-state">Repository build not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned curriculum</span><span class="app-icon">🌤️</span><h3>Elementary Weather</h3><p>Clouds, rain, seasons, wind, weather safety, simple instruments, and careful observation.</p><span class="planned-state">Learning module not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned curriculum</span><span class="app-icon">🌎</span><h3>Middle School Earth Science</h3><p>Atmosphere, oceans, climate, rocks, ecosystems, hazards, and evidence-based investigation.</p><span class="planned-state">Learning module not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned curriculum</span><span class="app-icon">📡</span><h3>High School Meteorology</h3><p>Forecasting, pressure, fronts, thermodynamics, hazards, models, maps, and data interpretation.</p><span class="planned-state">Learning module not yet present</span></article>
+      <article class="card planned-card"><span class="badge planned">Planned curriculum</span><span class="app-icon">🧭</span><h3>Teacher Center</h3><p>Lessons, labs, source guides, printable observation logs, projects, and classroom pathways.</p><span class="planned-state">Learning module not yet present</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="network" aria-labelledby="networkTitle">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">Connected public ecosystem</p>
+      <h2 id="networkTitle">Observe. Learn. Research. Verify. Act.</h2>
+      <p>Solanar connects Earth and sky observation to education, archives, news verification, law, health, service, art, music, and playful discovery.</p>
+    </div>
+    <div class="grid network-grid">
+      <a class="card network-card" href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer"><h3>Verve N Veda</h3><p>The public home of the wider creative, educational, and community ecosystem.</p><strong>Visit →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" target="_blank" rel="noopener noreferrer"><h3>Khaemenes Academy</h3><p>Free learning from early childhood through adult and higher study.</p><strong>Learn →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/Arshif.github.io/" target="_blank" rel="noopener noreferrer"><h3>ARSHIF Archives</h3><p>Research halls, history, science, law, literature, and human knowledge.</p><strong>Research →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener noreferrer"><h3>The Verifier</h3><p>News, evidence, source comparison, fact-checking, and media literacy.</p><strong>Verify →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/river_to_road.github.io/" target="_blank" rel="noopener noreferrer"><h3>River to Road</h3><p>Environmental stewardship, cleanup, restoration, conservation, and service.</p><strong>Act →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/firmament.github.io/" target="_blank" rel="noopener noreferrer"><h3>Firmament Law</h3><p>Law, rights, governance, public resources, and constitutional learning.</p><strong>Explore →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer"><h3>One Nation For All</h3><p>Civic participation, public policy, constitutional learning, and community pathways.</p><strong>Participate →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/medicament-hub.github.io/" target="_blank" rel="noopener noreferrer"><h3>Medicament Hub</h3><p>Health literacy, wellness learning, family resources, and trusted care pathways.</p><strong>Discover →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/the_refrain.github.io/" target="_blank" rel="noopener noreferrer"><h3>The Refrain</h3><p>Music learning, composition, sound tools, performance, and creative exploration.</p><strong>Listen →</strong></a>
+      <a class="card network-card" href="https://vervenveda.github.io/arcade.github.io/" target="_blank" rel="noopener noreferrer"><h3>Arcade</h3><p>Educational games, experiments, challenges, trivia, and playful discovery.</p><strong>Play →</strong></a>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="shell"><div class="footer-grid"><div><h3>Solanar Observatory</h3><p>A free living Earth, weather, environmental, lunar, and space learning platform.</p></div><div><h3>Explore</h3><div class="footer-links"><a href="apps/Solanar_Live_Weather_index.html">Live Weather</a><a href="apps/Solanar_Platform_index.html">Solanar Platform</a><a href="apps/Solanar_Planetarium_index.html">Planetarium</a><a href="apps/Lunar_reflections_index.html">Lunar Reflections</a></div></div><div><h3>Learning</h3><div class="footer-links"><a href="apps/Solanar_kids_skylab_index.html">Kids Skylab</a><a href="learning/teachers/index.html">Teacher Center</a><a href="centers/living-atlas/index.html">Living Atlas</a><a href="centers/citizen-science/index.html">Citizen Science</a></div></div><div><h3>Information</h3><div class="footer-links"><a href="about/index.html">About Solanar</a><a href="policies/accessibility.html">Accessibility</a><a href="policies/privacy.html">Privacy</a><a href="LICENSE.md">License</a></div></div></div><div class="bottom"><span>© <span id="year"></span> Jennifer Kay Pearl · Solanar Observatory</span><button class="back" id="backTop" type="button">Back to top</button></div></div></footer>
-<script>"use strict";const menuButton=document.querySelector(".menu"),menu=document.getElementById("siteMenu");if(menuButton&&menu){menuButton.addEventListener("click",()=>{const open=menuButton.getAttribute("aria-expanded")!=="true";menuButton.setAttribute("aria-expanded",String(open));menu.classList.toggle("open",open)});menu.addEventListener("click",e=>{if(e.target.closest("a")){menuButton.setAttribute("aria-expanded","false");menu.classList.remove("open")}})}document.getElementById("year").textContent=new Date().getFullYear();document.getElementById("backTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));</script>
+
+<footer>
+  <div class="shell">
+    <div class="footer-grid">
+      <div><h3>Solanar Observatory</h3><p>A free living Earth, weather, ocean, atmosphere, lunar, environmental, and space learning platform.</p></div>
+      <div><h3>Active Tools</h3><div class="footer-links"><a href="apps/Solanar_Live_Weather_index.html">Live Weather</a><a href="apps/Solanar_Platform_index.html">Solanar Platform</a><a href="apps/Solanar_Planetarium_index.html">Advanced Weather</a><a href="apps/Lunar_reflections_index.html">Lunar Reflections</a></div></div>
+      <div><h3>Learning</h3><div class="footer-links"><a href="apps/Solanar_kids_skylab_index.html">Kids SkyLab</a><a href="apps/environmental_news_index.html">Environmental News</a><a href="#systems">Earth Systems Map</a><a href="#sources">Official Science Sources</a></div></div>
+      <div><h3>Information</h3><div class="footer-links"><a href="#future">Planned Observatory Wings</a><a href="#network">Connected Network</a><a href="README.md">Repository README</a><a href="LICENSE.md">License</a></div></div>
+    </div>
+    <div class="bottom"><span>© <span id="year"></span> Jennifer Kay Pearl · Solanar Observatory</span><button class="back" id="backTop" type="button">Back to top</button></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  const menuButton=document.getElementById("menuButton");
+  const menu=document.getElementById("siteMenu");
+  const backTop=document.getElementById("backTop");
+  const year=document.getElementById("year");
+
+  function closeMenu(restoreFocus){
+    menu.classList.remove("open");
+    menuButton.setAttribute("aria-expanded","false");
+    menuButton.setAttribute("aria-label","Open navigation");
+    document.body.classList.remove("menu-open");
+    if(restoreFocus)menuButton.focus();
+  }
+
+  menuButton.addEventListener("click",function(){
+    const open=menuButton.getAttribute("aria-expanded")!=="true";
+    menuButton.setAttribute("aria-expanded",String(open));
+    menuButton.setAttribute("aria-label",open?"Close navigation":"Open navigation");
+    menu.classList.toggle("open",open);
+    document.body.classList.toggle("menu-open",open && window.innerWidth<=820);
+  });
+
+  menu.addEventListener("click",function(event){
+    if(event.target.closest("a"))closeMenu(false);
+  });
+
+  document.addEventListener("keydown",function(event){
+    if(event.key==="Escape" && menu.classList.contains("open"))closeMenu(true);
+  });
+
+  document.addEventListener("click",function(event){
+    if(window.innerWidth<=820 && menu.classList.contains("open") &&
+       !menu.contains(event.target) && !menuButton.contains(event.target)){
+      closeMenu(false);
+    }
+  });
+
+  window.addEventListener("resize",function(){
+    if(window.innerWidth>820)closeMenu(false);
+  });
+
+  backTop.addEventListener("click",function(){
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+
+  year.textContent=new Date().getFullYear();
+
+  window.auditSolanar=function(){
+    const report={
+      liveApplications:document.querySelectorAll("#live .app-card").length,
+      trustedSources:document.querySelectorAll("#sources .source-card").length,
+      earthSystems:document.querySelectorAll("#systems .system-card").length,
+      plannedWings:document.querySelectorAll("#future .planned-card").length,
+      networkDestinations:document.querySelectorAll("#network .network-card").length,
+      duplicateIds:[],
+      blankLinks:[]
+    };
+    const ids=new Map();
+    document.querySelectorAll("[id]").forEach(function(node){
+      ids.set(node.id,(ids.get(node.id)||0)+1);
+    });
+    report.duplicateIds=[...ids].filter(function(entry){return entry[1]>1;});
+    report.blankLinks=[...document.querySelectorAll("a[href]")].filter(function(link){
+      const value=link.getAttribute("href").trim();
+      return !value || value==="#";
+    }).map(function(link){return link.textContent.trim();});
+    console.table(report);
+    return report;
+  };
+})();
+</script>
 </body>
 </html>
