@@ -1,452 +1,1203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Environment News App</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Solanar World Weather & Environmental News — location-aware news, weather context, PLERA Search discovery, and NAIB mentor learning pathways.">
+<meta name="theme-color" content="#06172a">
+<title>Solanar World Weather & Environmental News</title>
+
 <style>
-  :root {
-    --bg: #01101c;
-    --text: #222;
-    --card: #fff;
-    --accent: #1667c7;
-  }
-  body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-  }
-  .dark {
-    --bg: #01101c;
-    --text: #e8e8e8;
-    --card: #1c1c1c;
-    --accent: #2EC1CC;
-  }
+:root{
+  --night:#04111d;
+  --night2:#082a43;
+  --panel:#0b2942;
+  --panel2:#103a58;
+  --paper:#f7fbff;
+  --ink:#f7fbff;
+  --muted:#b7cfdd;
+  --cyan:#69ddf5;
+  --teal:#7ae6bd;
+  --gold:#ffd878;
+  --blue:#63a9ff;
+  --violet:#bca2ff;
+  --rose:#ff98bd;
+  --good:#55df91;
+  --warn:#ffd064;
+  --bad:#ff8192;
+  --line:rgba(255,255,255,.14);
+  --shadow:0 22px 60px rgba(0,0,0,.32);
+  --radius:17px;
+  --display:Georgia,"Times New Roman",serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--ink);font-family:var(--sans);
+  background:
+    radial-gradient(circle at 10% 0,rgba(99,169,255,.17),transparent 30rem),
+    radial-gradient(circle at 91% 4%,rgba(122,230,189,.13),transparent 28rem),
+    linear-gradient(180deg,var(--night2),var(--night) 34rem,var(--night));
+}
+button,input,select{font:inherit}
+button{cursor:pointer;color:inherit}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid rgba(105,221,245,.72);outline-offset:3px}
+.shell{width:min(calc(100% - 28px),1280px);margin-inline:auto}
 
-  header {
-    padding: 12px;
-    background: var(--accent);
-    color: white;
-    text-align: center;
-    font-size: 1.4em;
-    font-weight: bold;
-  }
+/* ticker */
+.ticker{
+  height:36px;overflow:hidden;background:#020a12;border-bottom:1px solid var(--line);
+  position:relative;white-space:nowrap
+}
+.ticker:before,.ticker:after{
+  content:"";position:absolute;top:0;bottom:0;width:36px;z-index:3;pointer-events:none
+}
+.ticker:before{left:0;background:linear-gradient(90deg,#020a12,transparent)}
+.ticker:after{right:0;background:linear-gradient(270deg,#020a12,transparent)}
+.ticker-track{
+  width:max-content;height:100%;display:flex;align-items:center;
+  animation:newsTicker 28s linear infinite;will-change:transform
+}
+.ticker-group{
+  display:flex;align-items:center;gap:24px;padding-right:24px;
+  font-size:.73rem;font-weight:800;letter-spacing:.045em
+}
+.ticker a{text-decoration:none;color:#e9fbff}
+.ticker a:hover{color:var(--gold)}
+.dot{color:var(--teal)}
+.ticker:hover .ticker-track,.ticker:focus-within .ticker-track{animation-play-state:paused}
+@keyframes newsTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  #newsCard {
-    margin: 24px;
-    padding: 24px;
-    background: var(--card);
-    border-radius: 14px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    min-height: 222px;
-  }
+/* header */
+.siteHeader{
+  position:sticky;top:0;z-index:1000;background:rgba(4,17,29,.94);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(16px)
+}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+.mark{
+  width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#dffcff 0 7%,#5ab5e1 20%,#0a537c 58%,#042237 100%);
+  box-shadow:0 0 0 1px #ffffff25,0 0 24px #63a9ff44
+}
+.brand strong{display:block;font:600 1.04rem/1.1 var(--display);letter-spacing:.035em}
+.brand span{display:block;margin-top:4px;color:var(--muted);font-size:.63rem;letter-spacing:.11em;text-transform:uppercase}
+.menuWrap{position:relative}
+.menuBtn{
+  border:1px solid var(--line);border-radius:999px;background:#092038;padding:9px 13px;font-weight:800
+}
+.menu{
+  position:absolute;right:0;top:calc(100% + 8px);z-index:1100;min-width:255px;
+  display:none;gap:4px;padding:8px;border:1px solid var(--line);border-radius:14px;
+  background:#071b2e;box-shadow:var(--shadow)
+}
+.menu.open{display:grid}
+.menu a,.menu button{
+  display:block;width:100%;padding:10px 11px;border:0;border-radius:10px;background:transparent;
+  color:#fff;text-align:left;text-decoration:none;font-size:.82rem
+}
+.menu a:hover,.menu button:hover{background:#0f395b;color:var(--gold)}
 
-  #title {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 14px;
-  }
-  #desc {
-    opacity: 0.88;
-  }
-
-  .controls {
-  margin-top: 24px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+/* hero */
+.hero{padding:58px 0 30px}
+.heroGrid{display:grid;grid-template-columns:1.25fr .75fr;gap:25px;align-items:center}
+.eyebrow{
+  margin:0 0 9px;color:var(--teal);font-size:.7rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase
+}
+h1,h2,h3{font-family:var(--display);font-weight:600}
+h1{margin:0;font-size:clamp(3rem,7vw,6.5rem);line-height:.92}
+.hero p{max-width:760px;color:var(--muted);line-height:1.7}
+.heroActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.btn{
+  min-height:44px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;
+  background:#09233c;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;justify-content:center
+}
+.btn.primary{border:0;color:#052236;background:linear-gradient(135deg,#9ff2ff,#82edbe)}
+.btn.gold{border:0;color:#2a1c00;background:linear-gradient(135deg,#ffe69a,#f1bd55)}
+.btn:hover{transform:translateY(-1px)}
+.globeCard{
+  min-height:260px;display:grid;place-items:center;border:1px solid var(--line);border-radius:24px;
+  background:radial-gradient(circle at 45% 45%,#2d91bd 0 24%,#116188 42%,#0a3757 65%,#061827 75%);
+  box-shadow:var(--shadow);position:relative;overflow:hidden
+}
+.globeCard:after{
+  content:"";position:absolute;width:320px;height:105px;border:1px solid #7ae6bd99;border-radius:50%;
+  transform:rotate(-12deg)
+}
+.globeIcon{font-size:6rem;filter:drop-shadow(0 0 18px #fff3)}
+.globeLabel{
+  position:absolute;bottom:16px;left:16px;right:16px;padding:9px 11px;border-radius:11px;
+  background:#04111dda;border:1px solid var(--line);text-align:center;font-size:.78rem;color:#d7edf7
 }
 
-  button {
-    padding: 14px 14px;
-    border-radius: 7px;
-    border: none;
-    background: var(--accent);
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-  }
+/* grade toggle */
+.gradeBar{
+  margin-top:22px;padding:13px;border:1px solid var(--line);border-radius:15px;
+  background:#071c31;display:flex;gap:8px;align-items:center;flex-wrap:wrap
+}
+.gradeBar b{color:var(--gold);font-size:.79rem;margin-right:3px}
+.gradeBtn{
+  border:1px solid var(--line);border-radius:999px;padding:8px 11px;background:#09243d;font-weight:800;font-size:.78rem
+}
+.gradeBtn.active{color:#052236;background:linear-gradient(135deg,var(--cyan),var(--teal));border-color:transparent}
 
-  .tabs {
-    display: flex;
-    overflow-x: auto;
-    padding: 14px;
-    background: var(--card);
-    gap: 14px;
-  }
+/* dashboard */
+.dashboard{display:grid;grid-template-columns:1fr .9fr;gap:14px;margin-top:14px}
+.card{
+  min-width:0;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(150deg,var(--panel),var(--panel2));box-shadow:var(--shadow)
+}
+.panel{padding:16px}
+.panel h2{margin:0 0 10px;color:var(--cyan);font-size:1.2rem}
 
-  .tab {
-    padding: 7px 14px;
-    border-radius: 20px;
-    background: var(--accent);
-    color: white;
-    cursor: pointer;
-    white-space: nowrap;
-    font-size: 0.9em;
-  }
+/* geo/weather */
+.geoHead{display:flex;justify-content:space-between;gap:12px;align-items:start}
+.geoStatus{color:var(--muted);font-size:.82rem;line-height:1.5}
+.weatherGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.metric{padding:10px;border:1px solid #ffffff16;border-radius:12px;background:#061b30}
+.metric b{display:block;color:var(--teal);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.metric span{display:block;margin-top:4px;font-size:.95rem}
+.alertBox{display:grid;gap:7px;margin-top:10px}
+.alert{
+  padding:9px 11px;border:1px solid #ff819244;border-radius:11px;background:#4a1324;font-size:.81rem;line-height:1.45
+}
 
-  #favoritesPanel {
-    margin: 20px;
-    padding: 15px;
-    border-radius: 12px;
-    background: var(--card);
-    display: none;
-  }
+/* PLERA */
+.searchRow{display:grid;grid-template-columns:1fr auto;gap:8px}
+.searchRow input{
+  width:100%;min-height:46px;border:1px solid var(--line);border-radius:12px;
+  background:#06172a;color:#fff;padding:10px 12px
+}
+.searchRow button{white-space:nowrap}
+.quickSearch{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.chip{
+  border:1px solid var(--line);border-radius:999px;padding:7px 9px;background:#08233b;font-size:.73rem
+}
+.note{margin-top:9px;color:var(--muted);font-size:.74rem;line-height:1.45}
+
+/* tabs */
+.tabs{
+  display:flex;gap:7px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:thin
+}
+.tab{
+  flex:0 0 auto;border:1px solid var(--line);border-radius:999px;padding:8px 11px;
+  background:#09243d;font-weight:800;font-size:.77rem
+}
+.tab.active{background:linear-gradient(135deg,#177bb4,#22a8bf);border-color:transparent}
+
+/* news layout */
+.newsLayout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(310px,.65fr);gap:14px;margin-top:12px}
+.newsCard{padding:22px;min-height:390px;display:flex;flex-direction:column}
+.sourceRow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{
+  display:inline-flex;padding:5px 8px;border:1px solid var(--line);border-radius:999px;
+  color:#d9eef7;background:#061b30;font-size:.68rem;font-weight:800
+}
+.pill.official{color:#caffdf;border-color:#55df9155}
+.pill.age{color:#fff0ba;border-color:#ffd06455}
+.newsTitle{margin:15px 0 0;font-size:clamp(1.65rem,4vw,3rem);line-height:1.08}
+.newsDesc{margin-top:14px;color:#d0e2eb;line-height:1.72;font-size:.96rem}
+.newsControls{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:18px}
+.statusLine{margin-top:10px;color:var(--muted);font-size:.76rem}
+.empty{
+  padding:25px;text-align:center;color:var(--muted);border:1px dashed #ffffff22;border-radius:13px
+}
+
+/* mentor */
+.mentor{padding:18px}
+.mentorHeader{display:flex;align-items:center;gap:12px}
+.naibMark{
+  width:52px;height:52px;flex:0 0 52px;display:grid;place-items:center;border-radius:50%;
+  background:linear-gradient(135deg,#c9b8ff,#78e4c2);color:#10213a;
+  font:700 1.1rem/1 var(--display)
+}
+.mentor h2{margin:0;color:var(--gold)}
+.mentor p{margin:.35rem 0 0;color:var(--muted);font-size:.82rem;line-height:1.5}
+.mentorBox{
+  margin-top:14px;padding:13px;border:1px solid #bca2ff44;border-radius:13px;
+  background:#121d38
+}
+.mentorBox h3{margin:0 0 8px;font-size:1rem;color:#d8caff}
+.mentorList{margin:0;padding-left:18px;color:#dce8ef;font-size:.85rem;line-height:1.6}
+.mentorActions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}
+
+/* favorites */
+.favorites{margin-top:14px;padding:16px}
+.favGrid{display:grid;gap:8px}
+.favItem{padding:10px;border:1px solid #ffffff14;border-radius:11px;background:#061b30}
+.favItem button{margin-top:7px}
+
+/* age themes */
+body[data-grade="k2"]{
+  --night:#08223b;--night2:#19769d;--panel:#114b67;--panel2:#17627e;
+  --cyan:#91efff;--teal:#a7f5ad;--gold:#ffe46d
+}
+body[data-grade="35"]{
+  --night:#06192e;--night2:#155681;--panel:#0d3556;--panel2:#165274;
+}
+body[data-grade="68"]{
+  --night:#071224;--night2:#253c68;--panel:#111f3d;--panel2:#20375d;
+  --cyan:#78ceff;--teal:#bc9eff
+}
+body[data-grade="912"]{
+  --night:#050914;--night2:#172640;--panel:#0c172a;--panel2:#172d4b;
+  --cyan:#a1ddff;--teal:#d4c4ff
+}
+
+/* footer */
+footer{padding:28px 0 36px;text-align:center;color:#94aebe;font-size:.73rem}
+
+@media(max-width:1000px){
+  .heroGrid,.dashboard,.newsLayout{grid-template-columns:1fr}
+  .globeCard{min-height:210px}
+}
+@media(max-width:700px){
+  .brand span{display:none}.weatherGrid{grid-template-columns:repeat(2,1fr)}
+  .searchRow{grid-template-columns:1fr}.mentorActions{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .shell{width:min(calc(100% - 18px),1280px)}
+  .hero{padding-top:36px}.gradeBar{display:grid;grid-template-columns:1fr 1fr}
+  .gradeBar b{grid-column:1/-1}.weatherGrid{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important}
+  .ticker-track{animation:none!important}
+}
 </style>
-<body>
-<div class="app">
-  <header>🌍 Environment News</header>
+</head>
 
-  <div class="tabs">
-    <button class="tab" type="button" onclick="loadNews()">⟳ Refresh</button>
-    <button class="tab active" data-cat="general">All</button>
-    <button class="tab" data-cat="climate">Climate</button>
-    <button class="tab" data-cat="energy">Energy</button>
-    <button class="tab" data-cat="wildlife">Wildlife</button>
-    <button class="tab" type="button" onclick="toggleFavorites()">⭐ Favorites</button>
-    <button class="tab" type="button" onclick="toggleDark()">🌙/☀️</button>
-    <button class="tab" type="button" onclick="toggleFullscreen()">⛶</button>
+<body data-grade="35">
+
+<div class="ticker" role="region" aria-label="World weather and environment ticker">
+  <div class="ticker-track">
+    <div class="ticker-group">
+      <span id="tickerLocal">🌍 World Weather & Environment</span><span class="dot">✦</span>
+      <span>🌦 Weather</span><span class="dot">✦</span>
+      <span>🌊 Oceans</span><span class="dot">✦</span>
+      <span>🔥 Wildfire & Air</span><span class="dot">✦</span>
+      <span>🌀 Tropical Weather</span><span class="dot">✦</span>
+      <span>🦋 Wildlife & Biodiversity</span><span class="dot">✦</span>
+      <span>⚡ Energy & Climate</span><span class="dot">✦</span>
+      <a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">🔎 PLERA Search</a><span class="dot">✦</span>
+      <a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">N · NAIB Mentor</a><span class="dot">✦</span>
+      <a href="../index.html#contribute">♡ Contribute</a><span class="dot">✦</span>
+    </div>
+    <div class="ticker-group" aria-hidden="true">
+      <span>🌍 World Weather & Environment</span><span class="dot">✦</span>
+      <span>🌦 Weather</span><span class="dot">✦</span>
+      <span>🌊 Oceans</span><span class="dot">✦</span>
+      <span>🔥 Wildfire & Air</span><span class="dot">✦</span>
+      <span>🌀 Tropical Weather</span><span class="dot">✦</span>
+      <span>🦋 Wildlife & Biodiversity</span><span class="dot">✦</span>
+      <span>⚡ Energy & Climate</span><span class="dot">✦</span>
+      <span>🔎 PLERA Search</span><span class="dot">✦</span>
+      <span>N · NAIB Mentor</span><span class="dot">✦</span>
+      <span>♡ Contribute</span><span class="dot">✦</span>
+    </div>
   </div>
-
-  <div id="newsCard">
-    <div id="title">Loading environment news…</div>
-    <div id="metaLine"></div>
-    <div id="desc"></div>
-  </div>
-
- <div class="controls">
-  <button type="button" onclick="prev()">⬅ Prev</button>
-  <button type="button" onclick="next()">Next ➡</button>
-  <button type="button" onclick="readAloud()">🔊 Read</button>
-  <button type="button" onclick="saveFavorite()">⭐ Save</button>
-  <button type="button" onclick="openArticle()">🔗 Open</button>
 </div>
 
-  <div id="statusLine"></div>
+<header class="siteHeader">
+  <div class="shell nav">
+    <a class="brand" href="https://github.com/vervenveda/vervenveda.github.io" aria-label="Return to Verve N Veda home">
+      <span class="mark" aria-hidden="true">🌍</span>
+      <span>
+        <strong>Solanar News</strong>
+        <span>World Weather · Environment · Learning</span>
+      </span>
+    </a>
 
-  <div id="favoritesPanel"></div>
-</div>
+    <div class="menuWrap">
+      <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu">☰ Menu</button>
+      <nav class="menu" id="siteMenu" aria-label="Portal menu">
+        <a href="#news">📰 News</a>
+        <a href="#local">📍 My Area</a>
+        <a href="#plera">🔎 PLERA Search</a>
+        <a href="#mentor">N · NAIB Mentor</a>
+        <a href="../index.html">☀ Solanar Observatory</a>
+        <a href="../index.html#contribute">♡ Contribute</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="shell">
+      <div class="heroGrid">
+        <div>
+          <p class="eyebrow">A living Earth news room</p>
+          <h1>World Weather<br>&amp; Environment</h1>
+          <p>
+            Explore weather, oceans, climate, wildlife, energy, natural events, and Earth science
+            through a reading experience that grows with the learner.
+          </p>
+          <div class="heroActions">
+            <button class="btn primary" id="useLocationHero" type="button">📍 Use My Location</button>
+            <a class="btn" href="#news">📰 Explore News</a>
+            <a class="btn gold" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">🔎 Open PLERA Search</a>
+          </div>
+        </div>
+
+        <div class="globeCard" aria-label="World environment gateway">
+          <div class="globeIcon">🌎</div>
+          <div class="globeLabel" id="globeLabel">World view · location not selected</div>
+        </div>
+      </div>
+
+      <div class="gradeBar" aria-label="Reading level">
+        <b>Choose a learning level:</b>
+        <button class="gradeBtn" data-grade="k2">🌱 K–2</button>
+        <button class="gradeBtn active" data-grade="35">🧭 Grades 3–5</button>
+        <button class="gradeBtn" data-grade="68">⚡ Grades 6–8</button>
+        <button class="gradeBtn" data-grade="912">🛰 Grades 9–12</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="shell">
+
+    <section class="dashboard" id="local">
+      <article class="card panel">
+        <div class="geoHead">
+          <div>
+            <h2>📍 My Area</h2>
+            <div class="geoStatus" id="geoStatus">
+              Location is optional. Share it only if you want local weather and nearby-story matching.
+            </div>
+          </div>
+          <button class="btn" id="useLocation" type="button">Use Location</button>
+        </div>
+
+        <div class="weatherGrid">
+          <div class="metric"><b>Place</b><span id="localPlace">World view</span></div>
+          <div class="metric"><b>Temperature</b><span id="localTemp">—</span></div>
+          <div class="metric"><b>Weather</b><span id="localCondition">—</span></div>
+          <div class="metric"><b>Wind</b><span id="localWind">—</span></div>
+        </div>
+
+        <div class="alertBox" id="localAlerts"></div>
+
+        <div class="quickSearch">
+          <button class="chip" id="worldMode" type="button">🌍 World News</button>
+          <button class="chip" id="nearbyMode" type="button">📍 Stories Near Me</button>
+        </div>
+      </article>
+
+      <article class="card panel" id="plera">
+        <h2>🔎 PLERA Discovery</h2>
+        <div class="searchRow">
+          <input id="pleraQuery" placeholder="Search weather, climate, oceans, wildlife, a place, or this story…">
+          <button class="btn gold" id="pleraSearch" type="button">Search with PLERA</button>
+        </div>
+        <div class="quickSearch">
+          <button class="chip pleraChip" data-q="world weather today">World weather</button>
+          <button class="chip pleraChip" data-q="wildfire smoke air quality">Wildfire & air</button>
+          <button class="chip pleraChip" data-q="ocean climate coral reefs">Oceans</button>
+          <button class="chip pleraChip" data-q="wildlife biodiversity conservation">Wildlife</button>
+        </div>
+        <div class="note" id="pleraStatus">
+          PLERA opens in its own discovery workspace. The portal can prepare and copy a research query for you.
+        </div>
+      </article>
+    </section>
+
+    <section id="news">
+      <div class="tabs" role="tablist" aria-label="News categories">
+        <button class="tab active" data-cat="general">🌍 All</button>
+        <button class="tab" data-cat="weather">🌦 Weather</button>
+        <button class="tab" data-cat="climate">🌡 Climate</button>
+        <button class="tab" data-cat="ocean">🌊 Oceans</button>
+        <button class="tab" data-cat="wildlife">🦋 Wildlife</button>
+        <button class="tab" data-cat="energy">⚡ Energy</button>
+        <button class="tab" data-cat="hazards">🔥 Natural Events</button>
+        <button class="tab" id="refreshBtn" type="button">⟳ Refresh</button>
+      </div>
+
+      <div class="newsLayout">
+        <article class="card newsCard">
+          <div class="sourceRow">
+            <span class="pill" id="sourcePill">News</span>
+            <span class="pill age" id="agePill">Grades 3–5</span>
+            <span class="pill official" id="officialPill" hidden>Official source</span>
+          </div>
+
+          <h2 class="newsTitle" id="title">Loading Earth and weather news…</h2>
+          <div class="statusLine" id="metaLine"></div>
+          <div class="newsDesc" id="desc"></div>
+
+          <div class="newsControls">
+            <button class="btn" id="prevBtn" type="button">⬅ Previous</button>
+            <button class="btn" id="nextBtn" type="button">Next ➡</button>
+            <button class="btn" id="readBtn" type="button">🔊 Read</button>
+            <button class="btn" id="favoriteBtn" type="button">⭐ Save</button>
+            <button class="btn" id="articlePleraBtn" type="button">🔎 Research</button>
+            <button class="btn primary" id="openBtn" type="button">Open Source ↗</button>
+          </div>
+
+          <div class="statusLine" id="statusLine"></div>
+        </article>
+
+        <aside class="card mentor" id="mentor">
+          <div class="mentorHeader">
+            <div class="naibMark">N</div>
+            <div>
+              <h2>NAIB News Mentor</h2>
+              <p>Age-aware reading questions, source habits, and research guidance.</p>
+            </div>
+          </div>
+
+          <div class="mentorBox">
+            <h3 id="mentorTitle">Before you read</h3>
+            <ul class="mentorList" id="mentorList">
+              <li>What do you think this story will be about?</li>
+              <li>Where did the information come from?</li>
+            </ul>
+          </div>
+
+          <div class="mentorBox">
+            <h3>Vocabulary</h3>
+            <div id="vocab" class="note">Vocabulary will appear with the story.</div>
+          </div>
+
+          <div class="mentorActions">
+            <button class="btn gold" id="copyNaibPrompt" type="button">Copy Mentor Prompt</button>
+            <a class="btn" href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">Continue with NAIB ↗</a>
+          </div>
+          <div class="note" id="mentorStatus"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card favorites" id="favoritesPanel" hidden>
+      <h2>⭐ Saved Stories</h2>
+      <div class="favGrid" id="favoritesList"></div>
+    </section>
+
+    <div class="heroActions" style="justify-content:center;margin:16px 0 0">
+      <button class="btn" id="toggleFavorites" type="button">⭐ Show Saved Stories</button>
+      <button class="btn" id="fullscreenBtn" type="button">⛶ Fullscreen</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="shell">
+  Jennifer Kay Pearl · Verve N Veda · Khaemenes Academy · All Rights Reserved
+</footer>
 
 <script>
-// --- RSS SOURCES (environment-focused, free) ---
-const FEEDS = [
-  "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
-  "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
-  "https://www.theguardian.com/environment/rss",
-  "https://www.unep.org/news-and-stories/rss.xml",
-  "https://www.eia.gov/rss/todayinenergy.xml",
-  "https://www.carbonbrief.org/feed",
-  "https://insideclimatenews.org/rss.xml",
-  "https://yaleclimateconnections.org/feed",
-  "https://www.canarymedia.com/rss.rss",
-  "https://news.mongabay.com/feed/?feedtype=bulletpoints&post_type=post&topic=environment",
+"use strict";
 
-  "https://sci.esa.int/newssyndication/rss/sciweb.xml",
-  "http://sci.esa.int/newssyndication/rss/cosmicvisionweb.xml",
-  "https://cneos.jpl.nasa.gov/feed/news.xml",
-  "https://www.jpl.nasa.gov/feeds/news/",
-  "http://modis.gsfc.nasa.gov/rss/rss.xml",
-  "https://podaac.jpl.nasa.gov/PO.DAAC_RSS_Feed"
-]
+const $=id=>document.getElementById(id);
 
-let articles = [];
-let index = 0;
-let currentCategory = "general";
-let isLoading = false;
+const PLERA_URL="https://vervenveda.github.io/PLERASearch.github.io/";
+const NAIB_URL="https://artist1970.github.io/noema-ai.github.io/";
+const NEWS_CACHE="solanar_environment_news_v3";
+const FAV_KEY="solanar_environment_favorites_v3";
+const PREF_KEY="solanar_environment_prefs_v3";
 
-// Load cached offline first (if any)
-if (localStorage.envCache) {
-  try {
-    articles = JSON.parse(localStorage.envCache) || [];
-  } catch(e) {
-    articles = [];
+const FEEDS=[
+  {name:"NOAA Ocean Service",url:"https://oceanservice.noaa.gov/rss/nosnews.xml",official:true,kidSafe:true,defaultCat:"ocean"},
+  {name:"National Hurricane Center",url:"https://www.nhc.noaa.gov/gtwo.xml",official:true,kidSafe:false,defaultCat:"weather"},
+  {name:"NASA Earth Observatory",url:"https://science.nasa.gov/feed/earth-observatory/natural-events",official:true,kidSafe:true,defaultCat:"hazards"},
+  {name:"NASA CNEOS",url:"https://cneos.jpl.nasa.gov/feed/news.xml",official:true,kidSafe:true,defaultCat:"general"},
+  {name:"UN Environment Programme",url:"https://www.unep.org/news-and-stories/rss.xml",official:true,kidSafe:true,defaultCat:"general"},
+  {name:"BBC Science & Environment",url:"https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",official:false,kidSafe:false,defaultCat:"general"},
+  {name:"The Guardian Environment",url:"https://www.theguardian.com/environment/rss",official:false,kidSafe:false,defaultCat:"general"},
+  {name:"U.S. Energy Information Administration",url:"https://www.eia.gov/rss/todayinenergy.xml",official:true,kidSafe:true,defaultCat:"energy"},
+  {name:"Mongabay",url:"https://news.mongabay.com/feed/?feedtype=bulletpoints&post_type=post&topic=environment",official:false,kidSafe:false,defaultCat:"wildlife"}
+];
+
+const GRADE={
+  k2:{
+    label:"K–2",
+    maxWords:38,
+    mentor:[
+      "What is happening in this story?",
+      "Is it about the sky, water, land, plants, or animals?",
+      "What is one new thing you learned?",
+      "Ask a grown-up about any scary weather words."
+    ]
+  },
+  "35":{
+    label:"Grades 3–5",
+    maxWords:75,
+    mentor:[
+      "What happened, and where did it happen?",
+      "What weather or Earth system is involved?",
+      "Which fact in the story seems most important?",
+      "Who is the source of the information?"
+    ]
+  },
+  "68":{
+    label:"Grades 6–8",
+    maxWords:120,
+    mentor:[
+      "What is the main claim or event?",
+      "What evidence or measurements are mentioned?",
+      "What causes and effects can you identify?",
+      "How could you confirm this story with another source?"
+    ]
+  },
+  "912":{
+    label:"Grades 9–12",
+    maxWords:190,
+    mentor:[
+      "Separate the central factual claim from interpretation or opinion.",
+      "Identify the primary evidence, measurements, or institutions cited.",
+      "What uncertainty, missing context, or competing explanation should be checked?",
+      "Use PLERA and NAIB/The Verifier to look for primary and independent corroborating sources."
+    ]
   }
+};
+
+const SENSITIVE=/\b(killed|dead|death|fatal|body|bodies|blood|warfare|murder|attack victim|mass casualty)\b/i;
+
+let prefs={grade:"35",category:"general",scope:"world"};
+try{prefs=Object.assign(prefs,JSON.parse(localStorage.getItem(PREF_KEY)||"{}"))}catch{}
+
+let master=[];
+let articles=[];
+let index=0;
+let geo=null;
+let weather=null;
+let locationTerms=[];
+let isLoading=false;
+
+function savePrefs(){
+  try{localStorage.setItem(PREF_KEY,JSON.stringify(prefs))}catch{}
 }
 
-// --- Helpers for category detection ---
-function normalizeCategory(title, desc, rawCat, link) {
-  const text = (title + " " + desc + " " + (rawCat || "") + " " + (link || "")).toLowerCase();
-
-  if (text.includes("wildlife") || text.includes("species") || text.includes("habitat") ||
-      text.includes("biodiversity") || text.includes("conservation") || text.includes("forest")) {
-    return "wildlife";
-  }
-  if (text.includes("solar") || text.includes("wind") || text.includes("battery") ||
-      text.includes("renewable") || text.includes("electric") || text.includes("grid") ||
-      text.includes("energy")) {
-    return "energy";
-  }
-  if (text.includes("climate") || text.includes("warming") || text.includes("emission") ||
-      text.includes("carbon") || text.includes("greenhouse")) {
-    return "climate";
-  }
-  return "general";
+function stripHtml(html){
+  const d=document.createElement("div");
+  d.innerHTML=html||"";
+  d.querySelectorAll("script,style,iframe,object,embed").forEach(x=>x.remove());
+  return (d.textContent||d.innerText||"").replace(/\s+/g," ").trim();
 }
 
-// Basic RSS fetch via AllOrigins (CORS helper)
-async function fetchRSS(url) {
-  const res = await fetch("https://api.allorigins.win/get?url=" + encodeURIComponent(url));
-  if (!res.ok) throw new Error("Feed error");
-  const data = await res.json();
-  const xml = new DOMParser().parseFromString(data.contents, "text/xml");
-  return [...xml.querySelectorAll("item")].map(item => {
-    const title = item.querySelector("title")?.textContent || "Untitled";
-    const desc  = item.querySelector("description")?.textContent || "";
-    const link  = item.querySelector("link")?.textContent || "";
-    const rawCat = item.querySelector("category")?.textContent || "";
-    const category = normalizeCategory(title, desc, rawCat, link);
-    return { title, desc, link, category };
-  });
+function safeText(text){
+  return String(text??"");
 }
 
-// Load & cache all feeds
-async function loadNews() {
-  if (isLoading) return;
-  isLoading = true;
-  let temp = [];
-  for (let feed of FEEDS) {
-    try {
-      const items = await fetchRSS(feed);
-      temp.push(...items);
-    } catch (e) {
-      console.warn("RSS error", feed, e);
-    }
-  }
-  if (temp.length) {
-    // Save master list to cache
-    localStorage.envCache = JSON.stringify(temp);
-    articles = temp;
-    applyCategoryFilter();
-  } else if (!articles.length) {
-    document.getElementById("title").textContent = "Unable to load news.";
-    document.getElementById("desc").textContent =
-      "Please check your connection or try again later. Cached stories were not found.";
-  }
-  isLoading = false;
+function shorten(text,maxWords){
+  const words=stripHtml(text).split(/\s+/).filter(Boolean);
+  if(words.length<=maxWords)return words.join(" ");
+  return words.slice(0,maxWords).join(" ")+"…";
 }
 
-// Filter by currentCategory and show first article
-function applyCategoryFilter() {
-  let cache = [];
-  if (localStorage.envCache) {
-    try {
-      cache = JSON.parse(localStorage.envCache) || [];
-    } catch(e) {
-      cache = articles || [];
-    }
-  } else {
-    cache = articles || [];
-  }
-  if (!cache.length) return;
+function categoryFor(title,desc,rawCat,link,defaultCat){
+  const t=`${title} ${desc} ${rawCat||""} ${link||""}`.toLowerCase();
 
-  if (currentCategory === "general") {
-    articles = cache;
-  } else {
-    articles = cache.filter(a => a.category === currentCategory);
-    if (!articles.length) {
-      // fall back gracefully
-      articles = cache;
-      currentCategory = "general";
-    }
+  if(/\b(hurricane|tropical storm|tornado|forecast|rain|snow|weather|thunderstorm|lightning|wind|heat wave|cold front)\b/.test(t))return"weather";
+  if(/\b(wildfire|earthquake|volcano|flood|drought|landslide|natural event|smoke plume)\b/.test(t))return"hazards";
+  if(/\b(ocean|sea|marine|coral|reef|coast|tide|current|el niño|la niña)\b/.test(t))return"ocean";
+  if(/\b(wildlife|species|habitat|biodiversity|conservation|forest|animal|bird|pollinator)\b/.test(t))return"wildlife";
+  if(/\b(solar|wind farm|battery|renewable|electric|grid|energy|oil|gas|power plant)\b/.test(t))return"energy";
+  if(/\b(climate|warming|emission|carbon|greenhouse|temperature record|climate change)\b/.test(t))return"climate";
+
+  return defaultCat||"general";
+}
+
+function articleAgeOK(a){
+  const combined=`${a.title} ${a.desc}`;
+  if((prefs.grade==="k2"||prefs.grade==="35")&&SENSITIVE.test(combined))return false;
+
+  if(prefs.grade==="k2"){
+    return a.kidSafe || a.official || ["ocean","wildlife","climate","energy","general"].includes(a.category);
   }
-  index = 0;
-  updateActiveTabs();
+  return true;
+}
+
+function nearbyMatch(a){
+  if(!locationTerms.length)return false;
+  const t=`${a.title} ${stripHtml(a.desc)}`.toLowerCase();
+  return locationTerms.some(term=>term.length>=3&&t.includes(term.toLowerCase()));
+}
+
+function filtered(){
+  let list=master.filter(articleAgeOK);
+
+  if(prefs.category!=="general"){
+    const byCat=list.filter(a=>a.category===prefs.category);
+    if(byCat.length)list=byCat;
+  }
+
+  if(prefs.scope==="nearby"&&locationTerms.length){
+    const local=list.filter(nearbyMatch);
+    if(local.length)list=local;
+    else list=[];
+  }
+
+  return list;
+}
+
+function applyFilters(){
+  articles=filtered();
+  index=0;
+  renderTabs();
   showArticle();
 }
 
-function updateActiveTabs() {
-  document.querySelectorAll(".tab[data-cat]").forEach(tab => {
-    tab.classList.toggle("active", tab.dataset.cat === currentCategory);
+function renderTabs(){
+  document.querySelectorAll(".tab[data-cat]").forEach(tab=>{
+    tab.classList.toggle("active",tab.dataset.cat===prefs.category);
   });
 }
 
-function sanitizeHtml(html) {
-  const div = document.createElement("div");
-  div.innerHTML = html;
-  // Drop potentially unsafe elements but keep formatting/links
-  div.querySelectorAll("script,style,iframe").forEach(el => el.remove());
-  return div.innerHTML;
-}
+function ageSummary(a){
+  const text=stripHtml(a.desc)||"Open the source to read the full story.";
+  const short=shorten(text,GRADE[prefs.grade].maxWords);
 
-function showArticle(direction = 1) {
-  if (!articles.length) return;
-
-  const card = document.getElementById("newsCard");
-  card.style.opacity = 0;
-  card.style.transform = `translateX(${direction * 40}px)`;
-
-  setTimeout(() => {
-    const a = articles[index];
-    const titleEl = document.getElementById("title");
-    const descEl = document.getElementById("desc");
-    const metaEl = document.getElementById("metaLine");
-
-    titleEl.textContent = a.title;
-    titleEl.onclick = () => openArticle();
-
-    // derive simple source name from URL
-    let host = "";
-    try {
-      host = a.link ? new URL(a.link).hostname.replace(/^www\./, "") : "";
-    } catch(e) { host = ""; }
-
-    metaEl.textContent = host
-      ? `${host} · ${a.category.charAt(0).toUpperCase() + a.category.slice(1)}`
-      : a.category.charAt(0).toUpperCase() + a.category.slice(1);
-
-    descEl.innerHTML = sanitizeHtml(a.desc);
-
-    card.style.opacity = 1;
-    card.style.transform = "translateX(0)";
-
-    const status = document.getElementById("statusLine");
-    status.textContent = `${index + 1} of ${articles.length} stories`;
-  }, 220);
-}
-
-function next() {
-  if (!articles.length) return;
-  index = (index + 1) % articles.length;
-  showArticle(+1);
-}
-
-function prev() {
-  if (!articles.length) return;
-  index = (index - 1 + articles.length) % articles.length;
-  showArticle(-1);
-}
-
-function openArticle() {
-  if (!articles.length) return;
-  const link = articles[index].link;
-  if (link) {
-    window.open(link, "_blank", "noopener,noreferrer");
-  } else {
-    alert("No link available for this story.");
+  if(prefs.grade==="k2"){
+    return `This Earth story is about: ${short}`;
   }
-}
-
-// --- Voice ---
-function readAloud() {
-  if (!articles.length || !("speechSynthesis" in window)) return;
-  const a = articles[index];
-  const msg = new SpeechSynthesisUtterance(
-    `${a.title}. ${stripHtml(a.desc)}`
-  );
-  speechSynthesis.speak(msg);
-}
-
-function stripHtml(html) {
-  const div = document.createElement("div");
-  div.innerHTML = html;
-  return div.textContent || div.innerText || "";
-}
-
-// --- Favorites ---
-function saveFavorite() {
-  if (!articles.length) return;
-
-  let favs = [];
-  try {
-    favs = JSON.parse(localStorage.envFavs || "[]");
-  } catch(e) {
-    favs = [];
+  if(prefs.grade==="35"){
+    return short;
   }
+  return short;
+}
 
-  const current = articles[index];
-  const exists = favs.some(f => f.link === current.link);
+function sourceHost(link){
+  try{return new URL(link).hostname.replace(/^www\./,"")}catch{return""}
+}
 
-  if (exists) {
-    alert("This article is already in favorites.");
+function vocabularyFor(a){
+  const t=`${a.title} ${a.desc}`.toLowerCase();
+  const vocab=[];
+
+  const bank=[
+    ["precipitation","precipitation","water that falls from clouds as rain, snow, sleet, or hail"],
+    ["humidity","humidity","the amount of water vapor in the air"],
+    ["biodiversity","biodiversity","the variety of living things in an area"],
+    ["emissions","emissions","gases or particles released into the air"],
+    ["atmosphere","atmosphere","the layer of gases surrounding Earth"],
+    ["drought","drought","a long period with much less rain than usual"],
+    ["ecosystem","ecosystem","living things and their environment interacting together"],
+    ["hurricane","hurricane","a powerful rotating tropical storm"],
+    ["wildfire","wildfire","an uncontrolled fire burning in natural vegetation"],
+    ["carbon","carbon","an element that is part of living things and many gases and fuels"],
+    ["renewable","renewable energy","energy from sources that naturally replenish"],
+    ["conservation","conservation","protecting and carefully using natural resources"],
+    ["forecast","forecast","a prediction based on observations and models"]
+  ];
+
+  bank.forEach(([needle,word,meaning])=>{
+    if(t.includes(needle)&&vocab.length<3)vocab.push(`${word}: ${meaning}`);
+  });
+
+  return vocab.length?vocab.join(" · "):"Look for one science word you do not know. Try to define it from context, then verify the meaning.";
+}
+
+function mentorPromptFor(a){
+  const grade=GRADE[prefs.grade];
+  const place=geo?.label||"the learner's area";
+  return [
+    `You are NAIB acting as an age-appropriate environmental news mentor for ${grade.label}.`,
+    `Story title: ${a.title}`,
+    `Source: ${a.sourceName||sourceHost(a.link)||"unknown"}`,
+    `Category: ${a.category}`,
+    `Learner location context: ${place}`,
+    `Help the learner understand what happened, where it happened, what Earth system is involved, what evidence is present, and what should be verified.`,
+    `Use questions and explanations appropriate for ${grade.label}.`,
+    `Do not exaggerate hazards. Distinguish official warnings from general reporting.`
+  ].join("\n");
+}
+
+function renderMentor(a){
+  $("mentorTitle").textContent=`NAIB guide · ${GRADE[prefs.grade].label}`;
+  $("mentorList").innerHTML=GRADE[prefs.grade].mentor.map(q=>`<li>${safeText(q)}</li>`).join("");
+  $("vocab").textContent=vocabularyFor(a);
+}
+
+function showArticle(direction=1){
+  const title=$("title"),desc=$("desc"),meta=$("metaLine");
+
+  if(!articles.length){
+    title.textContent=prefs.scope==="nearby"
+      ?"No nearby-matching headlines are in the current feed set."
+      :"No stories match this learning level and category yet.";
+    desc.textContent=prefs.scope==="nearby"
+      ?"Use PLERA Search for a deeper location-specific search, or return to World News."
+      :"Try another category, learning level, or refresh.";
+    meta.textContent="";
+    $("sourcePill").textContent="No story";
+    $("officialPill").hidden=true;
+    $("statusLine").textContent="0 stories";
+    renderMentor({title:title.textContent,desc:desc.textContent,category:"general",sourceName:"Solanar"});
     return;
   }
 
-  favs.push(current);
-  localStorage.envFavs = JSON.stringify(favs);
-  alert("Saved to favorites.");
+  index=(index+articles.length)%articles.length;
+  const a=articles[index];
+
+  $("sourcePill").textContent=a.sourceName||sourceHost(a.link)||"News";
+  $("agePill").textContent=GRADE[prefs.grade].label;
+  $("officialPill").hidden=!a.official;
+
+  title.textContent=a.title;
+  desc.textContent=ageSummary(a);
+
+  const bits=[
+    a.category.charAt(0).toUpperCase()+a.category.slice(1),
+    a.pubDate?new Date(a.pubDate).toLocaleDateString():null,
+    prefs.scope==="nearby"&&nearbyMatch(a)?"Nearby match":null
+  ].filter(Boolean);
+  meta.textContent=bits.join(" · ");
+
+  $("statusLine").textContent=`${index+1} of ${articles.length} stories · ${prefs.scope==="nearby"?"nearby":"world"} view`;
+  renderMentor(a);
+
+  $("pleraQuery").value=`${a.title} ${geo?.label||""}`.trim();
 }
 
-function toggleFavorites() {
-  const panel = document.getElementById("favoritesPanel");
-  if (panel.style.display === "block") {
-    panel.style.display = "none";
-  } else {
-    let favs = [];
-    try {
-      favs = JSON.parse(localStorage.envFavs || "[]");
-    } catch(e) {
-      favs = [];
+function next(){if(articles.length){index=(index+1)%articles.length;showArticle(1)}}
+function prev(){if(articles.length){index=(index-1+articles.length)%articles.length;showArticle(-1)}}
+
+function current(){return articles[index]||null}
+
+function openArticle(){
+  const a=current();
+  if(a?.link)window.open(a.link,"_blank","noopener,noreferrer");
+}
+
+function readAloud(){
+  const a=current();
+  if(!a||!("speechSynthesis" in window))return;
+  speechSynthesis.cancel();
+  const msg=new SpeechSynthesisUtterance(`${a.title}. ${ageSummary(a)}`);
+  msg.rate=prefs.grade==="k2"?.84:prefs.grade==="35"?.9:1;
+  speechSynthesis.speak(msg);
+}
+
+function favorites(){
+  try{return JSON.parse(localStorage.getItem(FAV_KEY)||"[]")}catch{return[]}
+}
+
+function saveFavorite(){
+  const a=current();
+  if(!a)return;
+  const list=favorites();
+  if(list.some(x=>x.link===a.link)){
+    $("statusLine").textContent="That story is already saved.";
+    return;
+  }
+  list.unshift(a);
+  try{localStorage.setItem(FAV_KEY,JSON.stringify(list.slice(0,50)))}catch{}
+  $("statusLine").textContent="Story saved.";
+  renderFavorites();
+}
+
+function renderFavorites(){
+  const list=favorites();
+  $("favoritesList").innerHTML=list.length
+    ?list.map((f,i)=>`
+      <div class="favItem">
+        <b>${escapeHTML(f.title)}</b>
+        <div class="note">${escapeHTML(f.sourceName||sourceHost(f.link)||"Source")}</div>
+        <button class="btn" type="button" data-fav-open="${i}">Open Source ↗</button>
+      </div>`).join("")
+    :`<div class="empty">No saved stories yet.</div>`;
+
+  document.querySelectorAll("[data-fav-open]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const f=list[Number(btn.dataset.favOpen)];
+      if(f?.link)window.open(f.link,"_blank","noopener,noreferrer");
+    });
+  });
+}
+
+function escapeHTML(s){
+  return String(s??"").replace(/[&<>"']/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+
+async function fetchText(url){
+  const endpoints=[
+    "https://api.allorigins.win/raw?url="+encodeURIComponent(url),
+    "https://api.allorigins.win/get?url="+encodeURIComponent(url)
+  ];
+
+  let lastError=null;
+
+  for(const endpoint of endpoints){
+    try{
+      const r=await fetch(endpoint,{cache:"no-store"});
+      if(!r.ok)throw new Error("HTTP "+r.status);
+
+      if(endpoint.includes("/get?")){
+        const j=await r.json();
+        if(j?.contents)return j.contents;
+      }else{
+        return await r.text();
+      }
+    }catch(e){
+      lastError=e;
     }
-    panel.style.display = "block";
-    if (!favs.length) {
-      panel.innerHTML = "<p>No favorites yet.</p>";
-      return;
-    }
-    panel.innerHTML = favs.map(f => `
-      <p>
-        <b>${f.title}</b>
-        <small>${stripHtml(f.desc).slice(0,180)}${stripHtml(f.desc).length>180 ? "…" : ""}</small>
-      </p>
-    `).join("");
+  }
+  throw lastError||new Error("Feed unavailable");
+}
+
+async function fetchFeed(source){
+  const raw=await fetchText(source.url);
+  const xml=new DOMParser().parseFromString(raw,"text/xml");
+
+  const items=[...xml.querySelectorAll("item")];
+  const entries=items.length?items:[...xml.querySelectorAll("entry")];
+
+  return entries.slice(0,40).map(item=>{
+    const title=
+      item.querySelector("title")?.textContent?.trim()||"Untitled";
+
+    const desc=
+      item.querySelector("description")?.textContent||
+      item.querySelector("summary")?.textContent||
+      item.querySelector("content")?.textContent||
+      "";
+
+    let link=item.querySelector("link")?.textContent?.trim()||"";
+    const linkNode=item.querySelector("link[href]");
+    if(!link&&linkNode)link=linkNode.getAttribute("href")||"";
+
+    const rawCat=item.querySelector("category")?.textContent||"";
+    const pubDate=
+      item.querySelector("pubDate")?.textContent||
+      item.querySelector("updated")?.textContent||
+      item.querySelector("published")?.textContent||
+      "";
+
+    return{
+      title,
+      desc,
+      link,
+      pubDate,
+      sourceName:source.name,
+      official:source.official,
+      kidSafe:source.kidSafe,
+      category:categoryFor(title,desc,rawCat,link,source.defaultCat)
+    };
+  });
+}
+
+async function loadNews(){
+  if(isLoading)return;
+  isLoading=true;
+  $("refreshBtn").textContent="Loading…";
+
+  const collected=[];
+  const results=await Promise.allSettled(FEEDS.map(fetchFeed));
+  results.forEach((result,i)=>{
+    if(result.status==="fulfilled")collected.push(...result.value);
+    else console.warn("Feed unavailable:",FEEDS[i].name,result.reason);
+  });
+
+  const seen=new Set();
+  const clean=collected.filter(a=>{
+    const key=(a.link||a.title).trim();
+    if(!key||seen.has(key))return false;
+    seen.add(key);
+    return true;
+  }).sort((a,b)=>{
+    const da=Date.parse(a.pubDate)||0;
+    const db=Date.parse(b.pubDate)||0;
+    return db-da;
+  });
+
+  if(clean.length){
+    master=clean;
+    try{localStorage.setItem(NEWS_CACHE,JSON.stringify(master.slice(0,400)))}catch{}
+  }else if(!master.length){
+    $("title").textContent="News feeds are temporarily unavailable.";
+    $("desc").textContent="PLERA Search and local weather tools are still available.";
+  }
+
+  isLoading=false;
+  $("refreshBtn").textContent="⟳ Refresh";
+  applyFilters();
+}
+
+function loadCache(){
+  try{
+    const cached=JSON.parse(localStorage.getItem(NEWS_CACHE)||"[]");
+    if(Array.isArray(cached))master=cached;
+  }catch{}
+}
+
+function condition(code){
+  const c=Number(code);
+  if(c===0)return["☀️","Clear"];
+  if([1,2].includes(c))return["🌤️","Mostly clear"];
+  if(c===3)return["☁️","Cloudy"];
+  if([45,48].includes(c))return["🌫️","Fog"];
+  if([51,53,55,61,63,65,80,81,82].includes(c))return["🌧️","Rain"];
+  if([71,73,75,77,85,86].includes(c))return["❄️","Snow"];
+  if([95,96,99].includes(c))return["⛈️","Thunderstorm"];
+  return["🌥️","Variable"];
+}
+
+async function reversePlace(lat,lon){
+  try{
+    const r=await fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lon)}&localityLanguage=en`
+    );
+    if(!r.ok)throw new Error();
+    const j=await r.json();
+
+    const locality=j.city||j.locality||j.localityInfo?.administrative?.[0]?.name||"";
+    const region=j.principalSubdivision||"";
+    const country=j.countryName||"";
+
+    const label=[locality,region,country].filter(Boolean).join(", ");
+    locationTerms=[locality,region,country].filter(Boolean);
+    return label||`${lat.toFixed(2)}, ${lon.toFixed(2)}`;
+  }catch{
+    locationTerms=[];
+    return `${lat.toFixed(2)}, ${lon.toFixed(2)}`;
   }
 }
 
-// --- Dark Mode ---
-function toggleDark() {
-  document.body.classList.toggle("dark");
-}
+async function loadLocalWeather(lat,lon){
+  try{
+    const r=await fetch(
+      `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto`,
+      {cache:"no-store"}
+    );
+    if(!r.ok)throw new Error();
+    const d=await r.json();
+    weather=d.current||null;
 
-// --- Fullscreen ---
-function toggleFullscreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen?.();
-  } else {
-    document.exitFullscreen?.();
+    if(weather){
+      const [emoji,label]=condition(weather.weather_code);
+      $("localTemp").textContent=Math.round(weather.temperature_2m)+"°F";
+      $("localCondition").textContent=`${emoji} ${label}`;
+      $("localWind").textContent=Math.round(weather.wind_speed_10m)+" mph";
+      $("tickerLocal").textContent=`${emoji} ${geo.label} · ${Math.round(weather.temperature_2m)}°F · ${label}`;
+    }
+  }catch{
+    $("localCondition").textContent="Weather unavailable";
   }
 }
 
-// --- Swipe for mobile ---
-let touchStartX = 0;
-document.addEventListener("touchstart", e => {
-  if (!e.touches[0]) return;
-  touchStartX = e.touches[0].clientX;
-});
-document.addEventListener("touchend", e => {
-  if (!e.changedTouches[0]) return;
-  const dx = e.changedTouches[0].clientX - touchStartX;
-  if (dx > 40) prev();
-  if (dx < -40) next();
-});
+async function loadUSAlerts(lat,lon){
+  $("localAlerts").innerHTML="";
+  if(lat<15||lat>75||lon>-20||lon<-170)return;
 
-// --- Category Tabs ---
-document.querySelectorAll(".tab[data-cat]").forEach(tab => {
-  tab.addEventListener("click", () => {
-    currentCategory = tab.dataset.cat;
-    applyCategoryFilter();
+  try{
+    const r=await fetch(
+      `https://api.weather.gov/alerts/active?point=${lat},${lon}`,
+      {headers:{Accept:"application/geo+json"},cache:"no-store"}
+    );
+    if(!r.ok)return;
+    const j=await r.json();
+
+    (j.features||[]).slice(0,3).forEach(f=>{
+      const p=f.properties||{};
+      const div=document.createElement("div");
+      div.className="alert";
+      div.innerHTML=`<b>⚠ ${escapeHTML(p.event||"Weather Alert")}</b><br>`+
+        `${prefs.grade==="k2"||prefs.grade==="35"
+          ?"Ask a grown-up to read the official alert with you."
+          :"Follow the official alert and local emergency instructions."}`;
+      $("localAlerts").appendChild(div);
+    });
+  }catch{}
+}
+
+function useLocation(){
+  if(!navigator.geolocation){
+    $("geoStatus").textContent="Location is not available in this browser.";
+    return;
+  }
+
+  $("geoStatus").textContent="Finding your area…";
+
+  navigator.geolocation.getCurrentPosition(async pos=>{
+    const lat=pos.coords.latitude;
+    const lon=pos.coords.longitude;
+    const label=await reversePlace(lat,lon);
+
+    geo={lat,lon,label};
+    $("localPlace").textContent=label;
+    $("globeLabel").textContent=`Local view · ${label}`;
+    $("geoStatus").textContent=`Location ready · ${lat.toFixed(2)}, ${lon.toFixed(2)}`;
+
+    await loadLocalWeather(lat,lon);
+    loadUSAlerts(lat,lon);
+
+    if(prefs.scope==="nearby")applyFilters();
+  },()=>{
+    $("geoStatus").textContent="Location permission was not available. World view remains active.";
+  },{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+}
+
+async function copyText(text){
+  try{
+    await navigator.clipboard.writeText(text);
+    return true;
+  }catch{
+    const ta=document.createElement("textarea");
+    ta.value=text;
+    ta.style.position="fixed";
+    ta.style.opacity="0";
+    document.body.appendChild(ta);
+    ta.select();
+    const ok=document.execCommand("copy");
+    ta.remove();
+    return ok;
+  }
+}
+
+async function openPLERA(query){
+  const q=(query||$("pleraQuery").value||"").trim();
+  if(q){
+    await copyText(q);
+    $("pleraStatus").textContent="Research query copied. PLERA Search is opening—paste the query into its search field.";
+  }else{
+    $("pleraStatus").textContent="PLERA Search is opening.";
+  }
+  window.open(PLERA_URL,"_blank","noopener,noreferrer");
+}
+
+async function copyMentorPrompt(){
+  const a=current();
+  if(!a)return;
+  const prompt=mentorPromptFor(a);
+  const ok=await copyText(prompt);
+  $("mentorStatus").textContent=ok
+    ?"NAIB mentor prompt copied. Open NAIB and paste it into the conversation."
+    :"Could not copy automatically. Open NAIB and use this story title as your prompt.";
+}
+
+/* events */
+document.querySelectorAll(".gradeBtn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    prefs.grade=btn.dataset.grade;
+    document.body.dataset.grade=prefs.grade;
+    document.querySelectorAll(".gradeBtn").forEach(x=>x.classList.toggle("active",x===btn));
+    savePrefs();
+    applyFilters();
   });
 });
-document.addEventListener("keydown", e => {
-  if (e.key === "ArrowLeft") prev();
-  if (e.key === "ArrowRight") next();
+
+document.querySelectorAll(".tab[data-cat]").forEach(tab=>{
+  tab.addEventListener("click",()=>{
+    prefs.category=tab.dataset.cat;
+    savePrefs();
+    applyFilters();
+  });
 });
-  
-// --- Start app ---
-// Show cached stories immediately if present
-if (articles.length) {
-  applyCategoryFilter();   // will call showArticle()
-} else {
-  showArticle();
+
+document.querySelectorAll(".pleraChip").forEach(chip=>{
+  chip.addEventListener("click",()=>{
+    const where=geo?.label?` ${geo.label}`:"";
+    $("pleraQuery").value=chip.dataset.q+where;
+  });
+});
+
+$("useLocation").addEventListener("click",useLocation);
+$("useLocationHero").addEventListener("click",useLocation);
+
+$("worldMode").addEventListener("click",()=>{
+  prefs.scope="world";savePrefs();applyFilters();
+  $("geoStatus").textContent=geo?`World stories active · local weather still shown for ${geo.label}`:"World stories active.";
+});
+
+$("nearbyMode").addEventListener("click",()=>{
+  if(!geo){
+    prefs.scope="nearby";savePrefs();useLocation();
+    return;
+  }
+  prefs.scope="nearby";savePrefs();applyFilters();
+  $("geoStatus").textContent=`Showing stories that mention ${geo.label} when available.`;
+});
+
+$("pleraSearch").addEventListener("click",()=>openPLERA());
+$("pleraQuery").addEventListener("keydown",e=>{if(e.key==="Enter")openPLERA()});
+
+$("articlePleraBtn").addEventListener("click",()=>{
+  const a=current();
+  if(a)openPLERA(`${a.title} ${geo?.label||""}`.trim());
+});
+
+$("copyNaibPrompt").addEventListener("click",copyMentorPrompt);
+$("prevBtn").addEventListener("click",prev);
+$("nextBtn").addEventListener("click",next);
+$("readBtn").addEventListener("click",readAloud);
+$("favoriteBtn").addEventListener("click",saveFavorite);
+$("openBtn").addEventListener("click",openArticle);
+$("refreshBtn").addEventListener("click",loadNews);
+
+$("toggleFavorites").addEventListener("click",()=>{
+  const panel=$("favoritesPanel");
+  panel.hidden=!panel.hidden;
+  $("toggleFavorites").textContent=panel.hidden?"⭐ Show Saved Stories":"⭐ Hide Saved Stories";
+  if(!panel.hidden)renderFavorites();
+});
+
+$("fullscreenBtn").addEventListener("click",()=>{
+  if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();
+  else document.exitFullscreen?.();
+});
+
+/* menu */
+const menuBtn=$("menuBtn");
+const siteMenu=$("siteMenu");
+
+function closeMenu(focus=false){
+  siteMenu.classList.remove("open");
+  menuBtn.setAttribute("aria-expanded","false");
+  if(focus)menuBtn.focus();
 }
 
-// Fetch fresh content now
-loadNews();
+menuBtn.addEventListener("click",e=>{
+  e.stopPropagation();
+  const open=menuBtn.getAttribute("aria-expanded")!=="true";
+  siteMenu.classList.toggle("open",open);
+  menuBtn.setAttribute("aria-expanded",String(open));
+});
 
-// Refresh all feeds every 3 hours
-setInterval(loadNews, 3 * 60 * 60 * 1000);
+siteMenu.addEventListener("click",e=>{
+  if(e.target.closest("a,button"))closeMenu(false);
+});
+
+document.addEventListener("click",e=>{
+  if(!siteMenu.contains(e.target)&&!menuBtn.contains(e.target))closeMenu(false);
+});
+
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"&&siteMenu.classList.contains("open"))closeMenu(true);
+  if(e.key==="ArrowLeft"&&!/input|textarea|select/i.test(e.target.tagName))prev();
+  if(e.key==="ArrowRight"&&!/input|textarea|select/i.test(e.target.tagName))next();
+});
+
+/* swipe */
+let touchStartX=0;
+document.addEventListener("touchstart",e=>{
+  if(e.touches[0])touchStartX=e.touches[0].clientX;
+},{passive:true});
+document.addEventListener("touchend",e=>{
+  if(!e.changedTouches[0])return;
+  const dx=e.changedTouches[0].clientX-touchStartX;
+  if(dx>55)prev();
+  if(dx<-55)next();
+},{passive:true});
+
+/* init */
+document.body.dataset.grade=prefs.grade;
+document.querySelectorAll(".gradeBtn").forEach(btn=>{
+  btn.classList.toggle("active",btn.dataset.grade===prefs.grade);
+});
+
+loadCache();
+renderFavorites();
+if(master.length)applyFilters();
+loadNews();
+setInterval(loadNews,3*60*60*1000);
 </script>
 </body>
 </html>
