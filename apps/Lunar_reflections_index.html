@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lunar Reflections — Interactive Plera Protocol v2</title>
+<title>Lunar Reflections — Solanar Moon Companion</title>
 <style>
   /* Container card */
   #lunar-reflections-card {
@@ -152,7 +152,7 @@
 
   /* Calendar modal */
   .lunar-modal {
-    position:center;
+    position:fixed;
     inset:0;
     display:flex;
     align-items:center;
@@ -325,15 +325,321 @@
     pointer-events:none;
   }
 
+  /* Solanar frame */
+  body {
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(124,92,255,.22), transparent 30rem),
+      radial-gradient(circle at 85% 10%, rgba(255,222,126,.10), transparent 26rem),
+      linear-gradient(180deg,#080811,#10101a 44%,#080811);
+    color:#f8f3e6;
+  }
+
+  .lunar-shell {
+    width:min(calc(100% - 28px), 980px);
+    margin:0 auto;
+  }
+
+  .lunar-ticker {
+    height:34px;
+    overflow:hidden;
+    position:relative;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    background:#05050b;
+    white-space:nowrap;
+  }
+
+  .lunar-ticker::before,
+  .lunar-ticker::after {
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:34px;
+    z-index:3;
+    pointer-events:none;
+  }
+
+  .lunar-ticker::before { left:0;background:linear-gradient(90deg,#05050b,transparent); }
+  .lunar-ticker::after { right:0;background:linear-gradient(270deg,#05050b,transparent); }
+
+  .lunar-ticker-track {
+    height:100%;
+    width:max-content;
+    display:flex;
+    align-items:center;
+    animation:lunarTickerRTL 33s linear infinite;
+    will-change:transform;
+  }
+
+  .lunar-ticker-group {
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding-right:22px;
+    font:600 .73rem/1.2 Georgia,serif;
+    letter-spacing:.035em;
+  }
+
+  .lunar-ticker a { color:#ffde7e;text-decoration:none; }
+  .lunar-ticker a:hover,.lunar-ticker a:focus-visible { color:#fff6c9; }
+  .lunar-ticker-dot { color:#b9a5ff; }
+
+  .lunar-ticker:hover .lunar-ticker-track,
+  .lunar-ticker:focus-within .lunar-ticker-track {
+    animation-play-state:paused;
+  }
+
+  @keyframes lunarTickerRTL {
+    from { transform:translateX(0); }
+    to { transform:translateX(-50%); }
+  }
+
+  .lunar-site-header {
+    position:sticky;
+    top:0;
+    z-index:1200;
+    background:rgba(8,8,17,.94);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(16px);
+  }
+
+  .lunar-nav {
+    min-height:68px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+
+  .lunar-brand {
+    display:flex;
+    align-items:center;
+    gap:11px;
+    color:#f8f3e6;
+    text-decoration:none;
+    min-width:0;
+  }
+
+  .lunar-brand-mark {
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 36% 30%,#fffde9 0 10%,#d8d4c7 30%,#817d75 69%,#282730 100%);
+    box-shadow:0 0 22px rgba(255,255,255,.18);
+  }
+
+  .lunar-brand-copy strong {
+    display:block;
+    font:600 1.05rem/1.1 Georgia,serif;
+    letter-spacing:.035em;
+  }
+
+  .lunar-brand-copy span {
+    display:block;
+    margin-top:4px;
+    color:#c8bdd7;
+    font-size:.64rem;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+  }
+
+  .lunar-menu-wrap { position:relative; }
+
+  .lunar-menu-button {
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;
+    padding:9px 13px;
+    color:#fff;
+    background:#181827;
+    cursor:pointer;
+    font:600 .78rem/1 Georgia,serif;
+  }
+
+  .lunar-menu {
+    position:absolute;
+    right:0;
+    top:calc(100% + 8px);
+    z-index:1300;
+    min-width:240px;
+    display:none;
+    gap:4px;
+    padding:8px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:11px;
+    background:#12121d;
+    box-shadow:0 18px 45px rgba(0,0,0,.55);
+  }
+
+  .lunar-menu.lunar-open { display:grid; }
+
+  .lunar-menu a {
+    padding:10px 11px;
+    border-radius:8px;
+    color:#f8f3e6;
+    text-decoration:none;
+    font-size:.82rem;
+  }
+
+  .lunar-menu a:hover,.lunar-menu a:focus-visible {
+    background:#28283a;
+    color:#ffde7e;
+  }
+
+  .lunar-astro-panel {
+    background:
+      radial-gradient(circle at 90% 0%,rgba(124,92,255,.18),transparent 17rem),
+      linear-gradient(180deg,#1d1c2b,#11111a);
+    color:#f8f3e6;
+  }
+
+  .lunar-astro-kicker {
+    text-align:center;
+    color:#cbb8ff;
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    margin-bottom:7px;
+  }
+
+  .lunar-astro-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+    margin-top:14px;
+  }
+
+  .lunar-astro-card {
+    min-width:0;
+    padding:11px;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:7px;
+    background:rgba(255,255,255,.035);
+  }
+
+  .lunar-astro-card b {
+    display:block;
+    color:#ffde7e;
+    margin-bottom:4px;
+    font-size:.78rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+  }
+
+  .lunar-astro-card span {
+    display:block;
+    line-height:1.4;
+    font-size:.9rem;
+  }
+
+  .lunar-astro-symbol {
+    font-size:1.25rem;
+    margin-right:4px;
+  }
+
+  #lunar-astroPrompt {
+    margin:14px 0 0;
+    padding:12px 13px;
+    border:1px solid rgba(203,184,255,.22);
+    border-radius:7px;
+    background:rgba(124,92,255,.09);
+    color:#e6dcf6;
+    font-size:.88rem;
+    line-height:1.55;
+  }
+
+  .lunar-astro-note {
+    margin:10px 0 0;
+    text-align:center;
+    color:#b8adca;
+    font-size:.72rem;
+    line-height:1.45;
+  }
+
+  .lunar-footer {
+    width:min(calc(100% - 28px),980px);
+    margin:0 auto;
+    padding:24px 0 34px;
+    text-align:center;
+    color:#a99fb9;
+    font:500 .73rem/1.5 Georgia,serif;
+  }
+
+  @media (max-width:620px) {
+    .lunar-brand-copy span { display:none; }
+    .lunar-menu { right:0; }
+    .lunar-astro-grid { grid-template-columns:1fr; }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+    .lunar-ticker-track { animation:none!important; }
+  }
+
+
   @media (max-width:444px) {
     #lunar-reflections-card { margin-top:18px; }
   }
+
 </style>
+</head>
+<body>
+
+<div class="lunar-ticker" role="region" aria-label="Lunar Reflections ticker">
+  <div class="lunar-ticker-track">
+    <div class="lunar-ticker-group">
+      <span id="lunar-tickerPhase">🌙 Follow tonight’s Moon</span><span class="lunar-ticker-dot">✦</span>
+      <span>🌕 Moon phase & illumination</span><span class="lunar-ticker-dot">✦</span>
+      <span>♋ Astrology Lens</span><span class="lunar-ticker-dot">✦</span>
+      <span>📅 Lunar Calendar</span><span class="lunar-ticker-dot">✦</span>
+      <span>💧 Reflection Journal</span><span class="lunar-ticker-dot">✦</span>
+      <a href="../index.html">☀ Solanar Observatory</a><span class="lunar-ticker-dot">✦</span>
+      <a href="../index.html#contribute">♡ Contribute to Solanar</a><span class="lunar-ticker-dot">✦</span>
+    </div>
+    <div class="lunar-ticker-group" aria-hidden="true">
+      <span>🌙 Follow tonight’s Moon</span><span class="lunar-ticker-dot">✦</span>
+      <span>🌕 Moon phase & illumination</span><span class="lunar-ticker-dot">✦</span>
+      <span>♋ Astrology Lens</span><span class="lunar-ticker-dot">✦</span>
+      <span>📅 Lunar Calendar</span><span class="lunar-ticker-dot">✦</span>
+      <span>💧 Reflection Journal</span><span class="lunar-ticker-dot">✦</span>
+      <span>☀ Solanar Observatory</span><span class="lunar-ticker-dot">✦</span>
+      <span>♡ Contribute to Solanar</span><span class="lunar-ticker-dot">✦</span>
+    </div>
+  </div>
+</div>
+
+<header class="lunar-site-header">
+  <div class="lunar-shell lunar-nav">
+    <a class="lunar-brand" href="https://github.com/vervenveda/vervenveda.github.io" aria-label="Return to Verve N Veda home">
+      <span class="lunar-brand-mark" aria-hidden="true">☾</span>
+      <span class="lunar-brand-copy">
+        <strong>Lunar Reflections</strong>
+        <span>Solanar · Moon Companion</span>
+      </span>
+    </a>
+
+    <div class="lunar-menu-wrap">
+      <button class="lunar-menu-button" id="lunar-menuButton" type="button" aria-expanded="false" aria-controls="lunar-siteMenu">☰ Menu</button>
+      <nav class="lunar-menu" id="lunar-siteMenu" aria-label="Lunar navigation">
+        <a href="#lunar-moonCanvas">🌕 Moon</a>
+        <a href="#lunar-astrology">♋ Astrology Lens</a>
+        <a href="#lunar-journal">💧 Reflection Journal</a>
+        <a href="#" id="lunar-menuCalendar">📅 Lunar Calendar</a>
+        <a href="../index.html">☀ Solanar Observatory</a>
+        <a href="../index.html#contribute">♡ Contribute</a>
+      </nav>
+    </div>
+  </div>
+</header>
 
 <section id="lunar-reflections-card">
   <h1>🌕 Lunar Reflections</h1>
   <div class="lunar-subtitle">
-    Track the Moon, tune your tone, and write what you are ready to release.
+    Track the Moon, explore its astronomy and astrology lens, tune your tone, and reflect.
   </div>
 
   <!-- Moon panel -->
@@ -368,6 +674,37 @@
         World Clock
       </a>
     </div>
+  </div>
+
+
+  <!-- Astrology lens -->
+  <div class="lunar-panel lunar-astro-panel" id="lunar-astrology">
+    <div class="lunar-astro-kicker">Reflective tradition</div>
+    <h2>♋ Astrology Lens</h2>
+
+    <div class="lunar-astro-grid">
+      <div class="lunar-astro-card">
+        <b>☀ Sun Sign</b>
+        <span id="lunar-sunSign">—</span>
+      </div>
+      <div class="lunar-astro-card">
+        <b>☾ Moon Sign</b>
+        <span id="lunar-moonSign">—</span>
+      </div>
+      <div class="lunar-astro-card">
+        <b>Element</b>
+        <span id="lunar-astroElement">—</span>
+      </div>
+      <div class="lunar-astro-card">
+        <b>Modality</b>
+        <span id="lunar-astroModality">—</span>
+      </div>
+    </div>
+
+    <div id="lunar-astroPrompt">Select a date to reveal a reflection prompt.</div>
+    <p class="lunar-astro-note">
+      Astrology is presented as a cultural and reflective tradition. Zodiac positions here use an approximate geocentric tropical calculation and are not scientific forecasts.
+    </p>
   </div>
 
   <!-- Journal panel -->
@@ -435,6 +772,11 @@
   </div>
 </div>
 
+
+<footer class="lunar-footer">
+  Jennifer Kay Pearl · Verve N Veda · Khaemenes Academy · All Rights Reserved
+</footer>
+
 <script>
 (function(){
   /* ========= Basic data ========= */
@@ -496,6 +838,17 @@
   const starCanvas = document.getElementById("lunar-starfield");
   const sCtx = starCanvas.getContext("2d");
 
+  const tickerPhase = document.getElementById("lunar-tickerPhase");
+  const sunSignEl = document.getElementById("lunar-sunSign");
+  const moonSignEl = document.getElementById("lunar-moonSign");
+  const astroElementEl = document.getElementById("lunar-astroElement");
+  const astroModalityEl = document.getElementById("lunar-astroModality");
+  const astroPromptEl = document.getElementById("lunar-astroPrompt");
+
+  const menuButton = document.getElementById("lunar-menuButton");
+  const siteMenu = document.getElementById("lunar-siteMenu");
+  const menuCalendar = document.getElementById("lunar-menuCalendar");
+
   /* ========= State ========= */
   let currentDate = new Date();
   let currentPhase = null;
@@ -512,6 +865,92 @@
   } catch(e) { eventStore = {}; }
 
   let userFreq = Number(freqSlider.value || 440);
+
+
+  /* ========= Astrology lens ========= */
+  const zodiacSigns = [
+    {name:"Aries",symbol:"♈",element:"Fire",modality:"Cardinal",theme:"beginning with courage"},
+    {name:"Taurus",symbol:"♉",element:"Earth",modality:"Fixed",theme:"grounding in what is steady"},
+    {name:"Gemini",symbol:"♊",element:"Air",modality:"Mutable",theme:"staying curious and connected"},
+    {name:"Cancer",symbol:"♋",element:"Water",modality:"Cardinal",theme:"caring for home and inner needs"},
+    {name:"Leo",symbol:"♌",element:"Fire",modality:"Fixed",theme:"creating and expressing from the heart"},
+    {name:"Virgo",symbol:"♍",element:"Earth",modality:"Mutable",theme:"refining what supports daily life"},
+    {name:"Libra",symbol:"♎",element:"Air",modality:"Cardinal",theme:"seeking balance and fair exchange"},
+    {name:"Scorpio",symbol:"♏",element:"Water",modality:"Fixed",theme:"meeting depth with honesty"},
+    {name:"Sagittarius",symbol:"♐",element:"Fire",modality:"Mutable",theme:"expanding perspective and meaning"},
+    {name:"Capricorn",symbol:"♑",element:"Earth",modality:"Cardinal",theme:"building with patience and purpose"},
+    {name:"Aquarius",symbol:"♒",element:"Air",modality:"Fixed",theme:"seeing patterns and possibilities"},
+    {name:"Pisces",symbol:"♓",element:"Water",modality:"Mutable",theme:"making room for imagination and compassion"}
+  ];
+
+  const deg = Math.PI / 180;
+  const norm360 = n => ((n % 360) + 360) % 360;
+
+  function daysSinceJ2000(date){
+    return (date.getTime() - Date.UTC(2000,0,1,12,0,0)) / 86400000;
+  }
+
+  function sunLongitude(date){
+    const d = daysSinceJ2000(date);
+    const g = norm360(357.529 + 0.98560028*d);
+    const q = norm360(280.459 + 0.98564736*d);
+    return norm360(q + 1.915*Math.sin(g*deg) + 0.020*Math.sin(2*g*deg));
+  }
+
+  function moonLongitude(date){
+    const d = daysSinceJ2000(date);
+    const L0 = norm360(218.316 + 13.176396*d);
+    const Mm = norm360(134.963 + 13.064993*d);
+    const Ms = norm360(357.529 + 0.98560028*d);
+    const D  = norm360(297.850 + 12.190749*d);
+    const F  = norm360(93.272 + 13.229350*d);
+
+    return norm360(
+      L0
+      + 6.289*Math.sin(Mm*deg)
+      + 1.274*Math.sin((2*D-Mm)*deg)
+      + 0.658*Math.sin(2*D*deg)
+      + 0.214*Math.sin(2*Mm*deg)
+      - 0.186*Math.sin(Ms*deg)
+      - 0.059*Math.sin((2*D-2*Mm)*deg)
+      - 0.057*Math.sin((2*D-Ms-Mm)*deg)
+      + 0.053*Math.sin((2*D+Mm)*deg)
+      + 0.046*Math.sin((2*D-Ms)*deg)
+      + 0.041*Math.sin((Ms-Mm)*deg)
+      - 0.035*Math.sin(D*deg)
+      - 0.031*Math.sin((Ms+Mm)*deg)
+      - 0.015*Math.sin((2*F-2*D)*deg)
+      + 0.011*Math.sin((Mm-4*D)*deg)
+    );
+  }
+
+  function signForLongitude(longitude){
+    return zodiacSigns[Math.floor(norm360(longitude)/30)%12];
+  }
+
+  function updateAstrologyLens(date){
+    const sun = signForLongitude(sunLongitude(date));
+    const moon = signForLongitude(moonLongitude(date));
+
+    sunSignEl.textContent = `${sun.symbol} ${sun.name}`;
+    moonSignEl.textContent = `${moon.symbol} ${moon.name} · approx.`;
+
+    if(sun.element === moon.element){
+      astroElementEl.textContent = `${sun.element} emphasis`;
+    } else {
+      astroElementEl.textContent = `${sun.element} + ${moon.element}`;
+    }
+
+    astroModalityEl.textContent =
+      sun.modality === moon.modality
+        ? `${sun.modality} emphasis`
+        : `${sun.modality} + ${moon.modality}`;
+
+    const phaseName = currentPhase ? currentPhase.name : "Moon";
+    astroPromptEl.textContent =
+      `${phaseName} with the Moon in ${moon.name}: consider ${moon.theme}. ` +
+      `The Sun in ${sun.name} adds a theme of ${sun.theme}. What feels most worth noticing today?`;
+  }
 
   /* ========= Moon phase calculation ========= */
   function phaseFraction(y,m,d){
@@ -641,6 +1080,8 @@
     });
     phaseLine.textContent = `${currentPhase.icon} ${currentPhase.name} • ${illumPct}% illuminated`;
     messageLine.textContent = currentPhase.message;
+    if (tickerPhase) tickerPhase.textContent = `${currentPhase.icon} ${currentPhase.name} · ${illumPct}% illuminated`;
+    updateAstrologyLens(date);
     // tone default
     const baseTone = phaseTones[currentPhase.name] || 440;
     userFreq = baseTone;
@@ -664,19 +1105,27 @@
   }
   setInterval(updateClock, 1000);
 
-  /* ========= Moonrise / Moonset via Open-Meteo ========= */
+  /* ========= Moonrise / Moonset ========= */
   function fetchMoonTimes(date){
-    const targetISO = date.toISOString().split("T")[0];
+    const targetISO = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
 
-    function callAPI(lat, lon){
-      const url = `https://api.open-meteo.com/v1/astronomy?latitude=${lat}&longitude=${lon}&start_date=${targetISO}&end_date=${targetISO}&timezone=auto`;
-      fetch(url).then(r => r.ok ? r.json() : Promise.reject())
+    function callAPI(lat, lon, tzHours){
+      const coords = encodeURIComponent(`${lat},${lon}`);
+      const url = `https://aa.usno.navy.mil/api/rstt/oneday?date=${encodeURIComponent(targetISO)}&coords=${coords}&tz=${encodeURIComponent(tzHours)}`;
+
+      fetch(url, {cache:"no-store"})
+        .then(r => r.ok ? r.json() : Promise.reject())
         .then(json => {
-          const rise = json.moonrise || (json.daily && json.daily.moonrise && json.daily.moonrise[0]);
-          const set  = json.moonset || (json.daily && json.daily.moonset && json.daily.moonset[0]);
-          const fmt = t => t ? new Date(t).toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"}) : "--:--";
-          moonriseEl.textContent = fmt(rise);
-          moonsetEl.textContent  = fmt(set);
+          const data = json && json.properties && json.properties.data ? json.properties.data : {};
+          const moonData = Array.isArray(data.moondata) ? data.moondata : [];
+
+          const findPhen = names => {
+            const hit = moonData.find(item => names.includes(String(item.phen || "").toLowerCase()));
+            return hit && hit.time ? hit.time : "--:--";
+          };
+
+          moonriseEl.textContent = findPhen(["rise","moon rise"]);
+          moonsetEl.textContent  = findPhen(["set","moon set"]);
         })
         .catch(() => {
           moonriseEl.textContent = "--:--";
@@ -685,7 +1134,7 @@
     }
 
     if (currentLat != null && currentLon != null) {
-      callAPI(currentLat, currentLon);
+      callAPI(currentLat, currentLon, -(date.getTimezoneOffset()/60));
       return;
     }
 
@@ -693,14 +1142,16 @@
       navigator.geolocation.getCurrentPosition(pos => {
         currentLat = pos.coords.latitude;
         currentLon = pos.coords.longitude;
-        callAPI(currentLat, currentLon);
+        callAPI(currentLat, currentLon, -(date.getTimezoneOffset()/60));
       }, () => {
-        currentLat = 51.4769; currentLon = 0.0005; // Greenwich fallback
-        callAPI(currentLat, currentLon);
-      });
+        currentLat = 51.4769;
+        currentLon = 0.0005;
+        callAPI(currentLat, currentLon, 0);
+      }, {enableHighAccuracy:false,timeout:8000});
     } else {
-      currentLat = 51.4769; currentLon = 0.0005;
-      callAPI(currentLat, currentLon);
+      currentLat = 51.4769;
+      currentLon = 0.0005;
+      callAPI(currentLat, currentLon, 0);
     }
   }
 
@@ -911,6 +1362,45 @@
   }
   window.addEventListener("resize", () => {
     initStarfield();
+  });
+
+
+  /* ========= Site menu ========= */
+  function closeSiteMenu(restoreFocus){
+    siteMenu.classList.remove("lunar-open");
+    menuButton.setAttribute("aria-expanded","false");
+    if (restoreFocus) menuButton.focus();
+  }
+
+  menuButton.addEventListener("click", e => {
+    e.stopPropagation();
+    const open = menuButton.getAttribute("aria-expanded") !== "true";
+    siteMenu.classList.toggle("lunar-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
+
+  siteMenu.addEventListener("click", e => {
+    if (e.target.closest("a")) closeSiteMenu(false);
+  });
+
+  document.addEventListener("click", e => {
+    if (!siteMenu.contains(e.target) && !menuButton.contains(e.target)) {
+      closeSiteMenu(false);
+    }
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      if (dayModal.classList.contains("lunar-open")) closeDayModal();
+      else if (calendarModal.classList.contains("lunar-open")) closeCalendar();
+      else if (siteMenu.classList.contains("lunar-open")) closeSiteMenu(true);
+    }
+  });
+
+  menuCalendar.addEventListener("click", e => {
+    e.preventDefault();
+    closeSiteMenu(false);
+    openCalendar();
   });
 
   /* ========= Event wiring ========= */
