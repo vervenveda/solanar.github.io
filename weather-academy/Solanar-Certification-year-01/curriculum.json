@@ -1,0 +1,972 @@
+{
+  "program": {
+    "title": "Solanar Professional Meteorology Certificate",
+    "year": 1,
+    "duration_weeks": 36,
+    "semesters": 2,
+    "semester_weeks": 18,
+    "mastery_threshold": 80,
+    "tracks": [
+      "Operational Meteorologist",
+      "Broadcast Meteorologist",
+      "Climatologist"
+    ],
+    "year_1_role": "Common university-level atmospheric science foundation",
+    "recommended_credit_equivalent": 32
+  },
+  "semester_1": {
+    "weeks": [
+      {
+        "week": 1,
+        "title": "Scientific Foundations & Measurement",
+        "atmospheric_science": "Atmosphere: course orientation, atmosphere as a physical system, SI units, metadata and observation quality.",
+        "mathematics": "Math: functions, graphs, units and dimensional reasoning.",
+        "physics": "Physics: measurement, vectors and uncertainty.",
+        "data": "Data: notebook setup, variables, tables and plotting.",
+        "communication": "Communication: distinguish observation, interpretation, forecast and warning.",
+        "lab": "Lab: establish a personal weather station protocol and collect a baseline dataset.",
+        "required_forms": [
+          "observation-log",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-live",
+          "nws-education",
+          "solanar-platform",
+          "naib"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "Atmospheric Composition, Pressure & Density",
+        "atmospheric_science": "Atmosphere: composition, vertical structure, pressure and density.",
+        "mathematics": "Math: limits and rates of change.",
+        "physics": "Physics: vectors and one-dimensional motion.",
+        "data": "Data: import, clean and visualize temperature/pressure records.",
+        "communication": "Communication: write a source-labeled observation summary.",
+        "lab": "Lab: graph pressure/density with altitude from a supplied standard-atmosphere dataset.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 3,
+        "title": "Temperature, Heat & Energy",
+        "atmospheric_science": "Atmosphere: temperature scales, heat, heat capacity and weather relevance.",
+        "mathematics": "Math: derivative concept and instantaneous rate of change.",
+        "physics": "Physics: kinematics and acceleration.",
+        "data": "Data: calculate daily maxima, minima, range and rate of temperature change.",
+        "communication": "Communication: explain temperature versus heat without oversimplifying.",
+        "lab": "Lab: compare heating/cooling rates of contrasting surfaces.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 4,
+        "title": "Solar Radiation & Surface Heating",
+        "atmospheric_science": "Atmosphere: solar geometry, absorption, reflection and surface-energy concepts.",
+        "mathematics": "Math: derivative rules.",
+        "physics": "Physics: Newton's laws and force diagrams.",
+        "data": "Data: plot irradiance/temperature relationships.",
+        "communication": "Communication: produce a concise solar-heating explainer.",
+        "lab": "Lab: lamp/globe or surface-albedo heating investigation.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 5,
+        "title": "Surface Energy Balance",
+        "atmospheric_science": "Atmosphere: sensible heat, latent heat, ground heat and radiative balance.",
+        "mathematics": "Math: product/quotient/chain rules.",
+        "physics": "Physics: work, kinetic energy and potential energy.",
+        "data": "Data: calculate and graph simplified energy-budget terms.",
+        "communication": "Communication: construct an evidence-based diagram with caption.",
+        "lab": "Lab: simplified daytime surface-energy budget.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 6,
+        "title": "UNIT I CHECKPOINT \u2014 Measurement, Energy & Core Mathematics",
+        "atmospheric_science": "Atmosphere: cumulative review Weeks 1\u20135.",
+        "mathematics": "Math: cumulative functions/limits/derivatives review.",
+        "physics": "Physics: measurement, motion, forces and energy review.",
+        "data": "Data: reproducibility and data-quality audit.",
+        "communication": "Communication: five-minute technical briefing.",
+        "lab": "Lab: integrated energy-and-observation practical. Unit checkpoint \u226580% required.",
+        "required_forms": [
+          "observation-log",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-live",
+          "nws-education",
+          "solanar-platform",
+          "naib"
+        ]
+      },
+      {
+        "week": 7,
+        "title": "Water Vapor & Humidity",
+        "atmospheric_science": "Atmosphere: vapor pressure, relative humidity, dew point and moisture variables.",
+        "mathematics": "Math: implicit rates and related rates.",
+        "physics": "Physics: momentum and impulse.",
+        "data": "Data: calculate dew-point depression and compare humidity metrics.",
+        "communication": "Communication: explain why relative humidity changes with temperature.",
+        "lab": "Lab: humidity/evaporation comparison under two environments.",
+        "required_forms": [
+          "upper-air",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-planetarium",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 8,
+        "title": "Saturation, Condensation & Clouds",
+        "atmospheric_science": "Atmosphere: saturation, condensation nuclei, cloud-base formation and cloud families.",
+        "mathematics": "Math: extrema and optimization.",
+        "physics": "Physics: circular motion and rotation introduction.",
+        "data": "Data: cloud observations and categorical frequency analysis.",
+        "communication": "Communication: cloud identification briefing using evidence rather than appearance alone.",
+        "lab": "Lab: controlled condensation/cloud demonstration and cloud observation log.",
+        "required_forms": [
+          "observation-log",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-live",
+          "nws-education",
+          "solanar-platform",
+          "naib"
+        ]
+      },
+      {
+        "week": 9,
+        "title": "SEMESTER MIDTERM I",
+        "atmospheric_science": "Atmosphere: midterm assessment of Weeks 1\u20138.",
+        "mathematics": "Math: calculus midterm.",
+        "physics": "Physics: mechanics midterm.",
+        "data": "Data: practical data-cleaning and graphing assessment.",
+        "communication": "Communication: oral defense of one laboratory result.",
+        "lab": "Lab: integrated midterm practical. Every strand \u226580% required.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 10,
+        "title": "Pressure Gradients & Wind",
+        "atmospheric_science": "Atmosphere: pressure-gradient force and wind initiation.",
+        "mathematics": "Math: introduction to antiderivatives.",
+        "physics": "Physics: gravitation and potential fields.",
+        "data": "Data: contour spacing and gradient comparison.",
+        "communication": "Communication: explain why pressure maps can imply wind without claiming pressure alone determines actual wind.",
+        "lab": "Lab: pressure-map gradient analysis and wind comparison.",
+        "required_forms": [
+          "synoptic-analysis",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "nws-education",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 11,
+        "title": "Coriolis Effect & Large-Scale Flow",
+        "atmospheric_science": "Atmosphere: rotating reference frames, Coriolis effect and latitude dependence.",
+        "mathematics": "Math: definite integrals and area accumulation.",
+        "physics": "Physics: rotational motion and angular momentum.",
+        "data": "Data: vector-direction plotting.",
+        "communication": "Communication: correct common Coriolis misconceptions.",
+        "lab": "Lab: rotating-platform or rotating-paper trajectory model.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 12,
+        "title": "UNIT II CHECKPOINT \u2014 Moisture, Clouds & Atmospheric Forces",
+        "atmospheric_science": "Atmosphere: cumulative review Weeks 7\u201311.",
+        "mathematics": "Math: derivative applications plus introductory integration.",
+        "physics": "Physics: momentum/rotation/gravitation review.",
+        "data": "Data: combined moisture/wind analysis.",
+        "communication": "Communication: public explainer plus technical appendix.",
+        "lab": "Lab: integrated force/moisture practical. Unit checkpoint \u226580% required.",
+        "required_forms": [
+          "upper-air",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-planetarium",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 13,
+        "title": "Friction, Boundary Layer & Local Winds",
+        "atmospheric_science": "Atmosphere: friction, turbulent mixing, sea/land breezes and terrain circulations.",
+        "mathematics": "Math: Fundamental Theorem of Calculus concept.",
+        "physics": "Physics: fluids, pressure and buoyancy introduction.",
+        "data": "Data: compare coastal/inland temperature and wind records.",
+        "communication": "Communication: create a local-wind forecast narrative.",
+        "lab": "Lab: land-water differential-heating circulation model.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 14,
+        "title": "Air Masses & Fronts",
+        "atmospheric_science": "Atmosphere: source regions, modification and frontal boundaries.",
+        "mathematics": "Math: accumulation and meteorological rate problems.",
+        "physics": "Physics: fluid statics and density.",
+        "data": "Data: map temperature/dew-point gradients.",
+        "communication": "Communication: write a frontal-passage briefing with timing uncertainty.",
+        "lab": "Lab: identify air masses/fronts from a station dataset.",
+        "required_forms": [
+          "synoptic-analysis",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "nws-education",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 15,
+        "title": "Cyclones, Anticyclones & Weather Systems",
+        "atmospheric_science": "Atmosphere: pressure-system structure, circulation and basic midlatitude cyclone evolution.",
+        "mathematics": "Math: applied integration review.",
+        "physics": "Physics: fluid dynamics concepts and Bernoulli limitations.",
+        "data": "Data: track pressure-center motion.",
+        "communication": "Communication: one-page storm-system analysis.",
+        "lab": "Lab: sequence and annotate a developing cyclone.",
+        "required_forms": [
+          "synoptic-analysis",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "nws-education",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 16,
+        "title": "Weather Observations & Instrumentation",
+        "atmospheric_science": "Atmosphere: thermometer, barometer, hygrometer, anemometer, precipitation gauges and siting.",
+        "mathematics": "Math: quantitative error and percent difference.",
+        "physics": "Physics: calibration, sensor response and experimental error.",
+        "data": "Data: quality-control rules and outlier review.",
+        "communication": "Communication: instrument-method section written in formal scientific style.",
+        "lab": "Lab: instrument comparison/calibration practical.",
+        "required_forms": [
+          "observation-log",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-live",
+          "nws-education",
+          "solanar-platform",
+          "naib"
+        ]
+      },
+      {
+        "week": 17,
+        "title": "Station Models, Weather Maps & First Forecast",
+        "atmospheric_science": "Atmosphere: station plots, map analysis, fronts and basic short-range forecasting.",
+        "mathematics": "Math: cumulative calculus synthesis.",
+        "physics": "Physics: mechanics/fluids/thermal synthesis.",
+        "data": "Data: build a small surface-analysis dataset.",
+        "communication": "Communication: first 3-minute operational/broadcast forecast plus written technical forecast.",
+        "lab": "Lab: analyze a surface map and verify a 12\u201324 hour forecast.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 18,
+        "title": "SEMESTER I FINAL & PORTFOLIO DEFENSE",
+        "atmospheric_science": "Atmosphere: comprehensive Semester I final.",
+        "mathematics": "Math: comprehensive Calculus I final.",
+        "physics": "Physics: comprehensive Physics I final.",
+        "data": "Data: reproducible weather-data practical.",
+        "communication": "Communication: portfolio presentation and oral examination.",
+        "lab": "Lab: integrated forecast-and-analysis final practical. Semester completion requires every course strand \u226580%.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      }
+    ],
+    "courses": [
+      {
+        "code": "ATM 111",
+        "title": "Foundations of Atmospheric Science I",
+        "credits": 4,
+        "description": "Atmospheric composition and structure; weather observation; temperature; pressure; moisture; clouds; forces; winds; air masses; fronts; cyclone structure; forecast fundamentals."
+      },
+      {
+        "code": "MAT 151",
+        "title": "Calculus I for Atmospheric Science",
+        "credits": 4,
+        "description": "Functions, limits, derivatives, applications of derivatives, introductory integration, rates of change, optimization, graph interpretation and meteorological applications."
+      },
+      {
+        "code": "PHY 151",
+        "title": "University Physics I for Atmospheric Science",
+        "credits": 4,
+        "description": "Measurement, vectors, kinematics, Newtonian mechanics, work/energy, momentum, rotation, gravitation, fluids, temperature and introductory thermodynamics."
+      },
+      {
+        "code": "CSC 111",
+        "title": "Scientific Programming & Weather Data I",
+        "credits": 2,
+        "description": "Python-style scientific reasoning, variables, control flow, functions, tables, CSV data, plotting, data cleaning, reproducible notebooks and basic numerical methods."
+      },
+      {
+        "code": "COM 111",
+        "title": "Meteorological Communication I",
+        "credits": 2,
+        "description": "Scientific writing, source discipline, weather terminology, briefing structure, audience adaptation, uncertainty language, visual communication and oral presentation."
+      }
+    ]
+  },
+  "semester_2": {
+    "weeks": [
+      {
+        "week": 19,
+        "title": "Gas Laws & Atmospheric State",
+        "atmospheric_science": "Atmosphere: ideal-gas relationships and equation-of-state reasoning.",
+        "mathematics": "Math: integration techniques review and substitution.",
+        "physics": "Physics: oscillations and periodic motion.",
+        "data": "Data: calculate state-variable relationships from atmospheric samples.",
+        "communication": "Communication: write assumptions and units explicitly.",
+        "lab": "Lab: pressure-volume-temperature investigation using safe apparatus or supplied data.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 20,
+        "title": "Hydrostatic Balance",
+        "atmospheric_science": "Atmosphere: vertical pressure decrease, gravity and density.",
+        "mathematics": "Math: integration applications and differential-equation intuition.",
+        "physics": "Physics: waves, frequency, wavelength and phase.",
+        "data": "Data: pressure-versus-altitude numerical analysis.",
+        "communication": "Communication: technical derivation narrative in plain language.",
+        "lab": "Lab: compare observed/standard pressure profiles.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 21,
+        "title": "Dry Adiabatic Processes",
+        "atmospheric_science": "Atmosphere: parcel expansion/compression and dry adiabatic temperature change.",
+        "mathematics": "Math: first-order differential-equation concepts.",
+        "physics": "Physics: sound and wave propagation.",
+        "data": "Data: plot parcel/environment profiles.",
+        "communication": "Communication: explain adiabatic cooling without saying rising air 'gets farther from the Sun'.",
+        "lab": "Lab: pressure-change parcel model.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 22,
+        "title": "Moist Adiabatic Processes & Latent Heat",
+        "atmospheric_science": "Atmosphere: condensation, latent heating and moist adiabatic behavior.",
+        "mathematics": "Math: exponential/logarithmic integration applications.",
+        "physics": "Physics: electrostatics and electric fields.",
+        "data": "Data: compare dry/moist parcel traces.",
+        "communication": "Communication: structured thermodynamic explanation.",
+        "lab": "Lab: model dry versus saturated ascent.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 23,
+        "title": "Atmospheric Stability",
+        "atmospheric_science": "Atmosphere: environmental lapse rate, parcel buoyancy, stable/unstable/conditionally unstable layers.",
+        "mathematics": "Math: vectors and components.",
+        "physics": "Physics: electric potential and energy.",
+        "data": "Data: analyze simplified sounding profiles.",
+        "communication": "Communication: confidence statement tied to vertical-profile evidence.",
+        "lab": "Lab: classify stability from multiple soundings.",
+        "required_forms": [
+          "upper-air",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-planetarium",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 24,
+        "title": "UNIT III CHECKPOINT \u2014 Thermodynamics & Stability",
+        "atmospheric_science": "Atmosphere: cumulative Weeks 19\u201323.",
+        "mathematics": "Math: integration/differential-equation/vector checkpoint.",
+        "physics": "Physics: waves/electricity checkpoint.",
+        "data": "Data: sounding-analysis practical.",
+        "communication": "Communication: oral thermodynamics defense.",
+        "lab": "Lab: integrated parcel/stability practical. Unit checkpoint \u226580% required.",
+        "required_forms": [
+          "upper-air",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-planetarium",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 25,
+        "title": "Cloud Microphysics",
+        "atmospheric_science": "Atmosphere: aerosol nuclei, droplet growth, collision-coalescence and ice processes.",
+        "mathematics": "Math: vector magnitude/direction and introductory multivariable thinking.",
+        "physics": "Physics: circuits/current concepts and measurement.",
+        "data": "Data: classify particle-growth scenarios.",
+        "communication": "Communication: scientific-process diagram and caption.",
+        "lab": "Lab: microphysics model or particle-growth simulation.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 26,
+        "title": "Precipitation Physics",
+        "atmospheric_science": "Atmosphere: precipitation growth plus melting/refreezing layers.",
+        "mathematics": "Math: parametric representation and rates.",
+        "physics": "Physics: magnetism and forces on moving charges.",
+        "data": "Data: diagnose precipitation type from vertical temperature profiles.",
+        "communication": "Communication: communicate uncertainty near transition zones.",
+        "lab": "Lab: precipitation-type forecast practical.",
+        "required_forms": [
+          "professional-weather-report",
+          "lab-report"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 27,
+        "title": "SEMESTER MIDTERM II",
+        "atmospheric_science": "Atmosphere: cumulative Semester II midterm.",
+        "mathematics": "Math: Calculus II/vector methods midterm.",
+        "physics": "Physics: waves/electricity/magnetism midterm.",
+        "data": "Data: statistics and sounding practical.",
+        "communication": "Communication: oral scientific briefing.",
+        "lab": "Lab: integrated midterm case. Every strand \u226580% required.",
+        "required_forms": [
+          "upper-air",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-planetarium",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 28,
+        "title": "Upper-Air Observations & Soundings",
+        "atmospheric_science": "Atmosphere: radiosondes, pressure levels, inversions, moisture and wind profiles.",
+        "mathematics": "Math: vector applications and introduction to partial rates of change.",
+        "physics": "Physics: electromagnetic induction.",
+        "data": "Data: sounding tables, profiles and layer diagnostics.",
+        "communication": "Communication: upper-air diagnostic memo.",
+        "lab": "Lab: full sounding interpretation.",
+        "required_forms": [
+          "upper-air",
+          "professional-weather-report"
+        ],
+        "assigned_tools": [
+          "solanar-planetarium",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 29,
+        "title": "Radar Fundamentals",
+        "atmospheric_science": "Atmosphere: electromagnetic scattering, reflectivity and sampling limitations.",
+        "mathematics": "Math: quantitative scaling and logarithmic-style interpretation where appropriate.",
+        "physics": "Physics: electromagnetic waves.",
+        "data": "Data: spatial radar-image interpretation.",
+        "communication": "Communication: distinguish radar observation from warning and forecast.",
+        "lab": "Lab: track precipitation/storm motion from sequential radar frames.",
+        "required_forms": [
+          "radar-analysis",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "nws-radar",
+          "solanar-platform",
+          "meted",
+          "spc",
+          "naib"
+        ]
+      },
+      {
+        "week": 30,
+        "title": "Doppler Radar & Severe-Weather Signatures",
+        "atmospheric_science": "Atmosphere: radial velocity, convergence, divergence and rotation concepts.",
+        "mathematics": "Math: vector projection concept.",
+        "physics": "Physics: Doppler/wave applications.",
+        "data": "Data: paired reflectivity/velocity analysis.",
+        "communication": "Communication: cautious hazard-language practice.",
+        "lab": "Lab: simplified Doppler velocity-signature case.",
+        "required_forms": [
+          "radar-analysis",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "spc",
+          "nws-radar",
+          "solanar-platform",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 31,
+        "title": "Satellite Remote Sensing",
+        "atmospheric_science": "Atmosphere: visible, infrared and water-vapor channels; geostationary versus polar perspectives.",
+        "mathematics": "Math: functions of multiple variables introduction.",
+        "physics": "Physics: optics and radiation interaction.",
+        "data": "Data: compare multi-channel imagery.",
+        "communication": "Communication: write what each channel supports and does not support.",
+        "lab": "Lab: multispectral cloud/storm interpretation.",
+        "required_forms": [
+          "satellite-analysis",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "goes",
+          "solanar-planetarium",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 32,
+        "title": "Numerical Weather Prediction Introduction",
+        "atmospheric_science": "Atmosphere: model grids, initial conditions, forecast equations concept, parameterization and resolution.",
+        "mathematics": "Math: numerical approximation and slope/integration error ideas.",
+        "physics": "Physics: computational modeling as approximation of physical laws.",
+        "data": "Data: simple grid/advection experiment.",
+        "communication": "Communication: explain model guidance versus official forecast.",
+        "lab": "Lab: paper or code-based toy forecast model.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 33,
+        "title": "Probability, Ensembles & Forecast Uncertainty",
+        "atmospheric_science": "Atmosphere: deterministic versus probabilistic prediction and ensemble spread.",
+        "mathematics": "Math: probability foundations and distributions.",
+        "physics": "Physics: measurement uncertainty synthesis.",
+        "data": "Data: ensemble mean, median, range, percentile and threshold probability.",
+        "communication": "Communication: express probability without false certainty.",
+        "lab": "Lab: ensemble forecast analysis.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 34,
+        "title": "Forecast Verification & Climate Data Foundations",
+        "atmospheric_science": "Atmosphere: hits, misses, false alarms, temperature error, bias; weather versus climate datasets.",
+        "mathematics": "Math: correlation/regression foundations.",
+        "physics": "Physics: experimental validation and model comparison.",
+        "data": "Data: calculate MAE, bias and simple categorical scores; compare daily record to climate normal.",
+        "communication": "Communication: write a verification report that does not cherry-pick.",
+        "lab": "Lab: verify a forecast set and summarize a climate baseline.",
+        "required_forms": [
+          "climate-analysis",
+          "forecast-verification"
+        ],
+        "assigned_tools": [
+          "solanar-news",
+          "plera",
+          "meted",
+          "naib"
+        ]
+      },
+      {
+        "week": 35,
+        "title": "Three-Career Applied Studio",
+        "atmospheric_science": "Operational: produce a short operational forecast package from radar/satellite/model data.",
+        "mathematics": "Broadcast: turn the same technical analysis into a 2\u20133 minute public-facing weather segment.",
+        "physics": "Climatology: analyze a multi-year weather/climate dataset and distinguish variability from longer-term pattern.",
+        "data": "Data: all students document reproducible calculations and sources.",
+        "communication": "Communication: audience-specific versions of one evidence base.",
+        "lab": "Lab: three-station career rotation with mentor evaluation.",
+        "required_forms": [
+          "model-comparison",
+          "forecast-briefing"
+        ],
+        "assigned_tools": [
+          "solanar-platform",
+          "meted",
+          "plera",
+          "naib"
+        ]
+      },
+      {
+        "week": 36,
+        "title": "YEAR I COMPREHENSIVE FINAL, ORAL DEFENSE & ADVANCEMENT REVIEW",
+        "atmospheric_science": "Atmosphere: cumulative Year I examination spanning observation, thermodynamics, forces, clouds, maps, radar, satellite, models and climate foundations.",
+        "mathematics": "Math: cumulative Calculus I\u2013II/vector-method examination.",
+        "physics": "Physics: cumulative Physics I\u2013II examination.",
+        "data": "Data: reproducible analysis practical with statistics/probability.",
+        "communication": "Communication: oral defense before mentor/teacher panel.",
+        "lab": "Lab: integrated meteorological case. Advancement to Year II requires \u226580% on every required final, practical and portfolio competency.",
+        "required_forms": [
+          "climate-analysis",
+          "forecast-verification"
+        ],
+        "assigned_tools": [
+          "solanar-news",
+          "plera",
+          "meted",
+          "naib"
+        ]
+      }
+    ],
+    "courses": [
+      {
+        "code": "ATM 121",
+        "title": "Atmospheric Thermodynamics & Cloud Physics",
+        "credits": 4,
+        "description": "Gas laws, hydrostatic balance, moisture variables, saturation, adiabatic processes, stability, cloud formation, microphysics, precipitation and thermodynamic diagrams."
+      },
+      {
+        "code": "MAT 152",
+        "title": "Calculus II & Vector Methods for Atmospheric Science",
+        "credits": 4,
+        "description": "Integration techniques, differential equations introduction, sequences/series foundations, parametric ideas, vectors, partial-derivative introduction and meteorological applications."
+      },
+      {
+        "code": "PHY 152",
+        "title": "University Physics II for Atmospheric Science",
+        "credits": 4,
+        "description": "Oscillations, waves, sound, electricity, magnetism, optics, electromagnetic radiation and measurement concepts supporting radar, satellite and atmospheric remote sensing."
+      },
+      {
+        "code": "ATM 122",
+        "title": "Observations, Synoptic Analysis & Remote Sensing I",
+        "credits": 2,
+        "description": "Station models, METAR-style observations, surface and upper-air maps, radiosondes, radar fundamentals, satellite channels, forecast analysis and verification."
+      },
+      {
+        "code": "DAT 121",
+        "title": "Weather Statistics & Scientific Data II",
+        "credits": 1,
+        "description": "Descriptive statistics, distributions, probability, error, bias, correlation, regression foundations, uncertainty and ensemble interpretation."
+      },
+      {
+        "code": "COM 121",
+        "title": "Forecast Communication & Professional Practice I",
+        "credits": 1,
+        "description": "Forecast writing, public-safety communication, broadcast-style explanations, technical climate summaries, ethics and source labeling."
+      }
+    ]
+  },
+  "professional_forms": [
+    {
+      "id": "professional-weather-report",
+      "name": "Professional Weather Report",
+      "desc": "Structured current-condition, synoptic, analysis, forecast and hazard record."
+    },
+    {
+      "id": "forecast-briefing",
+      "name": "Professional Forecast Briefing",
+      "desc": "Operational briefing with key points, forecast details, uncertainty and actions."
+    },
+    {
+      "id": "observation-log",
+      "name": "Surface Observation & Instrument Log",
+      "desc": "Instrument exposure, readings, metadata, quality-control and observer notes."
+    },
+    {
+      "id": "synoptic-analysis",
+      "name": "Synoptic Analysis Worksheet",
+      "desc": "Surface/upper-air features, fronts, pressure systems, advection and forecast reasoning."
+    },
+    {
+      "id": "radar-analysis",
+      "name": "Radar Analysis Worksheet",
+      "desc": "Reflectivity, velocity, motion, signatures, limitations and hazard interpretation."
+    },
+    {
+      "id": "satellite-analysis",
+      "name": "Satellite Analysis Worksheet",
+      "desc": "Visible/IR/water-vapor channel analysis, cloud evolution and limitations."
+    },
+    {
+      "id": "upper-air",
+      "name": "Upper-Air / Sounding Analysis",
+      "desc": "Temperature, dew point, stability, wind, cloud layers and parcel reasoning."
+    },
+    {
+      "id": "model-comparison",
+      "name": "Model Guidance Comparison",
+      "desc": "Multi-model/ensemble comparison, bias, spread, confidence and bust scenarios."
+    },
+    {
+      "id": "forecast-verification",
+      "name": "Forecast Verification Record",
+      "desc": "Observed versus forecast values, error, bias, hits/misses and lessons learned."
+    },
+    {
+      "id": "climate-analysis",
+      "name": "Climate Data Analysis Sheet",
+      "desc": "Normals, anomalies, variability, trends, uncertainty and source documentation."
+    },
+    {
+      "id": "lab-report",
+      "name": "Professional Meteorology Lab Report",
+      "desc": "Question, method, data, calculations, uncertainty, results and conclusion."
+    }
+  ],
+  "learning_tools": [
+    {
+      "id": "solanar-live",
+      "name": "Solanar Live Weather",
+      "icon": "\ud83c\udf26",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Live_Weather_index.html",
+      "type": "Solanar App",
+      "desc": "Current conditions and forecast practice."
+    },
+    {
+      "id": "solanar-platform",
+      "name": "Solanar Platform",
+      "icon": "\ud83c\udf10",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+      "type": "Solanar App",
+      "desc": "Professional weather, hazards, Earth observation and briefing workspace."
+    },
+    {
+      "id": "solanar-planetarium",
+      "name": "Solanar Planetarium",
+      "icon": "\ud83c\udf0c",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Planetarium_index.html",
+      "type": "Solanar App",
+      "desc": "Atmosphere, hazard, official alert and observing context."
+    },
+    {
+      "id": "solanar-news",
+      "name": "Environmental News",
+      "icon": "\ud83d\udcf0",
+      "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+      "type": "Solanar App",
+      "desc": "Weather/climate source-analysis practice."
+    },
+    {
+      "id": "naib",
+      "name": "NAIB Mentor",
+      "icon": "N",
+      "url": "https://artist1970.github.io/noema-ai.github.io/",
+      "type": "Mentor",
+      "desc": "Mentorship, misconception repair and mastery review."
+    },
+    {
+      "id": "plera",
+      "name": "PLERA Search",
+      "icon": "\ud83d\udd0e",
+      "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+      "type": "Research",
+      "desc": "Source discovery and research support."
+    },
+    {
+      "id": "nws-education",
+      "name": "NWS Education / JetStream",
+      "icon": "\ud83c\udf93",
+      "url": "https://www.weather.gov/education",
+      "type": "Official Learning",
+      "desc": "National Weather Service weather education and data resources."
+    },
+    {
+      "id": "nws-radar",
+      "name": "NWS Radar",
+      "icon": "\ud83d\udce1",
+      "url": "https://radar.weather.gov/",
+      "type": "Official Data",
+      "desc": "Official U.S. radar viewer."
+    },
+    {
+      "id": "goes",
+      "name": "NOAA GOES Imagery",
+      "icon": "\ud83d\udef0",
+      "url": "https://goes.noaa.gov/",
+      "type": "Official Data",
+      "desc": "NOAA geostationary satellite imagery."
+    },
+    {
+      "id": "meted",
+      "name": "UCAR COMET MetEd",
+      "icon": "\ud83e\udde0",
+      "url": "https://www.meted.ucar.edu/",
+      "type": "Professional Training",
+      "desc": "Professional meteorology and Earth-system training modules and simulations."
+    },
+    {
+      "id": "spc",
+      "name": "Storm Prediction Center",
+      "icon": "\ud83c\udf2a",
+      "url": "https://www.spc.noaa.gov/",
+      "type": "Official Data",
+      "desc": "Severe-weather outlooks, watches and analysis."
+    },
+    {
+      "id": "nhc",
+      "name": "National Hurricane Center",
+      "icon": "\ud83c\udf00",
+      "url": "https://www.nhc.noaa.gov/",
+      "type": "Official Data",
+      "desc": "Tropical cyclone analysis and forecasts."
+    },
+    {
+      "id": "airnow",
+      "name": "AirNow",
+      "icon": "\ud83c\udf2b",
+      "url": "https://www.airnow.gov/",
+      "type": "Official Data",
+      "desc": "U.S. air-quality information."
+    }
+  ]
+}
