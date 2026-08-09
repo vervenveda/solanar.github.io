@@ -1,0 +1,23 @@
+# Track 03 Validation
+
+- 36 weeks: PASS
+- 180 advanced days: PASS
+- 6 qualifying checkpoints: PASS
+- Semester II gate: PASS
+- Five-part final: PASS
+- Tropical lab: PASS
+- Ticker: PASS
+- NAIB: PASS
+- JavaScript index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/semester-1/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/semester-2/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/mathematics/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/labs/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/research/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/forms/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/tools/index.html: PASS
+- JavaScript tropical-meteorology-hurricane-science/final/index.html: PASS
+- Static generated relative links: PASS
+- Track 01 / Track 02 parent links: EXPECTED EXISTING SIBLINGS
+- Secrets/private credentials: none included

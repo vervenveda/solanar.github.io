@@ -1,0 +1,1855 @@
+{
+  "program": {
+    "name": "Solanar Graduate Program",
+    "track_number": 3,
+    "credential": "Graduate Certificate of Completion in Tropical Meteorology & Hurricane Science",
+    "concentration": "Tropical Cyclone Dynamics \u00b7 Prediction \u00b7 Hazards \u00b7 Research",
+    "duration_weeks": 36,
+    "semesters": 2,
+    "advanced_learning_days": 180,
+    "mastery_threshold": 80,
+    "credit_equivalent_hours": 36,
+    "prerequisite": "Solanar Professional Meteorology Certificate Years I\u2013II or equivalent university-level meteorology preparation. Graduate Track 02 is recommended for students pursuing model/data-assimilation research.",
+    "credential_note": "Internal Solanar/Khaemenes certificate of completion; not accredited university credit, government licensure, WMO designation, AMS certification, or a substitute for institutional degree requirements."
+  },
+  "mathematics": [
+    {
+      "id": "calculus-ii",
+      "name": "Calculus II",
+      "role": "Core quantitative prerequisite",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/calculus-ii/",
+      "use": "Fluxes, integrals, series, thermodynamic and continuous-model applications."
+    },
+    {
+      "id": "differential-equations",
+      "name": "Differential Equations",
+      "role": "Core co-requisite",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/differential-equations/",
+      "use": "Vortex dynamics, coupled atmosphere\u2013ocean systems, intensity-change models, stability and numerical prediction."
+    },
+    {
+      "id": "linear-algebra",
+      "name": "Linear Algebra",
+      "role": "Core co-requisite",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/linear-algebra/",
+      "use": "Vector winds, coordinate transforms, covariance, ensemble structure, reconnaissance synthesis and DA/model applications."
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "role": "Core co-requisite",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/statistics/",
+      "use": "Genesis/intensity probabilities, forecast verification, ensembles, uncertainty, risk and research inference."
+    },
+    {
+      "id": "introduction-to-proofs",
+      "name": "Introduction to Proofs",
+      "role": "Graduate research reasoning",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/introduction-to-proofs/",
+      "use": "Assumptions, logical structure, defensible derivation, research criticism and oral defense."
+    },
+    {
+      "id": "real-complex-analysis",
+      "name": "Real & Complex Analysis",
+      "role": "Research distinction extension",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/real-complex-analysis/",
+      "use": "Advanced mathematical treatment of waves, stability, convergence and research-level dynamical analysis."
+    }
+  ],
+  "tools": [
+    {
+      "id": "tropical-lab",
+      "name": "Solanar Tropical Dynamics Lab",
+      "icon": "\ud83c\udf00",
+      "type": "Solanar Lab",
+      "url": "../labs/index.html",
+      "desc": "Coriolis, inertial period, great-circle track error and ensemble-track experiments."
+    },
+    {
+      "id": "solanar-platform",
+      "name": "Solanar Platform",
+      "icon": "\ud83c\udf10",
+      "type": "Solanar",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+      "desc": "Integrated weather, hazard and analysis workspace."
+    },
+    {
+      "id": "naib",
+      "name": "NAIB Research Mentor",
+      "icon": "N",
+      "type": "Mentor",
+      "url": "https://artist1970.github.io/noema-ai.github.io/",
+      "desc": "Graduate questioning, mastery repair, case defense and capstone support."
+    },
+    {
+      "id": "plera",
+      "name": "PLERA Search",
+      "icon": "\ud83d\udd0e",
+      "type": "Research",
+      "url": "https://vervenveda.com/PLERASearch.github.io/",
+      "desc": "Research and source discovery."
+    },
+    {
+      "id": "nhc",
+      "name": "National Hurricane Center",
+      "icon": "\ud83c\udf00",
+      "type": "Official",
+      "url": "https://www.nhc.noaa.gov/",
+      "desc": "Official U.S. tropical cyclone forecasts, advisories, analysis and archives."
+    },
+    {
+      "id": "nhc-recon",
+      "name": "NHC Aircraft Reconnaissance",
+      "icon": "\u2708",
+      "type": "Official",
+      "url": "https://www.nhc.noaa.gov/recon.php",
+      "desc": "Recon plans, observations, vortex messages, dropsondes and archives."
+    },
+    {
+      "id": "nhc-surge",
+      "name": "NHC Storm Surge Unit",
+      "icon": "\ud83c\udf0a",
+      "type": "Official",
+      "url": "https://www.nhc.noaa.gov/surge/ssu.php",
+      "desc": "Operational storm-surge science, products and resources."
+    },
+    {
+      "id": "aoml-hrd",
+      "name": "NOAA AOML Hurricane Research Division",
+      "icon": "\ud83d\udd2c",
+      "type": "Official Research",
+      "url": "https://www.aoml.noaa.gov/hurricane-research-division/",
+      "desc": "Dynamics, physics, observing systems, data assimilation, modeling and hurricane impacts."
+    },
+    {
+      "id": "wmo-tcf",
+      "name": "WMO Tropical Cyclone Forecaster",
+      "icon": "W",
+      "type": "Official",
+      "url": "https://severeweather.wmo.int/TCFW/",
+      "desc": "Global tropical-cyclone forecaster training materials and competency context."
+    },
+    {
+      "id": "goes",
+      "name": "NOAA GOES Imagery",
+      "icon": "\ud83d\udef0",
+      "type": "Official",
+      "url": "https://www.star.nesdis.noaa.gov/goes/",
+      "desc": "Geostationary satellite imagery."
+    },
+    {
+      "id": "nws-radar",
+      "name": "NWS Radar",
+      "icon": "\ud83d\udce1",
+      "type": "Official",
+      "url": "https://radar.weather.gov/",
+      "desc": "Operational radar viewer for landfall/outer-band analysis."
+    },
+    {
+      "id": "nomads",
+      "name": "NOAA NOMADS",
+      "icon": "\ud83d\uddc3",
+      "type": "Official Data",
+      "url": "https://nomads.ncep.noaa.gov/",
+      "desc": "Numerical model and analysis data."
+    },
+    {
+      "id": "ncei",
+      "name": "NOAA NCEI",
+      "icon": "\ud83d\udcda",
+      "type": "Official Data",
+      "url": "https://www.ncei.noaa.gov/",
+      "desc": "Historical weather/climate data and archives."
+    }
+  ],
+  "forms": [
+    {
+      "id": "tropical-synoptic",
+      "name": "Graduate Tropical Synoptic Analysis",
+      "desc": "Tropical waves, ridges/troughs, moisture, shear, SST/ocean context, steering and forecast implications."
+    },
+    {
+      "id": "genesis-diagnostic",
+      "name": "Tropical Cyclogenesis Diagnostic",
+      "desc": "Disturbance structure, vorticity, convection, moisture, shear, ocean state, model evidence and genesis probability."
+    },
+    {
+      "id": "satellite-tc",
+      "name": "Tropical Satellite Analysis",
+      "desc": "Visible/IR/water-vapor imagery, cloud pattern, center fixes, organization, convective trends and uncertainty."
+    },
+    {
+      "id": "recon-analysis",
+      "name": "Aircraft Reconnaissance Analysis",
+      "desc": "Flight level, SFMR, dropsondes, vortex messages, center/pressure/wind estimates, QC and forecast impact."
+    },
+    {
+      "id": "inner-core",
+      "name": "Inner-Core Structure & Intensity Analysis",
+      "desc": "Eye/eyewall, rainbands, RMW, asymmetry, shear, ERC, convective bursts and intensity-change evidence."
+    },
+    {
+      "id": "track-forecast",
+      "name": "Tropical Cyclone Track Forecast",
+      "desc": "Steering, synoptic pattern, model/ensemble spread, beta/interaction considerations, consensus and uncertainty."
+    },
+    {
+      "id": "intensity-forecast",
+      "name": "Tropical Cyclone Intensity Forecast",
+      "desc": "Ocean/atmosphere environment, inner-core state, shear, moisture, RI signals, model guidance and uncertainty."
+    },
+    {
+      "id": "ensemble-consensus",
+      "name": "TC Model / Ensemble Consensus Brief",
+      "desc": "Track/intensity guidance, clusters, consensus, outliers, initialization concerns and scenarios."
+    },
+    {
+      "id": "rapid-intensification",
+      "name": "Rapid Intensification Diagnostic",
+      "desc": "Environmental/inner-core preconditions, observational/model evidence, probabilities, failure modes and updates."
+    },
+    {
+      "id": "surge-hazards",
+      "name": "Storm Surge & Coastal Hazards Analysis",
+      "desc": "Track/size/intensity, bathymetry/coast orientation, tide context, official surge guidance and uncertainty."
+    },
+    {
+      "id": "rain-flood",
+      "name": "Tropical Rainfall & Flood Hazard Analysis",
+      "desc": "Moisture transport, storm motion, terrain, rainbands, QPF, antecedent conditions and flood-risk uncertainty."
+    },
+    {
+      "id": "landfall-radar",
+      "name": "Landfall Radar & Tornado Analysis",
+      "desc": "Rainbands, eyewall structure, velocity/rotation, tornado environments, sampling and warning evidence."
+    },
+    {
+      "id": "et-transition",
+      "name": "Extratropical Transition Analysis",
+      "desc": "Structural change, trough interaction, baroclinicity, wind-field evolution and downstream impacts."
+    },
+    {
+      "id": "forecast-verification",
+      "name": "TC Forecast Verification & After-Action Review",
+      "desc": "Track/intensity error, timing, cone/uncertainty interpretation, hazard outcomes and corrective learning."
+    },
+    {
+      "id": "drt-hurricane",
+      "name": "Displaced-Real-Time Hurricane Operations Log",
+      "desc": "Time-stamped evidence, forecast decisions, updates, briefing/hazard decisions and verification."
+    },
+    {
+      "id": "capstone-tc",
+      "name": "Tropical Cyclone Graduate Capstone Record",
+      "desc": "Research question, data, methods, mathematics, reproducibility, results, limitations and operational relevance."
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Tropical Atmosphere as a Distinct Dynamical Regime",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Contrast tropical and extratropical dynamics: weak Coriolis near the equator, deep convection, moist static energy, weak temperature gradients aloft and large-scale overturning."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate Coriolis parameter/inertial scales and review thermodynamic/energy budgets and nondimensional reasoning."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Map tropical latitude belts, ITCZ/monsoon regions and representative pressure/wind/moisture structures."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare tropical analyses with midlatitude analyses and identify which familiar approximations weaken or change."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Establish graduate source/evidence notebook and defend why tropical forecasting requires a distinct conceptual model."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations"
+      ],
+      "forms": [
+        "tropical-synoptic"
+      ],
+      "tools": [
+        "tropical-lab",
+        "wmo-tcf",
+        "naib"
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Hadley/Walker Circulations, ITCZ & Tropical Convergence",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study tropical overturning, trade winds, ITCZ structure, Walker circulation and coupling to convection."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Analyze continuity, mass flux and simple circulation/streamfunction relationships."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Diagnose a tropical convergence regime using winds, moisture and satellite imagery."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Connect large-scale circulation anomalies to basin-scale tropical weather."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write a circulation-to-weather briefing with explicit scale separation."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations"
+      ],
+      "forms": [
+        "tropical-synoptic",
+        "satellite-tc"
+      ],
+      "tools": [
+        "goes",
+        "wmo-tcf",
+        "naib"
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Equatorial Waves & Tropical Disturbances",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine Kelvin, equatorial Rossby, mixed Rossby\u2013gravity and easterly-wave concepts and their relationship to tropical convection."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Use phase speed, wavelength/period and simplified wave relationships; connect to differential-equation solutions conceptually."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Track an archived tropical wave from analysis/satellite sequences."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare disturbance evolution with model guidance and convective envelope changes."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Research memo: distinguish a wave/disturbance from a tropical cyclone and document uncertainty."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "real-complex-analysis"
+      ],
+      "forms": [
+        "tropical-synoptic",
+        "satellite-tc"
+      ],
+      "tools": [
+        "goes",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Moist Thermodynamics, Convection & Tropical Instability",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Advance equivalent potential temperature/moist static energy, entrainment, saturation, convective organization and weak-temperature-gradient thinking."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate thermodynamic quantities and sensitivity to SST/moisture/temperature changes."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare soundings and moist-energy profiles across developing/nondeveloping environments."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Evaluate model/satellite evidence for deep moisture and persistent convection."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Defend why high SST alone cannot establish cyclone genesis or intensification."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "forms": [
+        "genesis-diagnostic"
+      ],
+      "tools": [
+        "goes",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Ocean\u2013Atmosphere Exchange & Tropical Cyclone Energy",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study enthalpy flux, momentum exchange, ocean mixed-layer response, cold wakes and coupled intensity limits."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate illustrative flux/wind-stress relationships and sensitivity; distinguish simplified formulas from full coupled physics."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze SST/ocean heat and storm-motion contexts for archived intensity-change cases."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare coupled versus atmosphere-only prediction concepts."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write an evidence memo on when ocean feedback becomes forecast-critical."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations"
+      ],
+      "forms": [
+        "intensity-forecast"
+      ],
+      "tools": [
+        "aoml-hrd",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 6,
+      "title": "UNIT I QUALIFYING CHECKPOINT \u2014 Tropical Foundations",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Synthesize tropical circulation, waves, thermodynamics and ocean coupling."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Complete Coriolis/wave/energy/flux quantitative problems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze an unseen tropical disturbance environment."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Integrate satellite, synoptic and model evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Deliver a 10-minute scientific defense; each component \u226580%."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations",
+        "statistics"
+      ],
+      "forms": [
+        "tropical-synoptic",
+        "genesis-diagnostic"
+      ],
+      "tools": [
+        "wmo-tcf",
+        "goes",
+        "naib"
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Tropical Cyclogenesis: Necessary Ingredients vs Sufficient Evidence",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine low-level vorticity, persistent convection, moisture, shear, instability/ocean state and pre-existing disturbances as interacting genesis ingredients."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Use conditional probability and multivariate reasoning to avoid deterministic ingredient checklists."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare developing and nondeveloping disturbances."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Analyze operational genesis guidance/outlooks only as one evidence source, not answer keys."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Create a probabilistic genesis forecast with failure modes and update triggers."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "genesis-diagnostic"
+      ],
+      "tools": [
+        "nhc",
+        "goes",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Vortex Spin-Up, Angular Momentum & Secondary Circulation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study vortex stretching, absolute angular momentum, boundary-layer inflow, eyewall ascent and upper-level outflow."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate angular momentum and radial/vertical circulation relationships in simplified vortex models."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Construct radial profiles of wind/pressure and diagnose structural evolution."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare observed/research representations of secondary circulation."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Defend how inner-core organization differs from merely having strong convection."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "calculus-ii"
+      ],
+      "forms": [
+        "inner-core"
+      ],
+      "tools": [
+        "aoml-hrd",
+        "tropical-lab",
+        "naib"
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Tropical Cyclone Structure: Eye, Eyewall & Rainbands",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study warm-core structure, radius of maximum wind, eyewall slope, rainband dynamics, asymmetry and vortex tilt."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Use radial/tangential wind decomposition and structural metrics."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze satellite/radar/recon cross-sections or radial profiles from an archived storm."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Relate structural changes to track/intensity forecast questions."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write a structure-first intensity analysis rather than a category-first narrative."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "calculus-ii"
+      ],
+      "forms": [
+        "inner-core",
+        "satellite-tc"
+      ],
+      "tools": [
+        "aoml-hrd",
+        "goes",
+        "nhc-recon",
+        "naib"
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Environmental Vertical Shear & Vortex Resilience",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine shear-induced tilt, ventilation, asymmetric convection, dry-air pathways and resilient/fragile vortex responses."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate deep-layer shear vectors and coordinate-relative asymmetries."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare storms that weakened, maintained intensity or intensified under different shear/structure combinations."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Fuse satellite, recon and model shear guidance."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Produce an intensity forecast that treats shear effects probabilistically rather than mechanically."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "intensity-forecast",
+        "satellite-tc"
+      ],
+      "tools": [
+        "goes",
+        "aoml-hrd",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Eyewall Replacement Cycles & Internal Intensity Change",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study concentric eyewalls, secondary eyewall formation, wind-field expansion and intensity fluctuations."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Analyze radial wind/pressure profiles and changes in RMW/wind radii."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Document an archived eyewall replacement cycle using satellite/recon/radar evidence."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare model representation with observed structural evolution."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write a forecast-impact memo separating maximum-wind change from hazard-footprint change."
+        }
+      ],
+      "math": [
+        "statistics",
+        "calculus-ii"
+      ],
+      "forms": [
+        "inner-core",
+        "recon-analysis"
+      ],
+      "tools": [
+        "nhc-recon",
+        "goes",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 12,
+      "title": "UNIT II QUALIFYING CHECKPOINT \u2014 Genesis & Inner-Core Dynamics",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Synthesize genesis, vortex spin-up, inner-core structure, shear and eyewall cycles."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Complete vortex/angular-momentum/vector/probability problems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze an unseen developing/intensifying cyclone case."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Integrate satellite/recon/model evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Orally defend genesis/intensity reasoning; all components \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "genesis-diagnostic",
+        "inner-core",
+        "intensity-forecast"
+      ],
+      "tools": [
+        "nhc-recon",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Satellite Tropical Cyclone Analysis",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Advance Dvorak-pattern concepts, microwave/IR/visible structural interpretation, center fixes, convective symmetry and rapid-scan trends without treating any one technique as infallible."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Quantify motion/trend/radial metrics and uncertainty intervals."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Perform multi-time satellite analysis for a developing or changing cyclone."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare satellite-derived interpretation with recon when available."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Create a satellite-only provisional analysis, then update it after independent observations are revealed."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "satellite-tc"
+      ],
+      "tools": [
+        "goes",
+        "nhc",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Aircraft Reconnaissance, Dropsondes & Vortex Data",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study reconnaissance mission purpose, flight-level winds, SFMR, dropsondes, center fixes, minimum pressure and data QC/representativeness."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Convert/compare wind measures and calculate gradient/uncertainty examples."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Decode and synthesize an archived recon mission into a storm-state analysis."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Assess how reconnaissance changes analysis/model initialization/forecast confidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write a recon-impact memo documenting what changed and what remained uncertain."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "recon-analysis",
+        "inner-core"
+      ],
+      "tools": [
+        "nhc-recon",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Tropical Cyclone Radar & Landfall Structure",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study radar sampling of eyewalls/rainbands, Doppler velocity, mesovortices, tornado-producing cells and landfall structural evolution."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Use vector/radial-velocity calculations and sampling geometry."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze an archived landfall sequence."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Fuse radar with recon/satellite/surface observations."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Prepare a landfall nowcast separating official warning authority from graduate simulation."
+        }
+      ],
+      "math": [
+        "linear-algebra"
+      ],
+      "forms": [
+        "landfall-radar",
+        "inner-core"
+      ],
+      "tools": [
+        "nws-radar",
+        "nhc",
+        "naib"
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Intensity Estimation, Wind Radii & Pressure\u2013Wind Relationships",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine multiple intensity observations/estimates, pressure\u2013wind relationships, storm size, asymmetry and uncertainty."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Fit/compare simple pressure-wind relationships without treating them as universal laws."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Build an intensity evidence table from satellite/recon/surface data."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare best-track/operational estimates and discuss revisions."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Defend an intensity estimate with confidence bounds."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "recon-analysis",
+        "inner-core"
+      ],
+      "tools": [
+        "nhc-recon",
+        "nhc",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Rapid Intensification: Environment, Inner Core & Predictability",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study RI as an interaction among ocean state, shear/moisture, vortex structure, convective organization and stochastic/internal processes."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Use probability, thresholds and verification concepts; examine base rates and conditional risk."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare RI and false-alarm/non-RI cases."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Evaluate model/ensemble and observational signals without deterministic overconfidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Produce a time-updated RI probability brief with explicit bust scenarios."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "rapid-intensification",
+        "intensity-forecast"
+      ],
+      "tools": [
+        "aoml-hrd",
+        "nhc",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 18,
+      "title": "SEMESTER I COMPREHENSIVE \u2014 Tropical Dynamics & Observation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Cumulative tropical dynamics, genesis, inner-core, satellite, recon, radar and intensity examination."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Complete graduate quantitative tropical-dynamics/statistics problems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze an unseen cyclone from disturbance through mature structure."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Conduct a timed multi-source intensity/structure forecast exercise."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Submit research portfolio and oral defense; each component \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "tropical-synoptic",
+        "recon-analysis",
+        "inner-core",
+        "forecast-verification"
+      ],
+      "tools": [
+        "nhc",
+        "aoml-hrd",
+        "wmo-tcf",
+        "naib"
+      ]
+    },
+    {
+      "week": 19,
+      "title": "Track Forecasting: Steering Flow & Synoptic Interaction",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study deep-layer steering, subtropical ridges, trough interaction, beta drift concepts, binary interactions and recurvature."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate vector steering and great-circle track errors."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze steering layers and archived track changes."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare consensus/ensemble track guidance to synoptic diagnosis."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Issue a track forecast with confidence corridor and alternate scenarios."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "track-forecast",
+        "ensemble-consensus"
+      ],
+      "tools": [
+        "tropical-lab",
+        "nhc",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 20,
+      "title": "Track Ensembles, Consensus & Forecast Error",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine deterministic/ensemble model spread, consensus techniques, clustering, persistence/climatology baselines and systematic error."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate track error, ensemble centroid/spread and simple consensus metrics."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Build an ensemble-track diagnostic using archived positions."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare model clusters to the evolving steering pattern."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write a consensus-use doctrine that prevents blind model averaging."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "track-forecast",
+        "ensemble-consensus",
+        "forecast-verification"
+      ],
+      "tools": [
+        "tropical-lab",
+        "nomads",
+        "nhc",
+        "naib"
+      ]
+    },
+    {
+      "week": 21,
+      "title": "Intensity Guidance & Coupled Hurricane Modeling",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study statistical-dynamical, dynamical and coupled intensity guidance, inner-core resolution, ocean coupling and model-physics limitations."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Analyze intensity error, bias and ensemble/spread relationships."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare guidance across an archived intensity-change event."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Relate HAFS/research-model concepts to observed structure and environment."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write a model-diagnostic memo identifying why guidance diverged."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "intensity-forecast",
+        "ensemble-consensus"
+      ],
+      "tools": [
+        "aoml-hrd",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 22,
+      "title": "Hurricane Data Assimilation & Targeted Observations",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine assimilation of recon, dropsonde, satellite/radiance and conventional observations into hurricane analyses; discuss targeted observing and OSSE concepts."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Apply covariance/state-estimation concepts from Linear Algebra/Statistics and optional Track 02 foundations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Perform a toy observation-impact/analysis-update experiment."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Trace how new recon information could affect initial state and subsequent forecast."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Design an observing strategy for a stated track/intensity uncertainty and defend it."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "recon-analysis",
+        "ensemble-consensus"
+      ],
+      "tools": [
+        "aoml-hrd",
+        "nhc-recon",
+        "naib"
+      ]
+    },
+    {
+      "week": 23,
+      "title": "Forecast Verification, Best Track & Post-Storm Learning",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study operational versus best-track datasets, forecast lead-time verification, track/intensity error and post-analysis changes."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate track/intensity errors, bias and stratified verification summaries."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Verify an archived forecast sequence."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare forecast reasoning to final analyzed storm history without hindsight rewriting."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Produce an after-action review with specific scientific/process improvements."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "forecast-verification"
+      ],
+      "tools": [
+        "nhc",
+        "ncei",
+        "naib"
+      ]
+    },
+    {
+      "week": 24,
+      "title": "UNIT III QUALIFYING CHECKPOINT \u2014 Track, Intensity & Prediction Systems",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Synthesize steering, ensembles, intensity guidance, DA/observations and verification."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Complete great-circle/vector/probability/verification problems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze an unseen forecast cycle with track/intensity divergence."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Update forecast as recon/model/ensemble evidence arrives."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Defend model weighting and uncertainty; all components \u226580%."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "forms": [
+        "track-forecast",
+        "intensity-forecast",
+        "forecast-verification"
+      ],
+      "tools": [
+        "nhc",
+        "nhc-recon",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 25,
+      "title": "Storm Surge Physics & Coastal Inundation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study wind stress, inverse-barometer contribution, storm size/track/angle, shelf/bathymetry/coastline effects, waves/tide interaction concepts and SLOSH-based operational context."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate simplified wind-stress/pressure and geometry sensitivity examples without treating them as surge forecasts."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare surge outcomes from storms with different structure/landfall geometry."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Interpret official NHC surge products and uncertainty."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Create a coastal hazard briefing that never substitutes a toy calculation for official surge guidance."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "forms": [
+        "surge-hazards"
+      ],
+      "tools": [
+        "nhc-surge",
+        "nhc",
+        "naib"
+      ]
+    },
+    {
+      "week": 26,
+      "title": "Tropical Rainfall, Freshwater Flooding & Terrain",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study moisture flux, rainband training, storm motion, terrain enhancement, predecessor rain events and post-landfall rainfall."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Calculate moisture/rainfall accumulation and probability/threshold examples."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze a high-impact tropical rainfall case."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare QPF/model/radar observations and identify placement/timing errors."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Prepare an impact-based rainfall/flood meteorology brief."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "forms": [
+        "rain-flood"
+      ],
+      "tools": [
+        "nhc",
+        "nws-radar",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 27,
+      "title": "Tropical Tornadoes & Convective Hazards",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study rainband supercells, low-level shear/helicity environments, fast storm motion and radar/warning challenges."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Use hodograph/vector and probability calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze a tropical-cyclone tornado day from environment through radar evolution."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Integrate radar with storm-relative position and cyclone structure."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Write a simulated tornado-risk briefing with uncertainty."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "landfall-radar"
+      ],
+      "tools": [
+        "nws-radar",
+        "nhc",
+        "naib"
+      ]
+    },
+    {
+      "week": 28,
+      "title": "Wind Hazard, Size & Inland Decay",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine wind radii, gusts, boundary-layer exposure, terrain/land-cover effects, inland decay and asymmetric wind footprint."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Analyze radial wind profiles, decay curves and uncertainty."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare impacts from compact versus large storms of similar maximum intensity."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Integrate official wind products with structural evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Create a wind-impact brief emphasizing size/structure rather than category alone."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "inner-core",
+        "forecast-verification"
+      ],
+      "tools": [
+        "nhc",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 29,
+      "title": "Extratropical Transition & Downstream Impacts",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study structural transition, baroclinic interaction, frontal development, wind-field expansion and downstream wave amplification."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Apply vector/PV/wave and statistical verification concepts."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Diagnose an archived ET case from tropical through post-tropical evolution."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Compare model timing/structure of transition."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Produce a multi-day hazard brief extending beyond tropical classification."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "real-complex-analysis"
+      ],
+      "forms": [
+        "et-transition",
+        "track-forecast"
+      ],
+      "tools": [
+        "nhc",
+        "goes",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 30,
+      "title": "UNIT IV QUALIFYING CHECKPOINT \u2014 Tropical Cyclone Hazards",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Synthesize surge, rainfall/flood, tornado, wind and extratropical-transition hazards."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Complete quantitative hazard/geometry/probability problems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Analyze an unseen landfall scenario with interacting hazards."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Use official products and observational/model evidence appropriately."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Deliver an impact-based multi-hazard briefing; all components \u226580%."
+        }
+      ],
+      "math": [
+        "statistics",
+        "calculus-ii",
+        "linear-algebra"
+      ],
+      "forms": [
+        "surge-hazards",
+        "rain-flood",
+        "et-transition"
+      ],
+      "tools": [
+        "nhc-surge",
+        "nhc",
+        "nws-radar",
+        "naib"
+      ]
+    },
+    {
+      "week": 31,
+      "title": "Tropical Cyclone Climatology, ENSO & Environmental Modulation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Study basin climatology, seasonality, ENSO, MJO/large-scale variability, climate modes and limits of seasonal inference for individual storms."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Analyze distributions, anomalies, correlations and conditional probabilities while guarding against causal overreach."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Compare seasons/cases under different large-scale states."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Evaluate seasonal/environmental outlook evidence separately from event forecasting."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Research critique: identify common statistical fallacies in hurricane-climate discussion."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "tropical-synoptic",
+        "forecast-verification"
+      ],
+      "tools": [
+        "ncei",
+        "aoml-hrd",
+        "naib"
+      ]
+    },
+    {
+      "week": 32,
+      "title": "Tropical Cyclones & Climate Change: Detection, Attribution & Risk",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Examine observed/reconstructed records, model projections, intensity/rainfall/sea-level interactions, attribution logic and uncertainty."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Use trends, distributions, confidence intervals and sensitivity reasoning."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Critique datasets/metrics for inhomogeneity and changing observing capability."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Separate climate-scale statements from individual-event forecast claims."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Produce a literature synthesis that clearly labels evidence strength and unresolved questions."
+        }
+      ],
+      "math": [
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "forecast-verification",
+        "capstone-tc"
+      ],
+      "tools": [
+        "ncei",
+        "plera",
+        "naib"
+      ]
+    },
+    {
+      "week": 33,
+      "title": "Graduate Research Design in Hurricane Science",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Develop a focused, falsifiable research question in tropical dynamics, observations, prediction, hazards or communication."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Choose mathematical/statistical methods, define variables and preregister primary comparisons."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Audit candidate datasets for provenance, missingness, temporal changes and sampling bias."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Build a reproducible workflow and validation plan."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Submit and orally defend capstone proposal."
+        }
+      ],
+      "math": [
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "capstone-tc"
+      ],
+      "tools": [
+        "aoml-hrd",
+        "plera",
+        "naib"
+      ]
+    },
+    {
+      "week": 34,
+      "title": "Displaced Real-Time Case I \u2014 Genesis to Hurricane Forecast",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Enter an archived disturbance with future information hidden and progress through genesis, organization and track/intensity forecasting."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Complete timed steering, probability and verification calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Update satellite/synoptic/genesis analysis at staged data releases."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Integrate models/ensembles/recon only as they become available."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Submit contemporaneous forecast reasoning before verifying data are revealed."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "forms": [
+        "drt-hurricane",
+        "genesis-diagnostic",
+        "track-forecast",
+        "intensity-forecast"
+      ],
+      "tools": [
+        "nhc",
+        "goes",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 35,
+      "title": "Displaced Real-Time Case II \u2014 Landfall Operations",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Continue a separate archived storm into approach/landfall with track, intensity, surge, rain, wind and tornado hazards."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Maintain quantitative error/probability updates under time pressure."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Interrogate recon, radar, satellite and official products chronologically."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Issue simulated forecast/hazard briefings while preserving official-product authority."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Conduct after-action verification after the case concludes."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "drt-hurricane",
+        "surge-hazards",
+        "rain-flood",
+        "landfall-radar",
+        "forecast-verification"
+      ],
+      "tools": [
+        "nhc",
+        "nhc-recon",
+        "nhc-surge",
+        "nws-radar",
+        "naib"
+      ]
+    },
+    {
+      "week": 36,
+      "title": "GRADUATE QUALIFYING FINAL \u2014 Tropical Meteorology & Hurricane Science",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Tropical Theory & Dynamics",
+          "work": "Complete cumulative qualifying examination across tropical dynamics, genesis, structure, observations, track/intensity prediction and hazards."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Analysis",
+          "work": "Complete independent dynamics/vector/probability/verification calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Observation / Case Laboratory",
+          "work": "Perform an unseen displaced-real-time tropical-cyclone forecast case."
+        },
+        {
+          "day": "Thursday",
+          "label": "Forecast Guidance & Operations",
+          "work": "Diagnose track/intensity guidance, recon/satellite evidence and hazard evolution under time limits."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Hazards & Defense",
+          "work": "Defend capstone research. Written science, quantitative exam, DRT forecast operations, hazard decision-support case and research/oral defense each independently \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "capstone-tc",
+        "drt-hurricane",
+        "forecast-verification"
+      ],
+      "tools": [
+        "nhc",
+        "wmo-tcf",
+        "aoml-hrd",
+        "naib"
+      ]
+    }
+  ]
+}

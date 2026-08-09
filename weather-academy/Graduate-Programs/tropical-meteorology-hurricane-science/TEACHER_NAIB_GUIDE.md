@@ -1,0 +1,2 @@
+# NAIB / Faculty Mentor Guide — Track 03
+Require source/valid-time discipline, physical dynamics, competing track/intensity hypotheses, quantified uncertainty, forecast updating when evidence changes, distinct wind/surge/rain/tornado hazard communication, forecast verification without hindsight rewriting, and reproducible research. Human examiner judgment is required for verified graduate practicals, checkpoints, capstone and oral defense.

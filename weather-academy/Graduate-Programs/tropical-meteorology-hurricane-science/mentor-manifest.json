@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "sourceId": "solanar.graduate.tropical-hurricane-science",
+  "track": 3,
+  "name": "Graduate Certificate of Completion in Tropical Meteorology & Hurricane Science",
+  "classification": "graduate-advanced-professional-education",
+  "mentorSearchable": true,
+  "mastery": {
+    "threshold": 80,
+    "nonCompensatory": true
+  },
+  "domains": [
+    "tropical-meteorology",
+    "tropical-cyclones",
+    "hurricanes",
+    "forecasting",
+    "remote-sensing",
+    "reconnaissance",
+    "modeling",
+    "hazards",
+    "research"
+  ],
+  "mathCore": [
+    "calculus-ii",
+    "differential-equations",
+    "linear-algebra",
+    "statistics"
+  ],
+  "mentorNotes": "Do not advance through any required competency below 80%. Require physical dynamics, source authority, uncertainty, forecast verification, multi-hazard communication and reproducible research."
+}
