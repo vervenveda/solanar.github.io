@@ -90,7 +90,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "anomaly analysis"
     },
     {
       "week": 2,
@@ -177,7 +178,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "spatial layers"
     },
     {
       "week": 3,
@@ -265,7 +267,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "causal models"
     },
     {
       "week": 4,
@@ -353,7 +356,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "trend analysis"
     },
     {
       "week": 5,
@@ -441,7 +445,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "scenario comparison"
     },
     {
       "week": 6,
@@ -529,7 +534,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "systems diagram"
     },
     {
       "week": 7,
@@ -618,7 +624,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "anomaly analysis"
     },
     {
       "week": 8,
@@ -706,7 +713,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "spatial layers"
     },
     {
       "week": 9,
@@ -794,7 +802,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "causal models"
     },
     {
       "week": 10,
@@ -883,7 +892,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "trend analysis"
     },
     {
       "week": 11,
@@ -970,7 +980,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "scenario comparison"
     },
     {
       "week": 12,
@@ -1059,7 +1070,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "systems diagram"
     },
     {
       "week": 13,
@@ -1148,7 +1160,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "anomaly analysis"
     },
     {
       "week": 14,
@@ -1237,7 +1250,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "spatial layers"
     },
     {
       "week": 15,
@@ -1326,7 +1340,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "causal models"
     },
     {
       "week": 16,
@@ -1415,7 +1430,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "trend analysis"
     },
     {
       "week": 17,
@@ -1503,7 +1519,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "scenario comparison"
     },
     {
       "week": 18,
@@ -1592,7 +1609,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "systems diagram"
     },
     {
       "week": 19,
@@ -1680,7 +1698,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "anomaly analysis"
     },
     {
       "week": 20,
@@ -1769,7 +1788,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "spatial layers"
     },
     {
       "week": 21,
@@ -1857,7 +1877,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "causal models"
     },
     {
       "week": 22,
@@ -1943,7 +1964,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "trend analysis"
     },
     {
       "week": 23,
@@ -2031,7 +2053,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "scenario comparison"
     },
     {
       "week": 24,
@@ -2120,7 +2143,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "systems diagram"
     },
     {
       "week": 25,
@@ -2209,7 +2233,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "anomaly analysis"
     },
     {
       "week": 26,
@@ -2299,7 +2324,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "spatial layers"
     },
     {
       "week": 27,
@@ -2387,7 +2413,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "causal models"
     },
     {
       "week": 28,
@@ -2475,7 +2502,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "trend analysis"
     },
     {
       "week": 29,
@@ -2564,7 +2592,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "scenario comparison"
     },
     {
       "week": 30,
@@ -2653,7 +2682,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "systems diagram"
     },
     {
       "week": 31,
@@ -2740,7 +2770,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "anomaly analysis"
     },
     {
       "week": 32,
@@ -2827,7 +2858,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "spatial layers"
     },
     {
       "week": 33,
@@ -2917,7 +2949,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "causal models"
     },
     {
       "week": 34,
@@ -3005,7 +3038,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "trend analysis"
     },
     {
       "week": 35,
@@ -3092,7 +3126,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "scenario comparison"
     },
     {
       "week": 36,
@@ -3179,7 +3214,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "systems diagram"
     }
   ],
   "tools": [
