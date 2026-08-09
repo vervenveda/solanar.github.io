@@ -90,7 +90,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vector analysis"
     },
     {
       "week": 2,
@@ -178,7 +179,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vertical profiles"
     },
     {
       "week": 3,
@@ -266,7 +268,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "time series"
     },
     {
       "week": 4,
@@ -354,7 +357,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "radar interpretation"
     },
     {
       "week": 5,
@@ -441,7 +445,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "ensemble statistics"
     },
     {
       "week": 6,
@@ -530,7 +535,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "risk matrix"
     },
     {
       "week": 7,
@@ -618,7 +624,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vector analysis"
     },
     {
       "week": 8,
@@ -706,7 +713,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vertical profiles"
     },
     {
       "week": 9,
@@ -793,7 +801,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "time series"
     },
     {
       "week": 10,
@@ -880,7 +889,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "radar interpretation"
     },
     {
       "week": 11,
@@ -967,7 +977,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "ensemble statistics"
     },
     {
       "week": 12,
@@ -1055,7 +1066,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "risk matrix"
     },
     {
       "week": 13,
@@ -1143,7 +1155,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vector analysis"
     },
     {
       "week": 14,
@@ -1231,7 +1244,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vertical profiles"
     },
     {
       "week": 15,
@@ -1319,7 +1333,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "time series"
     },
     {
       "week": 16,
@@ -1406,7 +1421,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "radar interpretation"
     },
     {
       "week": 17,
@@ -1493,7 +1509,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "ensemble statistics"
     },
     {
       "week": 18,
@@ -1581,7 +1598,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "risk matrix"
     },
     {
       "week": 19,
@@ -1669,7 +1687,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vector analysis"
     },
     {
       "week": 20,
@@ -1756,7 +1775,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vertical profiles"
     },
     {
       "week": 21,
@@ -1843,7 +1863,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "time series"
     },
     {
       "week": 22,
@@ -1930,7 +1951,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "radar interpretation"
     },
     {
       "week": 23,
@@ -2017,7 +2039,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "ensemble statistics"
     },
     {
       "week": 24,
@@ -2104,7 +2127,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "risk matrix"
     },
     {
       "week": 25,
@@ -2192,7 +2216,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vector analysis"
     },
     {
       "week": 26,
@@ -2278,7 +2303,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vertical profiles"
     },
     {
       "week": 27,
@@ -2366,7 +2392,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "time series"
     },
     {
       "week": 28,
@@ -2454,7 +2481,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "radar interpretation"
     },
     {
       "week": 29,
@@ -2542,7 +2570,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "ensemble statistics"
     },
     {
       "week": 30,
@@ -2630,7 +2659,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "risk matrix"
     },
     {
       "week": 31,
@@ -2719,7 +2749,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vector analysis"
     },
     {
       "week": 32,
@@ -2806,7 +2837,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "vertical profiles"
     },
     {
       "week": 33,
@@ -2894,7 +2926,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "time series"
     },
     {
       "week": 34,
@@ -2982,7 +3015,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "radar interpretation"
     },
     {
       "week": 35,
@@ -3069,7 +3103,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "ensemble statistics"
     },
     {
       "week": 36,
@@ -3159,7 +3194,8 @@
             "Complete the 10-question weekly mastery quiz. 80% is required to unlock the next week."
           ]
         }
-      ]
+      ],
+      "quantSkill": "risk matrix"
     }
   ],
   "tools": [
