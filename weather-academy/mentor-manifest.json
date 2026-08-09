@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "sourceId": "solanar.weather-academy",
+  "name": "Solanar Weather Academy",
+  "classification": "educational",
+  "mentorSearchable": true,
+  "audiences": [
+    "elementary",
+    "middle",
+    "high-school",
+    "parent",
+    "educator"
+  ],
+  "roles": [
+    "student",
+    "parent",
+    "educator"
+  ],
+  "homepage": "https://vervenveda.com/solanar.github.io/weather-academy/",
+  "repository": "vervenveda/solanar.github.io",
+  "resources": [
+    {
+      "id": "elementary-weather-academy",
+      "title": "Elementary Weather Academy \u2014 Weather 101\u2013105",
+      "description": "Five complete 36-week elementary weather courses, Grades 1\u20135 recommended.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/elementary-weather-academy/",
+      "audiences": [
+        "elementary",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "weather",
+        "earth-science"
+      ],
+      "skills": [
+        "observation",
+        "measurement",
+        "forecasting"
+      ],
+      "tags": [
+        "weather-101-105"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "middle-weather-academy",
+      "title": "Middle Weather Academy \u2014 Weather 201\u2013203",
+      "description": "Three 36-week middle meteorology courses with hard 80% progression gates.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/middle-weather-academy/",
+      "audiences": [
+        "middle",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "meteorology",
+        "weather",
+        "climate"
+      ],
+      "skills": [
+        "data-analysis",
+        "modeling",
+        "forecasting",
+        "hazards"
+      ],
+      "tags": [
+        "weather-201-203",
+        "hard-80-mastery"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "high-school-weather-academy",
+      "title": "High School Weather Academy \u2014 Weather 301\u2013304",
+      "description": "Four 36-week high-school atmospheric science courses with hard daily, weekly, unit and final 80% mastery gates.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/high-school-weather-academy/",
+      "audiences": [
+        "high-school",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "meteorology",
+        "atmospheric-science",
+        "weather",
+        "climate"
+      ],
+      "skills": [
+        "quantitative-analysis",
+        "remote-sensing",
+        "numerical-modeling",
+        "forecasting",
+        "research"
+      ],
+      "tags": [
+        "weather-301-304",
+        "hard-80-mastery"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    }
+  ],
+  "mentorNotes": "Route by demonstrated readiness. Do not recommend advancement through any hard-gated course when a required daily, weekly, unit or final assessment is below 80%."
+}
