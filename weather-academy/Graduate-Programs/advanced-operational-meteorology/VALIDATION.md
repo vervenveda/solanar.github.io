@@ -1,0 +1,26 @@
+# Graduate Program Validation
+
+- Graduate weeks: 36
+- Daily advanced learning sessions: 180
+- Qualifying checkpoints: 6
+- Graduate evidence forms: 13
+- Higher Learning math courses integrated: 7
+- Professional/official/Solanar tools: 13
+- Hard 80% daily progression: PASS
+- Evidence-completion gate: PASS
+- Weekly examiner-practical gate: PASS
+- Six-week qualifying checkpoint gate: PASS
+- Semester I → II gate: PASS
+- Five independent final qualifying gates: PASS
+- NAIB on every index page: PASS
+- 28-second ticker on every index page: PASS
+- JavaScript index.html: PASS
+- JavaScript advanced-operational-meteorology/index.html: PASS
+- JavaScript advanced-operational-meteorology/semester-1/index.html: PASS
+- JavaScript advanced-operational-meteorology/semester-2/index.html: PASS
+- JavaScript advanced-operational-meteorology/mathematics/index.html: PASS
+- JavaScript advanced-operational-meteorology/research/index.html: PASS
+- JavaScript advanced-operational-meteorology/forms/index.html: PASS
+- JavaScript advanced-operational-meteorology/tools/index.html: PASS
+- JavaScript advanced-operational-meteorology/final/index.html: PASS
+- Secrets/private credentials: none included

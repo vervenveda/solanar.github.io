@@ -1,0 +1,1882 @@
+{
+  "program": {
+    "name": "Solanar Graduate Program",
+    "credential": "Graduate Certificate of Completion in Advanced Operational Meteorology",
+    "concentration": "Mesoscale & Severe Weather Forecasting",
+    "duration_weeks": 36,
+    "semesters": 2,
+    "mastery_threshold": 80,
+    "credit_equivalent_hours": 36,
+    "level": "Graduate / Advanced Professional",
+    "prerequisite": "Solanar Professional Meteorology Certificate Years I\u2013II or documented equivalent preparation.",
+    "credential_note": "Certificate of completion only; not accredited university credit, government licensure, AMS certification, or a substitute for degree requirements."
+  },
+  "mathematics": [
+    {
+      "id": "calculus-ii",
+      "name": "Calculus II",
+      "role": "Core prerequisite / remediation",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/calculus-ii/",
+      "use": "Integration, series, parametric reasoning and continuous physical-model applications."
+    },
+    {
+      "id": "linear-algebra",
+      "name": "Linear Algebra",
+      "role": "Required co-study",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/linear-algebra/",
+      "use": "Vectors, matrices, eigenstructure, least squares, SVD, state vectors and data assimilation."
+    },
+    {
+      "id": "differential-equations",
+      "name": "Differential Equations",
+      "role": "Required co-study",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/differential-equations/",
+      "use": "Atmospheric rate equations, systems, stability, numerical methods, oscillations and dynamical models."
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "role": "Required co-study",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/statistics/",
+      "use": "Probability, inference, regression, resampling, verification, calibration and ensemble interpretation."
+    },
+    {
+      "id": "introduction-to-proofs",
+      "name": "Introduction to Proofs",
+      "role": "Research distinction recommended",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/introduction-to-proofs/",
+      "use": "Formal reasoning, assumptions, proof structure, research writing and defensible derivation."
+    },
+    {
+      "id": "real-complex-analysis",
+      "name": "Real & Complex Analysis",
+      "role": "Advanced research extension",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/real-complex-analysis/",
+      "use": "Rigorous limits, continuity, convergence and advanced mathematical analysis for research-oriented students."
+    },
+    {
+      "id": "topology-differential-geometry",
+      "name": "Topology & Differential Geometry",
+      "role": "Optional mathematical research extension",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/topology-differential-geometry/",
+      "use": "Manifolds, differential forms, curvature and geometric thinking relevant to advanced geophysical fluid dynamics."
+    }
+  ],
+  "tools": [
+    {
+      "id": "solanar-platform",
+      "name": "Solanar Platform",
+      "icon": "\ud83c\udf10",
+      "type": "Solanar",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+      "desc": "Integrated forecast, hazard and Earth-observation workspace."
+    },
+    {
+      "id": "solanar-planetarium",
+      "name": "Solanar Planetarium",
+      "icon": "\ud83c\udf0c",
+      "type": "Solanar",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Planetarium_index.html",
+      "desc": "Atmosphere, upper-air and observing context."
+    },
+    {
+      "id": "naib",
+      "name": "NAIB Mentor",
+      "icon": "N",
+      "type": "Mentor",
+      "url": "https://artist1970.github.io/noema-ai.github.io/",
+      "desc": "Socratic defense, mastery repair, research and forecast-reasoning support."
+    },
+    {
+      "id": "plera",
+      "name": "PLERA Search",
+      "icon": "\ud83d\udd0e",
+      "type": "Research",
+      "url": "https://vervenveda.com/PLERASearch.github.io/",
+      "desc": "Research/source discovery."
+    },
+    {
+      "id": "woc-severe",
+      "name": "NWS WOC Severe",
+      "icon": "\u26a1",
+      "type": "Official Training",
+      "url": "https://training.weather.gov/wdtd/courses/woc/severe.php",
+      "desc": "Severe-weather warning-operations training."
+    },
+    {
+      "id": "rac",
+      "name": "NWS Radar & Applications Course",
+      "icon": "\ud83d\udce1",
+      "type": "Official Training",
+      "url": "https://training.weather.gov/wdtd/courses/rac/",
+      "desc": "Radar science and warning-decision applications."
+    },
+    {
+      "id": "nws-radar",
+      "name": "NWS Radar",
+      "icon": "\ud83d\udce1",
+      "type": "Official Data",
+      "url": "https://radar.weather.gov/",
+      "desc": "Operational radar display."
+    },
+    {
+      "id": "mrms",
+      "name": "NWS MRMS Training",
+      "icon": "\ud83e\udded",
+      "type": "Official Training",
+      "url": "https://training.weather.gov/wdtd/courses/MRMS/",
+      "desc": "Multi-Radar/Multi-Sensor concepts and products."
+    },
+    {
+      "id": "spc",
+      "name": "Storm Prediction Center",
+      "icon": "\ud83c\udf2a",
+      "type": "Official Data",
+      "url": "https://www.spc.noaa.gov/",
+      "desc": "Convective outlooks, mesoscale discussions, watches and analyses."
+    },
+    {
+      "id": "goes",
+      "name": "NOAA GOES",
+      "icon": "\ud83d\udef0",
+      "type": "Official Data",
+      "url": "https://www.star.nesdis.noaa.gov/goes/",
+      "desc": "Geostationary satellite imagery."
+    },
+    {
+      "id": "nomads",
+      "name": "NCEP NOMADS",
+      "icon": "\ud83e\uddee",
+      "type": "Official Data",
+      "url": "https://nomads.ncep.noaa.gov/",
+      "desc": "Numerical model data."
+    },
+    {
+      "id": "wpc",
+      "name": "Weather Prediction Center",
+      "icon": "\ud83c\udf27",
+      "type": "Official Data",
+      "url": "https://www.wpc.ncep.noaa.gov/",
+      "desc": "QPF, winter and medium-range guidance."
+    },
+    {
+      "id": "meted",
+      "name": "UCAR COMET MetEd",
+      "icon": "\ud83c\udf93",
+      "type": "Professional Training",
+      "url": "https://www.meted.ucar.edu/",
+      "desc": "Scenario-based meteorology education."
+    }
+  ],
+  "forms": [
+    {
+      "id": "graduate-case-diagnostic",
+      "name": "Graduate Case Diagnostic",
+      "desc": "Full evidence chain: observations, dynamics, remote sensing, guidance, uncertainty and forecast implications."
+    },
+    {
+      "id": "mesoanalysis",
+      "name": "Graduate Mesoanalysis",
+      "desc": "Boundaries, instability, moisture, forcing, shear, terrain and convective initiation."
+    },
+    {
+      "id": "radar-interrogation",
+      "name": "Radar Interrogation & Warning Evidence Log",
+      "desc": "Radar sampling, storm structure, trends, signatures, corroboration, uncertainty and decision points."
+    },
+    {
+      "id": "satellite-fusion",
+      "name": "Satellite / Lightning Data Fusion",
+      "desc": "Multispectral satellite, lightning context, radar integration and trend interpretation."
+    },
+    {
+      "id": "cam-evaluation",
+      "name": "CAM / NWP Evaluation",
+      "desc": "Convection-allowing model guidance, timing, mode, failure modes, biases and observations."
+    },
+    {
+      "id": "ensemble-probability",
+      "name": "Ensemble & Probability Brief",
+      "desc": "Spread, clustering, thresholds, calibration, confidence and decision triggers."
+    },
+    {
+      "id": "warning-decision",
+      "name": "Warning Decision Science Log",
+      "desc": "Evidence, alternative hypotheses, human factors, simulated decision and update triggers."
+    },
+    {
+      "id": "forecast-shift",
+      "name": "Graduate Forecast Shift Log",
+      "desc": "Situational awareness, priorities, forecast updates, briefings, handoff and verification."
+    },
+    {
+      "id": "verification",
+      "name": "Forecast Verification & After-Action Review",
+      "desc": "Error, bias, hits/misses, calibration, process failures and corrective learning."
+    },
+    {
+      "id": "literature-critique",
+      "name": "Research Literature Critique",
+      "desc": "Question, methods, data, assumptions, evidence, limitations, reproducibility and significance."
+    },
+    {
+      "id": "reproducibility",
+      "name": "Reproducible Analysis Record",
+      "desc": "Dataset provenance, transformations, calculations/code, figures, version notes and replication checks."
+    },
+    {
+      "id": "capstone-proposal",
+      "name": "Capstone Research Proposal",
+      "desc": "Problem, literature basis, methods, data, hypotheses, ethics, timeline and expected contribution."
+    },
+    {
+      "id": "capstone-defense",
+      "name": "Capstone Defense Rubric",
+      "desc": "Scientific depth, methods, reproducibility, operational value, communication and response to questioning."
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Conservation Laws, Scaling & Graduate Diagnostic Method",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Derive and interpret atmospheric mass, momentum and thermodynamic conservation laws; distinguish Eulerian and Lagrangian viewpoints."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Scale and nondimensionalize representative terms; document assumptions, units and error sensitivity."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Diagnose dominant force balances and time scales from an archived multi-scale case."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare observations with analyzed/model fields and identify where balance approximations fail."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Establish the graduate evidence notebook, source ledger and reproducibility protocol; defend one approximation orally."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations"
+      ],
+      "forms": [
+        "graduate-case-diagnostic",
+        "reproducibility"
+      ],
+      "tools": [
+        "solanar-platform",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Rotating Stratified Flow & Mesoscale Balance",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Develop Rossby, Froude and Richardson-number thinking and examine rotating/stratified flow departures from balance."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Calculate nondimensional numbers and evaluate sensitivity to representative atmospheric scales."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Analyze terrain, boundary-layer and ageostrophic circulations from surface and upper-air observations."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Evaluate model cross-sections and fields for balance, blocking and mesoscale circulations."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Issue a 12-hour mesoscale wind/temperature forecast and defend uncertainty."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "forms": [
+        "graduate-case-diagnostic",
+        "forecast-shift"
+      ],
+      "tools": [
+        "solanar-platform",
+        "nomads",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Vorticity, Potential Vorticity & Vertical Motion",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Derive vorticity tendency concepts and introduce Ertel potential vorticity conservation and inversion thinking."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Compute finite-difference vorticity/divergence and examine stretching, tilting and advection terms."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Diagnose a PV anomaly and its surface/vertical-motion consequences."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Fuse water-vapor satellite, tropopause/PV guidance and observed cyclone evolution."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Write a research memo comparing QG and PV frameworks on the same case."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "calculus-ii"
+      ],
+      "forms": [
+        "graduate-case-diagnostic",
+        "literature-critique"
+      ],
+      "tools": [
+        "goes",
+        "nomads",
+        "solanar-platform",
+        "naib"
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Frontogenesis, Q-Vectors & Jet/Front Dynamics",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Develop frontogenesis and Q-vector conceptual/quantitative diagnosis; connect deformation and ageostrophic circulation to ascent."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Calculate deformation/frontogenesis terms and interpret Q-vector convergence in simplified gridded fields."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Construct a surface-to-tropopause frontal diagnosis including jet coupling and banded precipitation."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Evaluate cross-sections, satellite and model guidance for frontal slope and stability."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Forecast precipitation-band timing/placement and defend the forcing chain."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "forms": [
+        "graduate-case-diagnostic",
+        "forecast-shift"
+      ],
+      "tools": [
+        "goes",
+        "nomads",
+        "wpc",
+        "naib"
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Boundary Layer, Turbulence, Drylines & Terrain",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Examine turbulent fluxes, mixed-layer growth, drylines, sea breezes, outflows and terrain circulations."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Calculate bulk stability and mixing-depth diagnostics; analyze horizontal moisture gradients."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Hand-analyze a boundary-rich observation network and identify favored convective-initiation zones."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare CAM boundary placement to observations and evolving satellite/radar evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Run a forecast challenge in which initiation probabilities must be revised as boundary errors emerge."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "forms": [
+        "mesoanalysis",
+        "cam-evaluation"
+      ],
+      "tools": [
+        "spc",
+        "goes",
+        "nws-radar",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 6,
+      "title": "UNIT I QUALIFYING CHECKPOINT \u2014 Dynamics & Mesoanalysis",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Synthesize Weeks 1\u20135 in an unseen dynamics/mesoanalysis case."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Complete timed derivations and diagnostic calculations with an approved formula sheet only."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Produce a complete hand/objective mesoanalysis and prioritize forecast uncertainties."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Reconcile conflicting observational, satellite and model evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Deliver a 10-minute oral forecast defense; each checkpoint component requires \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "graduate-case-diagnostic",
+        "mesoanalysis",
+        "capstone-defense"
+      ],
+      "tools": [
+        "solanar-platform",
+        "spc",
+        "goes",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Convective Thermodynamics Beyond CAPE",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Examine parcel choice, entrainment, buoyancy, CIN, LFC/EL, lapse rates and limits of single-number instability metrics."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Calculate parcel energetics and sensitivity to moisture/temperature perturbations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Compare multiple sounding/parcel choices for the same convective environment."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Evaluate model soundings and observed analyses for thermodynamic biases."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Write a technical briefing explaining why similar CAPE can support very different outcomes."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "forms": [
+        "mesoanalysis",
+        "graduate-case-diagnostic"
+      ],
+      "tools": [
+        "spc",
+        "meted",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Vertical Wind Shear, Hodographs & Storm-Relative Flow",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Develop hodograph interpretation, bulk shear, storm-relative flow and propagation concepts."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Use vector decomposition and coordinate transformations for shear/storm-motion analysis."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Diagnose observed hodographs for plausible storm modes and structural evolution."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare modeled hodographs to observed profiler/sounding information."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Produce an uncertainty-bounded storm-mode forecast."
+        }
+      ],
+      "math": [
+        "linear-algebra"
+      ],
+      "forms": [
+        "mesoanalysis",
+        "cam-evaluation"
+      ],
+      "tools": [
+        "spc",
+        "nomads",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Convective Initiation & Failure Modes",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Integrate boundaries, lift, capping, moisture, instability and mesoscale forcing into initiation diagnosis."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Quantify threshold sensitivity and conditional probability rather than binary yes/no initiation."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Analyze a failed-initiation and successful-initiation pair."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Interrogate satellite/radar/CAM evidence for convergence and developing towers."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Displaced-real-time forecast: update initiation probabilities at scheduled evidence releases."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "mesoanalysis",
+        "satellite-fusion",
+        "cam-evaluation"
+      ],
+      "tools": [
+        "spc",
+        "goes",
+        "nws-radar",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Supercell Dynamics & Mesocyclogenesis",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Examine rotating updraft dynamics, pressure perturbations, vertical vorticity generation and storm/environment interaction."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Use vorticity-vector and storm-relative flow calculations to connect environmental shear to storm rotation."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Analyze supercell structure and cyclic evolution from radar and environmental data."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare CAM-simulated storms to observed evolution without equating simulated reflectivity with truth."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Defend a supercell hazard forecast and identify alternative storm-mode scenarios."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "mesoanalysis",
+        "cam-evaluation"
+      ],
+      "tools": [
+        "rac",
+        "nws-radar",
+        "spc",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Tornadogenesis: Competing Pathways & Uncertainty",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Compare current conceptual pathways for low-level rotation/tornadogenesis and why environment alone cannot guarantee a tornado."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Evaluate conditional probabilities, base rates and evidence updating."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Conduct a literature-backed case comparison of tornadic and nontornadic supercells."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Fuse radar, surface, satellite and environmental evidence in a simulated warning timeline."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Produce a warning-decision log that explicitly records uncertainty and alternative hypotheses."
+        }
+      ],
+      "math": [
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "literature-critique",
+        "warning-decision",
+        "radar-interrogation"
+      ],
+      "tools": [
+        "woc-severe",
+        "rac",
+        "nws-radar",
+        "spc",
+        "naib"
+      ]
+    },
+    {
+      "week": 12,
+      "title": "UNIT II QUALIFYING CHECKPOINT \u2014 Convective Environment & Storm Dynamics",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Synthesize Weeks 7\u201311 across thermodynamics, shear, initiation, supercells and tornado uncertainty."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Complete quantitative sounding/hodograph/probability work."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Analyze an unseen convective case before storm initiation."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Update the forecast as radar/satellite/model information becomes available."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Complete a timed oral defense and after-action verification."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "forms": [
+        "mesoanalysis",
+        "radar-interrogation",
+        "verification"
+      ],
+      "tools": [
+        "woc-severe",
+        "rac",
+        "spc",
+        "goes",
+        "naib"
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Radar Sampling, Beam Geometry & Data Quality",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Advance WSR-88D sampling concepts: beam geometry, resolution, attenuation, aliasing, range effects and artifacts."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Calculate beam height/resolution and radial-velocity projection examples."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Identify sampling artifacts and confidence limits in archived radar volumes."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Cross-check radar evidence with MRMS and independent observations."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Research note: document a case where sampling limitations materially affected interpretation."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "linear-algebra"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "literature-critique"
+      ],
+      "tools": [
+        "rac",
+        "nws-radar",
+        "mrms",
+        "naib"
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Dual-Polarization Radar: Microphysics & Debris Evidence",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Interpret ZDR, CC, KDP and conceptual hydrometeor classification within physical and sampling limitations."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Analyze logarithmic ratios, gradients and multi-variable uncertainty."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Diagnose hail, melting-layer, heavy-rain and nonmeteorological signatures."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Fuse dual-pol trends with storm structure, reports and environmental evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Warning simulation: defend what the polarimetric evidence supports\u2014and what it does not."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "warning-decision"
+      ],
+      "tools": [
+        "rac",
+        "nws-radar",
+        "mrms",
+        "naib"
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Storm Structure, Evolution & Radar Trend Analysis",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Study organized convective structures, supercells, QLCS/MCS evolution and radar-observed transitions."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Quantify trends rather than relying on single-scan extrema."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Track storm-scale evolution through a complete radar sequence."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Integrate radar with satellite/lightning and environmental trends."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Produce a storm-evolution forecast with explicit update triggers."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "satellite-fusion"
+      ],
+      "tools": [
+        "rac",
+        "nws-radar",
+        "goes",
+        "naib"
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Multispectral Satellite & Rapid-Scan Convective Diagnosis",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Advance visible, IR, water-vapor and multispectral interpretation for boundaries, destabilization and storm evolution."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Analyze brightness-temperature/change-rate and spatial/temporal sampling limitations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Identify pre-convective and storm-top signatures in rapid-scan imagery."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Fuse satellite with radar, surface mesoanalysis and CAM guidance."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Issue a satellite-led nowcast that distinguishes observation from inferred process."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "forms": [
+        "satellite-fusion",
+        "mesoanalysis"
+      ],
+      "tools": [
+        "goes",
+        "spc",
+        "nws-radar",
+        "naib"
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Lightning, MRMS & Multi-Sensor Data Fusion",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Evaluate lightning and MRMS information as complementary evidence in warning and forecast decisions."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Use trend, threshold and uncertainty reasoning across heterogeneous sensors."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Build a timestamped multi-sensor evidence matrix for an evolving storm."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare single-sensor and fused interpretations to identify confirmation bias risks."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Human-factors briefing: justify which sources receive weight at each decision point."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "satellite-fusion",
+        "warning-decision",
+        "reproducibility"
+      ],
+      "tools": [
+        "mrms",
+        "woc-severe",
+        "nws-radar",
+        "goes",
+        "naib"
+      ]
+    },
+    {
+      "week": 18,
+      "title": "SEMESTER I GRADUATE COMPREHENSIVE",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Cumulative dynamics, convection, radar, satellite and data-fusion examination."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Complete graduate quantitative derivations and diagnostic calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Analyze an unseen severe-weather case from pre-convective environment through storm evolution."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Complete a timed multi-sensor forecast/warning simulation."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Submit Semester I research portfolio and defend it orally; every component \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "graduate-case-diagnostic",
+        "reproducibility",
+        "capstone-defense"
+      ],
+      "tools": [
+        "woc-severe",
+        "rac",
+        "spc",
+        "goes",
+        "naib"
+      ]
+    },
+    {
+      "week": 19,
+      "title": "Convection-Allowing Models: What CAMs Can and Cannot Predict",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Examine explicit convection, grid spacing, initial conditions, model physics and realistic limits on deterministic storm-scale prediction."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Quantify timing/location error and object-based comparison concepts."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Compare multiple CAM solutions to observations in an archived event."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Identify useful environmental signals versus misleading simulated storm detail."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Write a model-use doctrine for severe-weather operations."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "cam-evaluation",
+        "verification"
+      ],
+      "tools": [
+        "nomads",
+        "woc-severe",
+        "spc",
+        "naib"
+      ]
+    },
+    {
+      "week": 20,
+      "title": "Data Assimilation, State Estimation & Observational Influence",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Develop state-vector, background/observation error and analysis concepts for operational data assimilation."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Use matrices, least-squares intuition and covariance concepts in simplified assimilation exercises."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Perform a toy analysis update from a background state and observations."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Trace how observational differences can alter short-range model evolution."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Research seminar: defend an assimilation choice and its uncertainty assumptions."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "reproducibility",
+        "literature-critique"
+      ],
+      "tools": [
+        "nomads",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 21,
+      "title": "Ensembles, Clusters & Predictability",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Advance ensemble design, spread, clustering, outliers and flow-dependent predictability."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Compute ensemble statistics, probabilities and simple spread/error diagnostics."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Evaluate a high-spread severe-weather forecast and identify coherent scenario clusters."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare deterministic confidence with ensemble evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Issue a scenario-based probabilistic briefing with decision thresholds."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "ensemble-probability",
+        "verification"
+      ],
+      "tools": [
+        "nomads",
+        "spc",
+        "naib"
+      ]
+    },
+    {
+      "week": 22,
+      "title": "Calibration, Verification & Forecast Skill",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Develop deterministic and probabilistic verification concepts, calibration, reliability, resolution and discrimination."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Compute MAE/RMSE, contingency metrics and probability-score examples; critique metric misuse."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Verify a multi-day convective forecast set."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare model, ensemble and human forecast errors using matched cases."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Produce an after-action learning plan based on evidence rather than hindsight bias."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "verification",
+        "reproducibility"
+      ],
+      "tools": [
+        "spc",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 23,
+      "title": "Forecast Busts, Cognitive Bias & Human Factors",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Study confirmation bias, anchoring, premature closure, workload and team cognition in high-impact forecasting."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Apply decision-theory and base-rate reasoning to forecast/warning choices."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Reconstruct a forecast bust and identify scientific versus cognitive failure points."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Use staged data to practice hypothesis competition and deliberate updating."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "NAIB oral: defend how you changed your mind as evidence evolved."
+        }
+      ],
+      "math": [
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "warning-decision",
+        "verification"
+      ],
+      "tools": [
+        "woc-severe",
+        "naib",
+        "plera"
+      ]
+    },
+    {
+      "week": 24,
+      "title": "UNIT III QUALIFYING CHECKPOINT \u2014 NWP, Ensembles & Human Decision",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Synthesize Weeks 19\u201323 in an unseen forecast-bust/predictability case."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Complete matrix/probability/verification calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Evaluate CAMs and ensembles against observations."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Run a staged forecast update under uncertainty."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Defend model weighting and cognitive safeguards; checkpoint \u226580% each component."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "cam-evaluation",
+        "ensemble-probability",
+        "warning-decision"
+      ],
+      "tools": [
+        "nomads",
+        "woc-severe",
+        "naib"
+      ]
+    },
+    {
+      "week": 25,
+      "title": "QLCS, MCS & Derecho Dynamics",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Examine organized linear convection, cold pools, rear-inflow, mesovortices and upscale growth."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Apply momentum/vector and propagation calculations to organized convective systems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Diagnose an MCS evolution from radar, mesoanalysis and environmental data."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare CAM mode/timing with observed organization."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Forecast damaging-wind corridors and alternative modes."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "mesoanalysis",
+        "cam-evaluation"
+      ],
+      "tools": [
+        "rac",
+        "nws-radar",
+        "spc",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 26,
+      "title": "Hail Growth, Microphysics & Severe Hail Forecasting",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Connect updraft structure, freezing levels, supercooled water and storm dynamics to hail growth."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Analyze thermodynamic and radar-derived evidence with uncertainty."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Compare severe-hail and non-severe cases using dual-pol/radar/environmental data."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Evaluate CAM environment and storm-mode guidance."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Produce a hail forecast and verification plan."
+        }
+      ],
+      "math": [
+        "statistics",
+        "calculus-ii"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "verification"
+      ],
+      "tools": [
+        "rac",
+        "spc",
+        "nws-radar",
+        "naib"
+      ]
+    },
+    {
+      "week": 27,
+      "title": "Flash-Flood-Producing Convection & Training Storms",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Study precipitation efficiency, warm-cloud processes, storm motion, training and terrain/urban influences."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Compute rainfall-rate, motion and simple probabilistic threshold analyses."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Diagnose a flash-flood convective case using radar/MRMS and environmental data."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Compare QPF/CAM guidance with observed rainfall evolution."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Prepare a meteorological flood-support brief while preserving official hydrologic product boundaries."
+        }
+      ],
+      "math": [
+        "statistics",
+        "calculus-ii"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "ensemble-probability",
+        "forecast-shift"
+      ],
+      "tools": [
+        "mrms",
+        "wpc",
+        "nws-radar",
+        "naib"
+      ]
+    },
+    {
+      "week": 28,
+      "title": "Nocturnal Convection & Low-Level Jet Processes",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Examine elevated instability, low-level jets, nocturnal boundary layers and propagation."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Analyze vertical profiles, shear vectors and timing relationships."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Diagnose an overnight MCS/severe event."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Evaluate model timing and nocturnal boundary-layer errors."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Run an overnight forecast-shift simulation emphasizing handoff quality."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "forms": [
+        "forecast-shift",
+        "mesoanalysis"
+      ],
+      "tools": [
+        "spc",
+        "nomads",
+        "nws-radar",
+        "naib"
+      ]
+    },
+    {
+      "week": 29,
+      "title": "Cold-Season Severe & High-Shear/Low-CAPE Environments",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Study severe convection in weak-buoyancy/high-shear regimes and associated forecast challenges."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Use probability/base-rate reasoning and vertical-profile analysis."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Compare HSLC cases and failure modes."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Fuse radar, satellite and mesoanalysis with model guidance."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Produce a conditional hazard forecast that avoids CAPE-centric oversimplification."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "mesoanalysis",
+        "warning-decision"
+      ],
+      "tools": [
+        "spc",
+        "rac",
+        "nws-radar",
+        "naib"
+      ]
+    },
+    {
+      "week": 30,
+      "title": "UNIT IV QUALIFYING CHECKPOINT \u2014 Severe Convective Modes",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Synthesize Weeks 25\u201329 across QLCS/MCS, hail, flash flood, nocturnal and HSLC environments."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Complete quantitative diagnostics and uncertainty assessment."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Analyze an unseen multi-hazard convective system."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Integrate radar/MRMS/satellite/CAM guidance under time pressure."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Provide an impact-based forecast and oral defense; all checkpoint components \u226580%."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "forms": [
+        "graduate-case-diagnostic",
+        "warning-decision",
+        "verification"
+      ],
+      "tools": [
+        "woc-severe",
+        "rac",
+        "mrms",
+        "naib"
+      ]
+    },
+    {
+      "week": 31,
+      "title": "Research Design for Operational Meteorology",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Develop a defensible research question connecting severe-weather science to forecast or warning performance."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Select statistical/design methods, define variables and pre-specify analysis decisions."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Audit candidate datasets for provenance, missingness, selection bias and representativeness."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Build a reproducible analysis plan and versioned evidence record."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Submit and orally defend the capstone proposal."
+        }
+      ],
+      "math": [
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "capstone-proposal",
+        "reproducibility",
+        "literature-critique"
+      ],
+      "tools": [
+        "plera",
+        "naib",
+        "meted"
+      ]
+    },
+    {
+      "week": 32,
+      "title": "Graduate Literature Synthesis & Replication",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Critically synthesize peer-reviewed severe-weather/mesoscale literature rather than summarize papers independently."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Reproduce or approximate a published calculation/figure with transparent methods."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Compare competing interpretations and identify unresolved questions."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Test one literature claim against an archived operational case."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Submit an annotated synthesis and replication report."
+        }
+      ],
+      "math": [
+        "introduction-to-proofs",
+        "real-complex-analysis"
+      ],
+      "forms": [
+        "literature-critique",
+        "reproducibility"
+      ],
+      "tools": [
+        "plera",
+        "naib"
+      ]
+    },
+    {
+      "week": 33,
+      "title": "Displaced Real-Time Case I \u2014 Forecast Phase",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Enter an archived event without future knowledge and perform morning-to-afternoon operational diagnosis."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Complete timed calculations selected from dynamics, thermodynamics, shear and probabilities."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Update mesoanalysis and forecast probabilities at fixed evidence releases."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Evaluate CAM/ensemble guidance without seeing verifying future observations."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Submit forecast products and a contemporaneous reasoning log before verification is revealed."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "forms": [
+        "forecast-shift",
+        "mesoanalysis",
+        "cam-evaluation"
+      ],
+      "tools": [
+        "spc",
+        "goes",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 34,
+      "title": "Displaced Real-Time Case II \u2014 Warning Phase",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Continue an archived event into storm-scale operations using only time-appropriate data."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Maintain rapid evidence weighting and uncertainty estimates under operational time pressure."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Interrogate radar, dual-pol, satellite/lightning and reports as they become available."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Record simulated warning decisions, alternative hypotheses and update triggers."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Conduct an after-action review only after the case concludes."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "radar-interrogation",
+        "satellite-fusion",
+        "warning-decision",
+        "verification"
+      ],
+      "tools": [
+        "woc-severe",
+        "rac",
+        "nws-radar",
+        "mrms",
+        "naib"
+      ]
+    },
+    {
+      "week": 35,
+      "title": "Capstone Research & Forecast-Operations Integration",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Complete the capstone analysis and connect findings to mesoscale/severe-weather forecasting practice."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Finalize statistical/quantitative analysis and reproducibility audit."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Produce publication-style figures/tables and a methods/results narrative."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Run a forecast case that applies the capstone insight without overgeneralizing beyond evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Submit manuscript-style capstone and prepare oral defense."
+        }
+      ],
+      "math": [
+        "statistics",
+        "introduction-to-proofs",
+        "real-complex-analysis"
+      ],
+      "forms": [
+        "reproducibility",
+        "capstone-defense"
+      ],
+      "tools": [
+        "plera",
+        "naib",
+        "solanar-platform"
+      ]
+    },
+    {
+      "week": 36,
+      "title": "GRADUATE QUALIFYING FINAL \u2014 Science, Operations, Research & Defense",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Graduate Theory & Derivation",
+          "work": "Complete the cumulative written qualifying examination in advanced dynamics, mesoscale/severe meteorology, remote sensing, NWP and decision science."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Quantitative Methods",
+          "work": "Complete quantitative derivations and data-analysis problems independently."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Case / Diagnostic Laboratory",
+          "work": "Perform an unseen displaced-real-time forecast/warning case."
+        },
+        {
+          "day": "Thursday",
+          "label": "Models, Radar, Satellite & Data",
+          "work": "Defend multi-sensor/model decisions and forecast verification before mentor/instructor review."
+        },
+        {
+          "day": "Friday",
+          "label": "Research / Forecast Operations",
+          "work": "Defend the research capstone. Written, quantitative, DRT operations, research manuscript and oral defense must each independently reach \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "capstone-defense",
+        "verification",
+        "forecast-shift"
+      ],
+      "tools": [
+        "woc-severe",
+        "rac",
+        "spc",
+        "nomads",
+        "naib"
+      ]
+    }
+  ]
+}

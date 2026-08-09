@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "sourceId": "solanar.graduate.advanced-operational-meteorology",
+  "name": "Graduate Certificate of Completion in Advanced Operational Meteorology",
+  "concentration": "Mesoscale & Severe Weather Forecasting",
+  "classification": "graduate-advanced-professional-education",
+  "mentorSearchable": true,
+  "audiences": [
+    "graduate",
+    "advanced-professional",
+    "educator"
+  ],
+  "roles": [
+    "student",
+    "educator",
+    "mentor"
+  ],
+  "mastery": {
+    "threshold": 80,
+    "nonCompensatory": true,
+    "advancePastFailedGate": false
+  },
+  "domains": [
+    "meteorology",
+    "atmospheric-science",
+    "mesoscale-meteorology",
+    "severe-weather",
+    "radar",
+    "satellite",
+    "nwp",
+    "data-assimilation",
+    "forecasting",
+    "research"
+  ],
+  "mathDependencies": [
+    "calculus-ii",
+    "linear-algebra",
+    "differential-equations",
+    "statistics"
+  ],
+  "mentorNotes": "Route by demonstrated readiness. Do not advance past a required competency below 80%. Challenge assumptions, mathematics, source discipline, competing hypotheses, reproducibility and forecast verification."
+}
