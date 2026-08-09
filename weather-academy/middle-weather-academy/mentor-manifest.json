@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "sourceId": "solanar.weather-academy.middle",
+  "name": "Solanar Middle Weather Academy",
+  "classification": "educational",
+  "mentorSearchable": true,
+  "audiences": [
+    "middle",
+    "parent",
+    "educator"
+  ],
+  "roles": [
+    "student",
+    "parent",
+    "educator"
+  ],
+  "homepage": "https://vervenveda.com/solanar.github.io/weather-academy/middle-weather-academy/",
+  "repository": "vervenveda/solanar.github.io",
+  "resources": [
+    {
+      "id": "weather-201",
+      "title": "Weather 201 \u2014 Atmospheric Foundations & Forecasting",
+      "description": "36-week middle-school meteorology course; Grade 6 recommended but open by readiness. Daily labs, worksheets, weekly 80% mastery, cumulative final, certificate, and mentor brief.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/middle-weather-academy/weather-201/",
+      "audiences": [
+        "middle",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "weather",
+        "meteorology",
+        "earth-science",
+        "climate",
+        "science"
+      ],
+      "skills": [
+        "observation",
+        "data-analysis",
+        "modeling",
+        "forecasting",
+        "research",
+        "scientific-communication"
+      ],
+      "tags": [
+        "weather-201",
+        "grade-6",
+        "36-week",
+        "mastery",
+        "solanar"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "weather-202",
+      "title": "Weather 202 \u2014 Dynamic Weather & Hazard Science",
+      "description": "36-week middle-school meteorology course; Grade 7 recommended but open by readiness. Daily labs, worksheets, weekly 80% mastery, cumulative final, certificate, and mentor brief.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/middle-weather-academy/weather-202/",
+      "audiences": [
+        "middle",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "weather",
+        "meteorology",
+        "earth-science",
+        "climate",
+        "science"
+      ],
+      "skills": [
+        "observation",
+        "data-analysis",
+        "modeling",
+        "forecasting",
+        "research",
+        "scientific-communication"
+      ],
+      "tags": [
+        "weather-202",
+        "grade-7",
+        "36-week",
+        "mastery",
+        "solanar"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "weather-203",
+      "title": "Weather 203 \u2014 Weather, Climate & Earth Systems",
+      "description": "36-week middle-school meteorology course; Grade 8 recommended but open by readiness. Daily labs, worksheets, weekly 80% mastery, cumulative final, certificate, and mentor brief.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/middle-weather-academy/weather-203/",
+      "audiences": [
+        "middle",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "weather",
+        "meteorology",
+        "earth-science",
+        "climate",
+        "science"
+      ],
+      "skills": [
+        "observation",
+        "data-analysis",
+        "modeling",
+        "forecasting",
+        "research",
+        "scientific-communication"
+      ],
+      "tags": [
+        "weather-203",
+        "grade-8",
+        "36-week",
+        "mastery",
+        "solanar"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    }
+  ],
+  "mentorNotes": "Use readiness rather than age alone. Weather 201 is the default Grade 6 entry, Weather 202 Grade 7, and Weather 203 Grade 8. Learners may begin lower for foundation repair or higher when evidence of readiness supports acceleration. Course pages provide Copy Mentor Brief and progress export."
+}
