@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "sourceId": "solanar.weather-academy",
+  "name": "Solanar Weather Academy",
+  "classification": "educational",
+  "mentorSearchable": true,
+  "audiences": [
+    "elementary",
+    "middle",
+    "parent",
+    "educator"
+  ],
+  "roles": [
+    "student",
+    "parent",
+    "educator"
+  ],
+  "homepage": "https://vervenveda.com/solanar.github.io/weather-academy/",
+  "repository": "vervenveda/solanar.github.io",
+  "resources": [
+    {
+      "id": "elementary-weather-academy",
+      "title": "Elementary Weather Academy \u2014 Weather 101\u2013105",
+      "description": "Five 36-week elementary weather courses, Grades 1\u20135 recommended, open by readiness.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/elementary-weather-academy/",
+      "audiences": [
+        "elementary",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "weather",
+        "earth-science",
+        "education"
+      ],
+      "skills": [
+        "observation",
+        "measurement",
+        "weather-safety"
+      ],
+      "tags": [
+        "weather-101",
+        "weather-102",
+        "weather-103",
+        "weather-104",
+        "weather-105"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "middle-weather-academy",
+      "title": "Middle Weather Academy \u2014 Weather 201\u2013203",
+      "description": "Three 36-week middle-school meteorology courses, Grades 6\u20138 recommended, open by readiness.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/middle-weather-academy/",
+      "audiences": [
+        "middle",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "weather",
+        "meteorology",
+        "climate",
+        "earth-science"
+      ],
+      "skills": [
+        "data-analysis",
+        "modeling",
+        "forecasting",
+        "hazard-analysis",
+        "research"
+      ],
+      "tags": [
+        "weather-201",
+        "weather-202",
+        "weather-203"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    }
+  ],
+  "mentorNotes": "NAIB may route students by demonstrated readiness. Recommended sequence is Weather 101\u2013105 for elementary and Weather 201\u2013203 for middle school."
+}
