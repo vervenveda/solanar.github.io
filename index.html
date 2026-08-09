@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Solanar Observatory — live weather, atmospheric science, early learning, K–12 Weather Academy, professional meteorology, graduate study, research tools and environmental exploration.">
-<meta name="theme-color" content="#04111c">
-<meta name="color-scheme" content="dark">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="Solanar Observatory — public weather and atmospheric-science tools, early learning, NAIB guidance, K–12 and professional curriculum pathways, graduate study, research tools and environmental exploration." name="description"/>
+<meta content="#04111c" name="theme-color"/>
+<meta content="dark" name="color-scheme"/>
 <title>Solanar Observatory | Weather · Learning · Research</title>
 <style>
 :root{
@@ -233,375 +234,403 @@ footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid va
   .appModal{padding:7px}.appWindow{width:100%;height:94vh;border-radius:12px}.appOpenExternal{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.tickerTrack{animation:none!important}}
+
+/* NAIB / NOEMA access boundary
+   NAIB is the public interface.
+   NOEMA governs the administrative policy behind the boundary. */
+.accessModelNote{
+  max-width:760px;margin-top:12px;padding:10px 12px;border:1px solid rgba(120,230,182,.24);
+  border-radius:12px;background:rgba(6,24,39,.76);color:#cfe2ea;font-size:.72rem
+}
+.accessModelNote strong{color:var(--aurora)}
+.accessGuard{
+  position:fixed;inset:0;z-index:6200;display:none;place-items:center;padding:18px;
+  background:rgba(0,7,13,.84);backdrop-filter:blur(12px)
+}
+.accessGuard.open{display:grid}
+.accessGuardCard{
+  width:min(620px,100%);padding:22px;border:1px solid rgba(118,231,255,.3);border-radius:21px;
+  background:linear-gradient(155deg,#0b2d45,#061827 65%,#07111c);box-shadow:0 30px 90px rgba(0,0,0,.55);
+  text-align:center
+}
+.accessGuardMark{
+  width:68px;height:68px;display:grid;place-items:center;margin:0 auto 12px;border-radius:50%;
+  background:linear-gradient(145deg,var(--cyan),var(--aurora));color:#03202b;font:900 1rem var(--display)
+}
+.accessGuardCard h2{font-size:2rem;margin:0;color:#fff}
+.accessGuardCard p{max-width:520px;margin:10px auto;color:var(--muted);font-size:.82rem}
+.accessGuardMeta{
+  margin:12px 0;padding:10px;border:1px solid var(--line);border-radius:12px;background:#041524;
+  color:#d6e9f1;font-size:.74rem
+}
+.accessGuardActions{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:15px}
+.accessGuardClose{
+  position:absolute;right:18px;top:16px;width:42px;height:42px;border:1px solid var(--line);
+  border-radius:50%;background:#071827;color:#fff;font-size:1.5rem
+}
+@media(max-width:560px){.accessGuardActions{display:grid}.accessGuardActions .btn{width:100%}}
+
 </style>
 </head>
 <body data-role="family" id="top">
-
-<div class="ticker" aria-label="Solanar network shortcuts">
-  <div class="tickerTrack">
-    <div class="tickerGroup">
-      <a href="#weather">🌦 Live Weather</a><span class="sep">✦</span>
-      <a href="#early">🌈 Early Weather Learning</a><span class="sep">✦</span>
-      <a href="#academy">🎓 Weather Academy 101–304</a><span class="sep">✦</span>
-      <a href="#professional">🛰 Professional Meteorology</a><span class="sep">✦</span>
-      <a href="#graduate">🏛 Graduate Programs</a><span class="sep">✦</span>
-      <a href="apps/Solanar-TraceLab/">✎ TraceLab</a><span class="sep">✦</span>
-      <a href="apps/Solanar_Live_Weather_index.html">🌀 Weather Vortex</a><span class="sep">✦</span>
-      <a href="apps/environmental_news_index.html">📰 Environmental News</a><span class="sep">✦</span>
-      <a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">N · NAIB Mentor</a><span class="sep">✦</span>
-    </div>
-    <div class="tickerGroup" aria-hidden="true">
-      <span>🌦 Live Weather</span><span class="sep">✦</span><span>🌈 Early Weather Learning</span><span class="sep">✦</span>
-      <span>🎓 Weather Academy 101–304</span><span class="sep">✦</span><span>🛰 Professional Meteorology</span><span class="sep">✦</span>
-      <span>🏛 Graduate Programs</span><span class="sep">✦</span><span>✎ TraceLab</span><span class="sep">✦</span>
-      <span>🌀 Weather Vortex</span><span class="sep">✦</span><span>📰 Environmental News</span><span class="sep">✦</span><span>N · NAIB Mentor</span><span class="sep">✦</span>
-    </div>
-  </div>
+<div aria-label="Solanar network shortcuts" class="ticker">
+<div class="tickerTrack">
+<div class="tickerGroup">
+<a href="#weather">🌦 Live Weather</a><span class="sep">✦</span>
+<a href="#early">🌈 Early Weather Learning</a><span class="sep">✦</span>
+<a href="#academy">🎓 Weather Academy 101–304</a><span class="sep">✦</span>
+<a href="#professional">🛰 Professional Meteorology</a><span class="sep">✦</span>
+<a href="#graduate">🏛 Graduate Programs</a><span class="sep">✦</span>
+<a data-public-tool="true" href="apps/Solanar-TraceLab/">✎ TraceLab</a><span class="sep">✦</span>
+<a data-public-tool="true" href="apps/Solanar_Live_Weather_index.html">🌀 Weather Vortex</a><span class="sep">✦</span>
+<a data-age-sensitive="true" href="apps/environmental_news_index.html">📰 Environmental News</a><span class="sep">✦</span>
+<a href="https://artist1970.github.io/noema-ai.github.io/" rel="noopener" target="_blank">N · NAIB — Public Intelligence Director</a><span class="sep">✦</span>
 </div>
-
+<div aria-hidden="true" class="tickerGroup">
+<span>🌦 Live Weather</span><span class="sep">✦</span><span>🌈 Early Weather Learning</span><span class="sep">✦</span>
+<span>🎓 Weather Academy 101–304</span><span class="sep">✦</span><span>🛰 Professional Meteorology</span><span class="sep">✦</span>
+<span>🏛 Graduate Programs</span><span class="sep">✦</span><span>✎ TraceLab</span><span class="sep">✦</span>
+<span>🌀 Weather Vortex</span><span class="sep">✦</span><span>📰 Environmental News</span><span class="sep">✦</span><span>N · NAIB — Public Intelligence Director</span><span class="sep">✦</span>
+</div>
+</div>
+</div>
 <header class="siteHeader">
-  <div class="shell nav">
-    <a class="brand" href="#top">
-      <span class="mark" aria-hidden="true"></span>
-      <span><strong>Solanar Observatory</strong><small>Weather · Learning · Research</small></span>
-    </a>
-    <div class="headerActions">
-      <div class="roleMini" aria-label="Choose Solanar view">
-        <button type="button" data-role-set="student">Student</button>
-        <button type="button" data-role-set="family" class="active">Family</button>
-        <button type="button" data-role-set="professional">Professional</button>
-        <button type="button" data-role-set="research">Research</button>
-      </div>
-      <div class="menuWrap">
-        <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false">☰ Explore</button>
-        <nav class="mega" id="megaMenu">
-          <div class="menuCol">
-            <h3>Observe</h3>
-            <a href="#weather">🌦 Current Weather</a>
-            <a data-popup href="apps/Solanar_Live_Weather_index.html">🌀 Weather Vortex</a>
-            <a data-popup href="apps/Solanar_Planetarium_index.html">🌌 Planetarium</a>
-            <a data-popup href="apps/Solanar_Platform_index.html">🌐 Solanar Platform</a>
-            <a data-popup href="apps/Lunar_reflections_index.html">🌕 Lunar Reflections</a>
-            <a data-popup href="apps/environmental_news_index.html">📰 Environmental News</a>
-          </div>
-          <div class="menuCol">
-            <h3>Learn</h3>
-            <a href="#early">🌈 Early Weather Learning</a>
-            <a data-popup href="apps/Solanar_kids_skylab_index.html">🚀 Kids SkyLab</a>
-            <a href="weather-academy/">☀ Weather Academy</a>
-            <a href="weather-academy/elementary-weather-academy/">Weather 101–105</a>
-            <a href="weather-academy/middle-weather-academy/">Weather 201–203</a>
-            <a href="weather-academy/high-school-weather-academy/">Weather 301–304</a>
-          </div>
-          <div class="menuCol">
-            <h3>Advance</h3>
-            <a href="weather-academy/Solanar-Certification-year-01/">Professional Certificate · Year I</a>
-            <a href="weather-academy/Solanar-Certification-year-02/">Professional Certificate · Year II</a>
-            <a href="weather-academy/Graduate-Programs/">Graduate Programs</a>
-            <a href="weather-academy/Graduate-Programs/advanced-operational-meteorology/">Advanced Operational Meteorology</a>
-            <a href="weather-academy/Graduate-Programs/numerical-weather-prediction-data-assimilation/">NWP & Data Assimilation</a>
-            <a href="weather-academy/Graduate-Programs/tropical-meteorology-hurricane-science/">Tropical Meteorology</a>
-          </div>
-          <div class="menuCol">
-            <h3>Research & Network</h3>
-            <a data-popup href="apps/Solanar-TraceLab/">✎ Solanar TraceLab</a>
-            <a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">N · NAIB Mentor</a>
-            <a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">🔎 PLERA Search</a>
-            <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/" target="_blank" rel="noopener">∑ Higher Learning Mathematics</a>
-            <a href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener">Khaemenes Academy</a>
-            <a href="https://vervenveda.com/" target="_blank" rel="noopener">Verve N Veda</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
+<div class="shell nav">
+<a class="brand" href="#top">
+<span aria-hidden="true" class="mark"></span>
+<span><strong>Solanar Observatory</strong><small>Weather · Learning · Research</small></span>
+</a>
+<div class="headerActions">
+<div aria-label="Choose Solanar view" class="roleMini">
+<button data-role-set="student" type="button">Student</button>
+<button class="active" data-role-set="family" type="button">Family</button>
+<button data-role-set="professional" type="button">Professional</button>
+<button data-role-set="research" type="button">Research</button>
+</div>
+<div class="menuWrap">
+<button aria-expanded="false" class="menuBtn" id="menuBtn" type="button">☰ Explore</button>
+<nav class="mega" id="megaMenu">
+<div class="menuCol">
+<h3>Observe</h3>
+<a href="#weather">🌦 Current Weather</a>
+<a data-popup="" data-public-tool="true" href="apps/Solanar_Live_Weather_index.html">🌀 Weather Vortex</a>
+<a data-popup="" data-public-tool="true" href="apps/Solanar_Planetarium_index.html">🌌 Planetarium</a>
+<a data-popup="" data-public-tool="true" href="apps/Solanar_Platform_index.html">🌐 Solanar Platform</a>
+<a data-popup="" data-public-tool="true" href="apps/Lunar_reflections_index.html">🌕 Lunar Reflections</a>
+<a data-age-sensitive="true" data-popup="" href="apps/environmental_news_index.html">📰 Environmental News</a>
+</div>
+<div class="menuCol">
+<h3>Learn</h3>
+<a href="#early">🌈 Early Weather Learning</a>
+<a data-popup="" data-public-tool="true" href="apps/Solanar_kids_skylab_index.html">🚀 Kids SkyLab</a>
+<a data-curriculum-gate="true" href="weather-academy/">☀ Weather Academy</a>
+<a data-curriculum-gate="true" href="weather-academy/elementary-weather-academy/">Weather 101–105</a>
+<a data-curriculum-gate="true" href="weather-academy/middle-weather-academy/">Weather 201–203</a>
+<a data-curriculum-gate="true" href="weather-academy/high-school-weather-academy/">Weather 301–304</a>
+</div>
+<div class="menuCol">
+<h3>Advance</h3>
+<a data-curriculum-gate="true" href="weather-academy/Solanar-Certification-year-01/">Professional Certificate · Year I</a>
+<a data-curriculum-gate="true" href="weather-academy/Solanar-Certification-year-02/">Professional Certificate · Year II</a>
+<a data-curriculum-gate="true" href="weather-academy/Graduate-Programs/">Graduate Programs</a>
+<a data-curriculum-gate="true" href="weather-academy/Graduate-Programs/advanced-operational-meteorology/">Advanced Operational Meteorology</a>
+<a data-curriculum-gate="true" href="weather-academy/Graduate-Programs/numerical-weather-prediction-data-assimilation/">NWP &amp; Data Assimilation</a>
+<a data-curriculum-gate="true" href="weather-academy/Graduate-Programs/tropical-meteorology-hurricane-science/">Tropical Meteorology</a>
+</div>
+<div class="menuCol">
+<h3>Research &amp; Network</h3>
+<a data-popup="" data-public-tool="true" href="apps/Solanar-TraceLab/">✎ Solanar TraceLab</a>
+<a href="https://artist1970.github.io/noema-ai.github.io/" rel="noopener" target="_blank">N · NAIB — Public Intelligence Director</a>
+<a data-age-sensitive="true" href="https://vervenveda.github.io/PLERASearch.github.io/" rel="noopener" target="_blank">🔎 PLERA Search</a>
+<a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/" rel="noopener" target="_blank">∑ Higher Learning Mathematics</a>
+<a href="https://vervenveda.com/Khaemenes_Academy.github.io/" rel="noopener" target="_blank">Khaemenes Academy</a>
+<a href="https://vervenveda.com/" rel="noopener" target="_blank">Verve N Veda</a>
+</div>
+</nav>
+</div>
+</div>
+</div>
 </header>
-
 <main>
 <section class="hero">
-  <div class="shell">
-    <div class="heroGrid">
-      <div>
-        <p class="eyebrow" id="roleEyebrow">One atmosphere · many ways to explore it</p>
-        <h1>Solanar</h1>
-        <p class="heroTag" id="roleTag">Weather for today. Atmospheric science for a lifetime.</p>
-        <p class="heroCopy" id="roleCopy">
+<div class="shell">
+<div class="heroGrid">
+<div>
+<p class="eyebrow" id="roleEyebrow">One atmosphere · many ways to explore it</p>
+<h1>Solanar</h1>
+<p class="heroTag" id="roleTag">Weather for today. Atmospheric science for a lifetime.</p>
+<p class="heroCopy" id="roleCopy">
           Solanar is the atmospheric-science ecosystem of Verve N Veda and Khaemenes Academy: live weather, child-friendly discovery, a continuous K–12 Weather Academy, professional meteorology certification, graduate-level directional study, environmental reporting, scientific analysis tools, and research mentorship.
         </p>
-        <div class="rolePicker">
-          <button class="roleBtn" data-role-set="student" type="button">🚀 Student</button>
-          <button class="roleBtn active" data-role-set="family" type="button">🌦 Family / Adult</button>
-          <button class="roleBtn" data-role-set="professional" type="button">🛰 Professional</button>
-          <button class="roleBtn" data-role-set="research" type="button">🔬 Research</button>
+<div class="rolePicker">
+<button class="roleBtn" data-role-set="student" type="button">🚀 Student</button>
+<button class="roleBtn active" data-role-set="family" type="button">🌦 Family / Adult</button>
+<button class="roleBtn" data-role-set="professional" type="button">🛰 Professional</button>
+<button class="roleBtn" data-role-set="research" type="button">🔬 Research</button>
+</div>
+<div class="heroActions">
+<a class="btn primary" href="#weather">Check Weather</a>
+<a class="btn gold" data-curriculum-gate="true" href="weather-academy/">Enter Weather Academy</a>
+<a class="btn" data-popup="" data-public-tool="true" href="apps/Solanar-TraceLab/">Open TraceLab</a>
+</div>
+<div class="pathNote">Observe → Play → Learn → Analyze → Forecast → Research → Specialize</div>
+<div class="accessModelNote" role="note">
+<strong>Solanar access:</strong> weather, games, safe learning tools and scientific tools are public.
+          Formal curriculum is learner-gated. Full news/search tools use an age-aware content boundary.
         </div>
-        <div class="heroActions">
-          <a class="btn primary" href="#weather">Check Weather</a>
-          <a class="btn gold" href="weather-academy/">Enter Weather Academy</a>
-          <a class="btn" data-popup href="apps/Solanar-TraceLab/">Open TraceLab</a>
-        </div>
-        <div class="pathNote">Observe → Play → Learn → Analyze → Forecast → Research → Specialize</div>
-      </div>
-
-      <div class="weatherOrb" aria-label="Current weather summary">
-        <div class="orbCore">
-          <div class="orbIcon">🌍</div>
-          <div class="orbBadge" id="orbBadge">🌦️</div>
-          <div class="orbReadout"><div class="orbTemp" id="orbTemp">—</div><div class="orbCond" id="orbCond">Choose a location</div></div>
-        </div>
-        <div class="orbStats">
-          <div class="orbStat"><b id="orbPlace">World</b><small>Location</small></div>
-          <div class="orbStat"><b id="orbWind">—</b><small>Wind</small></div>
-          <div class="orbStat"><b id="orbCloud">—</b><small>Clouds</small></div>
-          <div class="orbStat"><b id="orbAlerts">—</b><small>Alerts</small></div>
-        </div>
-      </div>
-    </div>
-
-    <section class="weatherDesk" id="weather">
-      <div class="searchRow">
-        <input id="placeInput" autocomplete="off" placeholder="Search city, country, or U.S. ZIP — e.g. Tampa, FL / London / 34667">
-        <button class="btn primary" id="searchBtn" type="button">Search Weather</button>
-        <button class="btn" id="geoBtn" type="button">📍 Use My Location</button>
-      </div>
-      <div class="weatherStatus" id="weatherStatus">Search a place or use your location to load current conditions and a 7-day forecast.</div>
-      <div class="metricGrid">
-        <div class="metric"><small>Feels Like</small><b id="feels">—</b></div>
-        <div class="metric"><small>Humidity</small><b id="humidity">—</b></div>
-        <div class="metric"><small>Pressure</small><b id="pressure">—</b></div>
-        <div class="metric"><small>Visibility</small><b id="visibility">—</b></div>
-        <div class="metric"><small>Precip</small><b id="precip">—</b></div>
-        <div class="metric"><small>Gust</small><b id="gust">—</b></div>
-        <div class="metric"><small>Sunrise</small><b id="sunrise">—</b></div>
-        <div class="metric"><small>Sunset</small><b id="sunset">—</b></div>
-      </div>
-      <div class="alertBox" id="alertBox"></div>
-      <div class="forecastGrid" id="forecastGrid">
-        <div class="day"><b>Forecast</b><div class="dayIcon">🌦️</div><small>Load a location to begin.</small></div>
-      </div>
-    </section>
-  </div>
+</div>
+<div aria-label="Current weather summary" class="weatherOrb">
+<div class="orbCore">
+<div class="orbIcon">🌍</div>
+<div class="orbBadge" id="orbBadge">🌦️</div>
+<div class="orbReadout"><div class="orbTemp" id="orbTemp">—</div><div class="orbCond" id="orbCond">Choose a location</div></div>
+</div>
+<div class="orbStats">
+<div class="orbStat"><b id="orbPlace">World</b><small>Location</small></div>
+<div class="orbStat"><b id="orbWind">—</b><small>Wind</small></div>
+<div class="orbStat"><b id="orbCloud">—</b><small>Clouds</small></div>
+<div class="orbStat"><b id="orbAlerts">—</b><small>Alerts</small></div>
+</div>
+</div>
+</div>
+<section class="weatherDesk" id="weather">
+<div class="searchRow">
+<input autocomplete="off" id="placeInput" placeholder="Search city, country, or U.S. ZIP — e.g. Tampa, FL / London / 34667"/>
+<button class="btn primary" id="searchBtn" type="button">Search Weather</button>
+<button class="btn" id="geoBtn" type="button">📍 Use My Location</button>
+</div>
+<div class="weatherStatus" id="weatherStatus">Search a place or use your location to load current conditions and a 7-day forecast.</div>
+<div class="metricGrid">
+<div class="metric"><small>Feels Like</small><b id="feels">—</b></div>
+<div class="metric"><small>Humidity</small><b id="humidity">—</b></div>
+<div class="metric"><small>Pressure</small><b id="pressure">—</b></div>
+<div class="metric"><small>Visibility</small><b id="visibility">—</b></div>
+<div class="metric"><small>Precip</small><b id="precip">—</b></div>
+<div class="metric"><small>Gust</small><b id="gust">—</b></div>
+<div class="metric"><small>Sunrise</small><b id="sunrise">—</b></div>
+<div class="metric"><small>Sunset</small><b id="sunset">—</b></div>
+</div>
+<div class="alertBox" id="alertBox"></div>
+<div class="forecastGrid" id="forecastGrid">
+<div class="day"><b>Forecast</b><div class="dayIcon">🌦️</div><small>Load a location to begin.</small></div>
+</div>
 </section>
-
+</div>
+</section>
 <section class="section alt" id="ecosystem">
-  <div class="shell">
-    <div class="sectionHead">
-      <p class="eyebrow">The Solanar ecosystem</p>
-      <h2>One sky. A complete learning continuum.</h2>
-      <p>Solanar is organized so a preschool weather game, a fifth-grade forecast lab, a high-school atmospheric-science course, a professional forecasting shift, and a graduate research track all belong to the same scientific family.</p>
-    </div>
-    <div class="ecoGrid">
-      <a class="eco" href="#weather"><div class="ecoIcon">🌦️</div><strong>Observe</strong><span>Current conditions, weekly forecast, official U.S. alert context, live atmosphere tools and environmental reporting.</span><em>Start with the sky →</em></a>
-      <a class="eco" href="#early"><div class="ecoIcon">🌈</div><strong>Early Weather Learning</strong><span>Preschool, Kinder Garden and Elementary weather games and observation tools gathered into one child-friendly Solanar pathway.</span><em>Explore early weather →</em></a>
-      <a class="eco" href="#academy"><div class="ecoIcon">🎓</div><strong>K–12 Weather Academy</strong><span>Weather 101–304: a continuous 36-week course ladder from observation through forecasting, remote sensing, climate and computation.</span><em>Enter the Academy →</em></a>
-      <a class="eco" href="#professional"><div class="ecoIcon">🛰️</div><strong>Professional Meteorology</strong><span>Two-year, four-semester professional preparation in atmospheric science, mathematics, physics, data, communication and operational practice.</span><em>See certification →</em></a>
-      <a class="eco" href="#graduate"><div class="ecoIcon">🏛️</div><strong>Graduate Direction</strong><span>Advanced Operational Meteorology, Numerical Weather Prediction & Data Assimilation, and Tropical Meteorology & Hurricane Science.</span><em>View graduate tracks →</em></a>
-      <a class="eco" href="#tools"><div class="ecoIcon">🔬</div><strong>Scientific Tools & Research</strong><span>TraceLab, Planetarium, Vortex, Platform, Kids SkyLab, environmental news, PLERA research and NAIB mentorship.</span><em>Open the lab network →</em></a>
-    </div>
-
-    <div class="continuum" aria-label="Solanar learning continuum">
-      <div class="step"><i>🧸</i><b>Preschool</b><small>Notice weather</small></div>
-      <div class="step"><i>🌻</i><b>Kinder Garden</b><small>Play & identify</small></div>
-      <div class="step"><i>🎒</i><b>Elementary</b><small>Observe & measure</small></div>
-      <div class="step"><i>🧭</i><b>Middle</b><small>Analyze systems</small></div>
-      <div class="step"><i>🎓</i><b>High School</b><small>Forecast & model</small></div>
-      <div class="step"><i>🛰️</i><b>Professional</b><small>Operate & communicate</small></div>
-      <div class="step"><i>🔬</i><b>Graduate</b><small>Research & specialize</small></div>
-    </div>
-  </div>
+<div class="shell">
+<div class="sectionHead">
+<p class="eyebrow">The Solanar ecosystem</p>
+<h2>One sky. A complete learning continuum.</h2>
+<p>Solanar is organized so a preschool weather game, a fifth-grade forecast lab, a high-school atmospheric-science course, a professional forecasting shift, and a graduate research track all belong to the same scientific family.</p>
+</div>
+<div class="ecoGrid">
+<a class="eco" href="#weather"><div class="ecoIcon">🌦️</div><strong>Observe</strong><span>Current conditions, weekly forecast, official U.S. alert context, live atmosphere tools and environmental reporting.</span><em>Start with the sky →</em></a>
+<a class="eco" href="#early"><div class="ecoIcon">🌈</div><strong>Early Weather Learning</strong><span>Preschool, Kinder Garden and Elementary weather games and observation tools gathered into one child-friendly Solanar pathway.</span><em>Explore early weather →</em></a>
+<a class="eco" href="#academy"><div class="ecoIcon">🎓</div><strong>K–12 Weather Academy</strong><span>Weather 101–304: a continuous 36-week course ladder from observation through forecasting, remote sensing, climate and computation.</span><em>Enter the Academy →</em></a>
+<a class="eco" href="#professional"><div class="ecoIcon">🛰️</div><strong>Professional Meteorology</strong><span>Two-year, four-semester professional preparation in atmospheric science, mathematics, physics, data, communication and operational practice.</span><em>See certification →</em></a>
+<a class="eco" href="#graduate"><div class="ecoIcon">🏛️</div><strong>Graduate Direction</strong><span>Advanced Operational Meteorology, Numerical Weather Prediction &amp; Data Assimilation, and Tropical Meteorology &amp; Hurricane Science.</span><em>View graduate tracks →</em></a>
+<a class="eco" href="#tools"><div class="ecoIcon">🔬</div><strong>Scientific Tools &amp; Research</strong><span>TraceLab, Planetarium, Vortex, Platform, Kids SkyLab, environmental news, PLERA research and NAIB public intelligence guidance.</span><em>Open the lab network →</em></a>
+</div>
+<div aria-label="Solanar learning continuum" class="continuum">
+<div class="step"><i>🧸</i><b>Preschool</b><small>Notice weather</small></div>
+<div class="step"><i>🌻</i><b>Kinder Garden</b><small>Play &amp; identify</small></div>
+<div class="step"><i>🎒</i><b>Elementary</b><small>Observe &amp; measure</small></div>
+<div class="step"><i>🧭</i><b>Middle</b><small>Analyze systems</small></div>
+<div class="step"><i>🎓</i><b>High School</b><small>Forecast &amp; model</small></div>
+<div class="step"><i>🛰️</i><b>Professional</b><small>Operate &amp; communicate</small></div>
+<div class="step"><i>🔬</i><b>Graduate</b><small>Research &amp; specialize</small></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="early">
-  <div class="shell">
-    <div class="sectionHead">
-      <p class="eyebrow">Weather begins with curiosity</p>
-      <h2>Early Weather Learning</h2>
-      <p>These weather apps live across the Khaemenes Preschool, Kinder Garden and Elementary repositories. Solanar brings them together so young learners can follow the sky across campuses without losing the thread.</p>
-    </div>
-
-    <div class="ageBands">
-      <article class="band card">
-        <span class="badge">Preschool · Crèche</span>
-        <h3>My First Weather World</h3>
-        <p>Simple weather recognition, sky observation, playful forecasting and Solanar-themed discovery for the youngest learners.</p>
-        <div class="appList">
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_for_tots_index.html"><i>🪄</i>Weather Wizard for Tots</a>
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_index.html"><i>☀️</i>Sunny's Weather Adventure</a>
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_solonarium_index.html"><i>🌍</i>Solanar Kid Weather / Solonarium</a>
-        </div>
-      </article>
-
-      <article class="band card">
-        <span class="badge">Kinder Garden</span>
-        <h3>Weather Play Lab</h3>
-        <p>Direction, matching, weather patterns, sky exploration and cloud-themed mathematics for children ready for more structured exploration.</p>
-        <div class="appList">
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html"><i>🧭</i>Weather Compass</a>
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html"><i>🌌</i>Weather Planetarium</a>
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_wizard_index.html"><i>🪄</i>Weather Wizard Lab</a>
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/weather-match_index.html"><i>🌦️</i>Weather Match</a>
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/kindergarten_math_cloud_index.html"><i>☁️</i>Kindergarten Math Cloud</a>
-        </div>
-      </article>
-
-      <article class="band card">
-        <span class="badge">Elementary</span>
-        <h3>Junior Weather Scientist</h3>
-        <p>Live forecast context, weather science, experiments, quizzes, Moon study, air-quality awareness and a growing observation record.</p>
-        <div class="appList">
-          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Elementary.github.io/games/elementary_weather_portal/"><i>🌤️</i>Elementary Weather Portal</a>
-          <a class="appLink" href="weather-academy/elementary-weather-academy/"><i>📘</i>Weather Academy 101–105</a>
-          <a class="appLink" data-popup href="apps/Solanar_kids_skylab_index.html"><i>🚀</i>Kids SkyLab</a>
-        </div>
-      </article>
-    </div>
-  </div>
+<div class="shell">
+<div class="sectionHead">
+<p class="eyebrow">Weather begins with curiosity</p>
+<h2>Early Weather Learning</h2>
+<p>These weather apps live across the Khaemenes Preschool, Kinder Garden and Elementary repositories. Solanar brings them together so young learners can follow the sky across campuses without losing the thread.</p>
+</div>
+<div class="ageBands">
+<article class="band card">
+<span class="badge">Preschool · Crèche</span>
+<h3>My First Weather World</h3>
+<p>Simple weather recognition, sky observation, playful forecasting and Solanar-themed discovery for the youngest learners.</p>
+<div class="appList">
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_for_tots_index.html"><i>🪄</i>Weather Wizard for Tots</a>
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_index.html"><i>☀️</i>Sunny's Weather Adventure</a>
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_solonarium_index.html"><i>🌍</i>Solanar Kid Weather / Solonarium</a>
+</div>
+</article>
+<article class="band card">
+<span class="badge">Kinder Garden</span>
+<h3>Weather Play Lab</h3>
+<p>Direction, matching, weather patterns, sky exploration and cloud-themed mathematics for children ready for more structured exploration.</p>
+<div class="appList">
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html"><i>🧭</i>Weather Compass</a>
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html"><i>🌌</i>Weather Planetarium</a>
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_wizard_index.html"><i>🪄</i>Weather Wizard Lab</a>
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/weather-match_index.html"><i>🌦️</i>Weather Match</a>
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/kindergarten_math_cloud_index.html"><i>☁️</i>Kindergarten Math Cloud</a>
+</div>
+</article>
+<article class="band card">
+<span class="badge">Elementary</span>
+<h3>Junior Weather Scientist</h3>
+<p>Live forecast context, weather science, experiments, quizzes, Moon study, air-quality awareness and a growing observation record.</p>
+<div class="appList">
+<a class="appLink" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_Elementary.github.io/games/elementary_weather_portal/"><i>🌤️</i>Elementary Weather Portal</a>
+<a class="appLink" data-curriculum-gate="true" href="weather-academy/elementary-weather-academy/"><i>📘</i>Weather Academy 101–105</a>
+<a class="appLink" data-popup="" data-public-tool="true" href="apps/Solanar_kids_skylab_index.html"><i>🚀</i>Kids SkyLab</a>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <section class="section alt" id="academy">
-  <div class="shell">
-    <div class="sectionHead">
-      <p class="eyebrow">Khaemenes Academy · Solanar Weather Academy</p>
-      <h2>Weather 101 through 304</h2>
-      <p>A 12-grade atmospheric-science ladder. Grade labels are recommended starting points; readiness and mastery determine advancement. Required gated work must reach 80% before later work unlocks.</p>
-    </div>
-
-    <div class="ladder">
-      <article class="level card elementary">
-        <div class="num">101–105</div>
-        <h3>Elementary Weather</h3>
-        <p>Grades 1–5 recommended. Observation, instruments, water cycle, clouds, hazards, forecasting, radar, climate and increasingly scientific weather records.</p>
-        <div class="actions"><a class="btn primary" href="weather-academy/elementary-weather-academy/">Open 101–105</a><a class="btn" data-popup href="https://vervenveda.github.io/Khaemenes_Elementary.github.io/games/elementary_weather_portal/">Weather Portal</a></div>
-      </article>
-      <article class="level card middle">
-        <div class="num">201–203</div>
-        <h3>Middle Weather</h3>
-        <p>Grades 6–8 recommended. Atmospheric foundations, dynamic weather, severe hazards, global circulation, evidence, modeling, forecasting and Earth systems.</p>
-        <div class="actions"><a class="btn primary" href="weather-academy/middle-weather-academy/">Open 201–203</a></div>
-      </article>
-      <article class="level card high">
-        <div class="num">301–304</div>
-        <h3>High School Weather</h3>
-        <p>Grades 9–12 recommended. Thermodynamics, synoptic and mesoscale meteorology, radar, satellite, NWP, operations, climate dynamics and computational meteorology.</p>
-        <div class="actions"><a class="btn primary" href="weather-academy/high-school-weather-academy/">Open 301–304</a><a class="btn" data-popup href="apps/Solanar-TraceLab/">TraceLab</a></div>
-      </article>
-    </div>
-  </div>
+<div class="shell">
+<div class="sectionHead">
+<p class="eyebrow">Khaemenes Academy · Solanar Weather Academy</p>
+<h2>Weather 101 through 304</h2>
+<p>A 12-grade atmospheric-science ladder. Grade labels are recommended starting points; readiness and mastery determine advancement. Required gated work must reach 80% before later work unlocks.</p>
+</div>
+<div class="ladder">
+<article class="level card elementary">
+<div class="num">101–105</div>
+<h3>Elementary Weather</h3>
+<p>Grades 1–5 recommended. Observation, instruments, water cycle, clouds, hazards, forecasting, radar, climate and increasingly scientific weather records.</p>
+<div class="actions"><a class="btn primary" data-curriculum-gate="true" href="weather-academy/elementary-weather-academy/">Open 101–105</a><a class="btn" data-popup="" data-public-tool="true" href="https://vervenveda.github.io/Khaemenes_Elementary.github.io/games/elementary_weather_portal/">Weather Portal</a></div>
+</article>
+<article class="level card middle">
+<div class="num">201–203</div>
+<h3>Middle Weather</h3>
+<p>Grades 6–8 recommended. Atmospheric foundations, dynamic weather, severe hazards, global circulation, evidence, modeling, forecasting and Earth systems.</p>
+<div class="actions"><a class="btn primary" data-curriculum-gate="true" href="weather-academy/middle-weather-academy/">Open 201–203</a></div>
+</article>
+<article class="level card high">
+<div class="num">301–304</div>
+<h3>High School Weather</h3>
+<p>Grades 9–12 recommended. Thermodynamics, synoptic and mesoscale meteorology, radar, satellite, NWP, operations, climate dynamics and computational meteorology.</p>
+<div class="actions"><a class="btn primary" data-curriculum-gate="true" href="weather-academy/high-school-weather-academy/">Open 301–304</a><a class="btn" data-popup="" data-public-tool="true" href="apps/Solanar-TraceLab/">TraceLab</a></div>
+</article>
+</div>
+</div>
 </section>
-
 <section class="section" id="professional">
-  <div class="shell">
-    <div class="sectionHead">
-      <p class="eyebrow">Professional Meteorology Certificate</p>
-      <h2>Two years from foundation to operations.</h2>
-      <p>A four-semester professional sequence designed around atmospheric science, university mathematics and physics, scientific programming, observation, radar, satellite, models, forecast communication and professional evidence.</p>
-    </div>
-
-    <div class="certGrid">
-      <article class="cert card">
-        <span class="badge">Year I · Semesters I & II</span>
-        <h3>Atmospheric Science Common Core</h3>
-        <p>Foundations of Atmospheric Science, Calculus I–II, University Physics I–II, Scientific Programming, Weather Data, Thermodynamics, Cloud Physics, Observations, Synoptic Analysis, Remote Sensing, Statistics and Communication.</p>
-        <div class="statRow"><div class="stat"><b>36</b><small>Weeks</small></div><div class="stat"><b>2</b><small>Semesters</small></div><div class="stat"><b>80%</b><small>Every Gate</small></div></div>
-        <div class="tracks"><span class="badge">Operational</span><span class="badge">Broadcast</span><span class="badge">Climatology</span></div>
-        <div class="actions"><a class="btn gold" href="weather-academy/Solanar-Certification-year-01/">Enter Year I</a><a class="btn" href="weather-academy/Solanar-Certification-year-01/forms/">Professional Forms</a></div>
-      </article>
-
-      <article class="cert card">
-        <span class="badge">Year II · Semesters III & IV</span>
-        <h3>Professional Meteorologist Track</h3>
-        <p>Dynamical meteorology, synoptic and mesoscale diagnosis, Doppler and dual-polarization radar, satellite analysis, numerical weather prediction, ensembles, severe weather, specialized services, decision support and forecast-office capstone practice.</p>
-        <div class="statRow"><div class="stat"><b>36</b><small>Weeks</small></div><div class="stat"><b>22</b><small>Professional Forms</small></div><div class="stat"><b>80%</b><small>Every Gate</small></div></div>
-        <div class="actions"><a class="btn gold" href="weather-academy/Solanar-Certification-year-02/">Enter Year II</a><a class="btn" href="weather-academy/Solanar-Certification-year-02/tools/">Operational Tools</a></div>
-      </article>
-    </div>
-  </div>
+<div class="shell">
+<div class="sectionHead">
+<p class="eyebrow">Professional Meteorology Certificate</p>
+<h2>Two years from foundation to operations.</h2>
+<p>A four-semester professional sequence designed around atmospheric science, university mathematics and physics, scientific programming, observation, radar, satellite, models, forecast communication and professional evidence.</p>
+</div>
+<div class="certGrid">
+<article class="cert card">
+<span class="badge">Year I · Semesters I &amp; II</span>
+<h3>Atmospheric Science Common Core</h3>
+<p>Foundations of Atmospheric Science, Calculus I–II, University Physics I–II, Scientific Programming, Weather Data, Thermodynamics, Cloud Physics, Observations, Synoptic Analysis, Remote Sensing, Statistics and Communication.</p>
+<div class="statRow"><div class="stat"><b>36</b><small>Weeks</small></div><div class="stat"><b>2</b><small>Semesters</small></div><div class="stat"><b>80%</b><small>Every Gate</small></div></div>
+<div class="tracks"><span class="badge">Operational</span><span class="badge">Broadcast</span><span class="badge">Climatology</span></div>
+<div class="actions"><a class="btn gold" data-curriculum-gate="true" href="weather-academy/Solanar-Certification-year-01/">Enter Year I</a><a class="btn" data-curriculum-gate="true" href="weather-academy/Solanar-Certification-year-01/forms/">Professional Forms</a></div>
+</article>
+<article class="cert card">
+<span class="badge">Year II · Semesters III &amp; IV</span>
+<h3>Professional Meteorologist Track</h3>
+<p>Dynamical meteorology, synoptic and mesoscale diagnosis, Doppler and dual-polarization radar, satellite analysis, numerical weather prediction, ensembles, severe weather, specialized services, decision support and forecast-office capstone practice.</p>
+<div class="statRow"><div class="stat"><b>36</b><small>Weeks</small></div><div class="stat"><b>22</b><small>Professional Forms</small></div><div class="stat"><b>80%</b><small>Every Gate</small></div></div>
+<div class="actions"><a class="btn gold" data-curriculum-gate="true" href="weather-academy/Solanar-Certification-year-02/">Enter Year II</a><a class="btn" data-curriculum-gate="true" href="weather-academy/Solanar-Certification-year-02/tools/">Operational Tools</a></div>
+</article>
+</div>
+</div>
 </section>
-
 <section class="section alt" id="graduate">
-  <div class="shell">
-    <div class="sectionHead">
-      <p class="eyebrow">Advanced directional atmospheric science</p>
-      <h2>Solanar Graduate Programs</h2>
-      <p>Specialist concentrations extend the professional foundation through advanced mathematics, observational science, modeling, research, reproducibility and defended performance.</p>
-    </div>
-
-    <div class="gradGrid">
-      <article class="grad card"><span class="badge">Track 01 · Active</span><h3>Advanced Operational Meteorology</h3><p>Mesoscale and severe-weather forecasting, operational diagnosis, warning decisions, verification and professional forecast practice.</p><div class="actions"><a class="btn primary" href="weather-academy/Graduate-Programs/advanced-operational-meteorology/">Open Track 01</a></div></article>
-      <article class="grad card"><span class="badge">Track 02 · Active</span><h3>NWP & Data Assimilation</h3><p>Numerical modeling, ensembles, data assimilation, covariance, verification, reproducibility and hybrid AI/ML evaluation.</p><div class="actions"><a class="btn primary" href="weather-academy/Graduate-Programs/numerical-weather-prediction-data-assimilation/">Open Track 02</a></div></article>
-      <article class="grad card"><span class="badge">Track 03 · Active</span><h3>Tropical Meteorology & Hurricane Science</h3><p>Tropical cyclone dynamics, genesis, intensity, reconnaissance, landfall radar, hazards, ensemble consensus and research.</p><div class="actions"><a class="btn primary" href="weather-academy/Graduate-Programs/tropical-meteorology-hurricane-science/">Open Track 03</a></div></article>
-      <article class="grad card future"><span class="badge">Future Track 04</span><h3>Climate Dynamics, Modeling & Prediction</h3><p>Reserved directional concentration.</p></article>
-      <article class="grad card future"><span class="badge">Future Track 05</span><h3>Radar, Satellite & Atmospheric Remote Sensing</h3><p>Reserved directional concentration.</p></article>
-      <article class="grad card future"><span class="badge">Future Track 06+</span><h3>Specialized Forecast & Decision Science</h3><p>Aviation, hydrometeorology, fire weather, air quality, weather risk and other advanced specialties.</p></article>
-    </div>
-    <div style="text-align:center;margin-top:15px"><a class="btn violet" href="weather-academy/Graduate-Programs/">Open Graduate Program Gateway</a></div>
-  </div>
+<div class="shell">
+<div class="sectionHead">
+<p class="eyebrow">Advanced directional atmospheric science</p>
+<h2>Solanar Graduate Programs</h2>
+<p>Specialist concentrations extend the professional foundation through advanced mathematics, observational science, modeling, research, reproducibility and defended performance.</p>
+</div>
+<div class="gradGrid">
+<article class="grad card"><span class="badge">Track 01 · Active</span><h3>Advanced Operational Meteorology</h3><p>Mesoscale and severe-weather forecasting, operational diagnosis, warning decisions, verification and professional forecast practice.</p><div class="actions"><a class="btn primary" data-curriculum-gate="true" href="weather-academy/Graduate-Programs/advanced-operational-meteorology/">Open Track 01</a></div></article>
+<article class="grad card"><span class="badge">Track 02 · Active</span><h3>NWP &amp; Data Assimilation</h3><p>Numerical modeling, ensembles, data assimilation, covariance, verification, reproducibility and hybrid AI/ML evaluation.</p><div class="actions"><a class="btn primary" data-curriculum-gate="true" href="weather-academy/Graduate-Programs/numerical-weather-prediction-data-assimilation/">Open Track 02</a></div></article>
+<article class="grad card"><span class="badge">Track 03 · Active</span><h3>Tropical Meteorology &amp; Hurricane Science</h3><p>Tropical cyclone dynamics, genesis, intensity, reconnaissance, landfall radar, hazards, ensemble consensus and research.</p><div class="actions"><a class="btn primary" data-curriculum-gate="true" href="weather-academy/Graduate-Programs/tropical-meteorology-hurricane-science/">Open Track 03</a></div></article>
+<article class="grad card future"><span class="badge">Future Track 04</span><h3>Climate Dynamics, Modeling &amp; Prediction</h3><p>Reserved directional concentration.</p></article>
+<article class="grad card future"><span class="badge">Future Track 05</span><h3>Radar, Satellite &amp; Atmospheric Remote Sensing</h3><p>Reserved directional concentration.</p></article>
+<article class="grad card future"><span class="badge">Future Track 06+</span><h3>Specialized Forecast &amp; Decision Science</h3><p>Aviation, hydrometeorology, fire weather, air quality, weather risk and other advanced specialties.</p></article>
+</div>
+<div style="text-align:center;margin-top:15px"><a class="btn violet" data-curriculum-gate="true" href="weather-academy/Graduate-Programs/">Open Graduate Program Gateway</a></div>
+</div>
 </section>
-
 <section class="section" id="tools">
-  <div class="shell">
-    <div class="sectionHead">
-      <p class="eyebrow">Scientific learning suite</p>
-      <h2>Tools that grow with the learner.</h2>
-      <p>The same ecosystem supports playful observation, daily weather decisions, school laboratories, professional analysis and graduate research.</p>
-    </div>
-
-    <div class="toolGrid">
-      <a class="tool card" data-popup href="apps/Solanar_kids_skylab_index.html"><i>🚀</i><strong>Kids SkyLab</strong><span>Live weather, missions, badges, radar, sky journal and age-aware weather exploration.</span><em>Launch →</em></a>
-      <a class="tool card" data-popup href="apps/Solanar_Live_Weather_index.html"><i>🌀</i><strong>Weather Vortex</strong><span>Live Atmosphere Lab with current weather, visual traces, Earth imagery, Moon context and resource exploration.</span><em>Enter Vortex →</em></a>
-      <a class="tool card" data-popup href="apps/Solanar_Planetarium_index.html"><i>🌌</i><strong>Planetarium</strong><span>Atmosphere, official alert context, hazard trackers, Moon and observing conditions.</span><em>Open →</em></a>
-      <a class="tool card" data-popup href="apps/Solanar_Platform_index.html"><i>🌐</i><strong>Solanar Platform</strong><span>Full weather, Earth, hazard, saved-location and briefing command center.</span><em>Open →</em></a>
-      <a class="tool card" data-popup href="apps/Solanar-TraceLab/"><i>✎</i><strong>Solanar TraceLab</strong><span>Trace, label, measure and compare radar, satellite, synoptic, model, sounding and climate imagery.</span><em>Analyze →</em></a>
-      <a class="tool card" data-popup href="apps/environmental_news_index.html"><i>📰</i><strong>World Weather & Environmental News</strong><span>Weather, climate, oceans, hazards, wildlife and environmental reporting with student modes.</span><em>Read →</em></a>
-      <a class="tool card" data-popup href="apps/Lunar_reflections_index.html"><i>🌕</i><strong>Lunar Reflections</strong><span>Moon phase, sky timing and reflective observation with clear scientific/traditional boundaries.</span><em>Observe →</em></a>
-      <a class="tool card" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener"><i>🔎</i><strong>PLERA Search</strong><span>Research weather, climate, oceans, Earth science and source evidence across the wider Verve N Veda network.</span><em>Research →</em></a>
-    </div>
-  </div>
+<div class="shell">
+<div class="sectionHead">
+<p class="eyebrow">Scientific learning suite</p>
+<h2>Tools that grow with the learner.</h2>
+<p>The same ecosystem supports playful observation, daily weather decisions, school laboratories, professional analysis and graduate research.</p>
+</div>
+<div class="toolGrid">
+<a class="tool card" data-popup="" data-public-tool="true" href="apps/Solanar_kids_skylab_index.html"><i>🚀</i><strong>Kids SkyLab</strong><span>Live weather, missions, badges, radar, sky journal and age-aware weather exploration.</span><em>Launch →</em></a>
+<a class="tool card" data-popup="" data-public-tool="true" href="apps/Solanar_Live_Weather_index.html"><i>🌀</i><strong>Weather Vortex</strong><span>Live Atmosphere Lab with current weather, visual traces, Earth imagery, Moon context and resource exploration.</span><em>Enter Vortex →</em></a>
+<a class="tool card" data-popup="" data-public-tool="true" href="apps/Solanar_Planetarium_index.html"><i>🌌</i><strong>Planetarium</strong><span>Atmosphere, official alert context, hazard trackers, Moon and observing conditions.</span><em>Open →</em></a>
+<a class="tool card" data-popup="" data-public-tool="true" href="apps/Solanar_Platform_index.html"><i>🌐</i><strong>Solanar Platform</strong><span>Full weather, Earth, hazard, saved-location and briefing command center.</span><em>Open →</em></a>
+<a class="tool card" data-popup="" data-public-tool="true" href="apps/Solanar-TraceLab/"><i>✎</i><strong>Solanar TraceLab</strong><span>Trace, label, measure and compare radar, satellite, synoptic, model, sounding and climate imagery.</span><em>Analyze →</em></a>
+<a class="tool card" data-age-sensitive="true" data-popup="" href="apps/environmental_news_index.html"><i>📰</i><strong>World Weather &amp; Environmental News</strong><span>Weather, climate, oceans, hazards, wildlife and environmental reporting with student modes.</span><em>Read →</em></a>
+<a class="tool card" data-popup="" data-public-tool="true" href="apps/Lunar_reflections_index.html"><i>🌕</i><strong>Lunar Reflections</strong><span>Moon phase, sky timing and reflective observation with clear scientific/traditional boundaries.</span><em>Observe →</em></a>
+<a class="tool card" data-age-sensitive="true" href="https://vervenveda.github.io/PLERASearch.github.io/" rel="noopener" target="_blank"><i>🔎</i><strong>PLERA Search</strong><span>Research weather, climate, oceans, Earth science and source evidence across the wider Verve N Veda network.</span><em>Research →</em></a>
+</div>
+</div>
 </section>
-
 <section class="section alt" id="network">
-  <div class="shell">
-    <div class="sectionHead">
-      <p class="eyebrow">Connected learning network</p>
-      <h2>Solanar does not stand alone.</h2>
-      <p>Weather science can move naturally into mathematics, environmental reporting, family learning, research mentorship, archives and the wider Khaemenes Academy pathway.</p>
-    </div>
-
-    <div class="networkGrid">
-      <a class="network card" href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener"><i>N</i><b>NAIB Mentor</b><small>Readiness, misconception repair and research guidance</small></a>
-      <a class="network card" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/" target="_blank" rel="noopener"><i>∑</i><b>Higher Learning Mathematics</b><small>Calculus, differential equations, statistics and advanced mathematics</small></a>
-      <a class="network card" href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener"><i>K</i><b>Khaemenes Academy</b><small>Complete educational gateway and family learning network</small></a>
-      <a class="network card" href="https://vervenveda.github.io/Arshif.github.io/" target="_blank" rel="noopener"><i>📚</i><b>ARSHIF</b><small>Reading, archives and deeper contextual study</small></a>
-      <a class="network card" href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener"><i>✓</i><b>The Verifier</b><small>News, evidence and source-conscious public information</small></a>
-      <a class="network card" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/" target="_blank" rel="noopener"><i>👨‍👩‍👧</i><b>Family Profiles</b><small>Student and parent continuity across the Academy</small></a>
-      <a class="network card" href="weather-academy/" ><i>☀</i><b>Weather Academy</b><small>The continuous formal curriculum ladder</small></a>
-      <a class="network card" href="https://vervenveda.com/" target="_blank" rel="noopener"><i>✦</i><b>Verve N Veda</b><small>Return to the wider public ecosystem</small></a>
-    </div>
-  </div>
+<div class="shell">
+<div class="sectionHead">
+<p class="eyebrow">Connected learning network</p>
+<h2>Solanar does not stand alone.</h2>
+<p>Weather science can move naturally into mathematics, environmental reporting, family learning, research mentorship, archives and the wider Khaemenes Academy pathway.</p>
+</div>
+<div class="networkGrid">
+<a class="network card" href="https://artist1970.github.io/noema-ai.github.io/" rel="noopener" target="_blank"><i>N</i><b>NAIB — Public Intelligence Director</b><small>Public learning, research guidance, specialist coordination and bounded handoffs</small></a>
+<a class="network card" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/" rel="noopener" target="_blank"><i>∑</i><b>Higher Learning Mathematics</b><small>Calculus, differential equations, statistics and advanced mathematics</small></a>
+<a class="network card" href="https://vervenveda.com/Khaemenes_Academy.github.io/" rel="noopener" target="_blank"><i>K</i><b>Khaemenes Academy</b><small>Complete educational gateway and family learning network</small></a>
+<a class="network card" href="https://vervenveda.github.io/Arshif.github.io/" rel="noopener" target="_blank"><i>📚</i><b>ARSHIF</b><small>Reading, archives and deeper contextual study</small></a>
+<a class="network card" data-age-sensitive="true" href="https://vervenveda.github.io/theverifier.github.io/" rel="noopener" target="_blank"><i>✓</i><b>The Verifier</b><small>News, evidence and source-conscious public information</small></a>
+<a class="network card" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/" rel="noopener" target="_blank"><i>👨‍👩‍👧</i><b>Family Profiles</b><small>Student and parent continuity across the Academy</small></a>
+<a class="network card" data-curriculum-gate="true" href="weather-academy/"><i>☀</i><b>Weather Academy</b><small>The continuous formal curriculum ladder</small></a>
+<a class="network card" href="https://vervenveda.com/" rel="noopener" target="_blank"><i>✦</i><b>Verve N Veda</b><small>Return to the wider public ecosystem</small></a>
+</div>
+</div>
 </section>
 </main>
+<div aria-hidden="true" class="appModal" id="appModal">
+<section aria-labelledby="appModalTitle" aria-modal="true" class="appWindow" role="dialog">
+<div class="appWindowBar">
+<div class="appWindowTitle"><strong id="appModalTitle">Solanar App</strong><small id="appModalUrl">Loading application…</small></div>
+<div class="appWindowActions"><a class="appOpenExternal" href="#" id="appOpenExternal" rel="noopener" target="_blank">Open in New Tab ↗</a><button aria-label="Close application" class="appClose" id="appClose" type="button">×</button></div>
+</div>
+<div class="appFrameWrap"><div class="appLoading" id="appLoading">Opening Solanar application…</div><iframe class="appFrame" id="appFrame" title="Solanar application window"></iframe></div>
+</section>
+</div>
 
-<div class="appModal" id="appModal" aria-hidden="true">
-  <section class="appWindow" role="dialog" aria-modal="true" aria-labelledby="appModalTitle">
-    <div class="appWindowBar">
-      <div class="appWindowTitle"><strong id="appModalTitle">Solanar App</strong><small id="appModalUrl">Loading application…</small></div>
-      <div class="appWindowActions"><a class="appOpenExternal" id="appOpenExternal" href="#" target="_blank" rel="noopener">Open in New Tab ↗</a><button class="appClose" id="appClose" type="button" aria-label="Close application">×</button></div>
-    </div>
-    <div class="appFrameWrap"><div class="appLoading" id="appLoading">Opening Solanar application…</div><iframe class="appFrame" id="appFrame" title="Solanar application window"></iframe></div>
+<div class="accessGuard" id="accessGuard" aria-hidden="true">
+  <section class="accessGuardCard" role="dialog" aria-modal="true" aria-labelledby="accessGuardTitle">
+    <button class="accessGuardClose" id="accessGuardClose" type="button" aria-label="Close access notice">×</button>
+    <div class="accessGuardMark" id="accessGuardMark">N</div>
+    <p class="eyebrow" id="accessGuardEyebrow">NAIB · ACCESS BOUNDARY</p>
+    <h2 id="accessGuardTitle">Access notice</h2>
+    <p id="accessGuardCopy"></p>
+    <div class="accessGuardMeta" id="accessGuardMeta"></div>
+    <div class="accessGuardActions" id="accessGuardActions"></div>
   </section>
 </div>
 
 <footer>
-  <div class="shell">
-    <div class="footerGrid">
-      <div><h3>Solanar Observatory</h3><p>Weather for today. Atmospheric science for a lifetime.</p></div>
-      <div><h3>Weather</h3><div class="footerLinks"><a href="#weather">Live Weather</a><a href="apps/Solanar_Live_Weather_index.html">Weather Vortex</a><a href="apps/Solanar_Planetarium_index.html">Planetarium</a><a href="apps/environmental_news_index.html">Environmental News</a></div></div>
-      <div><h3>Learning</h3><div class="footerLinks"><a href="#early">Early Weather Learning</a><a href="weather-academy/">Weather Academy</a><a href="weather-academy/Solanar-Certification-year-01/">Professional Certificate</a><a href="weather-academy/Graduate-Programs/">Graduate Programs</a></div></div>
-      <div><h3>Research</h3><div class="footerLinks"><a href="apps/Solanar-TraceLab/">TraceLab</a><a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">PLERA Search</a><a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">NAIB Mentor</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener">Khaemenes Academy</a></div></div>
-    </div>
-    <div class="bottom">© <span id="year"></span> Jennifer Kay Pearl · Verve N Veda · Khaemenes Academy · All Rights Reserved</div>
-  </div>
+<div class="shell">
+<div class="footerGrid">
+<div><h3>Solanar Observatory</h3><p>Weather for today. Atmospheric science for a lifetime.</p></div>
+<div><h3>Weather</h3><div class="footerLinks"><a href="#weather">Live Weather</a><a data-public-tool="true" href="apps/Solanar_Live_Weather_index.html">Weather Vortex</a><a data-public-tool="true" href="apps/Solanar_Planetarium_index.html">Planetarium</a><a data-age-sensitive="true" href="apps/environmental_news_index.html">Environmental News</a></div></div>
+<div><h3>Learning</h3><div class="footerLinks"><a href="#early">Early Weather Learning</a><a data-curriculum-gate="true" href="weather-academy/">Weather Academy</a><a data-curriculum-gate="true" href="weather-academy/Solanar-Certification-year-01/">Professional Certificate</a><a data-curriculum-gate="true" href="weather-academy/Graduate-Programs/">Graduate Programs</a></div></div>
+<div><h3>Research</h3><div class="footerLinks"><a data-public-tool="true" href="apps/Solanar-TraceLab/">TraceLab</a><a data-age-sensitive="true" href="https://vervenveda.github.io/PLERASearch.github.io/" rel="noopener" target="_blank">PLERA Search</a><a href="https://artist1970.github.io/noema-ai.github.io/" rel="noopener" target="_blank">NAIB — Public Intelligence Director</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/" rel="noopener" target="_blank">Khaemenes Academy</a></div></div>
+</div>
+<div class="bottom">© <span id="year"></span> Jennifer Kay Pearl · Verve N Veda · Khaemenes Academy · All Rights Reserved</div>
+</div>
 </footer>
-
 <script>
 "use strict";
 const $=id=>document.getElementById(id);
@@ -612,7 +641,7 @@ const ROLE_INFO={
  student:{eyebrow:"Student view · learn from the sky around you",tag:"Explore weather at your level.",copy:"Start with Kids SkyLab and the early-weather games, then grow through Weather 101–304 into advanced atmospheric science."},
  family:{eyebrow:"One atmosphere · many ways to explore it",tag:"Weather for today. Atmospheric science for a lifetime.",copy:"Solanar is the atmospheric-science ecosystem of Verve N Veda and Khaemenes Academy: live weather, child-friendly discovery, K–12 Weather Academy, professional meteorology, graduate study and scientific research tools."},
  professional:{eyebrow:"Professional meteorology · evidence · operations",tag:"Build from fundamentals to forecast-office practice.",copy:"Enter the two-year Professional Meteorology Certificate, use professional evidence forms and tools, and continue into specialized graduate atmospheric-science programs."},
- research:{eyebrow:"Graduate research · computation · remote sensing",tag:"Analyze the atmosphere, not just the forecast.",copy:"Open TraceLab, advanced meteorology tracks, NWP and data assimilation, tropical meteorology, Higher Learning mathematics, PLERA research and NAIB mentorship."}
+ research:{eyebrow:"Graduate research · computation · remote sensing",tag:"Analyze the atmosphere, not just the forecast.",copy:"Open TraceLab, advanced meteorology tracks, NWP and data assimilation, tropical meteorology, Higher Learning mathematics, PLERA research and NAIB public intelligence guidance."}
 };
 function setRole(role){
  document.body.dataset.role=role;
@@ -655,7 +684,113 @@ document.addEventListener("click",e=>{
 $("appFrame").addEventListener("load",()=>$("appLoading").classList.add("hidden"));
 $("appClose").addEventListener("click",closeApp);
 $("appModal").addEventListener("click",e=>{if(e.target===$("appModal"))closeApp()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeApp()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeAccessGuard();closeApp()}});
+
+
+/* =========================================================
+   NAIB / NOEMA ACCESS MODEL
+   ---------------------------------------------------------
+   NAIB is the public-facing intelligence.
+   NOEMA is the administrative intelligence behind NAIB and
+   governs permissions, identity, Verifier standards, provider
+   boundaries and specialist authority.
+
+   OPEN:
+   - live weather
+   - safe games and learning apps
+   - scientific tools including TraceLab / Vortex / Planetarium
+   - public program descriptions
+
+   GATED:
+   - formal curriculum progression
+   - age-sensitive full news/search surfaces
+
+   Advanced content is NOT automatically restricted.
+   ========================================================= */
+const SOLANAR_FAMILY_PROFILE="https://vervenveda.com/Khaemenes_Academy.github.io/family/";
+let pendingGuardUrl=null;
+let pendingGuardKind=null;
+
+function openAccessGuard(kind,url,label){
+  pendingGuardUrl=url;
+  pendingGuardKind=kind;
+
+  const card=$("accessGuard");
+  const title=$("accessGuardTitle");
+  const copy=$("accessGuardCopy");
+  const meta=$("accessGuardMeta");
+  const actions=$("accessGuardActions");
+  const eyebrow=$("accessGuardEyebrow");
+  const mark=$("accessGuardMark");
+
+  if(kind==="curriculum"){
+    mark.textContent="K";
+    eyebrow.textContent="KHAEMENES · FORMAL CURRICULUM";
+    title.textContent="Formal curriculum uses the learner pathway";
+    copy.textContent="The course overview stays public. Entering formal lessons, mastery records, assessments and certificate progression requires the active Khaemenes learner.";
+    meta.textContent=`Requested: ${label || "Solanar curriculum"}`;
+    actions.innerHTML=`
+      <a class="btn gold" href="${SOLANAR_FAMILY_PROFILE}" target="_blank" rel="noopener">Open Family / Learner Profile</a>
+      <button class="btn" id="guardCancel" type="button">Keep Exploring Solanar</button>`;
+  }else{
+    mark.textContent="N";
+    eyebrow.textContent="NAIB · AGE-AWARE CONTENT";
+    title.textContent="This link can open unrestricted news or research material";
+    copy.textContent="Solanar's weather, games and scientific tools stay public. This particular destination can surface material that may not be appropriate for younger learners.";
+    meta.textContent=`Requested: ${label || "full news / research tool"}`;
+    actions.innerHTML=`
+      <button class="btn primary" id="guardAdultContinue" type="button">Continue with a Grown-Up / Adult View</button>
+      <button class="btn" id="guardCancel" type="button">Stay in Student-Safe Solanar</button>`;
+  }
+
+  card.classList.add("open");
+  card.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+
+  setTimeout(()=>{
+    $("guardCancel")?.addEventListener("click",closeAccessGuard);
+    $("guardAdultContinue")?.addEventListener("click",()=>{
+      try{sessionStorage.setItem("solanar.ageSensitiveAdultOK","1")}catch{}
+      const next=pendingGuardUrl;
+      closeAccessGuard();
+      if(next) location.href=next;
+    });
+  },0);
+}
+function closeAccessGuard(){
+  $("accessGuard")?.classList.remove("open");
+  $("accessGuard")?.setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+  pendingGuardUrl=null;
+  pendingGuardKind=null;
+}
+$("accessGuardClose")?.addEventListener("click",closeAccessGuard);
+$("accessGuard")?.addEventListener("click",e=>{if(e.target===$("accessGuard"))closeAccessGuard()});
+
+document.addEventListener("click",e=>{
+  const link=e.target.closest("a[data-curriculum-gate],a[data-age-sensitive]");
+  if(!link)return;
+
+  if(link.hasAttribute("data-curriculum-gate")){
+    e.preventDefault();
+    openAccessGuard("curriculum",link.href,link.textContent.trim());
+    return;
+  }
+
+  if(link.hasAttribute("data-age-sensitive")){
+    const role=document.body.dataset.role||"family";
+    let adultOK=false;
+    try{adultOK=sessionStorage.getItem("solanar.ageSensitiveAdultOK")==="1"}catch{}
+
+    // Family, professional and research views are treated as adult-oriented
+    // presentation choices. Student view receives the content boundary.
+    if(role==="student"&&!adultOK){
+      e.preventDefault();
+      openAccessGuard("age-sensitive",link.href,link.textContent.trim());
+    }
+  }
+},true);
+
 
 /* weather */
 function codeInfo(code){

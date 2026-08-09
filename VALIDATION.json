@@ -1,0 +1,40 @@
+{
+  "release": "Solanar NAIB / NOEMA Alignment v2",
+  "valid": true,
+  "accessModel": {
+    "public": [
+      "live weather",
+      "forecast",
+      "safe games",
+      "early-learning apps",
+      "scientific tools",
+      "TraceLab",
+      "Weather Vortex",
+      "Planetarium",
+      "public course/program descriptions",
+      "NAIB public intelligence"
+    ],
+    "gated": [
+      "formal curriculum progression",
+      "full age-sensitive news/search surfaces for student view"
+    ],
+    "principle": "Advanced is not automatically restricted."
+  },
+  "identity": {
+    "public": "NAIB — Public Intelligence Director",
+    "administrative": "NOEMA — not exposed as a public Solanar assistant"
+  },
+  "checks": {
+    "publicIdentityUsesNAIB": true,
+    "noPublicNoemaLabel": true,
+    "noemaAdminComment": true,
+    "curriculumGatePresent": true,
+    "ageSensitiveGatePresent": true,
+    "safeTraceLabOpen": true,
+    "weatherStillPublic": true,
+    "roleAwareAgeBoundary": true,
+    "curriculumUsesFamilyProfile": true,
+    "ageGateNotAccountGate": true
+  },
+  "issues": []
+}
