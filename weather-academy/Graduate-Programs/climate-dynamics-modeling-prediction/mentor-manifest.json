@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "sourceId": "solanar.graduate.climate-dynamics-modeling-prediction",
+  "track": 4,
+  "name": "Graduate Certificate of Completion in Climate Dynamics, Modeling & Prediction",
+  "classification": "graduate-advanced-professional-education",
+  "mentorSearchable": true,
+  "mastery": {
+    "threshold": 80,
+    "nonCompensatory": true
+  },
+  "domains": [
+    "climate-dynamics",
+    "earth-system-science",
+    "climate-modeling",
+    "prediction",
+    "projection",
+    "ensembles",
+    "uncertainty",
+    "detection-attribution",
+    "cmip7",
+    "regional-climate",
+    "climate-services",
+    "research"
+  ],
+  "mathCore": [
+    "calculus-ii",
+    "differential-equations",
+    "linear-algebra",
+    "statistics"
+  ],
+  "mentorNotes": "Do not advance through any required competency below 80%. Require physical reasoning, units, provenance, uncertainty, reproducibility and explicit separation among observation, prediction, projection, scenario and attribution. TraceLab is the primary scientific visualization environment; CAD and Pro Art support technical and publication communication."
+}

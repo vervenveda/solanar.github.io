@@ -1,0 +1,844 @@
+{
+  "version": "1.0.0",
+  "sourceId": "solanar.graduate.climate-dynamics-modeling-prediction",
+  "track": 4,
+  "title": "Climate Dynamics, Modeling & Prediction",
+  "credential": "Graduate Certificate of Completion in Climate Dynamics, Modeling & Prediction",
+  "classification": "graduate-advanced-professional-education",
+  "weeks": 36,
+  "advancedLearningDays": 180,
+  "semesters": 2,
+  "mastery": {
+    "threshold": 80,
+    "nonCompensatory": true,
+    "sequence": [
+      "five daily competencies each >=80",
+      "required evidence complete",
+      "weekly synthesis/practical >=80",
+      "checkpoint >=80 when assigned",
+      "semester comprehensive >=80",
+      "five final domains each >=80"
+    ]
+  },
+  "mathCore": [
+    "calculus-ii",
+    "differential-equations",
+    "linear-algebra",
+    "statistics"
+  ],
+  "primaryTools": [
+    "Solanar TraceLab",
+    "Solanar Climate Lab"
+  ],
+  "supportTools": [
+    "OHMIC Foundry CAD Studio",
+    "Sagaen Studio Pro Art",
+    "Advanced Sketch",
+    "NAIB"
+  ],
+  "weeksData": [
+    {
+      "week": 1,
+      "title": "Earth System Energy Balance & Climate Scales",
+      "unit": "Climate Foundations",
+      "semester": 1,
+      "days": [
+        "Define weather, climate, variability, prediction and projection across Earth-system timescales.",
+        "Derive global energy-balance terms, spherical averaging and unit-consistent flux budgets.",
+        "Annotate top-of-atmosphere shortwave and longwave fields in Solanar TraceLab, preserving source and interpretation layers.",
+        "Run a conceptual zero-dimensional energy-balance experiment and test albedo/emissivity sensitivity.",
+        "Defend a source-grounded energy-budget statement that separates observation, assumption, inference and uncertainty."
+      ],
+      "math": [
+        "calculus-ii"
+      ],
+      "tools": [
+        "climatelab"
+      ],
+      "checkpoint": "",
+      "evidence": "week-01-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 2,
+      "title": "Radiative Transfer, Forcing & Response",
+      "unit": "Climate Foundations",
+      "semester": 1,
+      "days": [
+        "Study absorption, emission, optical depth, greenhouse behavior and the physical meaning of radiative forcing.",
+        "Connect differential energy tendencies to forcing-response equations and compute idealized transient/equilibrium responses.",
+        "Use TraceLab to interpret vertical or spectral radiation graphics and identify where model assumptions enter.",
+        "Run controlled forcing experiments and compare the conceptual model response with linear-response expectations.",
+        "Defend the distinctions among forcing, feedback, efficacy, response and uncertainty."
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations"
+      ],
+      "tools": [
+        "climatelab"
+      ],
+      "checkpoint": "",
+      "evidence": "week-02-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 3,
+      "title": "Hydrologic Cycle, Moisture & Energetic Constraints",
+      "unit": "Climate Foundations",
+      "semester": 1,
+      "days": [
+        "Trace evaporation, atmospheric transport, condensation, precipitation, runoff and storage through the coupled hydrologic cycle.",
+        "Quantify latent-heat transport, moisture budgets, anomalies and percent change with correct baselines.",
+        "Use TraceLab to diagnose regional or global moisture and precipitation anomaly patterns.",
+        "Build a water-energy pathway schematic and test how warming can alter moisture capacity without uniform precipitation change.",
+        "Submit a hydrologic-cycle memo with explicit variable definitions, units, baselines and confidence limits."
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-03-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 4,
+      "title": "Atmospheric General Circulation",
+      "unit": "Large-Scale Climate Dynamics",
+      "semester": 1,
+      "days": [
+        "Analyze Hadley, Ferrel and polar overturning, jets, eddy transports and angular-momentum constraints.",
+        "Relate pressure-gradient, Coriolis, hydrostatic and advective terms to large-scale circulation balances.",
+        "Trace climatological winds, jets and overturning signatures on reanalysis maps in TraceLab.",
+        "Use OHMIC CAD Studio to construct a meridional circulation cross-section with forces, fluxes and scale assumptions.",
+        "Defend how circulation redistributes heat and moisture and why zonal-mean diagrams cannot represent every local process."
+      ],
+      "math": [
+        "differential-equations",
+        "calculus-ii"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "",
+      "evidence": "week-04-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 5,
+      "title": "Ocean Circulation, Heat Storage & Overturning",
+      "unit": "Large-Scale Climate Dynamics",
+      "semester": 1,
+      "days": [
+        "Study wind-driven gyres, Ekman transport, geostrophic flow, overturning, stratification and ocean heat uptake.",
+        "Compute idealized heat content, transport and mixed-layer/deep-ocean response timescales.",
+        "Annotate SST, ocean-heat-content or circulation fields in TraceLab and separate surface pattern from subsurface storage.",
+        "Use OHMIC CAD Studio to build an ocean-basin cross-section showing surface forcing, overturning branches and heat reservoirs.",
+        "Write an ocean-climate interpretation separating circulation change, heat uptake, internal variability and forced response."
+      ],
+      "math": [
+        "differential-equations",
+        "calculus-ii"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "",
+      "evidence": "week-05-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 6,
+      "title": "Rotating Stratified Fluid Dynamics",
+      "unit": "Large-Scale Climate Dynamics",
+      "semester": 1,
+      "days": [
+        "Review vorticity, potential vorticity, stratification, buoyancy frequency, deformation radius and Rossby-number reasoning.",
+        "Derive selected rotating-fluid relationships, state approximations and perform dimensional checks.",
+        "Use TraceLab to identify balanced structures, fronts, jets and characteristic scales in atmospheric/oceanic fields.",
+        "Compare geostrophic, hydrostatic and ageostrophic interpretations using controlled calculation cases.",
+        "Complete a whiteboard/oral defense of scale analysis and the consequences of neglected terms."
+      ],
+      "math": [
+        "differential-equations",
+        "real-complex-analysis"
+      ],
+      "tools": [],
+      "checkpoint": "Qualifying Checkpoint I \u00b7 Climate Foundations & Fluid Dynamics",
+      "evidence": "week-06-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 7,
+      "title": "Coupled Atmosphere\u2013Ocean Feedbacks",
+      "unit": "Coupled Climate Variability",
+      "semester": 1,
+      "days": [
+        "Study two-way atmosphere-ocean coupling, memory, flux feedbacks, delayed response and coupled instability.",
+        "Represent simplified coupled systems with differential equations, matrices and stability reasoning.",
+        "Annotate paired SST, wind and pressure anomalies in TraceLab to diagnose plausible coupling pathways.",
+        "Run a conceptual coupled-response experiment and test sensitivity to damping and coupling strength.",
+        "Construct a causal-chain defense distinguishing correlation, mechanistic consistency and demonstrated causation."
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "tools": [
+        "climatelab"
+      ],
+      "checkpoint": "",
+      "evidence": "week-07-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 8,
+      "title": "ENSO Dynamics & Tropical Pacific Predictability",
+      "unit": "Coupled Climate Variability",
+      "semester": 1,
+      "days": [
+        "Examine Bjerknes feedback, thermocline adjustment, recharge/discharge concepts and ENSO diversity.",
+        "Analyze Ni\u00f1o indices, lead-lag relationships, autocorrelation and simplified oscillator behavior.",
+        "Compare SST, wind, thermocline and precipitation anomalies across ENSO phases in TraceLab.",
+        "Build a prediction-evidence matrix separating initialized forecast information, statistical climatology and hindsight.",
+        "Present an ENSO briefing with uncertainty, teleconnection limits and calibrated claims about predictability."
+      ],
+      "math": [
+        "differential-equations",
+        "statistics"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-08-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 9,
+      "title": "Monsoons, ITCZ Migration & Tropical Hydroclimate",
+      "unit": "Coupled Climate Variability",
+      "semester": 1,
+      "days": [
+        "Analyze energetic controls on ITCZ position, land-ocean thermal contrast, monsoon circulations and seasonal migration.",
+        "Quantify seasonal composites, area-weighted precipitation and energy metrics.",
+        "Trace convergence zones, rainfall maxima and circulation anomalies in TraceLab across seasons or years.",
+        "Construct a seasonal hydroclimate schematic linking radiation, land response, circulation and moisture transport.",
+        "Defend why monsoon change cannot be reduced to a single temperature metric."
+      ],
+      "math": [
+        "statistics",
+        "calculus-ii"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-09-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 10,
+      "title": "Teleconnections, Annular Modes & Pattern Analysis",
+      "unit": "Coupled Climate Variability",
+      "semester": 1,
+      "days": [
+        "Study teleconnections, stationary waves, annular modes and the limits of named climate indices.",
+        "Use covariance matrices, eigenvectors and principal-component concepts to understand EOF analysis.",
+        "Annotate a leading spatial mode and associated time series in TraceLab, including sign and sampling caveats.",
+        "Compare EOF-derived patterns with physically defined indices and test sensitivity to domain and normalization.",
+        "Write a methods defense explaining what an EOF reveals and what it cannot prove physically."
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-10-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 11,
+      "title": "Cryosphere, Snow, Sea Ice & Ice\u2013Albedo Feedback",
+      "unit": "Earth-System Feedbacks",
+      "semester": 1,
+      "days": [
+        "Study snow, sea ice, glaciers and ice sheets as radiative, dynamical and mass-balance components of climate.",
+        "Quantify anomaly and trend while separating area, extent, thickness, mass and energy concepts.",
+        "Annotate sea-ice, snow or ice-mass anomaly maps in TraceLab and document spatial heterogeneity.",
+        "Use OHMIC CAD Studio to build a labeled ice-ocean-atmosphere cross-section with energy and mass pathways.",
+        "Submit a cryosphere feedback assessment with observational constraints and uncertainty statements."
+      ],
+      "math": [
+        "differential-equations",
+        "statistics"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "",
+      "evidence": "week-11-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 12,
+      "title": "Land Surface, Biosphere & Carbon\u2013Climate Coupling",
+      "unit": "Earth-System Feedbacks",
+      "semester": 1,
+      "days": [
+        "Analyze land energy balance, soil moisture, vegetation, evapotranspiration, carbon reservoirs and atmosphere-land coupling.",
+        "Build simplified reservoir/flux equations and evaluate residence-time reasoning.",
+        "Annotate drought, vegetation, land-surface or carbon-flux anomaly fields in TraceLab.",
+        "Run a conceptual reservoir response exercise and examine feedback sign and response time.",
+        "Defend a carbon-budget statement using strict stock-versus-flow accounting."
+      ],
+      "math": [
+        "differential-equations",
+        "statistics"
+      ],
+      "tools": [],
+      "checkpoint": "Qualifying Checkpoint II \u00b7 Coupled Variability & Earth-System Feedbacks",
+      "evidence": "week-12-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 13,
+      "title": "Clouds, Aerosols & Feedback Uncertainty",
+      "unit": "Earth-System Feedbacks",
+      "semester": 1,
+      "days": [
+        "Study cloud radiative effects, aerosol forcing, microphysics, parameterization and uncertainty pathways.",
+        "Separate observational, parametric, structural and internal-variability uncertainty in quantitative cases.",
+        "Annotate cloud/aerosol forcing or response fields in TraceLab with full provenance.",
+        "Compare two conceptual parameterizations and identify conclusions robust to uncertain parameter choices.",
+        "Produce an uncertainty ledger that records direction, magnitude, confidence and competing interpretations."
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-13-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 14,
+      "title": "Paleoclimate Evidence & Natural Forcing",
+      "unit": "Climate Evidence & Inference",
+      "semester": 1,
+      "days": [
+        "Study proxies, age models, orbital forcing, volcanism, solar variability and paleoclimate constraints.",
+        "Analyze irregular sampling, calibration, chronology uncertainty and time-scale mismatch in proxy records.",
+        "Compare reconstructed and simulated patterns or diagnostic figures in TraceLab.",
+        "Construct an evidence-chain diagram from proxy measurement through calibration, chronology and reconstruction.",
+        "Defend a paleoclimate inference while marking direct evidence, proxy inference and model-assisted interpretation."
+      ],
+      "math": [
+        "statistics",
+        "real-complex-analysis"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-14-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 15,
+      "title": "Climate Sensitivity, Feedback Analysis & Emergent Constraints",
+      "unit": "Climate Evidence & Inference",
+      "semester": 1,
+      "days": [
+        "Compare equilibrium and transient climate response concepts and the physical basis of feedback decomposition.",
+        "Calculate feedback-parameter relationships and propagate uncertainty through simplified response estimates.",
+        "Annotate forcing-response and feedback diagnostics in TraceLab, including method assumptions.",
+        "Use Sagaen Pro Art to create a publication-quality explanatory plate without altering scientific scales or uncertainty.",
+        "Critique an emergent-constraint argument for mechanism, independence, selection effects and out-of-sample credibility."
+      ],
+      "math": [
+        "differential-equations",
+        "statistics",
+        "linear-algebra"
+      ],
+      "tools": [
+        "sagaen"
+      ],
+      "checkpoint": "",
+      "evidence": "week-15-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 16,
+      "title": "Detection, Attribution & Forced Response",
+      "unit": "Climate Evidence & Inference",
+      "semester": 1,
+      "days": [
+        "Distinguish detection from attribution and study fingerprints, counterfactual framing, forcing experiments and internal variability.",
+        "Analyze signal-to-noise, regression, covariance structure and ensemble means in attribution problems.",
+        "Compare observed and simulated patterns in TraceLab and mark regions that affect interpretation.",
+        "Design a controlled attribution experiment with candidate forcings, counterfactuals and falsifiable comparison criteria.",
+        "Deliver an attribution defense that states alternative explanations and evidence that would weaken the conclusion."
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-16-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 17,
+      "title": "Observations, Reanalysis & Climate Data Integrity",
+      "unit": "Climate Evidence & Inference",
+      "semester": 1,
+      "days": [
+        "Study observing systems, reanalysis, homogenization, gridding, missing data, representativeness and metadata.",
+        "Quantify anomalies, climatologies, trend sensitivity, sampling error and serial correlation.",
+        "Compare observational products or reanalysis fields in TraceLab and annotate meaningful discrepancies.",
+        "Perform a reproducibility audit covering source, variable, units, aggregation, grid, transformations and version.",
+        "Write a graduate methods-section data-integrity statement."
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-17-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 18,
+      "title": "Semester I Synthesis \u00b7 Coupled Climate Dynamics",
+      "unit": "Semester I Qualification",
+      "semester": 1,
+      "days": [
+        "Synthesize energy balance, circulation, coupling, feedbacks, variability and observation into one Earth-system framework.",
+        "Complete cumulative quantitative derivations spanning budgets, dynamics, covariance and uncertainty.",
+        "Produce a TraceLab multi-panel diagnostic from an assigned climate case with source/annotation separation preserved.",
+        "Construct a systems-level atmosphere-ocean-land-cryosphere model plate without implying false precision.",
+        "Complete the Semester I written/oral synthesis and identify unresolved questions that motivate Semester II modeling."
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations",
+        "linear-algebra",
+        "statistics"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "Qualifying Checkpoint III \u00b7 Semester I Comprehensive",
+      "evidence": "week-18-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 19,
+      "title": "Model Hierarchies: Energy-Balance to Earth-System Models",
+      "unit": "Climate Model Architecture",
+      "semester": 2,
+      "days": [
+        "Compare conceptual, box, energy-balance, intermediate-complexity, GCM and Earth-system model hierarchies by scientific purpose.",
+        "Derive a time-dependent energy-balance model and connect heat capacity, feedback and response time.",
+        "Use TraceLab to compare outputs from models of differing complexity without treating complexity as automatic accuracy.",
+        "Use OHMIC CAD Studio to build a hierarchy plate marking resolved, parameterized and prescribed processes.",
+        "Defend model choice as a function of hypothesis, scale, data, cost and uncertainty."
+      ],
+      "math": [
+        "differential-equations",
+        "calculus-ii"
+      ],
+      "tools": [
+        "cad",
+        "climatelab"
+      ],
+      "checkpoint": "",
+      "evidence": "week-19-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 20,
+      "title": "Grids, Resolution, Discretization & Numerical Representation",
+      "unit": "Climate Model Architecture",
+      "semester": 2,
+      "days": [
+        "Study horizontal/vertical grids, coordinates, resolution, truncation, numerical diffusion and conservation requirements.",
+        "Analyze discretization error, stability concepts and spherical-grid geometry through finite-difference and matrix views.",
+        "Annotate gridded model fields in TraceLab and separate resolved structure from interpolation artifacts.",
+        "Use OHMIC CAD Studio to diagram a model mesh and document grid-cell geometry and scale.",
+        "Write a resolution audit naming resolved, under-resolved and parameterized phenomena."
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "topology-differential-geometry"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "",
+      "evidence": "week-20-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 21,
+      "title": "Coupled GCM/ESM Architecture & Conservation",
+      "unit": "Climate Model Architecture",
+      "semester": 2,
+      "days": [
+        "Examine atmosphere, ocean, land, sea-ice, biogeochemical and coupler components of comprehensive models.",
+        "Audit conservation of mass, energy and tracers across component exchanges.",
+        "Use TraceLab to compare component outputs and identify physically coherent cross-component signals.",
+        "Build an OHMIC CAD model-architecture diagram with flux directions, coupling frequency and state variables.",
+        "Defend why coupling strategy, parameterization and conservation diagnostics matter to scientific interpretation."
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "",
+      "evidence": "week-21-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 22,
+      "title": "Spin-Up, Control Climate, Drift & Initialization",
+      "unit": "Climate Model Architecture",
+      "semester": 2,
+      "days": [
+        "Study equilibration, control simulations, model drift, initialization shock and slow ocean/cryosphere adjustment.",
+        "Quantify drift, baseline stability and time-dependent bias using trend and residual diagnostics.",
+        "Annotate control-run diagnostics in TraceLab and distinguish drift from forced response.",
+        "Run a two-reservoir conceptual spin-up experiment and test sensitivity to initial conditions and slow timescales.",
+        "Write a model-readiness memo stating whether the simulation is sufficiently equilibrated for the proposed inference."
+      ],
+      "math": [
+        "differential-equations",
+        "statistics"
+      ],
+      "tools": [
+        "climatelab"
+      ],
+      "checkpoint": "",
+      "evidence": "week-22-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 23,
+      "title": "Initial-Condition, Parametric & Structural Ensembles",
+      "unit": "Uncertainty & Model Evaluation",
+      "semester": 2,
+      "days": [
+        "Distinguish initial-condition, perturbed-parameter, multi-model and scenario ensembles and what uncertainty each can sample.",
+        "Use ensemble means, spread, covariance and quantiles without conflating ensemble spread with total uncertainty.",
+        "Annotate ensemble maps or plumes in TraceLab, marking robust sign and low-agreement regions.",
+        "Run the Solanar ensemble experiment and test how ensemble size affects sample mean and spread.",
+        "Defend an ensemble claim with explicit language about what is and is not represented."
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "tools": [
+        "climatelab"
+      ],
+      "checkpoint": "",
+      "evidence": "week-23-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 24,
+      "title": "Model Evaluation, Bias, Skill & Rapid Evaluation",
+      "unit": "Uncertainty & Model Evaluation",
+      "semester": 2,
+      "days": [
+        "Study process-oriented evaluation, climatological bias, variability, extremes, conservation and out-of-sample tests.",
+        "Calculate bias, RMSE, correlation and distributional diagnostics with appropriate caveats.",
+        "Compare model and observation fields in TraceLab and annotate spatially coherent biases.",
+        "Design a reproducible evaluation dashboard specification inspired by rapid-evaluation principles.",
+        "Complete a model-evaluation defense explaining why no single scalar score establishes universal model quality."
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "tools": [],
+      "checkpoint": "Qualifying Checkpoint IV \u00b7 Model Architecture & Evaluation",
+      "evidence": "week-24-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 25,
+      "title": "CMIP Experimental Design: DECK, Historical & Coordinated MIPs",
+      "unit": "Coordinated Climate Modeling",
+      "semester": 2,
+      "days": [
+        "Study standardized control, forcing, historical and coordinated model-intercomparison experiments.",
+        "Map experimental factors, controls, ensembles and response variables into a reproducible design matrix.",
+        "Compare selected multi-model fields in TraceLab while recording model, experiment, member, grid and variable metadata.",
+        "Use Sagaen Pro Art to prepare a clean experiment-design figure with a provenance record.",
+        "Defend how coordinated experiments improve comparability without eliminating shared structural limitations."
+      ],
+      "math": [
+        "statistics"
+      ],
+      "tools": [
+        "sagaen"
+      ],
+      "checkpoint": "",
+      "evidence": "week-25-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 26,
+      "title": "CMIP7 Assessment Fast Track & Next-Generation Assessment",
+      "unit": "Coordinated Climate Modeling",
+      "semester": 2,
+      "days": [
+        "Study CMIP7's evolving sustained structure, DECK, Community MIPs and Assessment Fast Track.",
+        "Analyze how scenario, forcing, ensemble and evaluation design affect downstream assessment and uncertainty.",
+        "Prepare a TraceLab comparison plate suitable for assessment use with explicit model and experiment metadata.",
+        "Define a minimum reproducible diagnostic bundle for a hypothetical model submission using rapid-evaluation principles.",
+        "Write an assessment brief separating projection, scenario, evaluation, uncertainty and policy interpretation."
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-26-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 27,
+      "title": "Regional Climate, Dynamical & Statistical Downscaling",
+      "unit": "Prediction, Projection & Regionalization",
+      "semester": 2,
+      "days": [
+        "Compare dynamical downscaling, statistical downscaling, bias adjustment and regional-model nesting.",
+        "Analyze scale mismatch, stationarity, cross-validation and added-value criteria.",
+        "Compare global and regional climate fields in TraceLab, emphasizing topography and coastline effects.",
+        "Use OHMIC CAD Studio to build a nested-domain/terrain cross-section showing boundary forcing and resolution changes.",
+        "Defend a regional product by stating inherited and newly introduced uncertainty."
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "",
+      "evidence": "week-27-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 28,
+      "title": "Seasonal-to-Decadal Prediction & Predictability",
+      "unit": "Prediction, Projection & Regionalization",
+      "semester": 2,
+      "days": [
+        "Distinguish initialized prediction from uninitialized projection and identify sources of seasonal-to-decadal predictability.",
+        "Compute deterministic and probabilistic verification concepts including anomaly correlation and reliability.",
+        "Compare hindcast/prediction anomalies with verification fields in TraceLab.",
+        "Design a hindcast protocol with lead times, drift correction, baseline comparison and training/verification separation.",
+        "Deliver a skill briefing that avoids converting conditional predictability into deterministic certainty."
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-28-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 29,
+      "title": "Climate Extremes & Event Attribution",
+      "unit": "Prediction, Projection & Regionalization",
+      "semester": 2,
+      "days": [
+        "Study return periods, changing baselines, compound extremes and probabilistic event-attribution frameworks.",
+        "Analyze tail probabilities, risk ratios, confidence intervals and sensitivity to event definition.",
+        "Annotate observed and factual/counterfactual ensemble anomaly fields in TraceLab.",
+        "Design an attribution experiment and pre-register event definition, ensemble comparison and evaluation metric.",
+        "Defend an attribution statement using probability language, physical mechanism and sensitivity tests."
+      ],
+      "math": [
+        "statistics",
+        "real-complex-analysis"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-29-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 30,
+      "title": "Carbon Cycle, Biogeochemistry & Emissions-to-Concentration Response",
+      "unit": "Earth-System Projection",
+      "semester": 2,
+      "days": [
+        "Study coupled carbon pools, ocean/land uptake, airborne fraction, biogeochemical feedbacks and ESM extensions.",
+        "Build simplified multi-box carbon equations and identify conservation constraints and feedback pathways.",
+        "Trace carbon-flux, concentration or uptake fields in TraceLab with strict stock/flow distinctions.",
+        "Extend a coupled-model architecture schematic to include carbon reservoirs and exchange pathways.",
+        "Write an emissions-to-climate chain separating emissions scenario, concentration response, forcing and temperature response."
+      ],
+      "math": [
+        "differential-equations",
+        "statistics"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "Qualifying Checkpoint V \u00b7 Prediction, Projection & Earth-System Modeling",
+      "evidence": "week-30-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 31,
+      "title": "Ice Sheets, Sea Level & Long-Term Commitment",
+      "unit": "Earth-System Projection",
+      "semester": 2,
+      "days": [
+        "Study thermal expansion, glacier mass change, ice-sheet dynamics, gravitational fingerprints and long response times.",
+        "Analyze component sea-level contributions and uncertainty aggregation without assuming independence by default.",
+        "Annotate regional sea-level or cryosphere projection fields in TraceLab.",
+        "Use OHMIC CAD Studio to construct a coastline/ice-ocean schematic showing processes relevant to sea-level commitment.",
+        "Deliver a sea-level memo distinguishing near-term range, long-term commitment and deep uncertainty."
+      ],
+      "math": [
+        "differential-equations",
+        "statistics"
+      ],
+      "tools": [
+        "cad"
+      ],
+      "checkpoint": "",
+      "evidence": "week-31-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 32,
+      "title": "Uncertainty Quantification & Probabilistic Projection",
+      "unit": "Earth-System Projection",
+      "semester": 2,
+      "days": [
+        "Integrate scenario, model, internal variability, parameter, observational and methodological uncertainty into a structured framework.",
+        "Use variance, covariance, conditional probability and sensitivity analysis for selected uncertainty contributions.",
+        "Annotate uncertainty maps or fan charts in TraceLab and identify dominant uncertainty by scale or horizon.",
+        "Run a Monte Carlo conceptual projection experiment and test sensitivity to distributional assumptions.",
+        "Write a probabilistic projection statement with calibrated language and a transparent uncertainty budget."
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "tools": [
+        "climatelab"
+      ],
+      "checkpoint": "",
+      "evidence": "week-32-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 33,
+      "title": "Hybrid Physics\u2013AI/ML Climate Modeling",
+      "unit": "Emerging Climate Modeling",
+      "semester": 2,
+      "days": [
+        "Study surrogate models, emulators, learned parameterizations and hybrid physics-ML systems with scientific guardrails.",
+        "Relate regression, optimization, dimensionality reduction and dynamical constraints to climate-model ML workflows.",
+        "Compare baseline and ML/hybrid diagnostics in TraceLab, emphasizing failure patterns and out-of-distribution behavior.",
+        "Design validation with conservation checks, physical bounds, withheld regimes and reproducibility.",
+        "Defend when an ML component improves scientific utility and when predictive performance alone is insufficient."
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics",
+        "differential-equations"
+      ],
+      "tools": [],
+      "checkpoint": "",
+      "evidence": "week-33-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 34,
+      "title": "Climate Services, Risk, Decision Support & Communication",
+      "unit": "Research Translation",
+      "semester": 2,
+      "days": [
+        "Translate climate information into hazards, exposure, vulnerability, risk and decision-relevant services without collapsing these concepts.",
+        "Quantify thresholds, conditional probabilities and decision metrics while separating science from value judgments.",
+        "Build a TraceLab decision-support map with uncertainty and spatial limits explicitly marked.",
+        "Use Sagaen Pro Art to produce a professional figure that remains faithful to the underlying data and provenance.",
+        "Present a stakeholder briefing stating what evidence supports, what it does not support and what choices remain outside the science."
+      ],
+      "math": [
+        "statistics"
+      ],
+      "tools": [
+        "sagaen"
+      ],
+      "checkpoint": "",
+      "evidence": "week-34-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 35,
+      "title": "Capstone Climate Experiment, Reproducibility & Figure Suite",
+      "unit": "Research Translation",
+      "semester": 2,
+      "days": [
+        "Freeze the capstone hypothesis, experiment design, variables, comparison periods, ensemble choices and falsification criteria.",
+        "Complete quantitative analysis and document every transformation, diagnostic and uncertainty decision.",
+        "Produce the principal TraceLab diagnostic suite while preserving original source layers and exportable overlays.",
+        "Use OHMIC CAD and Sagaen Pro Art only where scientifically justified for methods, architecture or communication figures.",
+        "Submit the manuscript-quality evidence package and complete a reproducibility audit."
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra",
+        "differential-equations"
+      ],
+      "tools": [
+        "cad",
+        "sagaen"
+      ],
+      "checkpoint": "",
+      "evidence": "week-35-evidence",
+      "threshold": 80
+    },
+    {
+      "week": 36,
+      "title": "Graduate Synthesis, Assessment & Oral Defense Readiness",
+      "unit": "Semester II Qualification",
+      "semester": 2,
+      "days": [
+        "Synthesize climate dynamics, model architecture, coordinated experiments, prediction, projection and uncertainty.",
+        "Complete cumulative quantitative problems spanning dynamics, statistics, ensembles, feedbacks and evaluation.",
+        "Defend an unfamiliar climate-model diagnostic in TraceLab using only supplied evidence and metadata.",
+        "Complete a model-design/research-methods practical with conservation, reproducibility and uncertainty requirements.",
+        "Submit the capstone manuscript and complete the pre-defense oral examination before the five-gate graduate final."
+      ],
+      "math": [
+        "calculus-ii",
+        "differential-equations",
+        "linear-algebra",
+        "statistics"
+      ],
+      "tools": [],
+      "checkpoint": "Qualifying Checkpoint VI \u00b7 Semester II Comprehensive",
+      "evidence": "week-36-evidence",
+      "threshold": 80
+    }
+  ]
+}

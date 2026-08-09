@@ -1,0 +1,1 @@
+Upload `climate-dynamics-modeling-prediction` into `weather-academy/Graduate-Programs/`, then activate Track 04 on the parent Graduate Programs page using PARENT_INDEX_UPDATE.md.
