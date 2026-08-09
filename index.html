@@ -3,523 +3,314 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Solanar Observatory — a clean, role-aware weather gateway for students, families, and adult explorers.">
-<meta name="theme-color" content="#061728">
+<meta name="description" content="Solanar Observatory — live weather, atmospheric science, early learning, K–12 Weather Academy, professional meteorology, graduate study, research tools and environmental exploration.">
+<meta name="theme-color" content="#04111c">
 <meta name="color-scheme" content="dark">
-<title>Solanar Observatory | Weather for Everyone</title>
-
+<title>Solanar Observatory | Weather · Learning · Research</title>
 <style>
 :root{
-  --night:#04111c;
-  --night2:#071e30;
-  --panel:#0b2940;
-  --panel2:#103b58;
-  --ink:#f0fbff;
-  --muted:#afc9d7;
-  --cyan:#79e5f7;
-  --blue:#5faeff;
-  --aurora:#78e9bd;
-  --gold:#f1cb7e;
-  --violet:#baa8ff;
-  --danger:#ff9097;
-  --line:rgba(255,255,255,.14);
-  --shadow:0 22px 60px rgba(0,0,0,.30);
-  --r:11px;
-  --r2:21px;
-  --max:1240px;
-  --display:"Gaspacho","Cormorant Garamond",Baskerville,Georgia,serif;
+  --night:#030b13;--night2:#061827;--deep:#0b2d45;--panel:#0a2236;--panel2:#103b56;
+  --ink:#f2fbff;--muted:#abc4d2;--cyan:#76e7ff;--blue:#65aaff;--aurora:#78e6b6;
+  --gold:#f0cb79;--violet:#b7a4ff;--rose:#ff9fab;--line:rgba(255,255,255,.14);
+  --line2:rgba(118,231,255,.28);--shadow:0 24px 70px rgba(0,0,0,.34);--r:11px;--r2:21px;
+  --max:1280px;--display:"Gaspacho","Cormorant Garamond",Baskerville,Georgia,serif;
   --sans:"Brandon Grotesque","Montserrat","Avenir Next",Avenir,Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:86px;background:var(--night)}
+html{scroll-behavior:smooth;scroll-padding-top:92px;background:var(--night)}
 body{
-  margin:0;min-width:300px;color:var(--ink);font-family:var(--sans);line-height:1.6;
+  margin:0;min-width:300px;color:var(--ink);font-family:var(--sans);line-height:1.58;
   background:
-    radial-gradient(circle at 10% 0,rgba(95,174,255,.18),transparent 30rem),
-    radial-gradient(circle at 92% 3%,rgba(120,233,189,.14),transparent 28rem),
-    linear-gradient(180deg,#0a2942,var(--night2) 27rem,var(--night));
+    radial-gradient(circle at 8% 0,rgba(101,170,255,.20),transparent 30rem),
+    radial-gradient(circle at 90% 5%,rgba(120,230,182,.14),transparent 30rem),
+    linear-gradient(180deg,#0a2b45 0,#061827 31rem,#030b13 68rem);
 }
-body[data-role="student"]{
-  --panel:#103552;--panel2:#194b66;--gold:#ffe487;--aurora:#94f0bb;
-}
+body[data-role="student"]{--gold:#ffe491;--aurora:#8ff0ba;--panel2:#154a63}
+body[data-role="family"]{--gold:#f5d78a;--aurora:#8de3c8}
+body[data-role="professional"]{--gold:#e8bd67;--aurora:#77d9df;--panel2:#183a5a}
+body[data-role="research"]{--gold:#d9c38b;--aurora:#a99cff;--panel2:#332f58}
 a{color:inherit}
-button,input,select{font:inherit}
+button,input{font:inherit}
 button{color:inherit;cursor:pointer}
 [hidden]{display:none!important}
-:focus-visible{outline:3px solid rgba(121,229,247,.8);outline-offset:3px}
+:focus-visible{outline:3px solid rgba(118,231,255,.82);outline-offset:3px}
 .shell{width:min(calc(100% - 28px),var(--max));margin-inline:auto}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.eyebrow{margin:0;color:var(--aurora);font-size:.67rem;font-weight:850;letter-spacing:.17em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--display);font-weight:500}
+h2{font-size:clamp(2.25rem,5vw,4.5rem);line-height:1;margin:0}
+.subtle{color:var(--muted)}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:1px solid var(--line);border-radius:999px;background:#061827;color:#ddecf3;font-size:.65rem;font-weight:800}
+.btn{
+  min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 14px;
+  border:1px solid var(--line);border-radius:var(--r);background:#082039;color:#fff;text-decoration:none;
+  font-weight:850;font-size:.78rem;transition:.18s ease
+}
+.btn:hover{transform:translateY(-2px);border-color:var(--cyan)}
+.btn.primary{border:0;color:#03202b;background:linear-gradient(135deg,#a4f1ff,#84ebbd)}
+.btn.gold{border:0;color:#2c1e00;background:linear-gradient(135deg,#ffe9a7,#e8ba5b)}
+.btn.violet{border:0;background:linear-gradient(135deg,#6559a8,#9b79ce);color:white}
+.card{
+  border:1px solid var(--line);border-radius:var(--r2);
+  background:linear-gradient(150deg,rgba(15,52,79,.96),rgba(7,26,44,.96));
+  box-shadow:var(--shadow)
+}
 
 /* ticker */
-.ticker{
-  height:35px;overflow:hidden;position:relative;background:#01080d;border-bottom:1px solid var(--line);white-space:nowrap
-}
-.ticker:before,.ticker:after{
-  content:"";position:absolute;top:0;bottom:0;width:38px;z-index:3;pointer-events:none
-}
-.ticker:before{left:0;background:linear-gradient(90deg,#01080d,transparent)}
-.ticker:after{right:0;background:linear-gradient(270deg,#01080d,transparent)}
-.tickerTrack{
-  width:max-content;height:100%;display:flex;align-items:center;
-  animation:solanarTickerRTL 28s linear infinite;will-change:transform
-}
-.tickerGroup{
-  flex:0 0 auto;display:flex;align-items:center;gap:24px;padding-right:24px;
-  font-size:.71rem;font-weight:700;letter-spacing:.065em;text-transform:uppercase
-}
-.ticker a{text-decoration:none;color:#e9faff}
-.ticker a:hover{color:var(--gold)}
-.sep{color:var(--aurora)}
+.ticker{height:35px;overflow:hidden;background:#01070c;border-bottom:1px solid var(--line);white-space:nowrap}
+.tickerTrack{width:max-content;height:100%;display:flex;align-items:center;animation:solanarTicker 28s linear infinite;will-change:transform}
+.tickerGroup{display:flex;align-items:center;gap:24px;padding-right:24px;font-size:.67rem;font-weight:800;letter-spacing:.075em;text-transform:uppercase}
+.ticker a{text-decoration:none}.ticker a:hover{color:var(--gold)}.sep{color:var(--aurora)}
 .ticker:hover .tickerTrack,.ticker:focus-within .tickerTrack{animation-play-state:paused}
-@keyframes solanarTickerRTL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes solanarTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* header */
-.siteHeader{
-  position:sticky;top:0;z-index:1200;background:rgba(4,17,28,.95);
-  border-bottom:1px solid var(--line);backdrop-filter:blur(18px)
-}
-.nav{
-  min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px
-}
-.brand{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none}
+.siteHeader{position:sticky;top:0;z-index:1400;background:rgba(3,11,19,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
 .mark{
-  width:47px;height:47px;flex:0 0 47px;display:grid;place-items:center;position:relative;border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#d9fbff 0 5%,#4fa7d2 18%,#0b4d72 55%,#06192b 74%);
-  box-shadow:0 0 0 1px rgba(255,255,255,.20),0 0 28px rgba(95,174,255,.30)
+  width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;position:relative;border-radius:50%;
+  background:radial-gradient(circle at 35% 29%,#dcfbff 0 5%,#51acd4 17%,#0b557d 53%,#051a2a 75%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 28px rgba(101,170,255,.28)
 }
-.mark:after{
-  content:"";position:absolute;width:59px;height:18px;border:1px solid rgba(120,233,189,.65);
-  border-radius:50%;transform:rotate(-15deg)
-}
-.brand strong{display:block;font:500 1.15rem/1.1 var(--display);letter-spacing:.045em}
-.brand small{display:block;margin-top:4px;color:var(--muted);font-size:.61rem;letter-spacing:.13em;text-transform:uppercase}
+.mark:after{content:"";position:absolute;width:60px;height:18px;border:1px solid rgba(120,230,182,.65);border-radius:50%;transform:rotate(-15deg)}
+.brand strong{display:block;font:500 1.16rem/1.1 var(--display);letter-spacing:.04em}
+.brand small{display:block;color:var(--muted);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;margin-top:4px}
 .headerActions{display:flex;align-items:center;gap:8px}
-.roleMini{
-  display:flex;padding:4px;border:1px solid var(--line);border-radius:999px;background:#061827
-}
-.roleMini button{
-  min-height:34px;border:0;border-radius:999px;padding:6px 10px;background:transparent;
-  color:#c8dbe6;font-size:.7rem;font-weight:800
-}
-.roleMini button.active{color:#04202d;background:linear-gradient(135deg,var(--cyan),var(--aurora))}
-.menuBtn{
-  min-height:42px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:#071b2d;font-weight:800
-}
-
-/* mega menu */
+.roleMini{display:flex;padding:4px;border:1px solid var(--line);border-radius:999px;background:#061827}
+.roleMini button{min-height:34px;border:0;border-radius:999px;background:transparent;padding:6px 9px;color:#c8dce6;font-size:.65rem;font-weight:850}
+.roleMini button.active{color:#03202b;background:linear-gradient(135deg,var(--cyan),var(--aurora))}
+.menuBtn{min-height:42px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:#071b2d;font-weight:850}
 .menuWrap{position:relative}
 .mega{
-  position:absolute;right:0;top:calc(100% + 10px);width:min(920px,calc(100vw - 28px));
+  position:absolute;right:0;top:calc(100% + 10px);width:min(1020px,calc(100vw - 28px));
   display:none;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:12px;
-  border:1px solid var(--line);border-radius:18px;background:#061827;box-shadow:var(--shadow)
+  border:1px solid var(--line);border-radius:18px;background:#051522;box-shadow:var(--shadow)
 }
 .mega.open{display:grid}
-.menuCol{padding:9px;border:1px solid #ffffff0f;border-radius:13px;background:#081f34}
-.menuCol h3{
-  margin:0 0 8px;color:var(--gold);font:600 .85rem/1.2 var(--display);letter-spacing:.03em
-}
-.menuCol a{
-  display:block;padding:8px 9px;border-radius:9px;text-decoration:none;color:#d8ebf4;font-size:.75rem
-}
-.menuCol a:hover{background:#103a5b;color:#fff}
+.menuCol{padding:10px;border:1px solid #ffffff0d;border-radius:13px;background:#081e31}
+.menuCol h3{margin:0 0 8px;color:var(--gold);font:600 .86rem/1.2 var(--display)}
+.menuCol a{display:block;padding:8px 9px;border-radius:9px;text-decoration:none;color:#d7e9f1;font-size:.72rem}
+.menuCol a:hover{background:#103957;color:#fff}
 
 /* hero */
-.hero{padding:54px 0 25px}
-.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
-.eyebrow{
-  margin:0 0 10px;color:var(--aurora);font-size:.7rem;font-weight:850;letter-spacing:.17em;text-transform:uppercase
-}
-h1,h2,h3{font-family:var(--display);font-weight:500}
-h1{
-  margin:0;font-size:clamp(4.2rem,9vw,8rem);line-height:.88;letter-spacing:.01em
-}
-.heroTag{margin:17px 0 0;color:#ddf5ff;font:500 clamp(1.2rem,2.6vw,1.9rem)/1.3 var(--display)}
-.heroCopy{max-width:700px;margin:16px 0 0;color:var(--muted);line-height:1.75}
-.rolePicker{
-  display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;padding:8px;width:max-content;max-width:100%;
-  border:1px solid var(--line);border-radius:999px;background:#061827
-}
-.roleBtn{
-  min-height:44px;border:0;border-radius:999px;padding:9px 15px;background:transparent;
-  color:#d7e7ef;font-weight:850
-}
-.roleBtn.active{color:#03202b;background:linear-gradient(135deg,#a2f2ff,#83edbc)}
+.hero{padding:56px 0 30px}
+.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:center}
+h1{margin:10px 0 0;font-size:clamp(4.8rem,10vw,9rem);line-height:.82;letter-spacing:.005em}
+.heroTag{margin:20px 0 0;font:500 clamp(1.2rem,2.8vw,2rem)/1.25 var(--display);color:#e7f8ff}
+.heroCopy{max-width:730px;margin:15px 0 0;color:var(--muted);line-height:1.78}
+.rolePicker{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}
+.roleBtn{min-height:42px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:#061827;color:#d7e7ef;font-size:.71rem;font-weight:850}
+.roleBtn.active{color:#03202b;border-color:transparent;background:linear-gradient(135deg,var(--cyan),var(--aurora))}
 .heroActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.btn{
-  min-height:44px;display:inline-flex;align-items:center;justify-content:center;
-  padding:10px 14px;border:1px solid var(--line);border-radius:var(--r);background:#082039;
-  color:#fff;text-decoration:none;font-weight:850;font-size:.8rem
-}
-.btn.primary{border:0;color:#04202d;background:linear-gradient(135deg,#a2f2ff,#83edbc)}
-.btn.gold{border:0;color:#2b1d00;background:linear-gradient(135deg,#ffe9a5,#eebd5c)}
-.btn:hover{transform:translateY(-1px)}
+.pathNote{margin-top:12px;color:#bdd3df;font-size:.72rem}
 
-/* weather orb */
+/* orb */
 .weatherOrb{
-  min-height:430px;position:relative;display:grid;place-items:center;
-  border:1px solid var(--line);border-radius:30px;overflow:hidden;
-  background:
-    radial-gradient(circle at 50% 42%,rgba(95,174,255,.24),transparent 17rem),
-    linear-gradient(150deg,#0d3c60,#07182b);
+  min-height:455px;position:relative;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);
+  border-radius:30px;background:radial-gradient(circle at 50% 42%,rgba(101,170,255,.24),transparent 17rem),linear-gradient(150deg,#0d3d61,#07182b);
   box-shadow:var(--shadow)
 }
-.weatherOrb:before,.weatherOrb:after{
-  content:"";position:absolute;border-radius:50%;border:1px solid rgba(121,229,247,.24)
-}
-.weatherOrb:before{width:340px;height:340px}
-.weatherOrb:after{width:420px;height:220px;transform:rotate(-18deg);border-color:rgba(120,233,189,.28)}
+.weatherOrb:before,.weatherOrb:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(118,231,255,.22)}
+.weatherOrb:before{width:340px;height:340px}.weatherOrb:after{width:430px;height:220px;transform:rotate(-18deg);border-color:rgba(120,230,182,.28)}
 .orbCore{
-  position:relative;z-index:2;width:260px;height:260px;border-radius:50%;
-  display:grid;place-items:center;text-align:center;overflow:hidden;
-  background:
-    radial-gradient(circle at 36% 28%,rgba(146,230,255,.24),transparent 23%),
-    radial-gradient(circle at 50% 45%,#155f8b 0,#0d456b 47%,#062840 72%,#031522 100%);
-  border:1px solid rgba(151,232,255,.32);
-  box-shadow:
-    inset -30px -25px 50px rgba(0,0,0,.52),
-    inset 16px 10px 30px rgba(255,255,255,.07),
-    0 0 54px rgba(98,201,255,.38)
+  position:relative;z-index:2;width:270px;height:270px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:radial-gradient(circle at 36% 28%,rgba(146,230,255,.24),transparent 23%),radial-gradient(circle at 50% 45%,#155f8b 0,#0d456b 47%,#062840 72%,#031522 100%);
+  border:1px solid rgba(151,232,255,.32);box-shadow:inset -30px -25px 50px rgba(0,0,0,.52),inset 16px 10px 30px rgba(255,255,255,.07),0 0 54px rgba(98,201,255,.38)
 }
-.orbIcon{
-  position:absolute;left:50%;top:46%;
-  transform:translate(-50%,-50%);
-  font-size:10.7rem;line-height:1;
-  filter:drop-shadow(0 13px 18px rgba(0,0,0,.34));
-  z-index:1
-}
-.orbWeatherBadge{
-  position:absolute;right:18px;top:18px;z-index:3;
-  width:48px;height:48px;display:grid;place-items:center;
-  border:1px solid rgba(255,255,255,.24);border-radius:50%;
-  background:rgba(3,20,35,.82);box-shadow:0 8px 24px rgba(0,0,0,.25);
-  font-size:1.55rem
-}
-.orbReadout{
-  position:absolute;left:50%;bottom:18px;z-index:4;
-  transform:translateX(-50%);
-  width:calc(100% - 34px);padding:8px 11px;
-  border:1px solid rgba(255,255,255,.18);border-radius:12px;
-  background:linear-gradient(180deg,rgba(2,14,25,.76),rgba(2,14,25,.91));
-  box-shadow:0 10px 25px rgba(0,0,0,.20);
-  backdrop-filter:blur(7px)
-}
-.orbTemp{font-size:1.55rem;font-weight:900;line-height:1}
-.orbCond{margin-top:4px;color:#d8edf6;font-size:.76rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.orbStats{
-  position:absolute;left:14px;right:14px;bottom:14px;z-index:3;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:7px
-}
-.orbStat{
-  padding:10px;border:1px solid var(--line);border-radius:11px;background:#041524d8;text-align:center
-}
-.orbStat b{display:block;color:var(--cyan);font-size:.88rem}
-.orbStat small{color:var(--muted);font-size:.63rem}
+.orbIcon{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);font-size:11rem;line-height:1;filter:drop-shadow(0 13px 18px rgba(0,0,0,.34))}
+.orbBadge{position:absolute;right:19px;top:19px;width:48px;height:48px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.24);border-radius:50%;background:rgba(3,20,35,.82);font-size:1.55rem}
+.orbReadout{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:calc(100% - 34px);padding:8px 11px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(2,14,25,.88);z-index:4}
+.orbTemp{font-size:1.55rem;font-weight:900;line-height:1}.orbCond{margin-top:4px;color:#d8edf6;font-size:.76rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.orbStats{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.orbStat{padding:10px;border:1px solid var(--line);border-radius:11px;background:#041524d8;text-align:center}
+.orbStat b{display:block;color:var(--cyan);font-size:.88rem}.orbStat small{color:var(--muted);font-size:.63rem}
 
-/* shared weather search */
-.weatherDesk{
-  margin-top:18px;padding:13px;border:1px solid var(--line);border-radius:17px;
-  background:linear-gradient(135deg,rgba(121,229,247,.06),rgba(120,233,189,.05)),#07192d;
-  box-shadow:var(--shadow)
-}
+/* weather desk */
+.weatherDesk{margin-top:18px;padding:13px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(135deg,rgba(118,231,255,.06),rgba(120,230,182,.05)),#07192d;box-shadow:var(--shadow)}
 .searchRow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px}
-.searchRow input{
-  min-height:46px;min-width:0;border:1px solid var(--line);border-radius:12px;padding:10px 12px;
-  background:#031323;color:#fff
-}
-.weatherStatus{min-height:20px;margin-top:8px;color:var(--muted);font-size:.78rem}
+.searchRow input{min-height:46px;min-width:0;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#031323;color:#fff}
+.weatherStatus{min-height:20px;margin-top:8px;color:var(--muted);font-size:.77rem}
+.metricGrid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;margin-top:10px}
+.metric{padding:10px;border:1px solid var(--line);border-radius:11px;background:#061a2d;text-align:center}
+.metric small{display:block;color:var(--muted);font-size:.62rem;text-transform:uppercase}.metric b{display:block;margin-top:4px;font-size:.82rem}
+.forecastGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-top:10px}
+.day{min-height:145px;padding:11px;border:1px solid var(--line);border-radius:13px;background:#081e33;text-align:center}
+.dayIcon{font-size:1.8rem;margin:7px 0}.day small{display:block;color:var(--muted);font-size:.67rem;margin-top:3px}
+.alertBox{display:grid;gap:7px;margin-top:10px}.alert{padding:10px 12px;border:1px solid #ff909744;border-radius:12px;background:#421527;color:#ffe8ec;font-size:.78rem}
 
-/* dashboard */
-.section{padding:34px 0}
-.sectionHead{text-align:center;max-width:850px;margin:0 auto 18px}
-.sectionHead small{
-  color:var(--aurora);font-weight:850;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase
+/* sections */
+.section{padding:46px 0}
+.section.alt{background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.006));border-block:1px solid #ffffff0b}
+.sectionHead{text-align:center;max-width:900px;margin:0 auto 22px}
+.sectionHead p{max-width:760px;margin:11px auto 0;color:var(--muted)}
+.ecoGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.eco{
+  min-height:215px;padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(150deg,var(--panel),var(--panel2));
+  text-decoration:none;display:flex;flex-direction:column;gap:9px;box-shadow:var(--shadow);transition:.18s ease
 }
-.sectionHead h2{margin:7px 0 0;font-size:clamp(2.2rem,5vw,4.2rem);line-height:1}
-.sectionHead p{margin:10px auto 0;color:var(--muted);max-width:720px}
+.eco:hover{transform:translateY(-3px);border-color:var(--aurora)}
+.ecoIcon{font-size:2.4rem}.eco strong{font:600 1.35rem/1.1 var(--display)}.eco span{color:var(--muted);font-size:.78rem;line-height:1.48}.eco em{margin-top:auto;color:var(--gold);font-style:normal;font-size:.7rem;font-weight:850}
 
-.weatherGrid{
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px
-}
-.metric{
-  padding:12px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(160deg,var(--panel),var(--panel2))
-}
-.metric small{display:block;color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}
-.metric b{display:block;margin-top:5px;font-size:1rem}
+/* continuum */
+.continuum{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin-top:18px}
+.step{min-height:120px;padding:11px;border:1px solid var(--line);border-radius:14px;background:#071c31;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.step b{font-family:var(--display);font-size:.95rem}.step small{color:var(--muted);font-size:.62rem}.step i{font-style:normal;font-size:1.45rem}
 
-.forecastGrid{
-  display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-top:10px
-}
-.day{
-  min-height:152px;padding:12px;border:1px solid var(--line);border-radius:13px;background:#081e33;text-align:center
-}
-.day b{display:block}
-.dayIcon{font-size:1.9rem;margin:7px 0}
-.day small{display:block;color:var(--muted);font-size:.69rem;margin-top:3px}
-.alertBox{display:grid;gap:7px;margin-top:10px}
-.alert{
-  padding:10px 12px;border:1px solid #ff909744;border-radius:12px;background:#421527;color:#ffe8ec;font-size:.8rem
-}
+/* early weather */
+.ageBands{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.band{padding:19px}.band h3{font-size:1.6rem;margin:4px 0 6px}.band p{color:var(--muted);font-size:.78rem}
+.appList{display:grid;gap:7px;margin-top:12px}
+.appLink{display:flex;align-items:center;gap:9px;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#061827;text-decoration:none;font-size:.75rem;font-weight:800}
+.appLink:hover{border-color:var(--cyan);background:#0b2942}
+.appLink i{font-style:normal;font-size:1.2rem}
 
-/* quick launch */
-.quickGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.launch{
-  min-height:166px;display:flex;flex-direction:column;gap:9px;padding:15px;
-  border:1px solid var(--line);border-radius:17px;background:linear-gradient(150deg,var(--panel),var(--panel2));
-  text-decoration:none;box-shadow:var(--shadow)
-}
-.launch:hover{transform:translateY(-3px);border-color:var(--aurora)}
-.launchIcon{font-size:2.2rem}
-.launch strong{font:600 1.15rem/1.15 var(--display)}
-.launch span{color:var(--muted);font-size:.79rem;line-height:1.45}
-.launch em{margin-top:auto;color:var(--gold);font-style:normal;font-size:.72rem;font-weight:850}
+/* academy */
+.ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.level{padding:22px;min-height:320px;display:flex;flex-direction:column}
+.level .num{font-size:4.2rem;font-weight:950;line-height:1;opacity:.22}.level h3{font-size:2rem;margin:8px 0}.level p{color:var(--muted);font-size:.8rem;line-height:1.56}.level .actions{margin-top:auto;display:flex;gap:7px;flex-wrap:wrap}
+.level.elementary{background:linear-gradient(145deg,#0d5c72,#17496b)}
+.level.middle{background:linear-gradient(145deg,#2a456f,#5a548d)}
+.level.high{background:linear-gradient(145deg,#313451,#6a496f)}
 
-/* role panels */
-.rolePanel{
-  margin-top:14px;padding:16px;border:1px solid var(--line);border-radius:20px;
-  background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.018))
-}
-.gradeRow{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
-.gradeBtn{
-  border:1px solid var(--line);border-radius:999px;padding:8px 11px;background:#081f35;font-weight:800;font-size:.76rem
-}
-.gradeBtn.active{color:#04202d;background:linear-gradient(135deg,var(--cyan),var(--aurora));border-color:transparent}
-.roleFeature{
-  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px
-}
-.featureBox{
-  padding:15px;border:1px solid var(--line);border-radius:15px;background:#071c31
-}
-.featureBox h3{margin:0;font-size:1.3rem;color:var(--gold)}
-.featureBox p{margin:7px 0 0;color:var(--muted);font-size:.82rem}
-.featureLinks{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}
+/* certification */
+.certGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cert{padding:23px;min-height:330px;display:flex;flex-direction:column}
+.cert h3{font-size:2.2rem;margin:8px 0}.cert p{color:var(--muted);font-size:.8rem}.cert .statRow{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:13px 0}
+.cert .stat{padding:10px;border:1px solid var(--line);border-radius:11px;background:#071827;text-align:center}.cert .stat b{display:block;color:var(--gold);font-size:1.25rem}.cert .stat small{color:var(--muted);font-size:.6rem}
+.cert .actions{margin-top:auto;display:flex;gap:7px;flex-wrap:wrap}
+.tracks{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 
-/* school portals */
-.schoolGrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
-.school{
-  min-height:125px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#071c31;
-  text-align:center;text-decoration:none;display:flex;flex-direction:column;justify-content:center;align-items:center
-}
-.school:hover{border-color:var(--gold);background:#0d2b45}
-.school i{font-style:normal;font-size:1.7rem}
-.school b{display:block;margin-top:7px;font-family:var(--display)}
-.school small{display:block;margin-top:4px;color:var(--muted);font-size:.67rem}
+/* graduate */
+.gradGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.grad{padding:19px;min-height:240px;display:flex;flex-direction:column}.grad h3{font-size:1.5rem;margin:7px 0}.grad p{color:var(--muted);font-size:.78rem}.grad .actions{margin-top:auto}
+.future{opacity:.72}
 
-/* specialist row */
-.specialGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
-.special{
-  min-height:115px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#071c31;
-  text-align:center;text-decoration:none
-}
-.special:hover{border-color:var(--cyan)}
-.special strong{display:block;margin-top:6px;font-family:var(--display)}
-.special span{display:block;margin-top:4px;color:var(--muted);font-size:.72rem}
+/* tools */
+.toolGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.tool{min-height:180px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+.tool:hover{border-color:var(--cyan)}.tool i{font-style:normal;font-size:2rem}.tool strong{font:600 1.15rem/1.1 var(--display)}.tool span{color:var(--muted);font-size:.73rem}.tool em{margin-top:auto;color:var(--gold);font-style:normal;font-size:.68rem;font-weight:850}
 
+/* network */
+.networkGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.network{padding:15px;text-align:center;text-decoration:none}.network:hover{border-color:var(--gold)}.network i{font-style:normal;font-size:1.8rem}.network b{display:block;margin-top:7px;font-family:var(--display)}.network small{display:block;color:var(--muted);font-size:.67rem;margin-top:4px}
 
-/* App popup windows */
+/* popup */
 body.app-modal-open{overflow:hidden}
-.appModal{
-  position:fixed;inset:0;z-index:5000;display:none;align-items:center;justify-content:center;
-  padding:18px;background:rgba(0,7,13,.78);backdrop-filter:blur(12px)
-}
+.appModal{position:fixed;inset:0;z-index:5000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,7,13,.80);backdrop-filter:blur(12px)}
 .appModal.open{display:flex}
-.appWindow{
-  width:min(1180px,96vw);height:min(820px,92vh);display:grid;grid-template-rows:auto 1fr;
-  overflow:hidden;border:1px solid rgba(121,229,247,.34);border-radius:18px;
-  background:#04111c;box-shadow:0 34px 100px rgba(0,0,0,.62)
-}
-.appWindowBar{
-  min-height:58px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;
-  padding:9px 10px 9px 16px;border-bottom:1px solid var(--line);
-  background:linear-gradient(180deg,#0c2e49,#071c30)
-}
-.appWindowTitle{min-width:0}
-.appWindowTitle strong{
-  display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  font:500 1rem/1.1 var(--display);color:#fff
-}
-.appWindowTitle small{
-  display:block;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  color:var(--muted);font-size:.66rem
-}
+.appWindow{width:min(1180px,96vw);height:min(820px,92vh);display:grid;grid-template-rows:auto 1fr;overflow:hidden;border:1px solid rgba(118,231,255,.34);border-radius:18px;background:#04111c;box-shadow:0 34px 100px rgba(0,0,0,.62)}
+.appWindowBar{min-height:58px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:9px 10px 9px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0c2e49,#071c30)}
+.appWindowTitle strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:500 1rem/1.1 var(--display)}
+.appWindowTitle small{display:block;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted);font-size:.65rem}
 .appWindowActions{display:flex;align-items:center;gap:7px}
-.appOpenExternal{
-  min-height:38px;display:inline-flex;align-items:center;justify-content:center;
-  padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:#0a2942;
-  color:#e8f8ff;text-decoration:none;font-size:.72rem;font-weight:800
-}
-.appOpenExternal:hover{border-color:var(--aurora);background:#103957}
-.appClose{
-  width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.19);
-  border-radius:50%;background:#071827;color:#fff;font-size:1.7rem;line-height:1
-}
-.appClose:hover{background:#7e2430;border-color:#ff9ca5}
-.appFrameWrap{position:relative;min-height:0;background:#fff}
-.appFrame{
-  display:block;width:100%;height:100%;border:0;background:#fff
-}
-.appLoading{
-  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
-  color:#cce8f3;background:linear-gradient(145deg,#061a2c,#0a2942);
-  font-size:.82rem;letter-spacing:.04em
-}
-.appLoading.hidden{display:none}
-.appPopupHint{
-  display:inline-flex;align-items:center;gap:5px;margin-left:5px;color:var(--aurora);
-  font-size:.62rem;letter-spacing:.03em;vertical-align:middle
-}
-@media(max-width:650px){
-  .appModal{padding:7px}
-  .appWindow{width:100%;height:94vh;border-radius:12px}
-  .appWindowBar{padding-left:11px}
-  .appOpenExternal{display:none}
-  .appWindowTitle small{display:none}
-}
-
-/* contribution */
-.contributeSection{padding:42px 0 18px}
-.contributeCard{
-  max-width:820px;margin:0 auto;padding:28px;text-align:center;
-  border:1px solid var(--line);border-radius:20px;
-  background:
-    radial-gradient(circle at 50% 0,rgba(120,233,189,.13),transparent 22rem),
-    linear-gradient(155deg,#0a2a42,#071a2e);
-  box-shadow:var(--shadow)
-}
-.contributeCard small{
-  color:var(--aurora);font-weight:850;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase
-}
-.contributeCard h2{margin:7px 0 0;font-size:clamp(2rem,4vw,3.5rem)}
-.contributeCard p{max-width:650px;margin:10px auto 0;color:var(--muted)}
-.contributeButton{display:flex;justify-content:center;min-height:54px;margin-top:18px}
+.appOpenExternal{min-height:38px;display:inline-flex;align-items:center;justify-content:center;padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:#0a2942;text-decoration:none;font-size:.7rem;font-weight:800}
+.appClose{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.19);border-radius:50%;background:#071827;color:#fff;font-size:1.7rem}
+.appClose:hover{background:#7e2430}.appFrameWrap{position:relative;min-height:0;background:#fff}.appFrame{display:block;width:100%;height:100%;border:0;background:#fff}
+.appLoading{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;color:#cce8f3;background:linear-gradient(145deg,#061a2c,#0a2942);font-size:.8rem}.appLoading.hidden{display:none}
 
 /* footer */
-footer{margin-top:30px;padding:30px 0;background:#020a11;border-top:1px solid var(--line)}
-.footerGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:22px}
-footer h3{margin:0;font-size:1.05rem}
-footer p{margin:8px 0 0;color:var(--muted);font-size:.8rem}
-.footerLinks{display:grid;gap:7px;margin-top:8px}
-.footerLinks a{text-decoration:none;color:var(--muted);font-size:.77rem}
-.footerLinks a:hover{color:#fff}
-.bottom{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.72rem;text-align:center}
+footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid var(--line)}
+.footerGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:20px}.footerGrid h3{font-size:1rem;margin:0}.footerGrid p{color:var(--muted);font-size:.76rem}
+.footerLinks{display:grid;gap:6px;margin-top:8px}.footerLinks a{text-decoration:none;color:var(--muted);font-size:.73rem}.footerLinks a:hover{color:#fff}
+.bottom{margin-top:22px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:.7rem;text-align:center}
 
-@media(max-width:1050px){
-  .heroGrid{grid-template-columns:1fr}.weatherOrb{min-height:390px}
-  .forecastGrid{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .schoolGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .specialGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .mega{grid-template-columns:1fr 1fr}
+@media(max-width:1100px){
+  .heroGrid{grid-template-columns:1fr}.metricGrid{grid-template-columns:repeat(4,1fr)}
+  .continuum{grid-template-columns:repeat(4,1fr)}.toolGrid{grid-template-columns:repeat(3,1fr)}
+  .networkGrid{grid-template-columns:repeat(3,1fr)}.mega{grid-template-columns:1fr 1fr}
 }
-@media(max-width:760px){
-  .roleMini{display:none}.searchRow{grid-template-columns:1fr}
-  .weatherGrid{grid-template-columns:1fr 1fr}.quickGrid{grid-template-columns:1fr 1fr}
-  .roleFeature{grid-template-columns:1fr}
-  .forecastGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .schoolGrid,.specialGrid{grid-template-columns:1fr 1fr}
-  .footerGrid{grid-template-columns:1fr}.mega{position:fixed;left:14px;right:14px;top:80px;width:auto;max-height:calc(100vh - 95px);overflow:auto}
+@media(max-width:850px){
+  .roleMini{display:none}.searchRow{grid-template-columns:1fr}.ecoGrid,.ageBands,.ladder,.certGrid,.gradGrid{grid-template-columns:1fr}
+  .forecastGrid{grid-template-columns:repeat(4,1fr)}.toolGrid{grid-template-columns:repeat(2,1fr)}
+  .networkGrid{grid-template-columns:repeat(2,1fr)}.footerGrid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:500px){
-  .shell{width:min(calc(100% - 18px),var(--max))}
-  .brand small{display:none}.hero{padding-top:36px}
-  .weatherOrb{min-height:350px}.orbCore{width:220px;height:220px}.orbIcon{font-size:9rem}.orbWeatherBadge{width:42px;height:42px;right:12px;top:12px;font-size:1.3rem}
-  .orbStats{grid-template-columns:1fr 1fr}
-  .weatherGrid,.quickGrid,.schoolGrid,.specialGrid{grid-template-columns:1fr}
-  .forecastGrid{grid-template-columns:1fr 1fr}
+@media(max-width:560px){
+  .shell{width:min(calc(100% - 18px),var(--max))}.brand small{display:none}.hero{padding-top:36px}
+  .weatherOrb{min-height:370px}.orbCore{width:225px;height:225px}.orbIcon{font-size:9rem}
+  .orbStats{grid-template-columns:1fr 1fr}.metricGrid{grid-template-columns:1fr 1fr}.forecastGrid{grid-template-columns:1fr 1fr}
+  .continuum{grid-template-columns:1fr 1fr}.toolGrid,.networkGrid,.footerGrid{grid-template-columns:1fr}
+  .mega{position:fixed;left:10px;right:10px;top:82px;width:auto;max-height:calc(100vh - 95px);overflow:auto}
+  .appModal{padding:7px}.appWindow{width:100%;height:94vh;border-radius:12px}.appOpenExternal{display:none}
 }
-@media(prefers-reduced-motion:reduce){
-  *{scroll-behavior:auto!important;transition:none!important}
-  .tickerTrack{animation:none!important}
-}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.tickerTrack{animation:none!important}}
 </style>
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
+<body data-role="family" id="top">
 
-<body data-role="adult" id="top">
-
-<div class="ticker" role="region" aria-label="Solanar weather shortcuts">
+<div class="ticker" aria-label="Solanar network shortcuts">
   <div class="tickerTrack">
     <div class="tickerGroup">
-      <a href="#weather">🌦 Current Weather</a><span class="sep">✦</span>
-      <a href="#forecast">🗓 7-Day Forecast</a><span class="sep">✦</span>
-      <a href="https://radar.weather.gov/" target="_blank" rel="noopener">📡 Radar</a><span class="sep">✦</span>
-      <a href="apps/environmental_news_index.html">📰 Weather &amp; Environmental News</a><span class="sep">✦</span>
-      <a href="apps/Solanar_kids_skylab_index.html">🚀 Kids SkyLab</a><span class="sep">✦</span>
-      <a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">🔎 Student Research</a><span class="sep">✦</span>
+      <a href="#weather">🌦 Live Weather</a><span class="sep">✦</span>
+      <a href="#early">🌈 Early Weather Learning</a><span class="sep">✦</span>
+      <a href="#academy">🎓 Weather Academy 101–304</a><span class="sep">✦</span>
+      <a href="#professional">🛰 Professional Meteorology</a><span class="sep">✦</span>
+      <a href="#graduate">🏛 Graduate Programs</a><span class="sep">✦</span>
+      <a href="apps/Solanar-TraceLab/">✎ TraceLab</a><span class="sep">✦</span>
+      <a href="apps/Solanar_Live_Weather_index.html">🌀 Weather Vortex</a><span class="sep">✦</span>
+      <a href="apps/environmental_news_index.html">📰 Environmental News</a><span class="sep">✦</span>
       <a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">N · NAIB Mentor</a><span class="sep">✦</span>
-      <a href="apps/Solanar_Platform_index.html">🌐 Advanced Weather</a><span class="sep">✦</span>
-      <a href="#contribute">♡ Contribute to Solanar</a><span class="sep">✦</span>
     </div>
     <div class="tickerGroup" aria-hidden="true">
-      <span>🌦 Current Weather</span><span class="sep">✦</span>
-      <span>🗓 7-Day Forecast</span><span class="sep">✦</span>
-      <span>📡 Radar</span><span class="sep">✦</span>
-      <span>📰 Weather &amp; Environmental News</span><span class="sep">✦</span>
-      <span>🚀 Kids SkyLab</span><span class="sep">✦</span>
-      <span>🔎 Student Research</span><span class="sep">✦</span>
-      <span>N · NAIB Mentor</span><span class="sep">✦</span>
-      <span>🌐 Advanced Weather</span><span class="sep">✦</span>
-      <span>♡ Contribute to Solanar</span><span class="sep">✦</span>
+      <span>🌦 Live Weather</span><span class="sep">✦</span><span>🌈 Early Weather Learning</span><span class="sep">✦</span>
+      <span>🎓 Weather Academy 101–304</span><span class="sep">✦</span><span>🛰 Professional Meteorology</span><span class="sep">✦</span>
+      <span>🏛 Graduate Programs</span><span class="sep">✦</span><span>✎ TraceLab</span><span class="sep">✦</span>
+      <span>🌀 Weather Vortex</span><span class="sep">✦</span><span>📰 Environmental News</span><span class="sep">✦</span><span>N · NAIB Mentor</span><span class="sep">✦</span>
     </div>
   </div>
 </div>
 
 <header class="siteHeader">
   <div class="shell nav">
-    <a class="brand" href="#top" aria-label="Solanar Observatory home">
+    <a class="brand" href="#top">
       <span class="mark" aria-hidden="true"></span>
-      <span>
-        <strong>Solanar Observatory</strong>
-        <small>Weather · Earth · Sky · Learning</small>
-      </span>
+      <span><strong>Solanar Observatory</strong><small>Weather · Learning · Research</small></span>
     </a>
-
     <div class="headerActions">
-      <div class="roleMini" aria-label="Choose view">
+      <div class="roleMini" aria-label="Choose Solanar view">
         <button type="button" data-role-set="student">Student</button>
-        <button type="button" data-role-set="adult" class="active">Parent / Adult</button>
+        <button type="button" data-role-set="family" class="active">Family</button>
+        <button type="button" data-role-set="professional">Professional</button>
+        <button type="button" data-role-set="research">Research</button>
       </div>
-
       <div class="menuWrap">
-        <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="megaMenu">☰ Explore</button>
-        <nav class="mega" id="megaMenu" aria-label="Solanar and Khaemenes navigation">
-
+        <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false">☰ Explore</button>
+        <nav class="mega" id="megaMenu">
           <div class="menuCol">
-            <h3>Solanar Weather</h3>
-            <a href="apps/Solanar_Live_Weather_index.html">🌦 Live Weather</a>
-            <a href="apps/Solanar_Planetarium_index.html">🌌 Planetarium</a>
-            <a href="apps/Solanar_Platform_index.html">🌐 Platform</a>
-            <a href="apps/Solanar_Weather_Vortex_index.html">🌀 Weather Vortex</a>
-            <a href="apps/Lunar_reflections_index.html">🌕 Lunar Reflections</a>
-            <a href="apps/environmental_news_index.html">📰 Weather &amp; Environment News</a>
+            <h3>Observe</h3>
+            <a href="#weather">🌦 Current Weather</a>
+            <a data-popup href="apps/Solanar_Live_Weather_index.html">🌀 Weather Vortex</a>
+            <a data-popup href="apps/Solanar_Planetarium_index.html">🌌 Planetarium</a>
+            <a data-popup href="apps/Solanar_Platform_index.html">🌐 Solanar Platform</a>
+            <a data-popup href="apps/Lunar_reflections_index.html">🌕 Lunar Reflections</a>
+            <a data-popup href="apps/environmental_news_index.html">📰 Environmental News</a>
           </div>
-
           <div class="menuCol">
-            <h3>Khaemenes School Portals</h3>
-            <a href="https://vervenveda.com/Khaemenes_Preschool.github.io/" target="_blank" rel="noopener">🧸 Preschool / Crèche</a>
-            <a href="https://vervenveda.com/Khaemenes_KinderGarden.github.io/" target="_blank" rel="noopener">🌻 Kinder Garden</a>
-            <a href="https://vervenveda.com/Khaemenes_Elementary.github.io/" target="_blank" rel="noopener">🎒 Elementary</a>
-            <a href="https://vervenveda.com/Khaemenes_Middle.github.io/" target="_blank" rel="noopener">🧭 Middle School</a>
-            <a href="https://vervenveda.com/Khaemenes_High.github.io/" target="_blank" rel="noopener">🎓 High School</a>
-            <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/" target="_blank" rel="noopener">🏛 Higher Learning</a>
+            <h3>Learn</h3>
+            <a href="#early">🌈 Early Weather Learning</a>
+            <a data-popup href="apps/Solanar_kids_skylab_index.html">🚀 Kids SkyLab</a>
+            <a href="weather-academy/">☀ Weather Academy</a>
+            <a href="weather-academy/elementary-weather-academy/">Weather 101–105</a>
+            <a href="weather-academy/middle-weather-academy/">Weather 201–203</a>
+            <a href="weather-academy/high-school-weather-academy/">Weather 301–304</a>
           </div>
-
           <div class="menuCol">
-            <h3>Mentors &amp; Research</h3>
+            <h3>Advance</h3>
+            <a href="weather-academy/Solanar-Certification-year-01/">Professional Certificate · Year I</a>
+            <a href="weather-academy/Solanar-Certification-year-02/">Professional Certificate · Year II</a>
+            <a href="weather-academy/Graduate-Programs/">Graduate Programs</a>
+            <a href="weather-academy/Graduate-Programs/advanced-operational-meteorology/">Advanced Operational Meteorology</a>
+            <a href="weather-academy/Graduate-Programs/numerical-weather-prediction-data-assimilation/">NWP & Data Assimilation</a>
+            <a href="weather-academy/Graduate-Programs/tropical-meteorology-hurricane-science/">Tropical Meteorology</a>
+          </div>
+          <div class="menuCol">
+            <h3>Research & Network</h3>
+            <a data-popup href="apps/Solanar-TraceLab/">✎ Solanar TraceLab</a>
             <a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">N · NAIB Mentor</a>
             <a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">🔎 PLERA Search</a>
-            <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/" target="_blank" rel="noopener">👨‍👩‍👧 Family Profiles</a>
-            <a href="https://vervenveda.com/Khaemenes_Academy.github.io/Parent_resources/Homeschool_compass_index.html" target="_blank" rel="noopener">🧭 Homeschool Compass</a>
-            <a href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener">🏫 Academy Gateway</a>
+            <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/" target="_blank" rel="noopener">∑ Higher Learning Mathematics</a>
+            <a href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener">Khaemenes Academy</a>
+            <a href="https://vervenveda.com/" target="_blank" rel="noopener">Verve N Veda</a>
           </div>
-
-          <div class="menuCol">
-            <h3>Network Homes</h3>
-            <a href="https://vervenveda.com/" target="_blank" rel="noopener">✦ Verve N Veda Home</a>
-            <a href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener">K · Khaemenes Academy</a>
-            <a href="https://vervenveda.github.io/Arshif.github.io/" target="_blank" rel="noopener">📚 ARSHIF</a>
-            <a href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener">✓ The Verifier</a>
-            <a href="#schools">🎓 School Portals</a>
-          </div>
-
         </nav>
       </div>
     </div>
@@ -530,41 +321,32 @@ footer p{margin:8px 0 0;color:var(--muted);font-size:.8rem}
 <section class="hero">
   <div class="shell">
     <div class="heroGrid">
-
       <div>
-        <p class="eyebrow" id="roleEyebrow">Weather for families, adults, educators, and explorers</p>
+        <p class="eyebrow" id="roleEyebrow">One atmosphere · many ways to explore it</p>
         <h1>Solanar</h1>
-        <p class="heroTag" id="roleTag">Your weather starts here.</p>
+        <p class="heroTag" id="roleTag">Weather for today. Atmospheric science for a lifetime.</p>
         <p class="heroCopy" id="roleCopy">
-          Check current conditions, the week ahead, radar, alerts, environmental news, Moon and sky tools, and deeper atmospheric resources from one clean weather gateway.
+          Solanar is the atmospheric-science ecosystem of Verve N Veda and Khaemenes Academy: live weather, child-friendly discovery, a continuous K–12 Weather Academy, professional meteorology certification, graduate-level directional study, environmental reporting, scientific analysis tools, and research mentorship.
         </p>
-
-        <div class="rolePicker" aria-label="Choose Solanar view">
+        <div class="rolePicker">
           <button class="roleBtn" data-role-set="student" type="button">🚀 Student</button>
-          <button class="roleBtn active" data-role-set="adult" type="button">🌦 Parent / Adult</button>
+          <button class="roleBtn active" data-role-set="family" type="button">🌦 Family / Adult</button>
+          <button class="roleBtn" data-role-set="professional" type="button">🛰 Professional</button>
+          <button class="roleBtn" data-role-set="research" type="button">🔬 Research</button>
         </div>
-
-        <div class="heroActions" id="adultHeroActions">
-          <a class="btn primary" href="#weather">Check My Weather</a>
-          <a class="btn" href="https://radar.weather.gov/" target="_blank" rel="noopener">📡 Radar</a>
-          <a class="btn" href="apps/Solanar_Platform_index.html">Advanced Weather</a>
+        <div class="heroActions">
+          <a class="btn primary" href="#weather">Check Weather</a>
+          <a class="btn gold" href="weather-academy/">Enter Weather Academy</a>
+          <a class="btn" data-popup href="apps/Solanar-TraceLab/">Open TraceLab</a>
         </div>
-
-        <div class="heroActions" id="studentHeroActions" hidden>
-          <a class="btn primary" href="apps/Solanar_kids_skylab_index.html">🚀 Launch Kids SkyLab</a>
-          <a class="btn gold" href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">Meet NAIB Mentor</a>
-          <a class="btn" href="#studentZone">Choose My Grade</a>
-        </div>
+        <div class="pathNote">Observe → Play → Learn → Analyze → Forecast → Research → Specialize</div>
       </div>
 
       <div class="weatherOrb" aria-label="Current weather summary">
         <div class="orbCore">
-          <div class="orbIcon" id="orbIcon" aria-hidden="true">🌍</div>
-          <div class="orbWeatherBadge" id="orbWeatherBadge" aria-label="Weather condition">🌦️</div>
-          <div class="orbReadout">
-            <div class="orbTemp" id="orbTemp">—</div>
-            <div class="orbCond" id="orbCond">Choose a location</div>
-          </div>
+          <div class="orbIcon">🌍</div>
+          <div class="orbBadge" id="orbBadge">🌦️</div>
+          <div class="orbReadout"><div class="orbTemp" id="orbTemp">—</div><div class="orbCond" id="orbCond">Choose a location</div></div>
         </div>
         <div class="orbStats">
           <div class="orbStat"><b id="orbPlace">World</b><small>Location</small></div>
@@ -573,249 +355,248 @@ footer p{margin:8px 0 0;color:var(--muted);font-size:.8rem}
           <div class="orbStat"><b id="orbAlerts">—</b><small>Alerts</small></div>
         </div>
       </div>
-
     </div>
 
-    <section class="weatherDesk" id="weather" aria-label="Weather search">
+    <section class="weatherDesk" id="weather">
       <div class="searchRow">
-        <input id="placeInput" autocomplete="off" placeholder="Search city, country, or U.S. ZIP — e.g. Holiday, FL / London / 34667">
+        <input id="placeInput" autocomplete="off" placeholder="Search city, country, or U.S. ZIP — e.g. Tampa, FL / London / 34667">
         <button class="btn primary" id="searchBtn" type="button">Search Weather</button>
         <button class="btn" id="geoBtn" type="button">📍 Use My Location</button>
       </div>
-      <div class="weatherStatus" id="weatherStatus">Search a place or use your location to load current weather and the 7-day forecast.</div>
+      <div class="weatherStatus" id="weatherStatus">Search a place or use your location to load current conditions and a 7-day forecast.</div>
+      <div class="metricGrid">
+        <div class="metric"><small>Feels Like</small><b id="feels">—</b></div>
+        <div class="metric"><small>Humidity</small><b id="humidity">—</b></div>
+        <div class="metric"><small>Pressure</small><b id="pressure">—</b></div>
+        <div class="metric"><small>Visibility</small><b id="visibility">—</b></div>
+        <div class="metric"><small>Precip</small><b id="precip">—</b></div>
+        <div class="metric"><small>Gust</small><b id="gust">—</b></div>
+        <div class="metric"><small>Sunrise</small><b id="sunrise">—</b></div>
+        <div class="metric"><small>Sunset</small><b id="sunset">—</b></div>
+      </div>
+      <div class="alertBox" id="alertBox"></div>
+      <div class="forecastGrid" id="forecastGrid">
+        <div class="day"><b>Forecast</b><div class="dayIcon">🌦️</div><small>Load a location to begin.</small></div>
+      </div>
     </section>
   </div>
 </section>
 
-<section class="section" aria-labelledby="nowTitle">
+<section class="section alt" id="ecosystem">
   <div class="shell">
     <div class="sectionHead">
-      <small>Live weather at a glance</small>
-      <h2 id="nowTitle">What is happening outside?</h2>
+      <p class="eyebrow">The Solanar ecosystem</p>
+      <h2>One sky. A complete learning continuum.</h2>
+      <p>Solanar is organized so a preschool weather game, a fifth-grade forecast lab, a high-school atmospheric-science course, a professional forecasting shift, and a graduate research track all belong to the same scientific family.</p>
+    </div>
+    <div class="ecoGrid">
+      <a class="eco" href="#weather"><div class="ecoIcon">🌦️</div><strong>Observe</strong><span>Current conditions, weekly forecast, official U.S. alert context, live atmosphere tools and environmental reporting.</span><em>Start with the sky →</em></a>
+      <a class="eco" href="#early"><div class="ecoIcon">🌈</div><strong>Early Weather Learning</strong><span>Preschool, Kinder Garden and Elementary weather games and observation tools gathered into one child-friendly Solanar pathway.</span><em>Explore early weather →</em></a>
+      <a class="eco" href="#academy"><div class="ecoIcon">🎓</div><strong>K–12 Weather Academy</strong><span>Weather 101–304: a continuous 36-week course ladder from observation through forecasting, remote sensing, climate and computation.</span><em>Enter the Academy →</em></a>
+      <a class="eco" href="#professional"><div class="ecoIcon">🛰️</div><strong>Professional Meteorology</strong><span>Two-year, four-semester professional preparation in atmospheric science, mathematics, physics, data, communication and operational practice.</span><em>See certification →</em></a>
+      <a class="eco" href="#graduate"><div class="ecoIcon">🏛️</div><strong>Graduate Direction</strong><span>Advanced Operational Meteorology, Numerical Weather Prediction & Data Assimilation, and Tropical Meteorology & Hurricane Science.</span><em>View graduate tracks →</em></a>
+      <a class="eco" href="#tools"><div class="ecoIcon">🔬</div><strong>Scientific Tools & Research</strong><span>TraceLab, Planetarium, Vortex, Platform, Kids SkyLab, environmental news, PLERA research and NAIB mentorship.</span><em>Open the lab network →</em></a>
     </div>
 
-    <div class="weatherGrid">
-      <div class="metric"><small>Feels Like</small><b id="feels">—</b></div>
-      <div class="metric"><small>Humidity</small><b id="humidity">—</b></div>
-      <div class="metric"><small>Pressure</small><b id="pressure">—</b></div>
-      <div class="metric"><small>Visibility</small><b id="visibility">—</b></div>
-      <div class="metric"><small>Precipitation</small><b id="precip">—</b></div>
-      <div class="metric"><small>Wind Gust</small><b id="gust">—</b></div>
-      <div class="metric"><small>Sunrise</small><b id="sunrise">—</b></div>
-      <div class="metric"><small>Sunset</small><b id="sunset">—</b></div>
-    </div>
-
-    <div class="alertBox" id="alertBox"></div>
-  </div>
-</section>
-
-<section class="section" id="forecast" aria-labelledby="forecastTitle">
-  <div class="shell">
-    <div class="sectionHead">
-      <small>Plan the week</small>
-      <h2 id="forecastTitle">7-Day Forecast</h2>
-      <p>Daily highs, lows, precipitation chances, and conditions for the selected location.</p>
-    </div>
-    <div class="forecastGrid" id="forecastGrid">
-      <div class="day"><b>Forecast</b><div class="dayIcon">🌦️</div><small>Load a location to begin.</small></div>
+    <div class="continuum" aria-label="Solanar learning continuum">
+      <div class="step"><i>🧸</i><b>Preschool</b><small>Notice weather</small></div>
+      <div class="step"><i>🌻</i><b>Kinder Garden</b><small>Play & identify</small></div>
+      <div class="step"><i>🎒</i><b>Elementary</b><small>Observe & measure</small></div>
+      <div class="step"><i>🧭</i><b>Middle</b><small>Analyze systems</small></div>
+      <div class="step"><i>🎓</i><b>High School</b><small>Forecast & model</small></div>
+      <div class="step"><i>🛰️</i><b>Professional</b><small>Operate & communicate</small></div>
+      <div class="step"><i>🔬</i><b>Graduate</b><small>Research & specialize</small></div>
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="quickTitle">
+<section class="section" id="early">
   <div class="shell">
     <div class="sectionHead">
-      <small>Easy weather shortcuts</small>
-      <h2 id="quickTitle">Go straight to what you need.</h2>
+      <p class="eyebrow">Weather begins with curiosity</p>
+      <h2>Early Weather Learning</h2>
+      <p>These weather apps live across the Khaemenes Preschool, Kinder Garden and Elementary repositories. Solanar brings them together so young learners can follow the sky across campuses without losing the thread.</p>
     </div>
 
-    <div class="quickGrid" id="adultQuick">
-      <a class="launch" href="https://radar.weather.gov/" target="_blank" rel="noopener"><div class="launchIcon">📡</div><strong>Radar</strong><span>Open the official U.S. radar viewer for storms and precipitation.</span><em>Open Radar →</em></a>
-      <a class="launch" href="#forecast"><div class="launchIcon">🗓</div><strong>Weekly Forecast</strong><span>See the seven-day outlook for the location you selected above.</span><em>View the Week →</em></a>
-      <a class="launch" href="apps/environmental_news_index.html"><div class="launchIcon">📰</div><strong>Weather &amp; Environmental News</strong><span>World weather, climate, oceans, wildlife, hazards, and environmental reporting.</span><em>Read the News →</em></a>
-      <a class="launch" href="apps/Solanar_Planetarium_index.html"><div class="launchIcon">🌌</div><strong>Planetarium</strong><span>Atmosphere, official alerts, hazard trackers, Moon, and observing conditions.</span><em>Open Planetarium →</em></a>
-      <a class="launch" href="apps/Solanar_Weather_Vortex_index.html"><div class="launchIcon">🌀</div><strong>Weather Vortex</strong><span>Visual atmosphere lab with 12-hour traces, Earth imagery, Moon context, and weather resources.</span><em>Enter the Vortex →</em></a>
-      <a class="launch" href="apps/Solanar_Platform_index.html"><div class="launchIcon">🌐</div><strong>Solanar Platform</strong><span>The full weather, hazards, Earth, resources, saved locations, and briefing command center.</span><em>Open Platform →</em></a>
-    </div>
-
-    <div class="quickGrid" id="studentQuick" hidden>
-      <a class="launch" href="apps/Solanar_kids_skylab_index.html"><div class="launchIcon">🚀</div><strong>Kids SkyLab</strong><span>Live weather, radar, missions, badges, science questions, and a sky journal.</span><em>Launch SkyLab →</em></a>
-      <a class="launch" href="apps/environmental_news_index.html"><div class="launchIcon">📰</div><strong>Weather News</strong><span>Age-aware world weather and environmental stories for student readers.</span><em>Explore News →</em></a>
-      <a class="launch" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener"><div class="launchIcon">🔎</div><strong>Student Research</strong><span>Use PLERA Search to investigate weather, climate, oceans, Earth science, and a story you are studying.</span><em>Research with PLERA →</em></a>
-      <a class="launch" href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener"><div class="launchIcon">N</div><strong>NAIB Mentor</strong><span>Ask questions, work through evidence, and get age-aware guidance for weather and environmental study.</span><em>Meet Your Mentor →</em></a>
-      <a class="launch" href="https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/weather-match_index.html" target="_blank" rel="noopener"><div class="launchIcon">🌦️</div><strong>Weather Games</strong><span>Jump into Kinder Garden weather matching and connected child-weather activities.</span><em>Play &amp; Learn →</em></a>
-      <a class="launch" href="#schools"><div class="launchIcon">🎓</div><strong>My School Portal</strong><span>Open Preschool, Kinder Garden, Elementary, Middle, High School, or Higher Learning.</span><em>Choose School →</em></a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="studentZone" aria-labelledby="studentTitle">
-  <div class="shell">
-    <div class="rolePanel" id="studentPanel" hidden>
-      <div class="sectionHead" style="margin-bottom:10px">
-        <small>Student view</small>
-        <h2 id="studentTitle">Make Solanar fit your level.</h2>
-        <p>Choose a grade band. SkyLab and the learning links will meet you with the right kind of weather questions and explanations.</p>
-      </div>
-
-      <div class="gradeRow" role="group" aria-label="Student grade band">
-        <button class="gradeBtn" data-grade="k2" type="button">🌱 K–2</button>
-        <button class="gradeBtn active" data-grade="35" type="button">🧭 Grades 3–5</button>
-        <button class="gradeBtn" data-grade="68" type="button">⚡ Grades 6–8</button>
-        <button class="gradeBtn" data-grade="912" type="button">🛰 Grades 9–12</button>
-      </div>
-
-      <div class="roleFeature">
-        <div class="featureBox">
-          <h3 id="gradeTitle">Weather Explorer · Grades 3–5</h3>
-          <p id="gradeCopy">Observe what is happening, learn weather vocabulary, compare forecasts, and ask where the information came from.</p>
-          <div class="featureLinks">
-            <a class="btn primary" href="apps/Solanar_kids_skylab_index.html">Open SkyLab</a>
-            <a class="btn" href="apps/environmental_news_index.html">Read Weather News</a>
-          </div>
+    <div class="ageBands">
+      <article class="band card">
+        <span class="badge">Preschool · Crèche</span>
+        <h3>My First Weather World</h3>
+        <p>Simple weather recognition, sky observation, playful forecasting and Solanar-themed discovery for the youngest learners.</p>
+        <div class="appList">
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_for_tots_index.html"><i>🪄</i>Weather Wizard for Tots</a>
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_index.html"><i>☀️</i>Sunny's Weather Adventure</a>
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_solonarium_index.html"><i>🌍</i>Solanar Kid Weather / Solonarium</a>
         </div>
+      </article>
 
-        <div class="featureBox">
-          <h3>Research with a guide</h3>
-          <p>Search with PLERA, then bring your question or source to NAIB when you want help understanding evidence or building a research path.</p>
-          <div class="featureLinks">
-            <a class="btn gold" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">PLERA Search</a>
-            <a class="btn" href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">NAIB Mentor</a>
-          </div>
+      <article class="band card">
+        <span class="badge">Kinder Garden</span>
+        <h3>Weather Play Lab</h3>
+        <p>Direction, matching, weather patterns, sky exploration and cloud-themed mathematics for children ready for more structured exploration.</p>
+        <div class="appList">
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html"><i>🧭</i>Weather Compass</a>
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html"><i>🌌</i>Weather Planetarium</a>
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_wizard_index.html"><i>🪄</i>Weather Wizard Lab</a>
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/weather-match_index.html"><i>🌦️</i>Weather Match</a>
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/kindergarten_math_cloud_index.html"><i>☁️</i>Kindergarten Math Cloud</a>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <div class="rolePanel" id="adultPanel">
-      <div class="sectionHead" style="margin-bottom:10px">
-        <small>Parent / adult view</small>
-        <h2>Weather, family learning, and planning.</h2>
-        <p>Use Solanar for everyday weather decisions, deeper weather study, environmental news, and direct access to family learning resources.</p>
-      </div>
-
-      <div class="roleFeature">
-        <div class="featureBox">
-          <h3>Family Weather</h3>
-          <p>Check the week, radar, official alerts, environmental stories, and open SkyLab when a child wants to explore the same weather at their level.</p>
-          <div class="featureLinks">
-            <a class="btn primary" href="#forecast">Weekly Forecast</a>
-            <a class="btn" href="apps/Solanar_kids_skylab_index.html">Kids SkyLab</a>
-          </div>
+      <article class="band card">
+        <span class="badge">Elementary</span>
+        <h3>Junior Weather Scientist</h3>
+        <p>Live forecast context, weather science, experiments, quizzes, Moon study, air-quality awareness and a growing observation record.</p>
+        <div class="appList">
+          <a class="appLink" data-popup href="https://vervenveda.github.io/Khaemenes_Elementary.github.io/games/elementary_weather_portal/"><i>🌤️</i>Elementary Weather Portal</a>
+          <a class="appLink" href="weather-academy/elementary-weather-academy/"><i>📘</i>Weather Academy 101–105</a>
+          <a class="appLink" data-popup href="apps/Solanar_kids_skylab_index.html"><i>🚀</i>Kids SkyLab</a>
         </div>
-
-        <div class="featureBox">
-          <h3>Parent Resources</h3>
-          <p>Continue into the Academy family portal or Homeschool Compass for family profiles, planning, and educational guidance.</p>
-          <div class="featureLinks">
-            <a class="btn gold" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/" target="_blank" rel="noopener">Family Profiles</a>
-            <a class="btn" href="https://vervenveda.com/Khaemenes_Academy.github.io/Parent_resources/Homeschool_compass_index.html" target="_blank" rel="noopener">Homeschool Compass</a>
-          </div>
-        </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="schools" aria-labelledby="schoolsTitle">
+<section class="section alt" id="academy">
   <div class="shell">
     <div class="sectionHead">
-      <small>Khaemenes Academy</small>
-      <h2 id="schoolsTitle">School &amp; grade portals</h2>
-      <p>Move directly to the learner’s current campus.</p>
+      <p class="eyebrow">Khaemenes Academy · Solanar Weather Academy</p>
+      <h2>Weather 101 through 304</h2>
+      <p>A 12-grade atmospheric-science ladder. Grade labels are recommended starting points; readiness and mastery determine advancement. Required gated work must reach 80% before later work unlocks.</p>
     </div>
 
-    <div class="schoolGrid">
-      <a class="school" href="https://vervenveda.com/Khaemenes_Preschool.github.io/" target="_blank" rel="noopener"><i>🧸</i><b>Preschool</b><small>Crèche</small></a>
-      <a class="school" href="https://vervenveda.com/Khaemenes_KinderGarden.github.io/" target="_blank" rel="noopener"><i>🌻</i><b>Kinder Garden</b><small>A kinder place to learn</small></a>
-      <a class="school" href="https://vervenveda.com/Khaemenes_Elementary.github.io/" target="_blank" rel="noopener"><i>🎒</i><b>Elementary</b><small>Grades 1–5</small></a>
-      <a class="school" href="https://vervenveda.com/Khaemenes_Middle.github.io/" target="_blank" rel="noopener"><i>🧭</i><b>Middle School</b><small>Grades 6–8</small></a>
-      <a class="school" href="https://vervenveda.com/Khaemenes_High.github.io/" target="_blank" rel="noopener"><i>🎓</i><b>High School</b><small>Grades 9–12</small></a>
-      <a class="school" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/" target="_blank" rel="noopener"><i>🏛</i><b>Higher Learning</b><small>College &amp; beyond</small></a>
+    <div class="ladder">
+      <article class="level card elementary">
+        <div class="num">101–105</div>
+        <h3>Elementary Weather</h3>
+        <p>Grades 1–5 recommended. Observation, instruments, water cycle, clouds, hazards, forecasting, radar, climate and increasingly scientific weather records.</p>
+        <div class="actions"><a class="btn primary" href="weather-academy/elementary-weather-academy/">Open 101–105</a><a class="btn" data-popup href="https://vervenveda.github.io/Khaemenes_Elementary.github.io/games/elementary_weather_portal/">Weather Portal</a></div>
+      </article>
+      <article class="level card middle">
+        <div class="num">201–203</div>
+        <h3>Middle Weather</h3>
+        <p>Grades 6–8 recommended. Atmospheric foundations, dynamic weather, severe hazards, global circulation, evidence, modeling, forecasting and Earth systems.</p>
+        <div class="actions"><a class="btn primary" href="weather-academy/middle-weather-academy/">Open 201–203</a></div>
+      </article>
+      <article class="level card high">
+        <div class="num">301–304</div>
+        <h3>High School Weather</h3>
+        <p>Grades 9–12 recommended. Thermodynamics, synoptic and mesoscale meteorology, radar, satellite, NWP, operations, climate dynamics and computational meteorology.</p>
+        <div class="actions"><a class="btn primary" href="weather-academy/high-school-weather-academy/">Open 301–304</a><a class="btn" data-popup href="apps/Solanar-TraceLab/">TraceLab</a></div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="toolsTitle">
+<section class="section" id="professional">
   <div class="shell">
     <div class="sectionHead">
-      <small>Specialized Solanar instruments</small>
-      <h2 id="toolsTitle">Go deeper when you want to.</h2>
+      <p class="eyebrow">Professional Meteorology Certificate</p>
+      <h2>Two years from foundation to operations.</h2>
+      <p>A four-semester professional sequence designed around atmospheric science, university mathematics and physics, scientific programming, observation, radar, satellite, models, forecast communication and professional evidence.</p>
     </div>
 
-    <div class="specialGrid">
-      <a class="special" href="apps/Solanar_Live_Weather_index.html"><span>🌦️</span><strong>Live Weather</strong><span>Focused current conditions and forecast.</span></a>
-      <a class="special" href="apps/Solanar_Planetarium_index.html"><span>🌌</span><strong>Planetarium</strong><span>Atmosphere, hazards, alerts, and night sky.</span></a>
-      <a class="special" href="apps/Solanar_Weather_Vortex_index.html"><span>🌀</span><strong>Weather Vortex</strong><span>Visual atmosphere and Earth imagery lab.</span></a>
-      <a class="special" href="apps/Lunar_reflections_index.html"><span>🌕</span><strong>Lunar Reflections</strong><span>Moon phase, calendar, sky, and reflection.</span></a>
-      <a class="special" href="apps/environmental_news_index.html"><span>🌱</span><strong>Environmental News</strong><span>Weather, climate, Earth, and environmental reporting.</span></a>
+    <div class="certGrid">
+      <article class="cert card">
+        <span class="badge">Year I · Semesters I & II</span>
+        <h3>Atmospheric Science Common Core</h3>
+        <p>Foundations of Atmospheric Science, Calculus I–II, University Physics I–II, Scientific Programming, Weather Data, Thermodynamics, Cloud Physics, Observations, Synoptic Analysis, Remote Sensing, Statistics and Communication.</p>
+        <div class="statRow"><div class="stat"><b>36</b><small>Weeks</small></div><div class="stat"><b>2</b><small>Semesters</small></div><div class="stat"><b>80%</b><small>Every Gate</small></div></div>
+        <div class="tracks"><span class="badge">Operational</span><span class="badge">Broadcast</span><span class="badge">Climatology</span></div>
+        <div class="actions"><a class="btn gold" href="weather-academy/Solanar-Certification-year-01/">Enter Year I</a><a class="btn" href="weather-academy/Solanar-Certification-year-01/forms/">Professional Forms</a></div>
+      </article>
+
+      <article class="cert card">
+        <span class="badge">Year II · Semesters III & IV</span>
+        <h3>Professional Meteorologist Track</h3>
+        <p>Dynamical meteorology, synoptic and mesoscale diagnosis, Doppler and dual-polarization radar, satellite analysis, numerical weather prediction, ensembles, severe weather, specialized services, decision support and forecast-office capstone practice.</p>
+        <div class="statRow"><div class="stat"><b>36</b><small>Weeks</small></div><div class="stat"><b>22</b><small>Professional Forms</small></div><div class="stat"><b>80%</b><small>Every Gate</small></div></div>
+        <div class="actions"><a class="btn gold" href="weather-academy/Solanar-Certification-year-02/">Enter Year II</a><a class="btn" href="weather-academy/Solanar-Certification-year-02/tools/">Operational Tools</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="graduate">
+  <div class="shell">
+    <div class="sectionHead">
+      <p class="eyebrow">Advanced directional atmospheric science</p>
+      <h2>Solanar Graduate Programs</h2>
+      <p>Specialist concentrations extend the professional foundation through advanced mathematics, observational science, modeling, research, reproducibility and defended performance.</p>
+    </div>
+
+    <div class="gradGrid">
+      <article class="grad card"><span class="badge">Track 01 · Active</span><h3>Advanced Operational Meteorology</h3><p>Mesoscale and severe-weather forecasting, operational diagnosis, warning decisions, verification and professional forecast practice.</p><div class="actions"><a class="btn primary" href="weather-academy/Graduate-Programs/advanced-operational-meteorology/">Open Track 01</a></div></article>
+      <article class="grad card"><span class="badge">Track 02 · Active</span><h3>NWP & Data Assimilation</h3><p>Numerical modeling, ensembles, data assimilation, covariance, verification, reproducibility and hybrid AI/ML evaluation.</p><div class="actions"><a class="btn primary" href="weather-academy/Graduate-Programs/numerical-weather-prediction-data-assimilation/">Open Track 02</a></div></article>
+      <article class="grad card"><span class="badge">Track 03 · Active</span><h3>Tropical Meteorology & Hurricane Science</h3><p>Tropical cyclone dynamics, genesis, intensity, reconnaissance, landfall radar, hazards, ensemble consensus and research.</p><div class="actions"><a class="btn primary" href="weather-academy/Graduate-Programs/tropical-meteorology-hurricane-science/">Open Track 03</a></div></article>
+      <article class="grad card future"><span class="badge">Future Track 04</span><h3>Climate Dynamics, Modeling & Prediction</h3><p>Reserved directional concentration.</p></article>
+      <article class="grad card future"><span class="badge">Future Track 05</span><h3>Radar, Satellite & Atmospheric Remote Sensing</h3><p>Reserved directional concentration.</p></article>
+      <article class="grad card future"><span class="badge">Future Track 06+</span><h3>Specialized Forecast & Decision Science</h3><p>Aviation, hydrometeorology, fire weather, air quality, weather risk and other advanced specialties.</p></article>
+    </div>
+    <div style="text-align:center;margin-top:15px"><a class="btn violet" href="weather-academy/Graduate-Programs/">Open Graduate Program Gateway</a></div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <div class="shell">
+    <div class="sectionHead">
+      <p class="eyebrow">Scientific learning suite</p>
+      <h2>Tools that grow with the learner.</h2>
+      <p>The same ecosystem supports playful observation, daily weather decisions, school laboratories, professional analysis and graduate research.</p>
+    </div>
+
+    <div class="toolGrid">
+      <a class="tool card" data-popup href="apps/Solanar_kids_skylab_index.html"><i>🚀</i><strong>Kids SkyLab</strong><span>Live weather, missions, badges, radar, sky journal and age-aware weather exploration.</span><em>Launch →</em></a>
+      <a class="tool card" data-popup href="apps/Solanar_Live_Weather_index.html"><i>🌀</i><strong>Weather Vortex</strong><span>Live Atmosphere Lab with current weather, visual traces, Earth imagery, Moon context and resource exploration.</span><em>Enter Vortex →</em></a>
+      <a class="tool card" data-popup href="apps/Solanar_Planetarium_index.html"><i>🌌</i><strong>Planetarium</strong><span>Atmosphere, official alert context, hazard trackers, Moon and observing conditions.</span><em>Open →</em></a>
+      <a class="tool card" data-popup href="apps/Solanar_Platform_index.html"><i>🌐</i><strong>Solanar Platform</strong><span>Full weather, Earth, hazard, saved-location and briefing command center.</span><em>Open →</em></a>
+      <a class="tool card" data-popup href="apps/Solanar-TraceLab/"><i>✎</i><strong>Solanar TraceLab</strong><span>Trace, label, measure and compare radar, satellite, synoptic, model, sounding and climate imagery.</span><em>Analyze →</em></a>
+      <a class="tool card" data-popup href="apps/environmental_news_index.html"><i>📰</i><strong>World Weather & Environmental News</strong><span>Weather, climate, oceans, hazards, wildlife and environmental reporting with student modes.</span><em>Read →</em></a>
+      <a class="tool card" data-popup href="apps/Lunar_reflections_index.html"><i>🌕</i><strong>Lunar Reflections</strong><span>Moon phase, sky timing and reflective observation with clear scientific/traditional boundaries.</span><em>Observe →</em></a>
+      <a class="tool card" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener"><i>🔎</i><strong>PLERA Search</strong><span>Research weather, climate, oceans, Earth science and source evidence across the wider Verve N Veda network.</span><em>Research →</em></a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="network">
+  <div class="shell">
+    <div class="sectionHead">
+      <p class="eyebrow">Connected learning network</p>
+      <h2>Solanar does not stand alone.</h2>
+      <p>Weather science can move naturally into mathematics, environmental reporting, family learning, research mentorship, archives and the wider Khaemenes Academy pathway.</p>
+    </div>
+
+    <div class="networkGrid">
+      <a class="network card" href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener"><i>N</i><b>NAIB Mentor</b><small>Readiness, misconception repair and research guidance</small></a>
+      <a class="network card" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/" target="_blank" rel="noopener"><i>∑</i><b>Higher Learning Mathematics</b><small>Calculus, differential equations, statistics and advanced mathematics</small></a>
+      <a class="network card" href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener"><i>K</i><b>Khaemenes Academy</b><small>Complete educational gateway and family learning network</small></a>
+      <a class="network card" href="https://vervenveda.github.io/Arshif.github.io/" target="_blank" rel="noopener"><i>📚</i><b>ARSHIF</b><small>Reading, archives and deeper contextual study</small></a>
+      <a class="network card" href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener"><i>✓</i><b>The Verifier</b><small>News, evidence and source-conscious public information</small></a>
+      <a class="network card" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/" target="_blank" rel="noopener"><i>👨‍👩‍👧</i><b>Family Profiles</b><small>Student and parent continuity across the Academy</small></a>
+      <a class="network card" href="weather-academy/" ><i>☀</i><b>Weather Academy</b><small>The continuous formal curriculum ladder</small></a>
+      <a class="network card" href="https://vervenveda.com/" target="_blank" rel="noopener"><i>✦</i><b>Verve N Veda</b><small>Return to the wider public ecosystem</small></a>
     </div>
   </div>
 </section>
 </main>
 
-
-<section class="contributeSection" id="contribute" aria-labelledby="contributeTitle">
-  <div class="shell">
-    <article class="contributeCard">
-      <small>Support Solanar</small>
-      <h2 id="contributeTitle">Contribute to the Observatory</h2>
-      <p>Help support continued access to Solanar weather, Earth science, environmental learning, student research, and public educational resources.</p>
-      <div class="contributeButton">
-        <stripe-buy-button
-          buy-button-id="buy_btn_1TtUqXJv39zQCMS1skiXSbvP"
-          publishable-key="pk_live_51RpGqiJv39zQCMS1Gms5qklNYpH8haeue2dSLG76KHSims5CbWbitNjqlwhxDvjewGefNyrh24zNMsdQSk5m3mbE00Ajsji1iw">
-        </stripe-buy-button>
-      </div>
-    </article>
-  </div>
-</section>
-
-
 <div class="appModal" id="appModal" aria-hidden="true">
   <section class="appWindow" role="dialog" aria-modal="true" aria-labelledby="appModalTitle">
     <div class="appWindowBar">
-      <div class="appWindowTitle">
-        <strong id="appModalTitle">Solanar App</strong>
-        <small id="appModalUrl">Loading application…</small>
-      </div>
-      <div class="appWindowActions">
-        <a class="appOpenExternal" id="appOpenExternal" href="#" target="_blank" rel="noopener">Open in New Tab ↗</a>
-        <button class="appClose" id="appClose" type="button" aria-label="Close application">×</button>
-      </div>
+      <div class="appWindowTitle"><strong id="appModalTitle">Solanar App</strong><small id="appModalUrl">Loading application…</small></div>
+      <div class="appWindowActions"><a class="appOpenExternal" id="appOpenExternal" href="#" target="_blank" rel="noopener">Open in New Tab ↗</a><button class="appClose" id="appClose" type="button" aria-label="Close application">×</button></div>
     </div>
-    <div class="appFrameWrap">
-      <div class="appLoading" id="appLoading">Opening Solanar application…</div>
-      <iframe class="appFrame" id="appFrame" title="Solanar application window" loading="eager"></iframe>
-    </div>
+    <div class="appFrameWrap"><div class="appLoading" id="appLoading">Opening Solanar application…</div><iframe class="appFrame" id="appFrame" title="Solanar application window"></iframe></div>
   </section>
 </div>
 
 <footer>
   <div class="shell">
     <div class="footerGrid">
-      <div>
-        <h3>Solanar Observatory</h3>
-        <p>A clean weather gateway for students, families, educators, adult explorers, and researchers.</p>
-      </div>
-      <div>
-        <h3>Weather</h3>
-        <div class="footerLinks">
-          <a href="#weather">Current Weather</a>
-          <a href="#forecast">7-Day Forecast</a>
-          <a href="https://radar.weather.gov/" target="_blank" rel="noopener">Radar</a>
-          <a href="apps/environmental_news_index.html">Weather News</a>
-          <a href="#contribute">Contribute to Solanar</a>
-        </div>
-      </div>
-      <div>
-        <h3>Learning</h3>
-        <div class="footerLinks">
-          <a href="apps/Solanar_kids_skylab_index.html">Kids SkyLab</a>
-          <a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">PLERA Search</a>
-          <a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">NAIB Mentor</a>
-          <a href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener">Khaemenes Academy</a>
-        </div>
-      </div>
+      <div><h3>Solanar Observatory</h3><p>Weather for today. Atmospheric science for a lifetime.</p></div>
+      <div><h3>Weather</h3><div class="footerLinks"><a href="#weather">Live Weather</a><a href="apps/Solanar_Live_Weather_index.html">Weather Vortex</a><a href="apps/Solanar_Planetarium_index.html">Planetarium</a><a href="apps/environmental_news_index.html">Environmental News</a></div></div>
+      <div><h3>Learning</h3><div class="footerLinks"><a href="#early">Early Weather Learning</a><a href="weather-academy/">Weather Academy</a><a href="weather-academy/Solanar-Certification-year-01/">Professional Certificate</a><a href="weather-academy/Graduate-Programs/">Graduate Programs</a></div></div>
+      <div><h3>Research</h3><div class="footerLinks"><a href="apps/Solanar-TraceLab/">TraceLab</a><a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener">PLERA Search</a><a href="https://artist1970.github.io/noema-ai.github.io/" target="_blank" rel="noopener">NAIB Mentor</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/" target="_blank" rel="noopener">Khaemenes Academy</a></div></div>
     </div>
     <div class="bottom">© <span id="year"></span> Jennifer Kay Pearl · Verve N Veda · Khaemenes Academy · All Rights Reserved</div>
   </div>
@@ -823,398 +604,126 @@ footer p{margin:8px 0 0;color:var(--muted);font-size:.8rem}
 
 <script>
 "use strict";
-
 const $=id=>document.getElementById(id);
-const ROLE_KEY="solanar.landing.role.v2";
-const GRADE_KEY="solanar.landing.grade.v2";
-
-let role="adult";
-let grade="35";
-try{
-  role=localStorage.getItem(ROLE_KEY)||"adult";
-  grade=localStorage.getItem(GRADE_KEY)||"35";
-}catch{}
-let currentLoc=null;
-
-const GRADE_INFO={
-  k2:{
-    title:"Sky Sprout · K–2",
-    copy:"Notice clouds, rain, sunshine, wind, and temperature. Use simple observations, pictures, read-aloud, and a trusted grown-up for weather safety."
-  },
-  "35":{
-    title:"Weather Explorer · Grades 3–5",
-    copy:"Observe what is happening, learn weather vocabulary, compare forecasts, and ask where the information came from."
-  },
-  "68":{
-    title:"Storm Lab · Grades 6–8",
-    copy:"Study patterns, fronts, pressure, radar, hazards, evidence, and the difference between observation, forecast, and warning."
-  },
-  "912":{
-    title:"Atmosphere Lab · Grades 9–12",
-    copy:"Analyze measurements, uncertainty, models, primary sources, atmospheric systems, hazards, climate context, and source verification."
-  }
-};
-
-function setRole(next){
-  role=next==="student"?"student":"adult";
-  try{localStorage.setItem(ROLE_KEY,role)}catch{}
-  document.body.dataset.role=role;
-
-  document.querySelectorAll("[data-role-set]").forEach(btn=>{
-    btn.classList.toggle("active",btn.dataset.roleSet===role);
-  });
-
-  const student=role==="student";
-  $("studentHeroActions").hidden=!student;
-  $("adultHeroActions").hidden=student;
-  $("studentQuick").hidden=!student;
-  $("adultQuick").hidden=student;
-  $("studentPanel").hidden=!student;
-  $("adultPanel").hidden=student;
-
-  $("roleEyebrow").textContent=student
-    ?"Solanar Student Weather Gateway"
-    :"Weather for families, adults, educators, and explorers";
-
-  $("roleTag").textContent=student
-    ?"Your sky. Your questions. Your level."
-    :"Your weather starts here.";
-
-  $("roleCopy").textContent=student
-    ?"See real weather, open Kids SkyLab, choose your grade level, read age-appropriate environmental news, research with PLERA, and work with the NAIB mentor when you want help understanding what you discover."
-    :"Check current conditions, the week ahead, radar, alerts, environmental news, Moon and sky tools, and deeper atmospheric resources from one clean weather gateway.";
-}
-
-function setGrade(next){
-  if(!GRADE_INFO[next])return;
-  grade=next;
-  try{localStorage.setItem(GRADE_KEY,grade)}catch{}
-  document.querySelectorAll("[data-grade]").forEach(btn=>btn.classList.toggle("active",btn.dataset.grade===grade));
-  $("gradeTitle").textContent=GRADE_INFO[grade].title;
-  $("gradeCopy").textContent=GRADE_INFO[grade].copy;
-}
-
-function codeText(c){
-  const map={
-    0:"Clear",1:"Mostly Clear",2:"Partly Cloudy",3:"Cloudy",
-    45:"Fog",48:"Rime Fog",
-    51:"Light Drizzle",53:"Drizzle",55:"Heavy Drizzle",
-    56:"Freezing Drizzle",57:"Heavy Freezing Drizzle",
-    61:"Light Rain",63:"Rain",65:"Heavy Rain",
-    66:"Freezing Rain",67:"Heavy Freezing Rain",
-    71:"Light Snow",73:"Snow",75:"Heavy Snow",77:"Snow Grains",
-    80:"Rain Showers",81:"Heavy Showers",82:"Violent Showers",
-    85:"Snow Showers",86:"Heavy Snow Showers",
-    95:"Thunderstorm",96:"Thunderstorm with Hail",99:"Severe Thunderstorm"
-  };
-  return map[Number(c)]||"Variable Weather";
-}
-
-function codeIcon(c,isDay=1){
-  c=Number(c);
-  if(c===0)return isDay?"☀️":"🌙";
-  if([1,2].includes(c))return isDay?"🌤️":"☁️";
-  if(c===3)return"☁️";
-  if([45,48].includes(c))return"🌫️";
-  if([51,53,55,56,57,61,63,65,66,67,80,81,82].includes(c))return"🌧️";
-  if([71,73,75,77,85,86].includes(c))return"❄️";
-  if([95,96,99].includes(c))return"⛈️";
-  return"🌍";
-}
-
-function fmtTime(v){
-  if(!v)return"—";
-  const d=new Date(v);
-  if(Number.isNaN(d.getTime()))return String(v).slice(11,16);
-  return d.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"});
-}
-
-function vis(m){
-  if(!Number.isFinite(Number(m)))return"—";
-  return (Number(m)/1609.344).toFixed(1)+" mi";
-}
-
-async function geocode(q){
-  q=(q||"").trim();
-  if(!q)throw new Error("Enter a city, country, or U.S. ZIP.");
-
-  if(/^\d{5}$/.test(q)){
-    try{
-      const zr=await fetch(`https://api.zippopotam.us/us/${encodeURIComponent(q)}`);
-      if(zr.ok){
-        const z=await zr.json(),p=z.places?.[0];
-        if(p)return{
-          lat:Number(p.latitude),lon:Number(p.longitude),
-          label:`${p["place name"]}, ${p["state abbreviation"]||p.state}, US`,
-          country:"US"
-        };
-      }
-    }catch{}
-  }
-
-  const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=5&language=en&format=json`,{cache:"no-store"});
-  if(!r.ok)throw new Error("Location search is unavailable.");
-  const j=await r.json();
-  if(!j.results?.length)throw new Error("Location not found.");
-
-  const c=j.results[0];
-  return{
-    lat:Number(c.latitude),lon:Number(c.longitude),
-    label:[c.name,c.admin1,c.country_code].filter(Boolean).join(", "),
-    country:c.country_code||""
-  };
-}
-
-async function searchWeather(){
-  const q=$("placeInput").value.trim();
-  if(!q){$("weatherStatus").textContent="Enter a city, country, or U.S. ZIP.";return}
-
-  $("searchBtn").disabled=true;
-  $("searchBtn").textContent="Searching…";
-  try{
-    const loc=await geocode(q);
-    await loadWeather(loc);
-  }catch(e){
-    $("weatherStatus").textContent=e.message||"Weather could not be loaded.";
-  }finally{
-    $("searchBtn").disabled=false;
-    $("searchBtn").textContent="Search Weather";
-  }
-}
-
-function useLocation(){
-  if(!navigator.geolocation){
-    $("weatherStatus").textContent="Location is not available in this browser.";
-    return;
-  }
-
-  $("weatherStatus").textContent="Finding your location…";
-  navigator.geolocation.getCurrentPosition(
-    pos=>loadWeather({lat:pos.coords.latitude,lon:pos.coords.longitude,label:"Your location",country:""}),
-    ()=>$("weatherStatus").textContent="Location permission was unavailable. Search a city or ZIP instead.",
-    {enableHighAccuracy:false,timeout:10000,maximumAge:300000}
-  );
-}
-
-async function loadWeather(loc){
-  currentLoc=loc;
-  $("weatherStatus").textContent=`Loading weather for ${loc.label}…`;
-
-  const url=
-    `https://api.open-meteo.com/v1/forecast?latitude=${encodeURIComponent(loc.lat)}&longitude=${encodeURIComponent(loc.lon)}`+
-    `&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,cloud_cover,pressure_msl,visibility,wind_speed_10m,wind_gusts_10m,is_day`+
-    `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset`+
-    `&forecast_days=7&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=auto`;
-
-  const r=await fetch(url,{cache:"no-store"});
-  if(!r.ok)throw new Error("Weather service is unavailable.");
-  const w=await r.json();
-  renderWeather(w,loc);
-  loadAlerts(loc);
-  $("weatherStatus").textContent=`Weather ready for ${loc.label}.`;
-}
-
-function renderWeather(w,loc){
-  const c=w.current||{},d=w.daily||{};
-  const icon=codeIcon(c.weather_code,c.is_day);
-
-  $("orbWeatherBadge").textContent=icon;
-  $("orbTemp").textContent=`${Math.round(c.temperature_2m)}°F`;
-  $("orbCond").textContent=codeText(c.weather_code);
-  $("orbPlace").textContent=loc.label;
-  $("orbWind").textContent=`${Math.round(c.wind_speed_10m||0)} mph`;
-  $("orbCloud").textContent=`${Math.round(c.cloud_cover||0)}%`;
-
-  $("feels").textContent=`${Math.round(c.apparent_temperature)}°F`;
-  $("humidity").textContent=`${Math.round(c.relative_humidity_2m||0)}%`;
-  $("pressure").textContent=`${Math.round(c.pressure_msl||0)} hPa`;
-  $("visibility").textContent=vis(c.visibility);
-  $("precip").textContent=(Number(c.precipitation||0)>0)?`${Number(c.precipitation).toFixed(2)} in`:"None";
-  $("gust").textContent=`${Math.round(c.wind_gusts_10m||0)} mph`;
-  $("sunrise").textContent=fmtTime(d.sunrise?.[0]);
-  $("sunset").textContent=fmtTime(d.sunset?.[0]);
-
-  renderForecast(d);
-}
-
-function renderForecast(d){
-  const box=$("forecastGrid");
-  box.innerHTML="";
-  const n=Math.min(7,d.time?.length||0);
-
-  for(let i=0;i<n;i++){
-    const date=new Date(d.time[i]+"T12:00:00");
-    const el=document.createElement("article");
-    el.className="day";
-    el.innerHTML=
-      `<b>${date.toLocaleDateString([],{weekday:"short"})}</b>`+
-      `<div class="dayIcon">${codeIcon(d.weather_code?.[i],1)}</div>`+
-      `<div>${codeText(d.weather_code?.[i])}</div>`+
-      `<b>${Math.round(d.temperature_2m_max?.[i])}° / ${Math.round(d.temperature_2m_min?.[i])}°</b>`+
-      `<small>Rain ${Math.round(d.precipitation_probability_max?.[i]||0)}%</small>`;
-    box.appendChild(el);
-  }
-}
-
-async function loadAlerts(loc){
-  $("alertBox").innerHTML="";
-  $("orbAlerts").textContent="Check";
-
-  try{
-    const r=await fetch(`https://api.weather.gov/alerts/active?point=${encodeURIComponent(loc.lat)},${encodeURIComponent(loc.lon)}`,{
-      headers:{Accept:"application/geo+json"},cache:"no-store"
-    });
-    if(!r.ok)return;
-    const j=await r.json();
-    const alerts=(j.features||[]).slice(0,4);
-    $("orbAlerts").textContent=String(alerts.length);
-
-    alerts.forEach(f=>{
-      const p=f.properties||{};
-      const div=document.createElement("div");
-      div.className="alert";
-      div.innerHTML=`<b>OFFICIAL NWS ALERT · ${escapeHTML(p.event||"Weather Alert")}</b><br>`+
-        `${role==="student"?"Ask a trusted grown-up to review the official alert with you.":"Follow the official alert and local emergency instructions."}`;
-      $("alertBox").appendChild(div);
-    });
-  }catch{}
-}
-
-function escapeHTML(s){
-  return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
-
-/* menu */
-const menuBtn=$("menuBtn"),mega=$("megaMenu");
-function closeMenu(focus=false){
-  mega.classList.remove("open");
-  menuBtn.setAttribute("aria-expanded","false");
-  if(focus)menuBtn.focus();
-}
-menuBtn.addEventListener("click",e=>{
-  e.stopPropagation();
-  const open=menuBtn.getAttribute("aria-expanded")!=="true";
-  mega.classList.toggle("open",open);
-  menuBtn.setAttribute("aria-expanded",String(open));
-});
-mega.addEventListener("click",e=>{if(e.target.closest("a"))closeMenu(false)});
-document.addEventListener("click",e=>{if(!mega.contains(e.target)&&!menuBtn.contains(e.target))closeMenu(false)});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&mega.classList.contains("open"))closeMenu(true)});
-
-/* events */
-document.querySelectorAll("[data-role-set]").forEach(btn=>btn.addEventListener("click",()=>setRole(btn.dataset.roleSet)));
-document.querySelectorAll("[data-grade]").forEach(btn=>btn.addEventListener("click",()=>setGrade(btn.dataset.grade)));
-$("searchBtn").addEventListener("click",searchWeather);
-$("placeInput").addEventListener("keydown",e=>{if(e.key==="Enter")searchWeather()});
-$("geoBtn").addEventListener("click",useLocation);
 $("year").textContent=new Date().getFullYear();
 
-setGrade(grade);
-setRole(role);
+/* role-aware front door */
+const ROLE_INFO={
+ student:{eyebrow:"Student view · learn from the sky around you",tag:"Explore weather at your level.",copy:"Start with Kids SkyLab and the early-weather games, then grow through Weather 101–304 into advanced atmospheric science."},
+ family:{eyebrow:"One atmosphere · many ways to explore it",tag:"Weather for today. Atmospheric science for a lifetime.",copy:"Solanar is the atmospheric-science ecosystem of Verve N Veda and Khaemenes Academy: live weather, child-friendly discovery, K–12 Weather Academy, professional meteorology, graduate study and scientific research tools."},
+ professional:{eyebrow:"Professional meteorology · evidence · operations",tag:"Build from fundamentals to forecast-office practice.",copy:"Enter the two-year Professional Meteorology Certificate, use professional evidence forms and tools, and continue into specialized graduate atmospheric-science programs."},
+ research:{eyebrow:"Graduate research · computation · remote sensing",tag:"Analyze the atmosphere, not just the forecast.",copy:"Open TraceLab, advanced meteorology tracks, NWP and data assimilation, tropical meteorology, Higher Learning mathematics, PLERA research and NAIB mentorship."}
+};
+function setRole(role){
+ document.body.dataset.role=role;
+ document.querySelectorAll("[data-role-set]").forEach(b=>b.classList.toggle("active",b.dataset.roleSet===role));
+ const x=ROLE_INFO[role]||ROLE_INFO.family;
+ $("roleEyebrow").textContent=x.eyebrow;$("roleTag").textContent=x.tag;$("roleCopy").textContent=x.copy;
+ try{localStorage.setItem("solanar.root.role.v3",role)}catch{}
+}
+document.querySelectorAll("[data-role-set]").forEach(b=>b.addEventListener("click",()=>setRole(b.dataset.roleSet)));
+try{setRole(localStorage.getItem("solanar.root.role.v3")||"family")}catch{setRole("family")}
+
+/* menu */
+$("menuBtn").addEventListener("click",e=>{
+ const open=$("megaMenu").classList.toggle("open");$("menuBtn").setAttribute("aria-expanded",String(open));e.stopPropagation();
+});
+document.addEventListener("click",e=>{
+ if(!e.target.closest(".menuWrap")){$("megaMenu").classList.remove("open");$("menuBtn").setAttribute("aria-expanded","false")}
+});
+
+/* popup */
+let lastFocus=null;
+function openApp(url,title){
+ lastFocus=document.activeElement;
+ $("appModalTitle").textContent=title||"Solanar Application";
+ $("appModalUrl").textContent=url;
+ $("appOpenExternal").href=url;
+ $("appLoading").classList.remove("hidden");
+ $("appFrame").src=url;
+ $("appModal").classList.add("open");$("appModal").setAttribute("aria-hidden","false");document.body.classList.add("app-modal-open");
+ $("appClose").focus();
+}
+function closeApp(){
+ $("appModal").classList.remove("open");$("appModal").setAttribute("aria-hidden","true");document.body.classList.remove("app-modal-open");
+ $("appFrame").src="about:blank";lastFocus?.focus?.();
+}
+document.addEventListener("click",e=>{
+ const a=e.target.closest("[data-popup]");
+ if(a){e.preventDefault();openApp(a.href,a.textContent.trim())}
+});
+$("appFrame").addEventListener("load",()=>$("appLoading").classList.add("hidden"));
+$("appClose").addEventListener("click",closeApp);
+$("appModal").addEventListener("click",e=>{if(e.target===$("appModal"))closeApp()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeApp()});
+
+/* weather */
+function codeInfo(code){
+ const m={
+  0:["☀️","Clear sky"],1:["🌤️","Mainly clear"],2:["⛅","Partly cloudy"],3:["☁️","Overcast"],
+  45:["🌫️","Fog"],48:["🌫️","Rime fog"],51:["🌦️","Light drizzle"],53:["🌦️","Drizzle"],55:["🌧️","Heavy drizzle"],
+  61:["🌧️","Light rain"],63:["🌧️","Rain"],65:["🌧️","Heavy rain"],66:["🌧️","Freezing rain"],67:["🌧️","Heavy freezing rain"],
+  71:["🌨️","Light snow"],73:["🌨️","Snow"],75:["❄️","Heavy snow"],77:["❄️","Snow grains"],
+  80:["🌦️","Rain showers"],81:["🌧️","Rain showers"],82:["⛈️","Heavy showers"],85:["🌨️","Snow showers"],86:["🌨️","Heavy snow showers"],
+  95:["⛈️","Thunderstorm"],96:["⛈️","Thunderstorm with hail"],99:["⛈️","Severe thunderstorm with hail"]
+ };
+ return m[code]||["🌦️","Weather"];
+}
+async function resolvePlace(q){
+ q=q.trim();if(!q)throw new Error("Enter a city, country, or U.S. ZIP.");
+ if(/^\d{5}$/.test(q)){
+  const r=await fetch(`https://api.zippopotam.us/us/${encodeURIComponent(q)}`);
+  if(!r.ok)throw new Error("ZIP code not found.");
+  const j=await r.json(),p=j.places?.[0];if(!p)throw new Error("ZIP code not found.");
+  return {lat:+p.latitude,lon:+p.longitude,name:`${p["place name"]}, ${p["state abbreviation"]}`};
+ }
+ const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&language=en&format=json`);
+ if(!r.ok)throw new Error("Could not search that place.");
+ const j=await r.json(),p=j.results?.[0];if(!p)throw new Error("Place not found.");
+ return {lat:p.latitude,lon:p.longitude,name:[p.name,p.admin1,p.country].filter(Boolean).join(", ")};
+}
+async function loadWeather(loc){
+ $("weatherStatus").textContent=`Loading weather for ${loc.name}…`;
+ const params=new URLSearchParams({
+  latitude:loc.lat,longitude:loc.lon,timezone:"auto",temperature_unit:"fahrenheit",wind_speed_unit:"mph",precipitation_unit:"inch",
+  current:"temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,cloud_cover,surface_pressure,wind_speed_10m,wind_gusts_10m,visibility",
+  daily:"weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset"
+ });
+ const r=await fetch(`https://api.open-meteo.com/v1/forecast?${params}`);if(!r.ok)throw new Error("Weather service unavailable.");
+ const j=await r.json(),c=j.current,d=j.daily,[icon,cond]=codeInfo(c.weather_code);
+ $("orbBadge").textContent=icon;$("orbTemp").textContent=`${Math.round(c.temperature_2m)}°F`;$("orbCond").textContent=cond;
+ $("orbPlace").textContent=loc.name.split(",")[0];$("orbWind").textContent=`${Math.round(c.wind_speed_10m)} mph`;$("orbCloud").textContent=`${Math.round(c.cloud_cover)}%`;
+ $("feels").textContent=`${Math.round(c.apparent_temperature)}°F`;$("humidity").textContent=`${Math.round(c.relative_humidity_2m)}%`;
+ $("pressure").textContent=`${Math.round(c.surface_pressure)} hPa`;$("visibility").textContent=c.visibility!=null?`${(c.visibility/1609.344).toFixed(1)} mi`:"—";
+ $("precip").textContent=`${(+c.precipitation||0).toFixed(2)} in`;$("gust").textContent=`${Math.round(c.wind_gusts_10m||0)} mph`;
+ $("sunrise").textContent=new Date(d.sunrise[0]).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});
+ $("sunset").textContent=new Date(d.sunset[0]).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});
+ $("forecastGrid").innerHTML=d.time.slice(0,7).map((date,i)=>{
+   const [ic,tx]=codeInfo(d.weather_code[i]);const day=new Date(date+"T12:00:00").toLocaleDateString([], {weekday:"short"});
+   return `<div class="day"><b>${day}</b><div class="dayIcon">${ic}</div><strong>${Math.round(d.temperature_2m_max[i])}° / ${Math.round(d.temperature_2m_min[i])}°</strong><small>${tx}</small><small>Precip ${d.precipitation_probability_max[i]??0}%</small></div>`;
+ }).join("");
+ $("weatherStatus").textContent=`Updated for ${loc.name}.`;
+ await loadAlerts(loc);
+}
+async function loadAlerts(loc){
+ $("alertBox").innerHTML="";$("orbAlerts").textContent="—";
+ if(!(loc.lat>=18 && loc.lat<=72 && loc.lon>=-180 && loc.lon<=-60)){ $("orbAlerts").textContent="N/A"; return; }
+ try{
+  const r=await fetch(`https://api.weather.gov/alerts/active?point=${loc.lat},${loc.lon}`,{headers:{"Accept":"application/geo+json"}});
+  if(!r.ok)throw 0;const j=await r.json(),features=j.features||[];$("orbAlerts").textContent=features.length?String(features.length):"0";
+  $("alertBox").innerHTML=features.slice(0,3).map(f=>`<div class="alert"><strong>OFFICIAL · ${f.properties.event||"Weather Alert"}</strong><br>${f.properties.headline||f.properties.description||""}</div>`).join("");
+ }catch{$("orbAlerts").textContent="—"}
+}
+$("searchBtn").addEventListener("click",async()=>{try{loadWeather(await resolvePlace($("placeInput").value))}catch(e){$("weatherStatus").textContent=e.message}});
+$("placeInput").addEventListener("keydown",e=>{if(e.key==="Enter")$("searchBtn").click()});
+$("geoBtn").addEventListener("click",()=>{
+ if(!navigator.geolocation){$("weatherStatus").textContent="Location is not available in this browser.";return}
+ $("weatherStatus").textContent="Requesting your location…";
+ navigator.geolocation.getCurrentPosition(
+   p=>loadWeather({lat:p.coords.latitude,lon:p.coords.longitude,name:"Your Location"}).catch(e=>$("weatherStatus").textContent=e.message),
+   ()=>$("weatherStatus").textContent="Location permission was not granted."
+ );
+});
 </script>
-
-<script>
-(function(){
-  "use strict";
-
-  const modal=document.getElementById("appModal");
-  const frame=document.getElementById("appFrame");
-  const closeBtn=document.getElementById("appClose");
-  const titleEl=document.getElementById("appModalTitle");
-  const urlEl=document.getElementById("appModalUrl");
-  const external=document.getElementById("appOpenExternal");
-  const loading=document.getElementById("appLoading");
-  let lastFocus=null;
-
-  if(!modal||!frame||!closeBtn)return;
-
-  function looksLikeApp(anchor){
-    const href=(anchor.getAttribute("href")||"").trim();
-    if(!href||href.startsWith("#")||href.startsWith("mailto:")||href.startsWith("tel:"))return false;
-
-    let url;
-    try{url=new URL(href,location.href)}catch{return false}
-
-    const path=url.pathname.toLowerCase();
-
-    // Solanar and Khaemenes app pages.
-    if(path.includes("/apps/"))return true;
-
-    // Connected research/mentor applications.
-    if(url.hostname==="vervenveda.github.io" && path.includes("/plerasearch.github.io"))return true;
-    if(url.hostname==="artist1970.github.io" && path.includes("/noema-ai.github.io"))return true;
-
-    return anchor.hasAttribute("data-app-popup");
-  }
-
-  function friendlyTitle(anchor){
-    const direct=anchor.getAttribute("data-app-title");
-    if(direct)return direct;
-
-    const strong=anchor.querySelector("strong");
-    if(strong?.textContent.trim())return strong.textContent.trim();
-
-    const text=(anchor.textContent||"").replace(/\s+/g," ").trim();
-    return text.replace(/[→↗↓]+$/,"").trim()||"Solanar App";
-  }
-
-  function openApp(anchor){
-    const href=anchor.href;
-    lastFocus=document.activeElement;
-
-    titleEl.textContent=friendlyTitle(anchor);
-    urlEl.textContent="Solanar application window";
-    external.href=href;
-    loading.classList.remove("hidden");
-    frame.src="about:blank";
-
-    modal.classList.add("open");
-    modal.setAttribute("aria-hidden","false");
-    document.body.classList.add("app-modal-open");
-
-    requestAnimationFrame(()=>{
-      frame.src=href;
-      closeBtn.focus();
-    });
-  }
-
-  function closeApp(){
-    if(!modal.classList.contains("open"))return;
-    modal.classList.remove("open");
-    modal.setAttribute("aria-hidden","true");
-    document.body.classList.remove("app-modal-open");
-    frame.src="about:blank";
-    loading.classList.remove("hidden");
-    if(lastFocus && typeof lastFocus.focus==="function")lastFocus.focus();
-  }
-
-  frame.addEventListener("load",()=>{
-    if(frame.src!=="about:blank")loading.classList.add("hidden");
-  });
-
-  document.addEventListener("click",e=>{
-    const anchor=e.target.closest("a[href]");
-    if(!anchor||!looksLikeApp(anchor))return;
-    if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
-
-    e.preventDefault();
-    openApp(anchor);
-  });
-
-  closeBtn.addEventListener("click",closeApp);
-
-  modal.addEventListener("click",e=>{
-    if(e.target===modal)closeApp();
-  });
-
-  document.addEventListener("keydown",e=>{
-    if(e.key==="Escape"&&modal.classList.contains("open")){
-      e.preventDefault();
-      closeApp();
-    }
-  });
-})();
-</script>
-
 </body>
 </html>
