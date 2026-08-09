@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "sourceId": "solanar.weather-academy.high-school",
+  "name": "Solanar High School Weather Academy",
+  "classification": "educational",
+  "mentorSearchable": true,
+  "audiences": [
+    "high-school",
+    "parent",
+    "educator"
+  ],
+  "roles": [
+    "student",
+    "parent",
+    "educator"
+  ],
+  "homepage": "https://vervenveda.com/solanar.github.io/weather-academy/high-school-weather-academy/",
+  "repository": "vervenveda/solanar.github.io",
+  "resources": [
+    {
+      "id": "weather-301",
+      "title": "Weather 301 \u2014 Atmospheric Science I",
+      "description": "36-week high-school meteorology course; Grade 9 recommended, open by readiness. Daily, weekly, six-week unit and final assessments are hard-gated at 80%.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/high-school-weather-academy/weather-301/",
+      "audiences": [
+        "high-school",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "meteorology",
+        "atmospheric-science",
+        "weather",
+        "climate",
+        "earth-science"
+      ],
+      "skills": [
+        "quantitative-analysis",
+        "modeling",
+        "forecasting",
+        "remote-sensing",
+        "research",
+        "scientific-communication"
+      ],
+      "tags": [
+        "weather-301",
+        "grade-9",
+        "36-week",
+        "hard-80-mastery",
+        "solanar"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "weather-302",
+      "title": "Weather 302 \u2014 Synoptic & Mesoscale Meteorology",
+      "description": "36-week high-school meteorology course; Grade 10 recommended, open by readiness. Daily, weekly, six-week unit and final assessments are hard-gated at 80%.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/high-school-weather-academy/weather-302/",
+      "audiences": [
+        "high-school",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "meteorology",
+        "atmospheric-science",
+        "weather",
+        "climate",
+        "earth-science"
+      ],
+      "skills": [
+        "quantitative-analysis",
+        "modeling",
+        "forecasting",
+        "remote-sensing",
+        "research",
+        "scientific-communication"
+      ],
+      "tags": [
+        "weather-302",
+        "grade-10",
+        "36-week",
+        "hard-80-mastery",
+        "solanar"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "weather-303",
+      "title": "Weather 303 \u2014 Operational Forecasting & Remote Sensing",
+      "description": "36-week high-school meteorology course; Grade 11 recommended, open by readiness. Daily, weekly, six-week unit and final assessments are hard-gated at 80%.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/high-school-weather-academy/weather-303/",
+      "audiences": [
+        "high-school",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "meteorology",
+        "atmospheric-science",
+        "weather",
+        "climate",
+        "earth-science"
+      ],
+      "skills": [
+        "quantitative-analysis",
+        "modeling",
+        "forecasting",
+        "remote-sensing",
+        "research",
+        "scientific-communication"
+      ],
+      "tags": [
+        "weather-303",
+        "grade-11",
+        "36-week",
+        "hard-80-mastery",
+        "solanar"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "weather-304",
+      "title": "Weather 304 \u2014 Climate Dynamics & Computational Meteorology",
+      "description": "36-week high-school meteorology course; Grade 12 recommended, open by readiness. Daily, weekly, six-week unit and final assessments are hard-gated at 80%.",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/high-school-weather-academy/weather-304/",
+      "audiences": [
+        "high-school",
+        "parent",
+        "educator"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "meteorology",
+        "atmospheric-science",
+        "weather",
+        "climate",
+        "earth-science"
+      ],
+      "skills": [
+        "quantitative-analysis",
+        "modeling",
+        "forecasting",
+        "remote-sensing",
+        "research",
+        "scientific-communication"
+      ],
+      "tags": [
+        "weather-304",
+        "grade-12",
+        "36-week",
+        "hard-80-mastery",
+        "solanar"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    }
+  ],
+  "mentorNotes": "Route by readiness. Never recommend advancement past a daily, weekly, unit, or final assessment below 80%. Course pages expose a hard-gate mentor brief identifying the current unmet prerequisite."
+}

@@ -1,0 +1,3085 @@
+{
+  "grade": "Grade 9",
+  "level": "Atmospheric Science I",
+  "subtitle": "Observation, Thermodynamics & Forecast Fundamentals",
+  "colors": [
+    "#102d49",
+    "#1c6c8d",
+    "#efca74"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Meteorological Measurement & Quality Control",
+      "concept": "Operational meteorology depends on traceable measurements, metadata, instrument exposure, uncertainty, and quality control.",
+      "lab": "Design a school observing station plan; compare repeated temperature, pressure, wind, and cloud observations and identify likely measurement errors.",
+      "measure": "error, bias, hits, misses, false alarms, calibration or reliability",
+      "quantSkill": "error, bias, contingency-table or reliability analysis",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "uncertainty",
+        "observation",
+        "model",
+        "forecast"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Observatory",
+        "emoji": "\u2600",
+        "url": "https://vervenveda.com/solanar.github.io/",
+        "desc": "Current weather, forecast, role-aware research and Solanar gateway."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Meteorological Measurement & Quality Control** as a physical or operational problem. Operational meteorology depends on traceable measurements, metadata, instrument exposure, uncertainty, and quality control.",
+          "lab": "Design a school observing station plan; compare repeated temperature, pressure, wind, and cloud observations and identify likely measurement errors.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: error, bias, hits, misses, false alarms, calibration or reliability.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **error, bias, contingency-table or reliability analysis**.",
+          "lab": "Quantify and extend the investigation: Design a school observing station plan; compare repeated temperature, pressure, wind, and cloud observations and identify likely measurement errors. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply error, bias, contingency-table or reliability analysis. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining meteorological measurement & quality control.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to meteorological measurement & quality control.",
+          "worksheet": [
+            "Use at least four terms accurately: uncertainty, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Observatory** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Observatory to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize meteorological measurement & quality control through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Atmospheric Composition & Vertical Structure",
+      "concept": "The atmosphere's composition and vertical temperature structure define distinct layers and strongly control weather processes.",
+      "lab": "Build and analyze a standard-atmosphere profile of temperature, pressure, and density with altitude.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "vertical-profile graphing and rate-of-change calculation",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "atmosphere",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Platform",
+        "emoji": "\ud83c\udf10",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+        "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Atmospheric Composition & Vertical Structure** as a physical or operational problem. The atmosphere's composition and vertical temperature structure define distinct layers and strongly control weather processes.",
+          "lab": "Build and analyze a standard-atmosphere profile of temperature, pressure, and density with altitude.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **vertical-profile graphing and rate-of-change calculation**.",
+          "lab": "Quantify and extend the investigation: Build and analyze a standard-atmosphere profile of temperature, pressure, and density with altitude. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply vertical-profile graphing and rate-of-change calculation. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining atmospheric composition & vertical structure.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to atmospheric composition & vertical structure.",
+          "worksheet": [
+            "Use at least four terms accurately: atmosphere, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Platform** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Platform to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize atmospheric composition & vertical structure through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Gas Laws, Density & the Atmosphere",
+      "concept": "Pressure, temperature, density, and volume are physically related; these relationships help explain buoyancy and vertical atmospheric structure.",
+      "lab": "Use sealed syringes, balloons, or supplied data to test pressure-volume/temperature tendencies and relate them to atmospheric parcels.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "rate and gradient",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "atmosphere",
+        "pressure",
+        "density",
+        "observation",
+        "model",
+        "forecast"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Planetarium",
+        "emoji": "\ud83c\udf0c",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Planetarium_index.html",
+        "desc": "Atmosphere, official alerts, hazards, forecasts and night-sky observing."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Gas Laws, Density & the Atmosphere** as a physical or operational problem. Pressure, temperature, density, and volume are physically related; these relationships help explain buoyancy and vertical atmospheric structure.",
+          "lab": "Use sealed syringes, balloons, or supplied data to test pressure-volume/temperature tendencies and relate them to atmospheric parcels.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **rate and gradient**.",
+          "lab": "Quantify and extend the investigation: Use sealed syringes, balloons, or supplied data to test pressure-volume/temperature tendencies and relate them to atmospheric parcels. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply rate and gradient. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining gas laws, density & the atmosphere.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to gas laws, density & the atmosphere.",
+          "worksheet": [
+            "Use at least four terms accurately: atmosphere, pressure, density, observation, model.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Planetarium** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Planetarium to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize gas laws, density & the atmosphere through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Hydrostatic Balance & Pressure with Height",
+      "concept": "Atmospheric pressure decreases upward because less overlying air remains above; hydrostatic balance connects pressure change to density and gravity.",
+      "lab": "Graph pressure versus altitude and estimate pressure change through several layers.",
+      "measure": "pressure, pressure tendency, pressure gradient and altitude",
+      "quantSkill": "probability",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "density",
+        "hydrostatic balance",
+        "observation",
+        "model",
+        "forecast"
+      ],
+      "standards": [
+        "HS-ESS2-5"
+      ],
+      "tool": {
+        "name": "Weather Vortex",
+        "emoji": "\ud83c\udf00",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Weather_Vortex_index.html",
+        "desc": "Visual atmospheric analysis, short-range traces and Earth imagery."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Hydrostatic Balance & Pressure with Height** as a physical or operational problem. Atmospheric pressure decreases upward because less overlying air remains above; hydrostatic balance connects pressure change to density and gravity.",
+          "lab": "Graph pressure versus altitude and estimate pressure change through several layers.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: pressure, pressure tendency, pressure gradient and altitude.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **probability**.",
+          "lab": "Quantify and extend the investigation: Graph pressure versus altitude and estimate pressure change through several layers. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply probability. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining hydrostatic balance & pressure with height.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to hydrostatic balance & pressure with height.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, density, hydrostatic balance, observation, model.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Weather Vortex** plus an appropriate primary/official source.",
+          "lab": "Use Weather Vortex to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize hydrostatic balance & pressure with height through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Solar Radiation & Earth's Energy Input",
+      "concept": "Solar radiation is the primary external energy source for weather and climate, while angle, surface type, clouds, and atmosphere control absorption and reflection.",
+      "lab": "Measure heating of several surfaces under equal illumination and calculate temperature-change rates.",
+      "measure": "radiative flux, albedo, forcing or energy imbalance",
+      "quantSkill": "energy-balance calculations and dimensional reasoning",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "atmosphere",
+        "radiation",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-4"
+      ],
+      "tool": {
+        "name": "Environmental News",
+        "emoji": "\ud83d\udcf0",
+        "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+        "desc": "Weather, climate and environmental reporting for source analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Solar Radiation & Earth's Energy Input** as a physical or operational problem. Solar radiation is the primary external energy source for weather and climate, while angle, surface type, clouds, and atmosphere control absorption and reflection.",
+          "lab": "Measure heating of several surfaces under equal illumination and calculate temperature-change rates.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: radiative flux, albedo, forcing or energy imbalance.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **energy-balance calculations and dimensional reasoning**.",
+          "lab": "Quantify and extend the investigation: Measure heating of several surfaces under equal illumination and calculate temperature-change rates. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply energy-balance calculations and dimensional reasoning. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining solar radiation & earth's energy input.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to solar radiation & earth's energy input.",
+          "worksheet": [
+            "Use at least four terms accurately: atmosphere, radiation, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Environmental News** plus an appropriate primary/official source.",
+          "lab": "Use Environmental News to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize solar radiation & earth's energy input through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Surface Energy Budget",
+      "concept": "Net radiation, sensible heat, latent heat, and ground heat storage redistribute surface energy and shape boundary-layer weather.",
+      "lab": "Create a simplified daytime surface-energy budget using measured or supplied flux values.",
+      "measure": "radiative flux, albedo, forcing or energy imbalance",
+      "quantSkill": "energy-balance calculations and dimensional reasoning",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "radiation",
+        "latent heat",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-4",
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "PLERA Search",
+        "emoji": "\ud83d\udd0e",
+        "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+        "desc": "Research and source-discovery gateway."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Surface Energy Budget** as a physical or operational problem. Net radiation, sensible heat, latent heat, and ground heat storage redistribute surface energy and shape boundary-layer weather.",
+          "lab": "Create a simplified daytime surface-energy budget using measured or supplied flux values.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: radiative flux, albedo, forcing or energy imbalance.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **energy-balance calculations and dimensional reasoning**.",
+          "lab": "Quantify and extend the investigation: Create a simplified daytime surface-energy budget using measured or supplied flux values. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply energy-balance calculations and dimensional reasoning. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining surface energy budget.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to surface energy budget.",
+          "worksheet": [
+            "Use at least four terms accurately: radiation, latent heat, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **PLERA Search** plus an appropriate primary/official source.",
+          "lab": "Use PLERA Search to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize surface energy budget through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Conduction, Convection & Latent Heat",
+      "concept": "Energy moves through the lower atmosphere by multiple mechanisms; latent heat links phase changes of water to atmospheric energetics.",
+      "lab": "Run conduction, convection, evaporation, and condensation stations and compare energy-transfer pathways.",
+      "measure": "temperature, temperature change, lapse rate or heat flux",
+      "quantSkill": "unit conversion and uncertainty",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "atmosphere",
+        "latent heat",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "desc": "Mentorship for evidence, misconception repair and next-course routing."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Conduction, Convection & Latent Heat** as a physical or operational problem. Energy moves through the lower atmosphere by multiple mechanisms; latent heat links phase changes of water to atmospheric energetics.",
+          "lab": "Run conduction, convection, evaporation, and condensation stations and compare energy-transfer pathways.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: temperature, temperature change, lapse rate or heat flux.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **unit conversion and uncertainty**.",
+          "lab": "Quantify and extend the investigation: Run conduction, convection, evaporation, and condensation stations and compare energy-transfer pathways. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply unit conversion and uncertainty. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining conduction, convection & latent heat.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to conduction, convection & latent heat.",
+          "worksheet": [
+            "Use at least four terms accurately: atmosphere, latent heat, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NAIB Mentor** plus an appropriate primary/official source.",
+          "lab": "Use NAIB Mentor to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize conduction, convection & latent heat through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Water Vapor Variables",
+      "concept": "Vapor pressure, mixing ratio, relative humidity, and dew point describe different aspects of atmospheric moisture.",
+      "lab": "Analyze paired temperature/dew-point data and calculate dew-point depression and relative moisture categories.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "graphing and regression",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "humidity",
+        "dew point",
+        "observation",
+        "model",
+        "forecast"
+      ],
+      "standards": [
+        "HS-ESS2-5"
+      ],
+      "tool": {
+        "name": "NWS Radar",
+        "emoji": "\ud83d\udce1",
+        "url": "https://radar.weather.gov/",
+        "desc": "Official U.S. radar viewer."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Water Vapor Variables** as a physical or operational problem. Vapor pressure, mixing ratio, relative humidity, and dew point describe different aspects of atmospheric moisture.",
+          "lab": "Analyze paired temperature/dew-point data and calculate dew-point depression and relative moisture categories.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **graphing and regression**.",
+          "lab": "Quantify and extend the investigation: Analyze paired temperature/dew-point data and calculate dew-point depression and relative moisture categories. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply graphing and regression. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining water vapor variables.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to water vapor variables.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, humidity, dew point, observation, model.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NWS Radar** plus an appropriate primary/official source.",
+          "lab": "Use NWS Radar to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize water vapor variables through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Saturation & Dew Point",
+      "concept": "Air reaches saturation when vapor pressure equals saturation vapor pressure; cooling to dew point can initiate condensation.",
+      "lab": "Determine a condensation threshold experimentally and compare it with observed dew-point data.",
+      "measure": "temperature, dew point, relative humidity, mixing ratio or moisture transport",
+      "quantSkill": "rate and gradient",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "dew point",
+        "saturation",
+        "observation",
+        "model",
+        "forecast"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "NWS Education / JetStream",
+        "emoji": "\ud83c\udf93",
+        "url": "https://www.weather.gov/education",
+        "desc": "Official National Weather Service weather education and data resources."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Saturation & Dew Point** as a physical or operational problem. Air reaches saturation when vapor pressure equals saturation vapor pressure; cooling to dew point can initiate condensation.",
+          "lab": "Determine a condensation threshold experimentally and compare it with observed dew-point data.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: temperature, dew point, relative humidity, mixing ratio or moisture transport.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **rate and gradient**.",
+          "lab": "Quantify and extend the investigation: Determine a condensation threshold experimentally and compare it with observed dew-point data. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply rate and gradient. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining saturation & dew point.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to saturation & dew point.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, dew point, saturation, observation, model.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NWS Education / JetStream** plus an appropriate primary/official source.",
+          "lab": "Use NWS Education / JetStream to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize saturation & dew point through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Parcel Theory & Adiabatic Processes",
+      "concept": "Rising parcels expand and cool while sinking parcels compress and warm; adiabatic processes are central to cloud and storm development.",
+      "lab": "Use a pressure-change model and temperature profile to trace a rising air parcel conceptually.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "probability",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "adiabatic",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Storm Prediction Center",
+        "emoji": "\ud83c\udf2a\ufe0f",
+        "url": "https://www.spc.noaa.gov/",
+        "desc": "Official U.S. severe-weather outlooks, watches and analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Parcel Theory & Adiabatic Processes** as a physical or operational problem. Rising parcels expand and cool while sinking parcels compress and warm; adiabatic processes are central to cloud and storm development.",
+          "lab": "Use a pressure-change model and temperature profile to trace a rising air parcel conceptually.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **probability**.",
+          "lab": "Quantify and extend the investigation: Use a pressure-change model and temperature profile to trace a rising air parcel conceptually. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply probability. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining parcel theory & adiabatic processes.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to parcel theory & adiabatic processes.",
+          "worksheet": [
+            "Use at least four terms accurately: adiabatic, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Storm Prediction Center** plus an appropriate primary/official source.",
+          "lab": "Use Storm Prediction Center to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize parcel theory & adiabatic processes through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Atmospheric Stability",
+      "concept": "The relationship between environmental temperature structure and parcel temperature determines whether vertical displacement is resisted or amplified.",
+      "lab": "Classify several environmental profiles as stable, conditionally unstable, or unstable using simplified parcel traces.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "source verification",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "stability",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "National Hurricane Center",
+        "emoji": "\ud83c\udf00",
+        "url": "https://www.nhc.noaa.gov/",
+        "desc": "Official tropical cyclone forecasts and analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Atmospheric Stability** as a physical or operational problem. The relationship between environmental temperature structure and parcel temperature determines whether vertical displacement is resisted or amplified.",
+          "lab": "Classify several environmental profiles as stable, conditionally unstable, or unstable using simplified parcel traces.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **source verification**.",
+          "lab": "Quantify and extend the investigation: Classify several environmental profiles as stable, conditionally unstable, or unstable using simplified parcel traces. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply source verification. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining atmospheric stability.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to atmospheric stability.",
+          "worksheet": [
+            "Use at least four terms accurately: stability, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **National Hurricane Center** plus an appropriate primary/official source.",
+          "lab": "Use National Hurricane Center to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize atmospheric stability through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "title": "Cloud Microphysics",
+      "concept": "Cloud droplets and ice particles form and grow through condensation, collision-coalescence, deposition, and ice-phase processes.",
+      "lab": "Construct a process model linking aerosol nuclei, droplet growth, ice processes, and precipitation formation.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "CER reasoning",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "NASA Worldview",
+        "emoji": "\ud83d\udef0\ufe0f",
+        "url": "https://worldview.earthdata.nasa.gov/",
+        "desc": "Earth-observation imagery and environmental layers."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Cloud Microphysics** as a physical or operational problem. Cloud droplets and ice particles form and grow through condensation, collision-coalescence, deposition, and ice-phase processes.",
+          "lab": "Construct a process model linking aerosol nuclei, droplet growth, ice processes, and precipitation formation.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **CER reasoning**.",
+          "lab": "Quantify and extend the investigation: Construct a process model linking aerosol nuclei, droplet growth, ice processes, and precipitation formation. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply CER reasoning. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining cloud microphysics.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to cloud microphysics.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NASA Worldview** plus an appropriate primary/official source.",
+          "lab": "Use NASA Worldview to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize cloud microphysics through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Precipitation Physics",
+      "concept": "Rain, snow, sleet, and freezing rain reflect cloud microphysics plus the vertical temperature structure below cloud base.",
+      "lab": "Use vertical temperature profiles to diagnose precipitation type and explain uncertainty near transition zones.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "unit conversion and uncertainty",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-5"
+      ],
+      "tool": {
+        "name": "AirNow",
+        "emoji": "\ud83c\udf2b\ufe0f",
+        "url": "https://www.airnow.gov/",
+        "desc": "Official U.S. air-quality information."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Precipitation Physics** as a physical or operational problem. Rain, snow, sleet, and freezing rain reflect cloud microphysics plus the vertical temperature structure below cloud base.",
+          "lab": "Use vertical temperature profiles to diagnose precipitation type and explain uncertainty near transition zones.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **unit conversion and uncertainty**.",
+          "lab": "Quantify and extend the investigation: Use vertical temperature profiles to diagnose precipitation type and explain uncertainty near transition zones. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply unit conversion and uncertainty. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining precipitation physics.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to precipitation physics.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **AirNow** plus an appropriate primary/official source.",
+          "lab": "Use AirNow to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize precipitation physics through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Pressure-Gradient Force",
+      "concept": "Horizontal pressure differences accelerate air, with stronger pressure gradients generally supporting stronger winds.",
+      "lab": "Measure contour spacing on pressure maps and compare estimated pressure-gradient strength with wind observations.",
+      "measure": "pressure, pressure tendency, pressure gradient and altitude",
+      "quantSkill": "graphing and regression",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Khaemenes High School",
+        "emoji": "K",
+        "url": "https://vervenveda.com/Khaemenes_High.github.io/",
+        "desc": "Khaemenes high-school learning portal."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Pressure-Gradient Force** as a physical or operational problem. Horizontal pressure differences accelerate air, with stronger pressure gradients generally supporting stronger winds.",
+          "lab": "Measure contour spacing on pressure maps and compare estimated pressure-gradient strength with wind observations.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: pressure, pressure tendency, pressure gradient and altitude.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **graphing and regression**.",
+          "lab": "Quantify and extend the investigation: Measure contour spacing on pressure maps and compare estimated pressure-gradient strength with wind observations. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply graphing and regression. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining pressure-gradient force.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to pressure-gradient force.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Khaemenes High School** plus an appropriate primary/official source.",
+          "lab": "Use Khaemenes High School to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize pressure-gradient force through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Coriolis Effect",
+      "concept": "Earth's rotation produces an apparent deflection of large-scale atmospheric motion whose magnitude depends on latitude and speed.",
+      "lab": "Perform a rotating-frame path experiment and relate observed deflection to hemispheric atmospheric flow.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "vector representation and directional analysis",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Observatory",
+        "emoji": "\u2600",
+        "url": "https://vervenveda.com/solanar.github.io/",
+        "desc": "Current weather, forecast, role-aware research and Solanar gateway."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Coriolis Effect** as a physical or operational problem. Earth's rotation produces an apparent deflection of large-scale atmospheric motion whose magnitude depends on latitude and speed.",
+          "lab": "Perform a rotating-frame path experiment and relate observed deflection to hemispheric atmospheric flow.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **vector representation and directional analysis**.",
+          "lab": "Quantify and extend the investigation: Perform a rotating-frame path experiment and relate observed deflection to hemispheric atmospheric flow. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply vector representation and directional analysis. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining coriolis effect.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to coriolis effect.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Observatory** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Observatory to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize coriolis effect through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Friction & Boundary-Layer Wind",
+      "concept": "Friction slows near-surface wind and changes the balance among forces, affecting cross-isobar flow and convergence/divergence.",
+      "lab": "Compare idealized upper-level and surface wind vectors around pressure systems.",
+      "measure": "wind speed, direction, vector components and vertical shear",
+      "quantSkill": "vector representation and directional analysis",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "divergence",
+        "convergence",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Platform",
+        "emoji": "\ud83c\udf10",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+        "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Friction & Boundary-Layer Wind** as a physical or operational problem. Friction slows near-surface wind and changes the balance among forces, affecting cross-isobar flow and convergence/divergence.",
+          "lab": "Compare idealized upper-level and surface wind vectors around pressure systems.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: wind speed, direction, vector components and vertical shear.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **vector representation and directional analysis**.",
+          "lab": "Quantify and extend the investigation: Compare idealized upper-level and surface wind vectors around pressure systems. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply vector representation and directional analysis. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining friction & boundary-layer wind.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to friction & boundary-layer wind.",
+          "worksheet": [
+            "Use at least four terms accurately: divergence, convergence, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Platform** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Platform to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize friction & boundary-layer wind through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Geostrophic & Gradient Wind Concepts",
+      "concept": "Away from strong friction, large-scale winds often approach balances among pressure-gradient, Coriolis, and curvature effects.",
+      "lab": "Construct force-vector diagrams for straight and curved flow around high and low pressure systems.",
+      "measure": "wind speed, direction, vector components and vertical shear",
+      "quantSkill": "vector representation and directional analysis",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Planetarium",
+        "emoji": "\ud83c\udf0c",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Planetarium_index.html",
+        "desc": "Atmosphere, official alerts, hazards, forecasts and night-sky observing."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Geostrophic & Gradient Wind Concepts** as a physical or operational problem. Away from strong friction, large-scale winds often approach balances among pressure-gradient, Coriolis, and curvature effects.",
+          "lab": "Construct force-vector diagrams for straight and curved flow around high and low pressure systems.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: wind speed, direction, vector components and vertical shear.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **vector representation and directional analysis**.",
+          "lab": "Quantify and extend the investigation: Construct force-vector diagrams for straight and curved flow around high and low pressure systems. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply vector representation and directional analysis. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining geostrophic & gradient wind concepts.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to geostrophic & gradient wind concepts.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Planetarium** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Planetarium to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize geostrophic & gradient wind concepts through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "title": "Local Circulations",
+      "concept": "Differential heating and terrain create sea breezes, land breezes, mountain-valley winds, and urban circulations.",
+      "lab": "Use a land-water heating experiment and map a complete daytime/nighttime coastal circulation.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "CER reasoning",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Weather Vortex",
+        "emoji": "\ud83c\udf00",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Weather_Vortex_index.html",
+        "desc": "Visual atmospheric analysis, short-range traces and Earth imagery."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Local Circulations** as a physical or operational problem. Differential heating and terrain create sea breezes, land breezes, mountain-valley winds, and urban circulations.",
+          "lab": "Use a land-water heating experiment and map a complete daytime/nighttime coastal circulation.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **CER reasoning**.",
+          "lab": "Quantify and extend the investigation: Use a land-water heating experiment and map a complete daytime/nighttime coastal circulation. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply CER reasoning. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining local circulations.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to local circulations.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Weather Vortex** plus an appropriate primary/official source.",
+          "lab": "Use Weather Vortex to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize local circulations through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "title": "Air Masses & Source Regions",
+      "concept": "Air masses acquire thermal and moisture properties from their source regions and modify as they travel.",
+      "lab": "Track sample air masses across a map and predict temperature/dew-point changes along their paths.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "unit conversion and uncertainty",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Environmental News",
+        "emoji": "\ud83d\udcf0",
+        "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+        "desc": "Weather, climate and environmental reporting for source analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Air Masses & Source Regions** as a physical or operational problem. Air masses acquire thermal and moisture properties from their source regions and modify as they travel.",
+          "lab": "Track sample air masses across a map and predict temperature/dew-point changes along their paths.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **unit conversion and uncertainty**.",
+          "lab": "Quantify and extend the investigation: Track sample air masses across a map and predict temperature/dew-point changes along their paths. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply unit conversion and uncertainty. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining air masses & source regions.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to air masses & source regions.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Environmental News** plus an appropriate primary/official source.",
+          "lab": "Use Environmental News to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize air masses & source regions through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "title": "Frontogenesis & Front Types",
+      "concept": "Fronts organize strong horizontal gradients and vertical motion and evolve as surrounding wind fields deform temperature boundaries.",
+      "lab": "Use successive temperature/wind maps to identify cold, warm, stationary, and occluded frontal evolution.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "graphing and regression",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "frontogenesis",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "PLERA Search",
+        "emoji": "\ud83d\udd0e",
+        "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+        "desc": "Research and source-discovery gateway."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Frontogenesis & Front Types** as a physical or operational problem. Fronts organize strong horizontal gradients and vertical motion and evolve as surrounding wind fields deform temperature boundaries.",
+          "lab": "Use successive temperature/wind maps to identify cold, warm, stationary, and occluded frontal evolution.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **graphing and regression**.",
+          "lab": "Quantify and extend the investigation: Use successive temperature/wind maps to identify cold, warm, stationary, and occluded frontal evolution. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply graphing and regression. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining frontogenesis & front types.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to frontogenesis & front types.",
+          "worksheet": [
+            "Use at least four terms accurately: frontogenesis, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **PLERA Search** plus an appropriate primary/official source.",
+          "lab": "Use PLERA Search to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize frontogenesis & front types through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 21,
+      "title": "Midlatitude Cyclone Life Cycle",
+      "concept": "Many extratropical storms evolve through linked surface and upper-air processes around low pressure and fronts.",
+      "lab": "Sequence a cyclone through development, maturity, occlusion, and decay using surface maps.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "rate and gradient",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "desc": "Mentorship for evidence, misconception repair and next-course routing."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Midlatitude Cyclone Life Cycle** as a physical or operational problem. Many extratropical storms evolve through linked surface and upper-air processes around low pressure and fronts.",
+          "lab": "Sequence a cyclone through development, maturity, occlusion, and decay using surface maps.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **rate and gradient**.",
+          "lab": "Quantify and extend the investigation: Sequence a cyclone through development, maturity, occlusion, and decay using surface maps. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply rate and gradient. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining midlatitude cyclone life cycle.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to midlatitude cyclone life cycle.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NAIB Mentor** plus an appropriate primary/official source.",
+          "lab": "Use NAIB Mentor to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize midlatitude cyclone life cycle through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "title": "Station Models & METAR Basics",
+      "concept": "Station plots and coded observations compactly describe current weather, while METAR observations support aviation and surface analysis.",
+      "lab": "Decode station models and several simplified METAR reports; reconstruct a local weather map.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "computational-model reasoning and sensitivity testing",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Platform",
+        "emoji": "\ud83c\udf10",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+        "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Station Models & METAR Basics** as a physical or operational problem. Station plots and coded observations compactly describe current weather, while METAR observations support aviation and surface analysis.",
+          "lab": "Decode station models and several simplified METAR reports; reconstruct a local weather map.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **computational-model reasoning and sensitivity testing**.",
+          "lab": "Quantify and extend the investigation: Decode station models and several simplified METAR reports; reconstruct a local weather map. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply computational-model reasoning and sensitivity testing. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining station models & metar basics.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to station models & metar basics.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Platform** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Platform to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize station models & metar basics through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "title": "Surface Analysis",
+      "concept": "Surface weather analysis synthesizes pressure, temperature, dew point, wind, precipitation, and fronts into a coherent atmospheric diagnosis.",
+      "lab": "Create a hand-analyzed surface map from a station dataset.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "source verification",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "dew point",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "NWS Education / JetStream",
+        "emoji": "\ud83c\udf93",
+        "url": "https://www.weather.gov/education",
+        "desc": "Official National Weather Service weather education and data resources."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Surface Analysis** as a physical or operational problem. Surface weather analysis synthesizes pressure, temperature, dew point, wind, precipitation, and fronts into a coherent atmospheric diagnosis.",
+          "lab": "Create a hand-analyzed surface map from a station dataset.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **source verification**.",
+          "lab": "Quantify and extend the investigation: Create a hand-analyzed surface map from a station dataset. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply source verification. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining surface analysis.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to surface analysis.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, dew point, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NWS Education / JetStream** plus an appropriate primary/official source.",
+          "lab": "Use NWS Education / JetStream to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize surface analysis through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "title": "Upper-Air Charts",
+      "concept": "Constant-pressure charts reveal height, temperature, moisture, and wind patterns that control large-scale weather.",
+      "lab": "Interpret simplified 850-, 700-, 500-, and 300-hPa charts and connect features to surface weather.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "CER reasoning",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "pressure",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Storm Prediction Center",
+        "emoji": "\ud83c\udf2a\ufe0f",
+        "url": "https://www.spc.noaa.gov/",
+        "desc": "Official U.S. severe-weather outlooks, watches and analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Upper-Air Charts** as a physical or operational problem. Constant-pressure charts reveal height, temperature, moisture, and wind patterns that control large-scale weather.",
+          "lab": "Interpret simplified 850-, 700-, 500-, and 300-hPa charts and connect features to surface weather.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **CER reasoning**.",
+          "lab": "Quantify and extend the investigation: Interpret simplified 850-, 700-, 500-, and 300-hPa charts and connect features to surface weather. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply CER reasoning. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining upper-air charts.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to upper-air charts.",
+          "worksheet": [
+            "Use at least four terms accurately: pressure, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Storm Prediction Center** plus an appropriate primary/official source.",
+          "lab": "Use Storm Prediction Center to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize upper-air charts through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 25,
+      "title": "Radiosondes & Thermodynamic Profiles",
+      "concept": "Balloon soundings reveal vertical temperature, moisture, and wind structure unavailable from surface observations alone.",
+      "lab": "Plot a simplified sounding and identify inversions, dry layers, cloud layers, and wind shear.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "unit conversion and uncertainty",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "National Hurricane Center",
+        "emoji": "\ud83c\udf00",
+        "url": "https://www.nhc.noaa.gov/",
+        "desc": "Official tropical cyclone forecasts and analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Radiosondes & Thermodynamic Profiles** as a physical or operational problem. Balloon soundings reveal vertical temperature, moisture, and wind structure unavailable from surface observations alone.",
+          "lab": "Plot a simplified sounding and identify inversions, dry layers, cloud layers, and wind shear.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **unit conversion and uncertainty**.",
+          "lab": "Quantify and extend the investigation: Plot a simplified sounding and identify inversions, dry layers, cloud layers, and wind shear. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply unit conversion and uncertainty. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining radiosondes & thermodynamic profiles.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to radiosondes & thermodynamic profiles.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **National Hurricane Center** plus an appropriate primary/official source.",
+          "lab": "Use National Hurricane Center to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize radiosondes & thermodynamic profiles through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "title": "Weather Radar Physics",
+      "concept": "Radar transmits electromagnetic energy and interprets returned signals from hydrometeors to map precipitation and storms.",
+      "lab": "Relate simplified returned-power scenarios to target size/distance and interpret reflectivity structure.",
+      "measure": "reflectivity, radial velocity, dual-pol variable, precipitation estimate or storm motion",
+      "quantSkill": "spatial/temporal image interpretation and quantitative comparison",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "NWS Radar",
+        "emoji": "\ud83d\udce1",
+        "url": "https://radar.weather.gov/",
+        "desc": "Official U.S. radar viewer."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Weather Radar Physics** as a physical or operational problem. Radar transmits electromagnetic energy and interprets returned signals from hydrometeors to map precipitation and storms.",
+          "lab": "Relate simplified returned-power scenarios to target size/distance and interpret reflectivity structure.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: reflectivity, radial velocity, dual-pol variable, precipitation estimate or storm motion.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **spatial/temporal image interpretation and quantitative comparison**.",
+          "lab": "Quantify and extend the investigation: Relate simplified returned-power scenarios to target size/distance and interpret reflectivity structure. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply spatial/temporal image interpretation and quantitative comparison. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining weather radar physics.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to weather radar physics.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NWS Radar** plus an appropriate primary/official source.",
+          "lab": "Use NWS Radar to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize weather radar physics through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 27,
+      "title": "Doppler Velocity",
+      "concept": "Doppler radar estimates radial motion toward or away from the radar and can reveal rotation, convergence, divergence, and wind shifts.",
+      "lab": "Analyze paired reflectivity/velocity images and identify a radial-velocity shear zone.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "rate and gradient",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "divergence",
+        "convergence",
+        "Doppler velocity",
+        "observation",
+        "model",
+        "forecast"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "AirNow",
+        "emoji": "\ud83c\udf2b\ufe0f",
+        "url": "https://www.airnow.gov/",
+        "desc": "Official U.S. air-quality information."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Doppler Velocity** as a physical or operational problem. Doppler radar estimates radial motion toward or away from the radar and can reveal rotation, convergence, divergence, and wind shifts.",
+          "lab": "Analyze paired reflectivity/velocity images and identify a radial-velocity shear zone.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **rate and gradient**.",
+          "lab": "Quantify and extend the investigation: Analyze paired reflectivity/velocity images and identify a radial-velocity shear zone. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply rate and gradient. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining doppler velocity.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to doppler velocity.",
+          "worksheet": [
+            "Use at least four terms accurately: divergence, convergence, Doppler velocity, observation, model.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **AirNow** plus an appropriate primary/official source.",
+          "lab": "Use AirNow to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize doppler velocity through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 28,
+      "title": "Weather Satellites",
+      "concept": "Visible, infrared, and water-vapor satellite observations reveal different atmospheric properties and cloud structures.",
+      "lab": "Compare three satellite channels for the same weather system and write a channel-specific interpretation.",
+      "measure": "brightness/temperature signal, channel contrast, feature motion or cloud-top change",
+      "quantSkill": "spatial/temporal image interpretation and quantitative comparison",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "NASA Worldview",
+        "emoji": "\ud83d\udef0\ufe0f",
+        "url": "https://worldview.earthdata.nasa.gov/",
+        "desc": "Earth-observation imagery and environmental layers."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Weather Satellites** as a physical or operational problem. Visible, infrared, and water-vapor satellite observations reveal different atmospheric properties and cloud structures.",
+          "lab": "Compare three satellite channels for the same weather system and write a channel-specific interpretation.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: brightness/temperature signal, channel contrast, feature motion or cloud-top change.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **spatial/temporal image interpretation and quantitative comparison**.",
+          "lab": "Quantify and extend the investigation: Compare three satellite channels for the same weather system and write a channel-specific interpretation. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply spatial/temporal image interpretation and quantitative comparison. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining weather satellites.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to weather satellites.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **NASA Worldview** plus an appropriate primary/official source.",
+          "lab": "Use NASA Worldview to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize weather satellites through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 29,
+      "title": "Numerical Weather Prediction Basics",
+      "concept": "Numerical models approximate atmospheric physics on grids and evolve an analyzed initial state forward in time.",
+      "lab": "Run a paper grid forecast using a simple advection rule and compare outcomes at two resolutions.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "computational-model reasoning and sensitivity testing",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Platform",
+        "emoji": "\ud83c\udf10",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+        "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Numerical Weather Prediction Basics** as a physical or operational problem. Numerical models approximate atmospheric physics on grids and evolve an analyzed initial state forward in time.",
+          "lab": "Run a paper grid forecast using a simple advection rule and compare outcomes at two resolutions.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **computational-model reasoning and sensitivity testing**.",
+          "lab": "Quantify and extend the investigation: Run a paper grid forecast using a simple advection rule and compare outcomes at two resolutions. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply computational-model reasoning and sensitivity testing. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining numerical weather prediction basics.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to numerical weather prediction basics.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Platform** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Platform to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize numerical weather prediction basics through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 30,
+      "title": "Ensemble & Probabilistic Forecasting",
+      "concept": "Multiple model solutions provide information about forecast range, confidence, and probabilities rather than a single deterministic future.",
+      "lab": "Graph an ensemble temperature/precipitation set and calculate spread plus threshold probabilities.",
+      "measure": "ensemble mean, spread, percentile and event probability",
+      "quantSkill": "probability, distribution, percentile and spread",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "ensemble",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Platform",
+        "emoji": "\ud83c\udf10",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+        "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Ensemble & Probabilistic Forecasting** as a physical or operational problem. Multiple model solutions provide information about forecast range, confidence, and probabilities rather than a single deterministic future.",
+          "lab": "Graph an ensemble temperature/precipitation set and calculate spread plus threshold probabilities.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: ensemble mean, spread, percentile and event probability.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **probability, distribution, percentile and spread**.",
+          "lab": "Quantify and extend the investigation: Graph an ensemble temperature/precipitation set and calculate spread plus threshold probabilities. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply probability, distribution, percentile and spread. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining ensemble & probabilistic forecasting.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to ensemble & probabilistic forecasting.",
+          "worksheet": [
+            "Use at least four terms accurately: ensemble, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Platform** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Platform to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize ensemble & probabilistic forecasting through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 31,
+      "title": "Forecast Verification",
+      "concept": "Forecast quality can be evaluated with error, bias, hits, misses, false alarms, and calibration.",
+      "lab": "Calculate mean absolute error and a simple contingency table for a week of forecasts.",
+      "measure": "error, bias, hits, misses, false alarms, calibration or reliability",
+      "quantSkill": "error, bias, contingency-table or reliability analysis",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "bias",
+        "verification",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Platform",
+        "emoji": "\ud83c\udf10",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+        "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Forecast Verification** as a physical or operational problem. Forecast quality can be evaluated with error, bias, hits, misses, false alarms, and calibration.",
+          "lab": "Calculate mean absolute error and a simple contingency table for a week of forecasts.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: error, bias, hits, misses, false alarms, calibration or reliability.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **error, bias, contingency-table or reliability analysis**.",
+          "lab": "Quantify and extend the investigation: Calculate mean absolute error and a simple contingency table for a week of forecasts. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply error, bias, contingency-table or reliability analysis. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining forecast verification.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to forecast verification.",
+          "worksheet": [
+            "Use at least four terms accurately: bias, verification, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Platform** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Platform to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize forecast verification through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 32,
+      "title": "Thunderstorm Ingredients",
+      "concept": "Deep convection requires moisture, instability, lift, and sufficient vertical structure; not every favorable environment produces severe weather.",
+      "lab": "Evaluate sounding/map cards for moisture, instability, lift, and shear and rank convective potential.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "graphing and regression",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "stability",
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Weather Vortex",
+        "emoji": "\ud83c\udf00",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Weather_Vortex_index.html",
+        "desc": "Visual atmospheric analysis, short-range traces and Earth imagery."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Thunderstorm Ingredients** as a physical or operational problem. Deep convection requires moisture, instability, lift, and sufficient vertical structure; not every favorable environment produces severe weather.",
+          "lab": "Evaluate sounding/map cards for moisture, instability, lift, and shear and rank convective potential.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **graphing and regression**.",
+          "lab": "Quantify and extend the investigation: Evaluate sounding/map cards for moisture, instability, lift, and shear and rank convective potential. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply graphing and regression. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining thunderstorm ingredients.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to thunderstorm ingredients.",
+          "worksheet": [
+            "Use at least four terms accurately: stability, observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Weather Vortex** plus an appropriate primary/official source.",
+          "lab": "Use Weather Vortex to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize thunderstorm ingredients through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 33,
+      "title": "Severe Weather & Warning Products",
+      "concept": "Severe weather forecasting separates environmental potential, watches, warnings, observed hazards, and impacts.",
+      "lab": "Build a timeline from outlook to watch to warning and match each product to appropriate decisions.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "rate and gradient",
+      "safety": "Use official warning products for safety decisions; simulated analysis and student interpretation never replace protective action.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS3-1"
+      ],
+      "tool": {
+        "name": "Storm Prediction Center",
+        "emoji": "\ud83c\udf2a\ufe0f",
+        "url": "https://www.spc.noaa.gov/",
+        "desc": "Official U.S. severe-weather outlooks, watches and analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Severe Weather & Warning Products** as a physical or operational problem. Severe weather forecasting separates environmental potential, watches, warnings, observed hazards, and impacts.",
+          "lab": "Build a timeline from outlook to watch to warning and match each product to appropriate decisions.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **rate and gradient**.",
+          "lab": "Quantify and extend the investigation: Build a timeline from outlook to watch to warning and match each product to appropriate decisions. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply rate and gradient. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining severe weather & warning products.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to severe weather & warning products.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Storm Prediction Center** plus an appropriate primary/official source.",
+          "lab": "Use Storm Prediction Center to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize severe weather & warning products through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 34,
+      "title": "Tropical, Winter & Flood Hazards",
+      "concept": "Different atmospheric hazards require different observing systems, forecast methods, and protective actions.",
+      "lab": "Rotate through hurricane, winter-weather, and flood cases and identify the best evidence for each hazard.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "probability",
+      "safety": "Use official tropical cyclone and emergency-management guidance; never infer evacuation decisions from a student model.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-5",
+        "HS-ESS3-1"
+      ],
+      "tool": {
+        "name": "National Hurricane Center",
+        "emoji": "\ud83c\udf00",
+        "url": "https://www.nhc.noaa.gov/",
+        "desc": "Official tropical cyclone forecasts and analysis."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Tropical, Winter & Flood Hazards** as a physical or operational problem. Different atmospheric hazards require different observing systems, forecast methods, and protective actions.",
+          "lab": "Rotate through hurricane, winter-weather, and flood cases and identify the best evidence for each hazard.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **probability**.",
+          "lab": "Quantify and extend the investigation: Rotate through hurricane, winter-weather, and flood cases and identify the best evidence for each hazard. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply probability. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining tropical, winter & flood hazards.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to tropical, winter & flood hazards.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **National Hurricane Center** plus an appropriate primary/official source.",
+          "lab": "Use National Hurricane Center to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize tropical, winter & flood hazards through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 35,
+      "title": "Weather, Climate & Teleconnections",
+      "concept": "Weather is short-term atmospheric behavior, while climate describes distributions over longer periods; large-scale patterns can influence seasonal weather probabilities.",
+      "lab": "Compare daily data, climate normals, and an ENSO-style seasonal anomaly map without conflating timescales.",
+      "measure": "anomaly, average, trend, scenario range and confidence interval",
+      "quantSkill": "anomaly, trend, variability and uncertainty analysis",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "observation",
+        "model",
+        "forecast",
+        "uncertainty"
+      ],
+      "standards": [
+        "HS-ESS2-4"
+      ],
+      "tool": {
+        "name": "PLERA Search",
+        "emoji": "\ud83d\udd0e",
+        "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+        "desc": "Research and source-discovery gateway."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Weather, Climate & Teleconnections** as a physical or operational problem. Weather is short-term atmospheric behavior, while climate describes distributions over longer periods; large-scale patterns can influence seasonal weather probabilities.",
+          "lab": "Compare daily data, climate normals, and an ENSO-style seasonal anomaly map without conflating timescales.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: anomaly, average, trend, scenario range and confidence interval.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **anomaly, trend, variability and uncertainty analysis**.",
+          "lab": "Quantify and extend the investigation: Compare daily data, climate normals, and an ENSO-style seasonal anomaly map without conflating timescales. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply anomaly, trend, variability and uncertainty analysis. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining weather, climate & teleconnections.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to weather, climate & teleconnections.",
+          "worksheet": [
+            "Use at least four terms accurately: observation, model, forecast, uncertainty.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **PLERA Search** plus an appropriate primary/official source.",
+          "lab": "Use PLERA Search to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize weather, climate & teleconnections through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 36,
+      "title": "Forecast Capstone & Final",
+      "concept": "A professional-style forecast briefing integrates observations, physics, radar, satellite, models, uncertainty, hazards, and clear communication.",
+      "lab": "Produce a complete 48-hour forecast briefing for a selected location and defend the reasoning before the cumulative final.",
+      "measure": "time, location, units, quantitative observations, mapped fields and model output",
+      "quantSkill": "CER reasoning",
+      "safety": "Use safe lab materials, preserve source labels, separate official products from model/derived analysis, and stop field work when conditions become unsafe.",
+      "vocab": [
+        "uncertainty",
+        "observation",
+        "model",
+        "forecast"
+      ],
+      "standards": [
+        "HS-ESS2-2"
+      ],
+      "tool": {
+        "name": "Solanar Platform",
+        "emoji": "\ud83c\udf10",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+        "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Theory, Phenomenon & Hypothesis",
+          "lesson": "Frame **Forecast Capstone & Final** as a physical or operational problem. A professional-style forecast briefing integrates observations, physics, radar, satellite, models, uncertainty, hazards, and clear communication.",
+          "lab": "Produce a complete 48-hour forecast briefing for a selected location and defend the reasoning before the cumulative final.",
+          "worksheet": [
+            "Describe the phenomenon without explanation first; separate observation from interpretation.",
+            "Identify dependent/independent or diagnostic variables. Primary evidence: time, location, units, quantitative observations, mapped fields and model output.",
+            "State a hypothesis or forecast question that could be supported or rejected by evidence.",
+            "Identify one source of measurement or model uncertainty."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Quantitative Laboratory",
+          "lesson": "Translate the week's concept into measurable quantities. Main quantitative skill: **CER reasoning**.",
+          "lab": "Quantify and extend the investigation: Produce a complete 48-hour forecast briefing for a selected location and defend the reasoning before the cumulative final. Preserve units, metadata, assumptions and uncertainty.",
+          "worksheet": [
+            "Create a labeled data table with units, time, location/source and precision.",
+            "Apply CER reasoning. Show the calculation or decision rule.",
+            "Create an appropriate graph, profile, map, vector diagram or distribution.",
+            "Interpret the result in physical meteorological terms."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Data & Model Analysis",
+          "lesson": "Use models as testable representations rather than pictures. Develop or revise a model explaining forecast capstone & final.",
+          "lab": "Build, run or critique a physical, mathematical, conceptual or computational model related to forecast capstone & final.",
+          "worksheet": [
+            "Use at least four terms accurately: uncertainty, observation, model, forecast.",
+            "State governing relationships or causal links represented by the model.",
+            "Compare model output with at least one observation or expected physical constraint.",
+            "State one assumption, one limitation and one likely source of model error."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Operational Analysis & Research",
+          "lesson": "Apply the week's science to a real or archived atmospheric case using **Solanar Platform** plus an appropriate primary/official source.",
+          "lab": "Use Solanar Platform to investigate a case. Archive location, valid time, product/source, variables and screenshots/notes as permitted.",
+          "worksheet": [
+            "Classify each source as observation, official warning, forecast, numerical model, derived guidance, research/background or news.",
+            "Record at least two quantitative or spatial pieces of evidence.",
+            "Compare two independent sources or model/observation layers.",
+            "State confidence and what new evidence could change your conclusion."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Forecast Briefing, Defense & Mastery",
+          "lesson": "Synthesize forecast capstone & final through a concise technical briefing using claim, evidence, physical reasoning and explicit uncertainty.",
+          "lab": "Deliver a 3\u20135 minute forecast/science briefing or a one-page technical memorandum. Defend one key decision under questioning.",
+          "worksheet": [
+            "CLAIM / FORECAST: state the conclusion precisely.",
+            "EVIDENCE: cite at least three observations, calculations, map features or model results.",
+            "PHYSICAL REASONING: connect evidence to governing atmospheric processes.",
+            "UNCERTAINTY: identify plausible alternatives, confidence and forecast bust modes.",
+            "Complete the daily exit check, then the 10-question weekly mastery quiz. Both require 80%."
+          ]
+        }
+      ]
+    }
+  ],
+  "course": 301,
+  "tools": [
+    {
+      "name": "Solanar Observatory",
+      "emoji": "\u2600",
+      "url": "https://vervenveda.com/solanar.github.io/",
+      "desc": "Current weather, forecast, role-aware research and Solanar gateway."
+    },
+    {
+      "name": "Solanar Platform",
+      "emoji": "\ud83c\udf10",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+      "desc": "Full weather, hazards, Earth systems, resources and briefing environment."
+    },
+    {
+      "name": "Solanar Planetarium",
+      "emoji": "\ud83c\udf0c",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Planetarium_index.html",
+      "desc": "Atmosphere, official alerts, hazards, forecasts and night-sky observing."
+    },
+    {
+      "name": "Weather Vortex",
+      "emoji": "\ud83c\udf00",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Weather_Vortex_index.html",
+      "desc": "Visual atmospheric analysis, short-range traces and Earth imagery."
+    },
+    {
+      "name": "Environmental News",
+      "emoji": "\ud83d\udcf0",
+      "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+      "desc": "Weather, climate and environmental reporting for source analysis."
+    },
+    {
+      "name": "PLERA Search",
+      "emoji": "\ud83d\udd0e",
+      "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+      "desc": "Research and source-discovery gateway."
+    },
+    {
+      "name": "NAIB Mentor",
+      "emoji": "N",
+      "url": "https://artist1970.github.io/noema-ai.github.io/",
+      "desc": "Mentorship for evidence, misconception repair and next-course routing."
+    },
+    {
+      "name": "NWS Radar",
+      "emoji": "\ud83d\udce1",
+      "url": "https://radar.weather.gov/",
+      "desc": "Official U.S. radar viewer."
+    },
+    {
+      "name": "NWS Education / JetStream",
+      "emoji": "\ud83c\udf93",
+      "url": "https://www.weather.gov/education",
+      "desc": "Official National Weather Service weather education and data resources."
+    },
+    {
+      "name": "Storm Prediction Center",
+      "emoji": "\ud83c\udf2a\ufe0f",
+      "url": "https://www.spc.noaa.gov/",
+      "desc": "Official U.S. severe-weather outlooks, watches and analysis."
+    },
+    {
+      "name": "National Hurricane Center",
+      "emoji": "\ud83c\udf00",
+      "url": "https://www.nhc.noaa.gov/",
+      "desc": "Official tropical cyclone forecasts and analysis."
+    },
+    {
+      "name": "NASA Worldview",
+      "emoji": "\ud83d\udef0\ufe0f",
+      "url": "https://worldview.earthdata.nasa.gov/",
+      "desc": "Earth-observation imagery and environmental layers."
+    },
+    {
+      "name": "AirNow",
+      "emoji": "\ud83c\udf2b\ufe0f",
+      "url": "https://www.airnow.gov/",
+      "desc": "Official U.S. air-quality information."
+    },
+    {
+      "name": "Khaemenes High School",
+      "emoji": "K",
+      "url": "https://vervenveda.com/Khaemenes_High.github.io/",
+      "desc": "Khaemenes high-school learning portal."
+    }
+  ]
+}
