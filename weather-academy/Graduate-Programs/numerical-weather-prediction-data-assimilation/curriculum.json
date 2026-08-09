@@ -1,0 +1,1864 @@
+{
+  "program": {
+    "name": "Solanar Graduate Program",
+    "track_number": 2,
+    "credential": "Graduate Certificate of Completion in Numerical Weather Prediction & Data Assimilation",
+    "concentration": "Computational Atmospheric Modeling \u00b7 Ensembles \u00b7 Data Assimilation \u00b7 Hybrid AI/ML",
+    "duration_weeks": 36,
+    "semesters": 2,
+    "advanced_learning_days": 180,
+    "mastery_threshold": 80,
+    "credit_equivalent_hours": 36,
+    "prerequisite": "Solanar Professional Meteorology Certificate Years I\u2013II or equivalent university-level atmospheric science, calculus, physics, programming and statistics preparation.",
+    "credential_note": "Internal Solanar/Khaemenes certificate of completion; not accredited university credit, government licensure, AMS certification, or a substitute for institutional degree requirements."
+  },
+  "mathematics": [
+    {
+      "id": "calculus-ii",
+      "name": "Calculus II",
+      "role": "Prerequisite / remediation",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/calculus-ii/",
+      "use": "Integration, infinite series, parametric reasoning, differential-equation applications and continuous model formulation."
+    },
+    {
+      "id": "linear-algebra",
+      "name": "Linear Algebra",
+      "role": "Core co-requisite",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/linear-algebra/",
+      "use": "State vectors, matrices, least squares, eigenstructure, covariance, SVD, inverse problems and data assimilation."
+    },
+    {
+      "id": "differential-equations",
+      "name": "Differential Equations",
+      "role": "Core co-requisite",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/differential-equations/",
+      "use": "Atmospheric governing equations, systems, stability, numerical integration, oscillations and dynamical prediction."
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "role": "Core co-requisite",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/statistics/",
+      "use": "Probability, Bayesian foundations, estimation, regression, resampling, ensemble forecasting, calibration and verification."
+    },
+    {
+      "id": "introduction-to-proofs",
+      "name": "Introduction to Proofs",
+      "role": "Graduate research reasoning",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/introduction-to-proofs/",
+      "use": "Assumptions, formal reasoning, convergence arguments, defensible methods and research writing."
+    },
+    {
+      "id": "real-complex-analysis",
+      "name": "Real & Complex Analysis",
+      "role": "Research distinction extension",
+      "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/real-complex-analysis/",
+      "use": "Rigorous limits, convergence, continuity and advanced mathematical analysis for numerical-method research."
+    }
+  ],
+  "tools": [
+    {
+      "id": "numerical-lab",
+      "name": "Solanar Numerical Prediction Lab",
+      "icon": "\u2211",
+      "type": "Solanar Lab",
+      "url": "../labs/index.html",
+      "desc": "Interactive CFL, advection, Kalman-update and ensemble-probability experiments."
+    },
+    {
+      "id": "solanar-platform",
+      "name": "Solanar Platform",
+      "icon": "\ud83c\udf10",
+      "type": "Solanar",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+      "desc": "Applied weather, hazard and model-analysis workspace."
+    },
+    {
+      "id": "naib",
+      "name": "NAIB Research Mentor",
+      "icon": "N",
+      "type": "Mentor",
+      "url": "https://artist1970.github.io/noema-ai.github.io/",
+      "desc": "Socratic mathematical, research and model-diagnostic support."
+    },
+    {
+      "id": "plera",
+      "name": "PLERA Search",
+      "icon": "\ud83d\udd0e",
+      "type": "Research",
+      "url": "https://vervenveda.com/PLERASearch.github.io/",
+      "desc": "Research and source discovery."
+    },
+    {
+      "id": "ecmwf-da",
+      "name": "ECMWF Data Assimilation & ML Training",
+      "icon": "E",
+      "type": "Official/Professional",
+      "url": "https://events.ecmwf.int/event/498/overview",
+      "desc": "Contemporary DA methods and ML-in-DA professional training."
+    },
+    {
+      "id": "wmo-nwp",
+      "name": "WMO NWP Skills & Knowledge Framework",
+      "icon": "W",
+      "type": "Official",
+      "url": "https://wmo.int/events/expert-meeting-develop-skills-and-knowledge-framework-nwp",
+      "desc": "Operational NWP skills framework development."
+    },
+    {
+      "id": "ncep-da",
+      "name": "NCEP Data Assimilation",
+      "icon": "\ud83e\udded",
+      "type": "Official",
+      "url": "https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/ncep_data_assimilation.php",
+      "desc": "Operational NOAA/NCEP data-assimilation background."
+    },
+    {
+      "id": "ncep-systems",
+      "name": "NCEP Numerical Forecast Systems",
+      "icon": "\ud83d\udda5",
+      "type": "Official",
+      "url": "https://www.emc.ncep.noaa.gov/emc/pages/ncep-numerical-forecast-systems.php",
+      "desc": "Operational GFS, GEFS, DA and related model systems."
+    },
+    {
+      "id": "gfs",
+      "name": "NCEP GFS",
+      "icon": "\ud83c\udf0d",
+      "type": "Official",
+      "url": "https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs.php",
+      "desc": "Global Forecast System documentation/context."
+    },
+    {
+      "id": "nomads",
+      "name": "NOAA NOMADS",
+      "icon": "\ud83d\uddc3",
+      "type": "Official Data",
+      "url": "https://nomads.ncep.noaa.gov/",
+      "desc": "Model and analysis data access."
+    },
+    {
+      "id": "ncei-nwp",
+      "name": "NCEI Numerical Weather Prediction",
+      "icon": "\ud83d\udcda",
+      "type": "Official Data",
+      "url": "https://www.ncei.noaa.gov/products/weather-climate-models/numerical-weather-prediction",
+      "desc": "Historical/operational NWP datasets."
+    },
+    {
+      "id": "gdas",
+      "name": "NCEI GDAS",
+      "icon": "\ud83d\udef0",
+      "type": "Official Data",
+      "url": "https://www.ncei.noaa.gov/products/weather-climate-models/global-data-assimilation",
+      "desc": "Global Data Assimilation System data/context."
+    },
+    {
+      "id": "meted",
+      "name": "UCAR COMET MetEd",
+      "icon": "\ud83c\udf93",
+      "type": "Professional Training",
+      "url": "https://www.meted.ucar.edu/",
+      "desc": "Meteorology and model-guidance professional training."
+    }
+  ],
+  "forms": [
+    {
+      "id": "experiment-design",
+      "name": "Numerical Experiment Design Record",
+      "desc": "Question, hypothesis, baseline, perturbation, controlled variables, metrics and reproducibility plan."
+    },
+    {
+      "id": "model-config",
+      "name": "Model Configuration & Provenance Record",
+      "desc": "Grid/domain, coordinates, time step, dynamical core, physics, initial/boundary conditions, code/data versions."
+    },
+    {
+      "id": "stability-error",
+      "name": "Numerical Stability & Error Analysis",
+      "desc": "CFL, truncation error, dispersion, diffusion, conservation and sensitivity."
+    },
+    {
+      "id": "grid-coordinate",
+      "name": "Grid & Coordinate Analysis",
+      "desc": "Horizontal/vertical grid, metric/coordinate implications, resolution and numerical tradeoffs."
+    },
+    {
+      "id": "parameterization-audit",
+      "name": "Physical Parameterization Audit",
+      "desc": "Radiation, microphysics, PBL, surface, convection and sub-grid assumptions."
+    },
+    {
+      "id": "verification-deterministic",
+      "name": "Deterministic Model Verification",
+      "desc": "Bias, MAE/RMSE, categorical scores, spatial/timing error and failure diagnosis."
+    },
+    {
+      "id": "observation-inventory",
+      "name": "DA Observation Inventory & QC",
+      "desc": "Observation types, representativeness, metadata, QC, thinning/superobbing concepts and exclusions."
+    },
+    {
+      "id": "innovation-diagnostics",
+      "name": "Innovation / Residual Diagnostics",
+      "desc": "Background-minus-observation, analysis-minus-observation, bias, variance and suspect-data patterns."
+    },
+    {
+      "id": "variational-analysis",
+      "name": "Variational DA Analysis",
+      "desc": "Cost function, control vector, background/observation terms, minimization logic and assumptions."
+    },
+    {
+      "id": "adjoint-trace",
+      "name": "Tangent-Linear / Adjoint Reasoning Log",
+      "desc": "Perturbation propagation, sensitivities, linearization assumptions and limitations."
+    },
+    {
+      "id": "kalman-ensemble-da",
+      "name": "Kalman / Ensemble DA Experiment",
+      "desc": "Prior, observation, uncertainty, gain/update, ensemble spread and posterior diagnosis."
+    },
+    {
+      "id": "covariance-audit",
+      "name": "Error Covariance Audit",
+      "desc": "Background/observation covariance structure, localization/inflation concepts and sensitivity."
+    },
+    {
+      "id": "ensemble-forecast",
+      "name": "Ensemble Prediction & Probability Brief",
+      "desc": "Perturbations, spread, clusters, threshold probabilities, reliability and scenarios."
+    },
+    {
+      "id": "ml-hybrid-evaluation",
+      "name": "ML / Hybrid Prediction Evaluation",
+      "desc": "Training/evaluation separation, baselines, generalization, physical consistency, uncertainty and failure modes."
+    },
+    {
+      "id": "reproducibility",
+      "name": "Computational Reproducibility Record",
+      "desc": "Dataset provenance, configuration, code logic, seeds, versions, outputs and replication check."
+    },
+    {
+      "id": "capstone-system",
+      "name": "Graduate Forecast-System Capstone Record",
+      "desc": "Architecture, equations, numerics, DA, ensemble design, verification, limitations and research contribution."
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Forecast Systems as Scientific Models",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Frame NWP as a chain from observations \u2192 analysis \u2192 numerical integration \u2192 physics \u2192 products \u2192 verification; distinguish model state, analysis, forecast and post-processing."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Represent atmospheric variables as functions/state vectors and review dimensional consistency, Taylor expansion and error notation."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Build a reproducible experiment notebook and run baseline sensitivity calculations in the Solanar Numerical Prediction Lab."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare a current analysis and forecast product while identifying what is observed, assimilated, modeled and derived."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a graduate model-system map and identify at least five distinct uncertainty sources."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "linear-algebra"
+      ],
+      "forms": [
+        "experiment-design",
+        "reproducibility"
+      ],
+      "tools": [
+        "numerical-lab",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Governing Equations & Model State",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Revisit mass, momentum, thermodynamic and moisture equations as a coupled prediction system; examine hydrostatic versus nonhydrostatic modeling choices."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Express coupled prognostic variables as vectors/systems and analyze units, scales and dependencies."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Create a simplified coupled state-vector model and test parameter sensitivity."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Inspect operational model variable sets and diagnose which fields are prognostic versus diagnostic."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend which simplifications are acceptable for a toy educational model and which would invalidate its purpose."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "forms": [
+        "model-config",
+        "experiment-design"
+      ],
+      "tools": [
+        "numerical-lab",
+        "gfs",
+        "naib"
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Grids, Coordinates & Discrete Atmospheric States",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study structured grids, staggering concepts, map projections, cubed-sphere ideas, vertical coordinates and resolution tradeoffs."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Translate continuous fields into indexed arrays/vectors; examine coordinate transforms and matrix representations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Construct discrete 1-D/2-D fields and quantify how grid spacing changes representation of gradients/features."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare global and regional model grid/resolution choices and document consequences for resolved phenomena."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Research memo: resolution is not equivalent to forecast accuracy\u2014explain why."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "calculus-ii"
+      ],
+      "forms": [
+        "grid-coordinate",
+        "model-config"
+      ],
+      "tools": [
+        "numerical-lab",
+        "gfs",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Finite Differences, Truncation Error & Consistency",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Derive forward, backward and centered finite-difference approximations from Taylor expansion and classify truncation error."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Work derivative approximations and error-order calculations; connect consistency to convergence."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Numerically approximate derivatives of analytic functions and measure error as grid spacing changes."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Inspect how numerical derivative choices affect atmospheric gradient diagnostics."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Produce a convergence table and defend whether observed error reduction matches theoretical order."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "stability-error",
+        "reproducibility"
+      ],
+      "tools": [
+        "numerical-lab",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Time Integration, CFL Stability & Error Growth",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study explicit/implicit ideas, Euler and Runge\u2013Kutta families, stability regions conceptually, CFL constraints and accumulated numerical error."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Analyze ODE time stepping and stability; calculate CFL numbers across atmospheric flow/grid/time-step scenarios."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Use the CFL lab to map stable/unstable combinations and compare numerical solutions to an analytic benchmark."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Relate operational model resolution/time step to computational and stability constraints without assuming one universal CFL rule."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write an error-budget note separating initial-condition, model and numerical errors."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "calculus-ii"
+      ],
+      "forms": [
+        "stability-error",
+        "model-config"
+      ],
+      "tools": [
+        "numerical-lab",
+        "gfs",
+        "naib"
+      ]
+    },
+    {
+      "week": 6,
+      "title": "UNIT I QUALIFYING CHECKPOINT \u2014 Numerical Foundations",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Synthesize forecast-system architecture, governing equations, grids, finite differences and stability."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Complete derivations and numerical-error/stability calculations under timed conditions."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Implement/modify a simple finite-difference numerical experiment and document reproducibility."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Diagnose an operational model configuration from published documentation."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Orally defend numerical choices; written, quantitative, computational and oral components each require \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "experiment-design",
+        "stability-error",
+        "reproducibility"
+      ],
+      "tools": [
+        "numerical-lab",
+        "gfs",
+        "naib"
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Advection: Upwind, Centered & Higher-Order Tradeoffs",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study numerical advection as a core atmospheric transport problem; compare diffusion, dispersion, phase error and monotonicity."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Derive/update finite-difference advection equations and analyze amplification/error behavior conceptually."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Run 1-D advection experiments with varying wind, grid spacing and time step; compare shape preservation and numerical diffusion."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Identify forecast features whose timing/amplitude can be sensitive to transport numerics."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a method comparison emphasizing tradeoffs rather than declaring a universally best scheme."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "calculus-ii"
+      ],
+      "forms": [
+        "stability-error",
+        "experiment-design"
+      ],
+      "tools": [
+        "numerical-lab",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Diffusion, Filters & Numerical Noise",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study physical versus numerical diffusion, computational modes, smoothing/filtering and conservation implications."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Analyze diffusion equations/eigenmodes conceptually and calculate scale-dependent damping."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Add controlled diffusion to a toy field and quantify noise suppression versus signal loss."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Evaluate when smoothing a model field can obscure genuine small-scale structure."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Research note: distinguish numerical stabilization from physical parameterization."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "forms": [
+        "stability-error",
+        "reproducibility"
+      ],
+      "tools": [
+        "numerical-lab",
+        "naib"
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Dynamical Cores & Conservation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Compare major dynamical-core design ideas including finite-volume, spectral/semi-Lagrangian and gridpoint approaches; emphasize conservation and computational tradeoffs."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Use integral/flux reasoning and matrix/vector operators to describe discrete conservation."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Perform a finite-volume-style conservation experiment on a toy control volume."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Study GFS/FV3 documentation context and identify model-core versus physics responsibilities."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend conservation diagnostics that should accompany numerical experiments."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "linear-algebra"
+      ],
+      "forms": [
+        "model-config",
+        "stability-error"
+      ],
+      "tools": [
+        "gfs",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Vertical Coordinates & Atmospheric Columns",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Examine pressure, sigma/terrain-following, hybrid and height-like vertical coordinates, layer interfaces and terrain interactions."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Transform/compare vertical-coordinate representations and discretized column operators."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Construct a model-column representation and test how vertical resolution changes depiction of inversions/jet layers."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare reported operational vertical-layer structures and implications for boundary layer/upper atmosphere."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a design memo selecting a vertical coordinate for a hypothetical regional model."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "linear-algebra"
+      ],
+      "forms": [
+        "grid-coordinate",
+        "model-config"
+      ],
+      "tools": [
+        "gfs",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Physical Parameterizations I \u2014 Radiation, Surface & PBL",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Analyze why unresolved/sub-grid physical processes require parameterization; focus on radiation, land-surface exchange and planetary boundary layer schemes."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Express flux/budget relationships and sensitivity to parameter changes."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Run parameter sensitivity thought experiments with controlled surface/flux changes."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare model guidance during a boundary-layer-sensitive forecast and identify likely parameterization influences."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Prepare a parameterization audit that distinguishes evidence from speculation."
+        }
+      ],
+      "math": [
+        "calculus-ii",
+        "statistics"
+      ],
+      "forms": [
+        "parameterization-audit",
+        "experiment-design"
+      ],
+      "tools": [
+        "ncep-systems",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 12,
+      "title": "UNIT II QUALIFYING CHECKPOINT \u2014 Dynamics & Physics",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Synthesize advection/diffusion, dynamical cores, vertical coordinates and physical parameterizations."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Complete numerical-method and flux/conservation calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Run a documented sensitivity experiment and assess numerical versus physical impacts."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Interpret an operational-model forecast difference using configuration evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend model-design tradeoffs; checkpoint components each \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "parameterization-audit",
+        "stability-error",
+        "reproducibility"
+      ],
+      "tools": [
+        "numerical-lab",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Physical Parameterizations II \u2014 Microphysics & Convection",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study cloud microphysics and convection parameterization, scale awareness, explicit versus parameterized convection and gray-zone challenges."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Analyze sensitivity and categorical/continuous verification metrics for precipitation experiments."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Design a controlled microphysics/convection sensitivity experiment using supplied or archived outputs."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare precipitation guidance across model configurations/resolutions without attributing differences to a single scheme absent evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a parameterization experiment proposal with falsifiable expectations."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "parameterization-audit",
+        "experiment-design"
+      ],
+      "tools": [
+        "ncep-systems",
+        "nomads",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Initial & Boundary Conditions, Spin-Up & Balance",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study model initialization, lateral boundary conditions, digital/implicit balancing concepts, spin-up and adjustment."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Analyze perturbation propagation and boundary forcing in simple ODE/system examples."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Perturb a toy initial state and quantify forecast divergence over time."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare analyses/short forecasts to identify spin-up or boundary-related artifacts."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a forecast-system diagnostic distinguishing initialization error from model-physics error."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "forms": [
+        "model-config",
+        "verification-deterministic"
+      ],
+      "tools": [
+        "numerical-lab",
+        "gdas",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Limited-Area & High-Resolution NWP",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Examine nesting, regional models, convection-allowing resolution, boundary dependence, computational cost and predictability limits."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Compute resolution/cost scaling examples and spatial-error metrics."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Compare coarse and high-resolution outputs for terrain/convection features using matched verification periods."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Assess what high-resolution guidance adds\u2014and what false precision it can create."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Create an operational-use rubric for high-resolution guidance."
+        }
+      ],
+      "math": [
+        "statistics",
+        "calculus-ii"
+      ],
+      "forms": [
+        "model-config",
+        "verification-deterministic"
+      ],
+      "tools": [
+        "wmo-nwp",
+        "nomads",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Deterministic Verification & Object/Timing Error",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study bias, MAE, RMSE, anomaly correlation concepts, categorical scores and spatial/timing verification limitations."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Calculate deterministic scores and examine sensitivity to thresholds/rare events."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Verify a small multi-variable forecast set and separate amplitude, timing and displacement errors."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare two model systems fairly using matched cases/lead times."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a verification report that avoids cherry-picking metrics."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "verification-deterministic",
+        "reproducibility"
+      ],
+      "tools": [
+        "ncei-nwp",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Reproducible NWP Experiment Design",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Integrate scientific method, controlled experiments, code/data provenance, configuration management and versioned outputs."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Use statistical design, paired comparisons, uncertainty and reproducible calculation practices."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Create a complete experiment directory/manifest for a toy NWP study and independently reproduce it."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Audit an archived model comparison for uncontrolled differences."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Submit Semester I computational research proposal and preregister primary metrics."
+        }
+      ],
+      "math": [
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "experiment-design",
+        "reproducibility"
+      ],
+      "tools": [
+        "plera",
+        "naib",
+        "numerical-lab"
+      ]
+    },
+    {
+      "week": 18,
+      "title": "SEMESTER I COMPREHENSIVE \u2014 Numerical Modeling",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Cumulative examination in governing equations, discretization, stability, advection/diffusion, dynamical cores, parameterizations, initialization and verification."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Complete graduate numerical-analysis and differential-equation problems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Implement and defend a reproducible toy forecast-model experiment."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Diagnose a model forecast using configuration and verification evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Portfolio/oral defense. Each component independently \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "model-config",
+        "stability-error",
+        "verification-deterministic",
+        "reproducibility"
+      ],
+      "tools": [
+        "numerical-lab",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 19,
+      "title": "Observing Systems, Representativeness & Quality Control",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Map surface, radiosonde, aircraft, buoy, radar, satellite and other observations into the DA problem; distinguish instrument, representativeness and preprocessing errors."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Model observations as noisy measurements of a state and introduce observation operators."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Build an observation inventory and perform QC/outlier experiments on synthetic observations."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Examine GDAS observation categories and operational data formats/context."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend an observation inclusion/exclusion decision using metadata and uncertainty."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "observation-inventory",
+        "reproducibility"
+      ],
+      "tools": [
+        "gdas",
+        "ncep-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 20,
+      "title": "Estimation, Bayesian Reasoning & Least Squares",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Frame DA as statistical estimation combining prior/background and observations with uncertainty."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Derive scalar weighted-estimate/least-squares results and connect Bayesian/BLUE interpretations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Use synthetic priors/observations to test sensitivity to assumed error variance."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Interpret analysis increments as evidence-weighted corrections rather than direct observations."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write an assumptions ledger for a simple assimilation problem."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "innovation-diagnostics",
+        "kalman-ensemble-da"
+      ],
+      "tools": [
+        "numerical-lab",
+        "ecmwf-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 21,
+      "title": "Optimal Interpolation & BLUE",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Develop Best Linear Unbiased Estimation / optimal interpolation concepts, gain weighting and multivariate covariance influence."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Solve scalar and small matrix OI/BLUE problems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Implement a small matrix analysis update using prescribed background/observation errors."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Map the conceptual method to historical/modern DA evolution without implying current systems are simple OI."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Verify posterior error reduction and identify failure when covariance assumptions are wrong."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "variational-analysis",
+        "covariance-audit"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "ncep-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 22,
+      "title": "3D-Var & Cost-Function Minimization",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Formulate 3D-Var as minimization of background and observation misfit terms at an analysis time."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Work quadratic cost functions, gradients and matrix-weighted norms."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Minimize a low-dimensional 3D-Var toy cost function and compare with BLUE solution under equivalent assumptions."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Interpret analysis increments and innovation diagnostics in an operational context."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend control variables/error assumptions and document convergence."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics",
+        "calculus-ii"
+      ],
+      "forms": [
+        "variational-analysis",
+        "innovation-diagnostics"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "ncep-da",
+        "numerical-lab",
+        "naib"
+      ]
+    },
+    {
+      "week": 23,
+      "title": "4D-Var, Model Constraint & Time-Window Assimilation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Extend variational assimilation through time using a forecast model and time-distributed observations."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Analyze constrained optimization and sensitivity across a time window; introduce tangent-linear/adjoint reasoning."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Perform a simplified multi-time-step assimilation experiment and trace how early-state adjustments affect later observation fit."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare conceptual strengths/limitations of 3D-Var and 4D-Var."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a design memo selecting an assimilation window for a hypothetical system."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "calculus-ii"
+      ],
+      "forms": [
+        "variational-analysis",
+        "adjoint-trace"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "gfs",
+        "naib"
+      ]
+    },
+    {
+      "week": 24,
+      "title": "UNIT III QUALIFYING CHECKPOINT \u2014 Variational Assimilation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Synthesize observations/QC, estimation, OI/BLUE, 3D-Var and 4D-Var."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Complete matrix/statistical/optimization calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Execute and document a toy variational analysis experiment."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Interpret innovations/increments and identify suspect assumptions."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Orally defend an assimilation design; components each \u226580%."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "variational-analysis",
+        "innovation-diagnostics",
+        "reproducibility"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "ncep-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 25,
+      "title": "Kalman Filtering & Sequential State Estimation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Develop forecast-analysis cycling, Kalman gain, covariance propagation and sequential updates."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Derive scalar Kalman equations and solve low-dimensional matrix cases."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Use the Solanar Kalman lab to vary prior/observation uncertainties and track posterior estimates."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Relate cycling analysis/forecast concepts to operational DA without oversimplifying nonlinear high-dimensional systems."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Produce a sensitivity report on covariance assumptions."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "kalman-ensemble-da",
+        "covariance-audit"
+      ],
+      "tools": [
+        "numerical-lab",
+        "ecmwf-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 26,
+      "title": "Ensemble Kalman Filters",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study ensemble-estimated covariance, finite-ensemble sampling error, localization and inflation concepts."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Compute ensemble mean/covariance and simplified gain/update calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Run an ensemble update experiment and test localization/inflation thought experiments."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare ensemble and variational information pathways."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a failure-mode analysis for small ensembles and mis-specified observations."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "kalman-ensemble-da",
+        "covariance-audit"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "ncep-da",
+        "numerical-lab",
+        "naib"
+      ]
+    },
+    {
+      "week": 27,
+      "title": "Hybrid Ensemble\u2013Variational Assimilation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Examine why operational systems combine ensemble flow-dependent covariance with variational frameworks."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Blend static/ensemble covariance concepts and analyze weighting sensitivity."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Construct a simplified hybrid covariance experiment."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Study current NCEP hybrid ensemble-variational context and identify conceptual links to GFS initialization."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend when flow-dependent covariance should materially change an analysis."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics"
+      ],
+      "forms": [
+        "covariance-audit",
+        "variational-analysis"
+      ],
+      "tools": [
+        "ncep-da",
+        "gfs",
+        "ecmwf-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 28,
+      "title": "Background & Observation Error Covariance",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study spatial/cross-variable covariance, correlation length scales, representativeness, localization and observation-error correlation."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Estimate covariance/correlation from synthetic samples and inspect positive-definiteness/sampling issues conceptually."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Build competing covariance models and compare resulting analysis increments."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Use innovation statistics to diagnose possible error-model problems."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Research note: why 'smaller error' is not automatically a more truthful covariance model."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "covariance-audit",
+        "innovation-diagnostics"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 29,
+      "title": "Bias Correction, Observation Operators & Radiance Assimilation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Examine systematic observation/model bias, nonlinear observation operators and direct radiance assimilation concepts."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Model bias terms and nonlinear mappings in simplified estimation exercises."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Compare assimilation with/without a controlled bias and diagnose posterior impacts."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Study ECMWF training themes on radiance observations and bias correction."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a bias-correction governance memo addressing overfitting and changing observing systems."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "observation-inventory",
+        "innovation-diagnostics"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "gdas",
+        "naib"
+      ]
+    },
+    {
+      "week": 30,
+      "title": "UNIT IV QUALIFYING CHECKPOINT \u2014 Ensemble & Hybrid DA",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Synthesize Kalman/EnKF, hybrid methods, covariance, bias correction and observation operators."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Complete matrix/covariance/probability calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Run a controlled ensemble/hybrid toy assimilation experiment."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Diagnose innovations/spread and identify an error-model failure."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend the analysis and uncertainty treatment; all components \u226580%."
+        }
+      ],
+      "math": [
+        "linear-algebra",
+        "statistics",
+        "differential-equations"
+      ],
+      "forms": [
+        "kalman-ensemble-da",
+        "covariance-audit",
+        "innovation-diagnostics"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "ncep-da",
+        "naib"
+      ]
+    },
+    {
+      "week": 31,
+      "title": "Ensemble Prediction, Perturbations & Stochastic Physics",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study initial-condition ensembles, model-error representation, stochastic physics, spread-skill relationships and scenario interpretation."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Calculate ensemble summary statistics, probabilities and spread/error measures."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Use the ensemble lab to calculate threshold probabilities and scenario sensitivity."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Examine current GEFS context and distinguish ensemble members from independent truths."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Create a probabilistic guidance brief that communicates low-probability/high-impact scenarios."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra"
+      ],
+      "forms": [
+        "ensemble-forecast",
+        "verification-deterministic"
+      ],
+      "tools": [
+        "ncep-systems",
+        "nomads",
+        "numerical-lab",
+        "naib"
+      ]
+    },
+    {
+      "week": 32,
+      "title": "Calibration, Post-Processing & Probabilistic Verification",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study reliability, sharpness, discrimination, Brier-score concepts, quantile/probability calibration and statistical post-processing."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Calculate probabilistic verification examples and simple regression/calibration adjustments."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Calibrate a synthetic ensemble forecast and test performance on held-out cases."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare raw versus calibrated guidance while preserving traceability."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Write a verification protocol that prevents training/test leakage."
+        }
+      ],
+      "math": [
+        "statistics"
+      ],
+      "forms": [
+        "ensemble-forecast",
+        "verification-deterministic",
+        "reproducibility"
+      ],
+      "tools": [
+        "nomads",
+        "meted",
+        "naib"
+      ]
+    },
+    {
+      "week": 33,
+      "title": "Reanalysis & Coupled Earth-System Data Assimilation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Study reanalysis principles and coupled atmosphere\u2013ocean\u2013land\u2013ice initialization; examine consistency versus changing observing systems."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Analyze cycling, covariance and time-series concepts relevant to long reanalyses/coupled systems."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Compare analysis/reanalysis time series and identify observing-system discontinuity risks."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Connect operational coupled modeling and DA research to Earth-system prediction."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Prepare a coupled-DA research proposal identifying state variables and cross-component interactions."
+        }
+      ],
+      "math": [
+        "statistics",
+        "differential-equations",
+        "linear-algebra"
+      ],
+      "forms": [
+        "experiment-design",
+        "covariance-audit"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "ncep-systems",
+        "ncei-nwp",
+        "naib"
+      ]
+    },
+    {
+      "week": 34,
+      "title": "AI/ML in the NWP & DA Workflow",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Evaluate ML for emulation, bias/model-error correction, observation processing, hybrid forecasting and DA support; distinguish learned prediction from physically based integration."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Study train/validation/test design, generalization, loss functions, uncertainty and baseline comparison using existing Statistics foundations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Compare a simple learned correction to a baseline on held-out synthetic/model-error data."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Analyze where an ML component could enter a forecast/DA workflow and what operational safeguards are required."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Produce an ML/hybrid evaluation plan addressing physical consistency, distribution shift, uncertainty and reproducibility."
+        }
+      ],
+      "math": [
+        "statistics",
+        "linear-algebra",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "ml-hybrid-evaluation",
+        "reproducibility"
+      ],
+      "tools": [
+        "ecmwf-da",
+        "ncep-systems",
+        "naib"
+      ]
+    },
+    {
+      "week": 35,
+      "title": "Graduate Forecast-System Capstone Integration",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Integrate a toy dynamical model, numerical solver, synthetic observations, assimilation method, ensemble/scenario generation and verification."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Choose/justify numerical and statistical methods and quantify uncertainty/error."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Complete the reproducible system build and controlled experiments."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Compare toy-system behavior to operational NWP/DA concepts without claiming production equivalence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Submit manuscript-style capstone, source/data manifest, verification suite and oral-defense deck."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "capstone-system",
+        "reproducibility",
+        "verification-deterministic"
+      ],
+      "tools": [
+        "numerical-lab",
+        "ncep-da",
+        "nomads",
+        "naib"
+      ]
+    },
+    {
+      "week": 36,
+      "title": "GRADUATE QUALIFYING FINAL \u2014 Numerical Prediction & Data Assimilation",
+      "days": [
+        {
+          "day": "Monday",
+          "label": "Theory & Model Formulation",
+          "work": "Complete cumulative examination spanning numerical modeling, physical parameterization, DA, ensembles, verification and hybrid AI/ML."
+        },
+        {
+          "day": "Tuesday",
+          "label": "Mathematics & Numerical Analysis",
+          "work": "Complete independent numerical-analysis, matrix/DA and probabilistic calculations."
+        },
+        {
+          "day": "Wednesday",
+          "label": "Computational Laboratory",
+          "work": "Perform a timed computational practical modifying/testing the toy forecast-assimilation system."
+        },
+        {
+          "day": "Thursday",
+          "label": "Operational NWP / DA Diagnosis",
+          "work": "Diagnose an unseen model/analysis failure using innovations, ensembles, verification and configuration evidence."
+        },
+        {
+          "day": "Friday",
+          "label": "Research, Verification & Defense",
+          "work": "Defend the capstone system and research conclusions. Written science, quantitative exam, coding/computational practical, DA diagnostic case and research/oral defense each independently \u226580%."
+        }
+      ],
+      "math": [
+        "differential-equations",
+        "linear-algebra",
+        "statistics",
+        "introduction-to-proofs"
+      ],
+      "forms": [
+        "capstone-system",
+        "reproducibility",
+        "innovation-diagnostics"
+      ],
+      "tools": [
+        "numerical-lab",
+        "ecmwf-da",
+        "ncep-da",
+        "naib"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# Track 02 Validation
+
+- Graduate weeks: 36
+- Advanced learning days: 180
+- Qualifying checkpoints: 6
+- Computational/research forms: 16
+- Higher Learning mathematics integrations: 6
+- Tools/professional resources: 13
+- Interactive numerical lab: CFL + scalar Kalman + ensemble probability + 1-D advection
+- 36 weeks: PASS
+- 180 advanced days: PASS
+- Semester II gate: PASS
+- Five-part final: PASS
+- Math bridge: PASS
+- Interactive lab: PASS
+- Ticker: PASS
+- NAIB: PASS
+- JavaScript index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/semester-1/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/semester-2/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/mathematics/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/labs/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/research/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/forms/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/tools/index.html: PASS
+- JavaScript numerical-weather-prediction-data-assimilation/final/index.html: PASS
+- Static generated relative links: PASS
+- Parent Track 01 link: EXPECTED EXISTING SIBLING (not duplicated in incremental Track 02 ZIP)
+- Secrets/private credentials: none included

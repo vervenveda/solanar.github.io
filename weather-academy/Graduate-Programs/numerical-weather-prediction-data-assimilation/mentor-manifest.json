@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "sourceId": "solanar.graduate.nwp-data-assimilation",
+  "name": "Graduate Certificate of Completion in Numerical Weather Prediction & Data Assimilation",
+  "track": 2,
+  "classification": "graduate-advanced-professional-education",
+  "mentorSearchable": true,
+  "audiences": [
+    "graduate",
+    "advanced-professional",
+    "research",
+    "educator"
+  ],
+  "roles": [
+    "student",
+    "educator",
+    "mentor"
+  ],
+  "mastery": {
+    "threshold": 80,
+    "nonCompensatory": true,
+    "advancePastFailedGate": false
+  },
+  "domains": [
+    "numerical-weather-prediction",
+    "data-assimilation",
+    "atmospheric-modeling",
+    "numerical-analysis",
+    "ensembles",
+    "verification",
+    "machine-learning",
+    "research"
+  ],
+  "mathCore": [
+    "linear-algebra",
+    "differential-equations",
+    "statistics",
+    "calculus-ii"
+  ],
+  "mentorNotes": "Do not advance past any required competency below 80%. Require mathematical explanation, experiment provenance, reproducibility, verification, uncertainty and explicit model/DA assumptions."
+}
