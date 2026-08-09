@@ -107,24 +107,53 @@ h1{margin:10px 0 0;font-size:clamp(4.8rem,10vw,9rem);line-height:.82;letter-spac
 
 /* orb */
 .weatherOrb{
-  min-height:455px;position:relative;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);
-  border-radius:30px;background:radial-gradient(circle at 50% 42%,rgba(101,170,255,.24),transparent 17rem),linear-gradient(150deg,#0d3d61,#07182b);
+  min-height:500px;position:relative;display:grid;grid-template-rows:auto 1fr auto;gap:12px;
+  align-items:center;overflow:hidden;padding:16px 14px 14px;border:1px solid var(--line);
+  border-radius:30px;
+  background:radial-gradient(circle at 50% 46%,rgba(101,170,255,.24),transparent 17rem),linear-gradient(150deg,#0d3d61,#07182b);
   box-shadow:var(--shadow)
 }
-.weatherOrb:before,.weatherOrb:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(118,231,255,.22)}
-.weatherOrb:before{width:340px;height:340px}.weatherOrb:after{width:430px;height:220px;transform:rotate(-18deg);border-color:rgba(120,230,182,.28)}
-.orbCore{
-  position:relative;z-index:2;width:270px;height:270px;border-radius:50%;display:grid;place-items:center;text-align:center;
-  background:radial-gradient(circle at 36% 28%,rgba(146,230,255,.24),transparent 23%),radial-gradient(circle at 50% 45%,#155f8b 0,#0d456b 47%,#062840 72%,#031522 100%);
-  border:1px solid rgba(151,232,255,.32);box-shadow:inset -30px -25px 50px rgba(0,0,0,.52),inset 16px 10px 30px rgba(255,255,255,.07),0 0 54px rgba(98,201,255,.38)
+.weatherOrb:before,.weatherOrb:after{
+  content:"";position:absolute;left:50%;top:50%;pointer-events:none;border-radius:50%;
+  border:1px solid rgba(118,231,255,.22);transform:translate(-50%,-50%);z-index:0
 }
-.orbIcon{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);font-size:11rem;line-height:1;filter:drop-shadow(0 13px 18px rgba(0,0,0,.34))}
-.orbBadge{position:absolute;right:19px;top:19px;width:48px;height:48px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.24);border-radius:50%;background:rgba(3,20,35,.82);font-size:1.55rem}
-.orbReadout{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:calc(100% - 34px);padding:8px 11px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(2,14,25,.88);z-index:4}
-.orbTemp{font-size:1.55rem;font-weight:900;line-height:1}.orbCond{margin-top:4px;color:#d8edf6;font-size:.76rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.orbStats{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.orbStat{padding:10px;border:1px solid var(--line);border-radius:11px;background:#041524d8;text-align:center}
-.orbStat b{display:block;color:var(--cyan);font-size:.88rem}.orbStat small{color:var(--muted);font-size:.63rem}
+.weatherOrb:before{width:340px;height:340px}
+.weatherOrb:after{width:430px;height:220px;transform:translate(-50%,-50%) rotate(-18deg);border-color:rgba(120,230,182,.28)}
+
+.orbConditionPanel{
+  position:relative;z-index:4;width:100%;display:flex;align-items:center;justify-content:center;gap:11px;
+  min-height:58px;padding:8px 12px;border:1px solid rgba(255,255,255,.16);border-radius:14px;
+  background:linear-gradient(180deg,rgba(4,25,42,.82),rgba(3,18,31,.9));backdrop-filter:blur(8px)
+}
+.orbBadge{
+  position:relative;flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.24);border-radius:50%;background:rgba(3,20,35,.9);font-size:1.45rem
+}
+.orbReadout{position:relative;min-width:0;text-align:left}
+.orbTemp{font-size:1.45rem;font-weight:900;line-height:1}
+.orbCond{margin-top:4px;color:#d8edf6;font-size:.75rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.orbCore{
+  position:relative;z-index:2;width:270px;height:270px;margin:auto;border-radius:50%;
+  display:grid;place-items:center;text-align:center;
+  background:radial-gradient(circle at 36% 28%,rgba(146,230,255,.24),transparent 23%),
+             radial-gradient(circle at 50% 45%,#155f8b 0,#0d456b 47%,#062840 72%,#031522 100%);
+  border:1px solid rgba(151,232,255,.32);
+  box-shadow:inset -30px -25px 50px rgba(0,0,0,.52),
+             inset 16px 10px 30px rgba(255,255,255,.07),
+             0 0 54px rgba(98,201,255,.38)
+}
+.orbIcon{
+  position:relative;z-index:1;font-size:11rem;line-height:1;
+  filter:drop-shadow(0 13px 18px rgba(0,0,0,.34))
+}
+
+.orbStats{
+  position:relative;z-index:4;width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:7px
+}
+.orbStat{padding:10px;border:1px solid var(--line);border-radius:11px;background:#041524e8;text-align:center}
+.orbStat b{display:block;color:var(--cyan);font-size:.88rem}
+.orbStat small{color:var(--muted);font-size:.63rem}
 
 /* weather desk */
 .weatherDesk{margin-top:18px;padding:13px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(135deg,rgba(118,231,255,.06),rgba(120,230,182,.05)),#07192d;box-shadow:var(--shadow)}
@@ -227,7 +256,7 @@ footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid va
 }
 @media(max-width:560px){
   .shell{width:min(calc(100% - 18px),var(--max))}.brand small{display:none}.hero{padding-top:36px}
-  .weatherOrb{min-height:370px}.orbCore{width:225px;height:225px}.orbIcon{font-size:9rem}
+  .weatherOrb{min-height:470px}.orbCore{width:225px;height:225px}.orbIcon{font-size:9rem}
   .orbStats{grid-template-columns:1fr 1fr}.metricGrid{grid-template-columns:1fr 1fr}.forecastGrid{grid-template-columns:1fr 1fr}
   .continuum{grid-template-columns:1fr 1fr}.toolGrid,.networkGrid,.footerGrid{grid-template-columns:1fr}
   .mega{position:fixed;left:10px;right:10px;top:82px;width:auto;max-height:calc(100vh - 95px);overflow:auto}
@@ -249,7 +278,7 @@ footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid va
 }
 .accessGuard.open{display:grid}
 .accessGuardCard{
-  width:min(620px,100%);padding:22px;border:1px solid rgba(118,231,255,.3);border-radius:21px;
+  position:relative;width:min(620px,100%);padding:22px;border:1px solid rgba(118,231,255,.3);border-radius:21px;
   background:linear-gradient(155deg,#0b2d45,#061827 65%,#07111c);box-shadow:0 30px 90px rgba(0,0,0,.55);
   text-align:center
 }
@@ -380,10 +409,12 @@ footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid va
         </div>
 </div>
 <div aria-label="Current weather summary" class="weatherOrb">
-<div class="orbCore">
-<div class="orbIcon">🌍</div>
+<div class="orbConditionPanel" aria-label="Current condition and temperature">
 <div class="orbBadge" id="orbBadge">🌦️</div>
 <div class="orbReadout"><div class="orbTemp" id="orbTemp">—</div><div class="orbCond" id="orbCond">Choose a location</div></div>
+</div>
+<div class="orbCore" aria-label="Solanar Earth">
+<div class="orbIcon" aria-hidden="true">🌍</div>
 </div>
 <div class="orbStats">
 <div class="orbStat"><b id="orbPlace">World</b><small>Location</small></div>
@@ -601,7 +632,7 @@ footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid va
 <div aria-hidden="true" class="appModal" id="appModal">
 <section aria-labelledby="appModalTitle" aria-modal="true" class="appWindow" role="dialog">
 <div class="appWindowBar">
-<div class="appWindowTitle"><strong id="appModalTitle">Solanar App</strong><small id="appModalUrl">Loading application…</small></div>
+<div class="appWindowTitle"><strong id="appModalTitle">Solanar App</strong><small id="appModalContext">Integrated Solanar application</small></div>
 <div class="appWindowActions"><a class="appOpenExternal" href="#" id="appOpenExternal" rel="noopener" target="_blank">Open in New Tab ↗</a><button aria-label="Close application" class="appClose" id="appClose" type="button">×</button></div>
 </div>
 <div class="appFrameWrap"><div class="appLoading" id="appLoading">Opening Solanar application…</div><iframe class="appFrame" id="appFrame" title="Solanar application window"></iframe></div>
@@ -666,7 +697,7 @@ let lastFocus=null;
 function openApp(url,title){
  lastFocus=document.activeElement;
  $("appModalTitle").textContent=title||"Solanar Application";
- $("appModalUrl").textContent=url;
+ $("appModalContext").textContent="Integrated Solanar application";
  $("appOpenExternal").href=url;
  $("appLoading").classList.remove("hidden");
  $("appFrame").src=url;
@@ -710,8 +741,10 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeAccessGuard();
 const SOLANAR_FAMILY_PROFILE="https://vervenveda.com/Khaemenes_Academy.github.io/family/";
 let pendingGuardUrl=null;
 let pendingGuardKind=null;
+let accessGuardLastFocus=null;
 
 function openAccessGuard(kind,url,label){
+  accessGuardLastFocus=document.activeElement;
   pendingGuardUrl=url;
   pendingGuardKind=kind;
 
@@ -746,6 +779,7 @@ function openAccessGuard(kind,url,label){
   card.classList.add("open");
   card.setAttribute("aria-hidden","false");
   document.body.style.overflow="hidden";
+  setTimeout(()=>$("accessGuardClose")?.focus(),0);
 
   setTimeout(()=>{
     $("guardCancel")?.addEventListener("click",closeAccessGuard);
@@ -763,6 +797,7 @@ function closeAccessGuard(){
   document.body.style.overflow="";
   pendingGuardUrl=null;
   pendingGuardKind=null;
+  accessGuardLastFocus?.focus?.();
 }
 $("accessGuardClose")?.addEventListener("click",closeAccessGuard);
 $("accessGuard")?.addEventListener("click",e=>{if(e.target===$("accessGuard"))closeAccessGuard()});
@@ -773,6 +808,7 @@ document.addEventListener("click",e=>{
 
   if(link.hasAttribute("data-curriculum-gate")){
     e.preventDefault();
+    e.stopImmediatePropagation();
     openAccessGuard("curriculum",link.href,link.textContent.trim());
     return;
   }
@@ -786,6 +822,7 @@ document.addEventListener("click",e=>{
     // presentation choices. Student view receives the content boundary.
     if(role==="student"&&!adultOK){
       e.preventDefault();
+      e.stopImmediatePropagation();
       openAccessGuard("age-sensitive",link.href,link.textContent.trim());
     }
   }
