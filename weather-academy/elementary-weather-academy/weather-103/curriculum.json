@@ -1,0 +1,2901 @@
+{
+  "course": 103,
+  "grade": "Grade 3",
+  "level": "Weather Data Scientist",
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Weather Data Bootcamp",
+      "concept": "Weather science begins with repeated measurements collected in consistent ways.",
+      "lab": "Design a daily observation protocol for temperature, sky, wind, and rain.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "measurement",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Elementary Weather Portal",
+        "emoji": "\ud83c\udf26\ufe0f",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_weather_portal/",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Live elementary weather, hourly/daily outlooks, weather science, experiments, quizzes, Moon phase, air quality, and observation tools."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Weather Data Bootcamp**. Weather science begins with repeated measurements collected in consistent ways.",
+          "lab": "Design a daily observation protocol for temperature, sky, wind, and rain.",
+          "worksheet": [
+            "Write or draw what you already notice about weather data bootcamp.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Design a daily observation protocol for temperature, sky, wind, and rain. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Weather science begins with repeated measurements collected in consistent ways.",
+          "lab": "Build, draw, or revise a model of weather data bootcamp using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, measurement, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect weather data bootcamp to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Elementary Weather Portal** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of weather data bootcamp.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Temperature Patterns",
+      "concept": "Temperature data can be organized to reveal daily and weekly patterns.",
+      "lab": "Graph seven temperatures and calculate the range.",
+      "measure": "temperature (\u00b0F or \u00b0C) and change over time",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "temperature",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Kids SkyLab",
+        "emoji": "\ud83d\ude80",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_kids_skylab_index.html",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Solanar child weather lab with grade modes, missions, radar, live weather, badges, safety, and journals."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Temperature Patterns**. Temperature data can be organized to reveal daily and weekly patterns.",
+          "lab": "Graph seven temperatures and calculate the range.",
+          "worksheet": [
+            "Write or draw what you already notice about temperature patterns.",
+            "Record one observation related to temperature (\u00b0F or \u00b0C) and change over time.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on temperature (\u00b0F or \u00b0C) and change over time.",
+          "lab": "Repeat or extend the week's investigation: Graph seven temperatures and calculate the range. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Temperature data can be organized to reveal daily and weekly patterns.",
+          "lab": "Build, draw, or revise a model of temperature patterns using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: temperature, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect temperature patterns to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kids SkyLab** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of temperature patterns.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Precipitation Patterns",
+      "concept": "Rain and snow records reveal wet and dry periods.",
+      "lab": "Compare two weekly precipitation totals and identify patterns.",
+      "measure": "precipitation amount, water depth, or runoff",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "precipitation",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Compass Explorer",
+        "emoji": "\ud83e\udded",
+        "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html",
+        "levels": [
+          101,
+          102,
+          103
+        ],
+        "desc": "Direction and orientation practice for wind-direction work."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Precipitation Patterns**. Rain and snow records reveal wet and dry periods.",
+          "lab": "Compare two weekly precipitation totals and identify patterns.",
+          "worksheet": [
+            "Write or draw what you already notice about precipitation patterns.",
+            "Record one observation related to precipitation amount, water depth, or runoff.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on precipitation amount, water depth, or runoff.",
+          "lab": "Repeat or extend the week's investigation: Compare two weekly precipitation totals and identify patterns. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Rain and snow records reveal wet and dry periods.",
+          "lab": "Build, draw, or revise a model of precipitation patterns using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: precipitation, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect precipitation patterns to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Compass Explorer** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of precipitation patterns.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Wind Measurements",
+      "concept": "Wind direction and speed help describe moving air.",
+      "lab": "Use ribbon, compass, and timed pinwheel turns to compare wind.",
+      "measure": "wind direction, relative speed, or model rotation",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "wind",
+        "measurement",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Kid Planetarium",
+        "emoji": "\ud83e\ude90",
+        "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html",
+        "levels": [
+          101,
+          102,
+          103
+        ],
+        "desc": "Friendly weather and Moon exploration with read-aloud."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Wind Measurements**. Wind direction and speed help describe moving air.",
+          "lab": "Use ribbon, compass, and timed pinwheel turns to compare wind.",
+          "worksheet": [
+            "Write or draw what you already notice about wind measurements.",
+            "Record one observation related to wind direction, relative speed, or model rotation.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on wind direction, relative speed, or model rotation.",
+          "lab": "Repeat or extend the week's investigation: Use ribbon, compass, and timed pinwheel turns to compare wind. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Wind direction and speed help describe moving air.",
+          "lab": "Build, draw, or revise a model of wind measurements using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: wind, measurement, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect wind measurements to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kid Planetarium** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of wind measurements.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Air Pressure Introduction",
+      "concept": "Air has weight and pushes in all directions; pressure changes can accompany changing weather.",
+      "lab": "Use a card-and-water demonstration to explore air pressure.",
+      "measure": "air-pressure value or pressure trend",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "pressure",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Curiosity Machine",
+        "emoji": "\ud83d\udd2c",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/curiosity-machine/",
+        "levels": [
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Elementary investigation and question-building space."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Air Pressure Introduction**. Air has weight and pushes in all directions; pressure changes can accompany changing weather.",
+          "lab": "Use a card-and-water demonstration to explore air pressure.",
+          "worksheet": [
+            "Write or draw what you already notice about air pressure introduction.",
+            "Record one observation related to air-pressure value or pressure trend.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on air-pressure value or pressure trend.",
+          "lab": "Repeat or extend the week's investigation: Use a card-and-water demonstration to explore air pressure. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Air has weight and pushes in all directions; pressure changes can accompany changing weather.",
+          "lab": "Build, draw, or revise a model of air pressure introduction using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, pressure, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect air pressure introduction to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Curiosity Machine** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of air pressure introduction.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Humidity Introduction",
+      "concept": "Humidity describes water vapor in the air.",
+      "lab": "Compare how quickly wet paper dries on a dry day and a humid day.",
+      "measure": "humidity/condensation evidence",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "humidity",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Junior Engineer Studio",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/junior-engineer-studio/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Design-and-test engineering crossover for weather safety projects."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Humidity Introduction**. Humidity describes water vapor in the air.",
+          "lab": "Compare how quickly wet paper dries on a dry day and a humid day.",
+          "worksheet": [
+            "Write or draw what you already notice about humidity introduction.",
+            "Record one observation related to humidity/condensation evidence.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on humidity/condensation evidence.",
+          "lab": "Repeat or extend the week's investigation: Compare how quickly wet paper dries on a dry day and a humid day. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Humidity describes water vapor in the air.",
+          "lab": "Build, draw, or revise a model of humidity introduction using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: humidity, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect humidity introduction to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Junior Engineer Studio** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of humidity introduction.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Cloud Formation",
+      "concept": "Clouds form when moist air cools enough for water vapor to condense.",
+      "lab": "Create a safe jar-cloud demonstration with teacher supervision.",
+      "measure": "cloud type, cloud cover, or visible sky condition",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "cloud",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Environmental News",
+        "emoji": "\ud83d\udcf0",
+        "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Age-aware world weather and environmental news."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Cloud Formation**. Clouds form when moist air cools enough for water vapor to condense.",
+          "lab": "Create a safe jar-cloud demonstration with teacher supervision.",
+          "worksheet": [
+            "Write or draw what you already notice about cloud formation.",
+            "Record one observation related to cloud type, cloud cover, or visible sky condition.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on cloud type, cloud cover, or visible sky condition.",
+          "lab": "Repeat or extend the week's investigation: Create a safe jar-cloud demonstration with teacher supervision. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Clouds form when moist air cools enough for water vapor to condense.",
+          "lab": "Build, draw, or revise a model of cloud formation using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: cloud, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect cloud formation to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Environmental News** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of cloud formation.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Cloud Types & Weather",
+      "concept": "Cloud type and cloud change can provide clues about current atmospheric conditions.",
+      "lab": "Classify cumulus, stratus, cirrus, and cumulonimbus photographs.",
+      "measure": "cloud type, cloud cover, or visible sky condition",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "cloud",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "PLERA Search",
+        "emoji": "\ud83d\udd0e",
+        "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Research and source discovery."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Cloud Types & Weather**. Cloud type and cloud change can provide clues about current atmospheric conditions.",
+          "lab": "Classify cumulus, stratus, cirrus, and cumulonimbus photographs.",
+          "worksheet": [
+            "Write or draw what you already notice about cloud types & weather.",
+            "Record one observation related to cloud type, cloud cover, or visible sky condition.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on cloud type, cloud cover, or visible sky condition.",
+          "lab": "Repeat or extend the week's investigation: Classify cumulus, stratus, cirrus, and cumulonimbus photographs. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Cloud type and cloud change can provide clues about current atmospheric conditions.",
+          "lab": "Build, draw, or revise a model of cloud types & weather using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, cloud, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect cloud types & weather to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **PLERA Search** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of cloud types & weather.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Water Cycle Energy",
+      "concept": "Sunlight provides energy that helps drive evaporation and the water cycle.",
+      "lab": "Compare evaporation in a lit warm location and a cooler shaded location.",
+      "measure": "light/energy exposure and temperature response",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "evaporation",
+        "water cycle",
+        "energy"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Mentor support for questions, evidence, and research organization."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Water Cycle Energy**. Sunlight provides energy that helps drive evaporation and the water cycle.",
+          "lab": "Compare evaporation in a lit warm location and a cooler shaded location.",
+          "worksheet": [
+            "Write or draw what you already notice about water cycle energy.",
+            "Record one observation related to light/energy exposure and temperature response.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on light/energy exposure and temperature response.",
+          "lab": "Repeat or extend the week's investigation: Compare evaporation in a lit warm location and a cooler shaded location. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Sunlight provides energy that helps drive evaporation and the water cycle.",
+          "lab": "Build, draw, or revise a model of water cycle energy using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: evaporation, water cycle, energy.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect water cycle energy to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **NAIB Mentor** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of water cycle energy.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Local Water Cycle",
+      "concept": "Water moves among air, land, living things, and bodies of water.",
+      "lab": "Trace a drop of water through a local watershed story.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "water cycle",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Elementary Weather Portal",
+        "emoji": "\ud83c\udf26\ufe0f",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_weather_portal/",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Live elementary weather, hourly/daily outlooks, weather science, experiments, quizzes, Moon phase, air quality, and observation tools."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Local Water Cycle**. Water moves among air, land, living things, and bodies of water.",
+          "lab": "Trace a drop of water through a local watershed story.",
+          "worksheet": [
+            "Write or draw what you already notice about local water cycle.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Trace a drop of water through a local watershed story. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Water moves among air, land, living things, and bodies of water.",
+          "lab": "Build, draw, or revise a model of local water cycle using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: water cycle, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect local water cycle to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Elementary Weather Portal** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of local water cycle.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Weather Maps",
+      "concept": "Maps combine symbols, colors, and numbers to show weather over an area.",
+      "lab": "Decode a beginner weather map legend.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Kids SkyLab",
+        "emoji": "\ud83d\ude80",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_kids_skylab_index.html",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Solanar child weather lab with grade modes, missions, radar, live weather, badges, safety, and journals."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Weather Maps**. Maps combine symbols, colors, and numbers to show weather over an area.",
+          "lab": "Decode a beginner weather map legend.",
+          "worksheet": [
+            "Write or draw what you already notice about weather maps.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Decode a beginner weather map legend. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Maps combine symbols, colors, and numbers to show weather over an area.",
+          "lab": "Build, draw, or revise a model of weather maps using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect weather maps to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kids SkyLab** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of weather maps.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "title": "Isobars & Pressure Patterns",
+      "concept": "Lines connecting equal pressure values help show pressure patterns on maps.",
+      "lab": "Draw simple contour-like pressure lines through matching values.",
+      "measure": "air-pressure value or pressure trend",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "pressure",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Compass Explorer",
+        "emoji": "\ud83e\udded",
+        "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html",
+        "levels": [
+          101,
+          102,
+          103
+        ],
+        "desc": "Direction and orientation practice for wind-direction work."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Isobars & Pressure Patterns**. Lines connecting equal pressure values help show pressure patterns on maps.",
+          "lab": "Draw simple contour-like pressure lines through matching values.",
+          "worksheet": [
+            "Write or draw what you already notice about isobars & pressure patterns.",
+            "Record one observation related to air-pressure value or pressure trend.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on air-pressure value or pressure trend.",
+          "lab": "Repeat or extend the week's investigation: Draw simple contour-like pressure lines through matching values. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Lines connecting equal pressure values help show pressure patterns on maps.",
+          "lab": "Build, draw, or revise a model of isobars & pressure patterns using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: pressure, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect isobars & pressure patterns to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Compass Explorer** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of isobars & pressure patterns.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "title": "High & Low Pressure",
+      "concept": "High- and low-pressure areas are associated with different patterns of air motion and weather.",
+      "lab": "Model high and low pressure with arrows on a map.",
+      "measure": "air-pressure value or pressure trend",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "pressure",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Kid Planetarium",
+        "emoji": "\ud83e\ude90",
+        "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html",
+        "levels": [
+          101,
+          102,
+          103
+        ],
+        "desc": "Friendly weather and Moon exploration with read-aloud."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **High & Low Pressure**. High- and low-pressure areas are associated with different patterns of air motion and weather.",
+          "lab": "Model high and low pressure with arrows on a map.",
+          "worksheet": [
+            "Write or draw what you already notice about high & low pressure.",
+            "Record one observation related to air-pressure value or pressure trend.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on air-pressure value or pressure trend.",
+          "lab": "Repeat or extend the week's investigation: Model high and low pressure with arrows on a map. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: High- and low-pressure areas are associated with different patterns of air motion and weather.",
+          "lab": "Build, draw, or revise a model of high & low pressure using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, pressure, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect high & low pressure to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kid Planetarium** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of high & low pressure.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Air Masses",
+      "concept": "Large bodies of air can have characteristic temperature and moisture.",
+      "lab": "Sort air-mass cards by warm/cold and moist/dry.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "temperature",
+        "air mass",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Curiosity Machine",
+        "emoji": "\ud83d\udd2c",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/curiosity-machine/",
+        "levels": [
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Elementary investigation and question-building space."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Air Masses**. Large bodies of air can have characteristic temperature and moisture.",
+          "lab": "Sort air-mass cards by warm/cold and moist/dry.",
+          "worksheet": [
+            "Write or draw what you already notice about air masses.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Sort air-mass cards by warm/cold and moist/dry. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Large bodies of air can have characteristic temperature and moisture.",
+          "lab": "Build, draw, or revise a model of air masses using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: temperature, air mass, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect air masses to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Curiosity Machine** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of air masses.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Fronts",
+      "concept": "A front is a boundary between air masses with different properties.",
+      "lab": "Use colored water to model two air masses meeting.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "front",
+        "air mass",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Junior Engineer Studio",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/junior-engineer-studio/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Design-and-test engineering crossover for weather safety projects."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Fronts**. A front is a boundary between air masses with different properties.",
+          "lab": "Use colored water to model two air masses meeting.",
+          "worksheet": [
+            "Write or draw what you already notice about fronts.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Use colored water to model two air masses meeting. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: A front is a boundary between air masses with different properties.",
+          "lab": "Build, draw, or revise a model of fronts using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: front, air mass, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect fronts to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Junior Engineer Studio** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of fronts.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Cold Fronts",
+      "concept": "Cold fronts often bring relatively quick weather changes.",
+      "lab": "Sequence a before-during-after cold-front weather story.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Dress for conditions, limit exposure, and use adult guidance around ice or extreme cold.",
+      "vocab": [
+        "weather",
+        "front",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Environmental News",
+        "emoji": "\ud83d\udcf0",
+        "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Age-aware world weather and environmental news."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Cold Fronts**. Cold fronts often bring relatively quick weather changes.",
+          "lab": "Sequence a before-during-after cold-front weather story.",
+          "worksheet": [
+            "Write or draw what you already notice about cold fronts.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Sequence a before-during-after cold-front weather story. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Cold fronts often bring relatively quick weather changes.",
+          "lab": "Build, draw, or revise a model of cold fronts using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, front, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect cold fronts to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Environmental News** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of cold fronts.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Warm Fronts",
+      "concept": "Warm fronts can bring widespread clouds and steadier precipitation.",
+      "lab": "Sequence a before-during-after warm-front weather story.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "precipitation",
+        "cloud",
+        "front"
+      ],
+      "tool": {
+        "name": "PLERA Search",
+        "emoji": "\ud83d\udd0e",
+        "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Research and source discovery."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Warm Fronts**. Warm fronts can bring widespread clouds and steadier precipitation.",
+          "lab": "Sequence a before-during-after warm-front weather story.",
+          "worksheet": [
+            "Write or draw what you already notice about warm fronts.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Sequence a before-during-after warm-front weather story. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Warm fronts can bring widespread clouds and steadier precipitation.",
+          "lab": "Build, draw, or revise a model of warm fronts using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: precipitation, cloud, front.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect warm fronts to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **PLERA Search** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of warm fronts.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "title": "Forecast Models",
+      "concept": "Forecasting combines observations, patterns, maps, and computer models.",
+      "lab": "Compare two simple model forecasts with the same observations.",
+      "measure": "forecast value, probability, model spread, and verification",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "forecast",
+        "observation",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Mentor support for questions, evidence, and research organization."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Forecast Models**. Forecasting combines observations, patterns, maps, and computer models.",
+          "lab": "Compare two simple model forecasts with the same observations.",
+          "worksheet": [
+            "Write or draw what you already notice about forecast models.",
+            "Record one observation related to forecast value, probability, model spread, and verification.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on forecast value, probability, model spread, and verification.",
+          "lab": "Repeat or extend the week's investigation: Compare two simple model forecasts with the same observations. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Forecasting combines observations, patterns, maps, and computer models.",
+          "lab": "Build, draw, or revise a model of forecast models using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: forecast, observation, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect forecast models to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **NAIB Mentor** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of forecast models.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "title": "Probability & Forecasts",
+      "concept": "Forecast probabilities describe uncertainty rather than guaranteeing one outcome.",
+      "lab": "Simulate 30%, 60%, and 90% events with number cards.",
+      "measure": "forecast value, probability, model spread, and verification",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "forecast",
+        "probability",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Elementary Weather Portal",
+        "emoji": "\ud83c\udf26\ufe0f",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_weather_portal/",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Live elementary weather, hourly/daily outlooks, weather science, experiments, quizzes, Moon phase, air quality, and observation tools."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Probability & Forecasts**. Forecast probabilities describe uncertainty rather than guaranteeing one outcome.",
+          "lab": "Simulate 30%, 60%, and 90% events with number cards.",
+          "worksheet": [
+            "Write or draw what you already notice about probability & forecasts.",
+            "Record one observation related to forecast value, probability, model spread, and verification.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on forecast value, probability, model spread, and verification.",
+          "lab": "Repeat or extend the week's investigation: Simulate 30%, 60%, and 90% events with number cards. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Forecast probabilities describe uncertainty rather than guaranteeing one outcome.",
+          "lab": "Build, draw, or revise a model of probability & forecasts using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: forecast, probability, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect probability & forecasts to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Elementary Weather Portal** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of probability & forecasts.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "title": "Seasonal Weather Data",
+      "concept": "Longer records show typical seasonal weather patterns.",
+      "lab": "Compare monthly temperature and rainfall graphs.",
+      "measure": "daily/monthly averages and repeated patterns",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Kids SkyLab",
+        "emoji": "\ud83d\ude80",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_kids_skylab_index.html",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Solanar child weather lab with grade modes, missions, radar, live weather, badges, safety, and journals."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Seasonal Weather Data**. Longer records show typical seasonal weather patterns.",
+          "lab": "Compare monthly temperature and rainfall graphs.",
+          "worksheet": [
+            "Write or draw what you already notice about seasonal weather data.",
+            "Record one observation related to daily/monthly averages and repeated patterns.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on daily/monthly averages and repeated patterns.",
+          "lab": "Repeat or extend the week's investigation: Compare monthly temperature and rainfall graphs. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Longer records show typical seasonal weather patterns.",
+          "lab": "Build, draw, or revise a model of seasonal weather data using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect seasonal weather data to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kids SkyLab** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of seasonal weather data.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 21,
+      "title": "Climate Regions",
+      "concept": "Places can be grouped by long-term temperature and precipitation patterns.",
+      "lab": "Compare simplified tropical, dry, temperate, and polar climate cards.",
+      "measure": "daily/monthly averages and repeated patterns",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "temperature",
+        "precipitation",
+        "climate"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Mentor support for questions, evidence, and research organization."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Climate Regions**. Places can be grouped by long-term temperature and precipitation patterns.",
+          "lab": "Compare simplified tropical, dry, temperate, and polar climate cards.",
+          "worksheet": [
+            "Write or draw what you already notice about climate regions.",
+            "Record one observation related to daily/monthly averages and repeated patterns.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on daily/monthly averages and repeated patterns.",
+          "lab": "Repeat or extend the week's investigation: Compare simplified tropical, dry, temperate, and polar climate cards. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Places can be grouped by long-term temperature and precipitation patterns.",
+          "lab": "Build, draw, or revise a model of climate regions using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: temperature, precipitation, climate.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect climate regions to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **NAIB Mentor** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of climate regions.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "title": "Weather Hazards Overview",
+      "concept": "Different hazards require different safety responses.",
+      "lab": "Build a hazard-response matrix for lightning, tornado, flood, heat, and cold.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Kid Planetarium",
+        "emoji": "\ud83e\ude90",
+        "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html",
+        "levels": [
+          101,
+          102,
+          103
+        ],
+        "desc": "Friendly weather and Moon exploration with read-aloud."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Weather Hazards Overview**. Different hazards require different safety responses.",
+          "lab": "Build a hazard-response matrix for lightning, tornado, flood, heat, and cold.",
+          "worksheet": [
+            "Write or draw what you already notice about weather hazards overview.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Build a hazard-response matrix for lightning, tornado, flood, heat, and cold. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Different hazards require different safety responses.",
+          "lab": "Build, draw, or revise a model of weather hazards overview using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect weather hazards overview to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kid Planetarium** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of weather hazards overview.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "title": "Thunderstorms",
+      "concept": "Thunderstorms form when moist unstable air rises and grows into deep clouds.",
+      "lab": "Build a convection-in-a-cup model and connect it to rising air.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "If thunder is heard, move indoors to a substantial building or hard-topped vehicle and follow official guidance.",
+      "vocab": [
+        "cloud",
+        "thunderstorm",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Curiosity Machine",
+        "emoji": "\ud83d\udd2c",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/curiosity-machine/",
+        "levels": [
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Elementary investigation and question-building space."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Thunderstorms**. Thunderstorms form when moist unstable air rises and grows into deep clouds.",
+          "lab": "Build a convection-in-a-cup model and connect it to rising air.",
+          "worksheet": [
+            "Write or draw what you already notice about thunderstorms.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Build a convection-in-a-cup model and connect it to rising air. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Thunderstorms form when moist unstable air rises and grows into deep clouds.",
+          "lab": "Build, draw, or revise a model of thunderstorms using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: cloud, thunderstorm, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect thunderstorms to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Curiosity Machine** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of thunderstorms.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "title": "Lightning",
+      "concept": "Lightning is a powerful electrical discharge; thunder is the sound caused by rapidly heated air.",
+      "lab": "Time a safe sound-delay demonstration to discuss light versus sound.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "If thunder is heard, move indoors to a substantial building or hard-topped vehicle and follow official guidance.",
+      "vocab": [
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Junior Engineer Studio",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/junior-engineer-studio/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Design-and-test engineering crossover for weather safety projects."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Lightning**. Lightning is a powerful electrical discharge; thunder is the sound caused by rapidly heated air.",
+          "lab": "Time a safe sound-delay demonstration to discuss light versus sound.",
+          "worksheet": [
+            "Write or draw what you already notice about lightning.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Time a safe sound-delay demonstration to discuss light versus sound. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Lightning is a powerful electrical discharge; thunder is the sound caused by rapidly heated air.",
+          "lab": "Build, draw, or revise a model of lightning using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: evidence, data, pattern.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect lightning to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Junior Engineer Studio** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of lightning.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 25,
+      "title": "Tornadoes",
+      "concept": "Tornadoes are rotating columns of air connected to thunderstorms and the ground.",
+      "lab": "Create a vortex in a bottle and discuss model limitations.",
+      "measure": "wind direction, relative speed, or model rotation",
+      "safety": "Treat warnings as urgent: use a sturdy safe place away from windows and follow local official instructions.",
+      "vocab": [
+        "thunderstorm",
+        "tornado",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Environmental News",
+        "emoji": "\ud83d\udcf0",
+        "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Age-aware world weather and environmental news."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Tornadoes**. Tornadoes are rotating columns of air connected to thunderstorms and the ground.",
+          "lab": "Create a vortex in a bottle and discuss model limitations.",
+          "worksheet": [
+            "Write or draw what you already notice about tornadoes.",
+            "Record one observation related to wind direction, relative speed, or model rotation.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on wind direction, relative speed, or model rotation.",
+          "lab": "Repeat or extend the week's investigation: Create a vortex in a bottle and discuss model limitations. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Tornadoes are rotating columns of air connected to thunderstorms and the ground.",
+          "lab": "Build, draw, or revise a model of tornadoes using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: thunderstorm, tornado, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect tornadoes to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Environmental News** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of tornadoes.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "title": "Hurricanes",
+      "concept": "Tropical cyclones gain energy from warm ocean water and can bring wind, rain, surge, and tornadoes.",
+      "lab": "Use warm and cool water maps to identify favorable ocean areas.",
+      "measure": "wind direction, relative speed, or model rotation",
+      "safety": "Follow official forecasts, evacuation instructions, and adult/emergency-management guidance.",
+      "vocab": [
+        "wind",
+        "tornado",
+        "hurricane",
+        "energy"
+      ],
+      "tool": {
+        "name": "PLERA Search",
+        "emoji": "\ud83d\udd0e",
+        "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Research and source discovery."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Hurricanes**. Tropical cyclones gain energy from warm ocean water and can bring wind, rain, surge, and tornadoes.",
+          "lab": "Use warm and cool water maps to identify favorable ocean areas.",
+          "worksheet": [
+            "Write or draw what you already notice about hurricanes.",
+            "Record one observation related to wind direction, relative speed, or model rotation.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on wind direction, relative speed, or model rotation.",
+          "lab": "Repeat or extend the week's investigation: Use warm and cool water maps to identify favorable ocean areas. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Tropical cyclones gain energy from warm ocean water and can bring wind, rain, surge, and tornadoes.",
+          "lab": "Build, draw, or revise a model of hurricanes using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: wind, tornado, hurricane.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect hurricanes to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **PLERA Search** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of hurricanes.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 27,
+      "title": "Floods",
+      "concept": "Flood risk depends on rainfall, ground conditions, drainage, rivers, and topography.",
+      "lab": "Build two watershed trays and compare runoff pathways.",
+      "measure": "precipitation amount, water depth, or runoff",
+      "safety": "Never enter or play in floodwater; moving water can be deeper and faster than it looks.",
+      "vocab": [
+        "flood",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Mentor support for questions, evidence, and research organization."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Floods**. Flood risk depends on rainfall, ground conditions, drainage, rivers, and topography.",
+          "lab": "Build two watershed trays and compare runoff pathways.",
+          "worksheet": [
+            "Write or draw what you already notice about floods.",
+            "Record one observation related to precipitation amount, water depth, or runoff.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on precipitation amount, water depth, or runoff.",
+          "lab": "Repeat or extend the week's investigation: Build two watershed trays and compare runoff pathways. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Flood risk depends on rainfall, ground conditions, drainage, rivers, and topography.",
+          "lab": "Build, draw, or revise a model of floods using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: flood, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect floods to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **NAIB Mentor** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of floods.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 28,
+      "title": "Drought & Heat",
+      "concept": "Persistent dry and hot conditions can stress water, ecosystems, and people.",
+      "lab": "Analyze a simple drought-and-temperature timeline.",
+      "measure": "temperature (\u00b0F or \u00b0C) and change over time",
+      "safety": "Use shade, water, breaks, and adult guidance during hot conditions.",
+      "vocab": [
+        "drought",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Elementary Weather Portal",
+        "emoji": "\ud83c\udf26\ufe0f",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_weather_portal/",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Live elementary weather, hourly/daily outlooks, weather science, experiments, quizzes, Moon phase, air quality, and observation tools."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Drought & Heat**. Persistent dry and hot conditions can stress water, ecosystems, and people.",
+          "lab": "Analyze a simple drought-and-temperature timeline.",
+          "worksheet": [
+            "Write or draw what you already notice about drought & heat.",
+            "Record one observation related to temperature (\u00b0F or \u00b0C) and change over time.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on temperature (\u00b0F or \u00b0C) and change over time.",
+          "lab": "Repeat or extend the week's investigation: Analyze a simple drought-and-temperature timeline. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Persistent dry and hot conditions can stress water, ecosystems, and people.",
+          "lab": "Build, draw, or revise a model of drought & heat using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: drought, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect drought & heat to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Elementary Weather Portal** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of drought & heat.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 29,
+      "title": "Winter Weather",
+      "concept": "Snow, ice, wind chill, and freezing conditions create distinct hazards.",
+      "lab": "Test traction on dry versus icy model surfaces.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Dress for conditions, limit exposure, and use adult guidance around ice or extreme cold.",
+      "vocab": [
+        "weather",
+        "wind",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Kids SkyLab",
+        "emoji": "\ud83d\ude80",
+        "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_kids_skylab_index.html",
+        "levels": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Solanar child weather lab with grade modes, missions, radar, live weather, badges, safety, and journals."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Winter Weather**. Snow, ice, wind chill, and freezing conditions create distinct hazards.",
+          "lab": "Test traction on dry versus icy model surfaces.",
+          "worksheet": [
+            "Write or draw what you already notice about winter weather.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Test traction on dry versus icy model surfaces. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Snow, ice, wind chill, and freezing conditions create distinct hazards.",
+          "lab": "Build, draw, or revise a model of winter weather using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, wind, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect winter weather to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kids SkyLab** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of winter weather.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 30,
+      "title": "Air Quality",
+      "concept": "Particles and gases can affect air quality and health.",
+      "lab": "Compare sample AQI reports and activity recommendations.",
+      "measure": "air-quality or hazard-category evidence",
+      "safety": "Use official air-quality/fire information and adult guidance before outdoor activity.",
+      "vocab": [
+        "air quality",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Compass Explorer",
+        "emoji": "\ud83e\udded",
+        "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html",
+        "levels": [
+          101,
+          102,
+          103
+        ],
+        "desc": "Direction and orientation practice for wind-direction work."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Air Quality**. Particles and gases can affect air quality and health.",
+          "lab": "Compare sample AQI reports and activity recommendations.",
+          "worksheet": [
+            "Write or draw what you already notice about air quality.",
+            "Record one observation related to air-quality or hazard-category evidence.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on air-quality or hazard-category evidence.",
+          "lab": "Repeat or extend the week's investigation: Compare sample AQI reports and activity recommendations. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Particles and gases can affect air quality and health.",
+          "lab": "Build, draw, or revise a model of air quality using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: air quality, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect air quality to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Compass Explorer** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of air quality.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 31,
+      "title": "Weather and Agriculture",
+      "concept": "Farmers use weather and climate information to plan crops and protect animals.",
+      "lab": "Create a farm-weather decision calendar.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "climate",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "Kid Planetarium",
+        "emoji": "\ud83e\ude90",
+        "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html",
+        "levels": [
+          101,
+          102,
+          103
+        ],
+        "desc": "Friendly weather and Moon exploration with read-aloud."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Weather and Agriculture**. Farmers use weather and climate information to plan crops and protect animals.",
+          "lab": "Create a farm-weather decision calendar.",
+          "worksheet": [
+            "Write or draw what you already notice about weather and agriculture.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Create a farm-weather decision calendar. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Farmers use weather and climate information to plan crops and protect animals.",
+          "lab": "Build, draw, or revise a model of weather and agriculture using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, climate, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect weather and agriculture to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Kid Planetarium** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of weather and agriculture.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 32,
+      "title": "Weather and Transportation",
+      "concept": "Wind, visibility, precipitation, heat, and ice affect transportation.",
+      "lab": "Investigate toy-vehicle stopping on dry and wet surfaces.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "precipitation",
+        "wind",
+        "visibility"
+      ],
+      "tool": {
+        "name": "Curiosity Machine",
+        "emoji": "\ud83d\udd2c",
+        "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/curiosity-machine/",
+        "levels": [
+          102,
+          103,
+          104,
+          105
+        ],
+        "desc": "Elementary investigation and question-building space."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Weather and Transportation**. Wind, visibility, precipitation, heat, and ice affect transportation.",
+          "lab": "Investigate toy-vehicle stopping on dry and wet surfaces.",
+          "worksheet": [
+            "Write or draw what you already notice about weather and transportation.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Investigate toy-vehicle stopping on dry and wet surfaces. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Wind, visibility, precipitation, heat, and ice affect transportation.",
+          "lab": "Build, draw, or revise a model of weather and transportation using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, precipitation, wind.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect weather and transportation to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Curiosity Machine** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of weather and transportation.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 33,
+      "title": "Weather News Literacy",
+      "concept": "A strong weather news reader checks location, time, source, hazard type, and official warning status.",
+      "lab": "Compare two mock weather headlines with source details.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Mentor support for questions, evidence, and research organization."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Weather News Literacy**. A strong weather news reader checks location, time, source, hazard type, and official warning status.",
+          "lab": "Compare two mock weather headlines with source details.",
+          "worksheet": [
+            "Write or draw what you already notice about weather news literacy.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Compare two mock weather headlines with source details. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: A strong weather news reader checks location, time, source, hazard type, and official warning status.",
+          "lab": "Build, draw, or revise a model of weather news literacy using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect weather news literacy to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **NAIB Mentor** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of weather news literacy.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 34,
+      "title": "Forecast Challenge",
+      "concept": "A forecast should connect current data to a reasoned prediction and state uncertainty.",
+      "lab": "Create a next-day forecast from a supplied data packet.",
+      "measure": "forecast value, probability, model spread, and verification",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "forecast",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "Environmental News",
+        "emoji": "\ud83d\udcf0",
+        "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Age-aware world weather and environmental news."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Forecast Challenge**. A forecast should connect current data to a reasoned prediction and state uncertainty.",
+          "lab": "Create a next-day forecast from a supplied data packet.",
+          "worksheet": [
+            "Write or draw what you already notice about forecast challenge.",
+            "Record one observation related to forecast value, probability, model spread, and verification.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on forecast value, probability, model spread, and verification.",
+          "lab": "Repeat or extend the week's investigation: Create a next-day forecast from a supplied data packet. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: A forecast should connect current data to a reasoned prediction and state uncertainty.",
+          "lab": "Build, draw, or revise a model of forecast challenge using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: forecast, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect forecast challenge to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **Environmental News** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of forecast challenge.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 35,
+      "title": "Weather Research Project",
+      "concept": "Scientific explanations use a question, evidence, reasoning, and cited sources.",
+      "lab": "Complete a mini research poster using Solanar, PLERA, or approved sources.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "evidence",
+        "data",
+        "pattern"
+      ],
+      "tool": {
+        "name": "PLERA Search",
+        "emoji": "\ud83d\udd0e",
+        "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Research and source discovery."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Weather Research Project**. Scientific explanations use a question, evidence, reasoning, and cited sources.",
+          "lab": "Complete a mini research poster using Solanar, PLERA, or approved sources.",
+          "worksheet": [
+            "Write or draw what you already notice about weather research project.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Complete a mini research poster using Solanar, PLERA, or approved sources. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Scientific explanations use a question, evidence, reasoning, and cited sources.",
+          "lab": "Build, draw, or revise a model of weather research project using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, evidence, data.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect weather research project to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **PLERA Search** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of weather research project.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    },
+    {
+      "week": 36,
+      "title": "Final Data Expedition",
+      "concept": "Weather science uses measurements, maps, patterns, models, probabilities, and safety knowledge together.",
+      "lab": "Complete a cumulative data-analysis and forecasting mission.",
+      "measure": "time-stamped observations, counts, categories, or measurements",
+      "safety": "Use safe materials, record observations before conclusions, and stop an outdoor lab if weather becomes unsafe.",
+      "vocab": [
+        "weather",
+        "measurement",
+        "evidence",
+        "data"
+      ],
+      "tool": {
+        "name": "NAIB Mentor",
+        "emoji": "N",
+        "url": "https://artist1970.github.io/noema-ai.github.io/",
+        "levels": [
+          103,
+          104,
+          105
+        ],
+        "desc": "Mentor support for questions, evidence, and research organization."
+      },
+      "days": [
+        {
+          "name": "Monday \u00b7 Observe & Ask",
+          "lesson": "Introduce **Final Data Expedition**. Weather science uses measurements, maps, patterns, models, probabilities, and safety knowledge together.",
+          "lab": "Complete a cumulative data-analysis and forecasting mission.",
+          "worksheet": [
+            "Write or draw what you already notice about final data expedition.",
+            "Record one observation related to time-stamped observations, counts, categories, or measurements.",
+            "Write one question you want to answer this week."
+          ]
+        },
+        {
+          "name": "Tuesday \u00b7 Measure & Record",
+          "lesson": "Scientists make fair comparisons by recording the same kind of evidence. This week, focus on time-stamped observations, counts, categories, or measurements.",
+          "lab": "Repeat or extend the week's investigation: Complete a cumulative data-analysis and forecasting mission. Record at least two observations or measurements.",
+          "worksheet": [
+            "Create a small data table with labels and units or categories.",
+            "Circle the largest change or most important difference.",
+            "Write one sentence describing what the data show."
+          ]
+        },
+        {
+          "name": "Wednesday \u00b7 Model & Explain",
+          "lesson": "Use a model, diagram, or sequence to explain the idea: Weather science uses measurements, maps, patterns, models, probabilities, and safety knowledge together.",
+          "lab": "Build, draw, or revise a model of final data expedition using the week's evidence.",
+          "worksheet": [
+            "Label your model with at least two of these words: weather, measurement, evidence.",
+            "Draw arrows or numbers to show change, motion, or order when appropriate.",
+            "Explain one way the model is similar to real weather and one way it is different."
+          ]
+        },
+        {
+          "name": "Thursday \u00b7 Apply & Explore",
+          "lesson": "Connect final data expedition to a real forecast, weather map, local observation, or Solanar learning tool.",
+          "lab": "Use **NAIB Mentor** or a teacher-provided weather source to find one example connected to this week's topic.",
+          "worksheet": [
+            "Write the place, date/time, and source you used.",
+            "Record one piece of evidence from the source.",
+            "Explain how the evidence connects to this week's concept."
+          ]
+        },
+        {
+          "name": "Friday \u00b7 Communicate & Master",
+          "lesson": "Review the week's evidence and communicate a clear scientific explanation of final data expedition.",
+          "lab": "Create a 60-second weather-science briefing, mini-poster, diagram, or demonstration using this week's evidence.",
+          "worksheet": [
+            "Complete: My strongest evidence this week was\u2026",
+            "Complete: I used this evidence to explain\u2026",
+            "Complete the weekly mastery quiz. Score 80% or higher to open the next week."
+          ]
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Elementary Weather Portal",
+      "emoji": "\ud83c\udf26\ufe0f",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_weather_portal/",
+      "levels": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "desc": "Live elementary weather, hourly/daily outlooks, weather science, experiments, quizzes, Moon phase, air quality, and observation tools."
+    },
+    {
+      "name": "Kids SkyLab",
+      "emoji": "\ud83d\ude80",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_kids_skylab_index.html",
+      "levels": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "desc": "Solanar child weather lab with grade modes, missions, radar, live weather, badges, safety, and journals."
+    },
+    {
+      "name": "Compass Explorer",
+      "emoji": "\ud83e\udded",
+      "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html",
+      "levels": [
+        101,
+        102,
+        103
+      ],
+      "desc": "Direction and orientation practice for wind-direction work."
+    },
+    {
+      "name": "Kid Planetarium",
+      "emoji": "\ud83e\ude90",
+      "url": "https://vervenveda.com/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html",
+      "levels": [
+        101,
+        102,
+        103
+      ],
+      "desc": "Friendly weather and Moon exploration with read-aloud."
+    },
+    {
+      "name": "Curiosity Machine",
+      "emoji": "\ud83d\udd2c",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/curiosity-machine/",
+      "levels": [
+        102,
+        103,
+        104,
+        105
+      ],
+      "desc": "Elementary investigation and question-building space."
+    },
+    {
+      "name": "Junior Engineer Studio",
+      "emoji": "\ud83d\udee0\ufe0f",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/junior-engineer-studio/",
+      "levels": [
+        103,
+        104,
+        105
+      ],
+      "desc": "Design-and-test engineering crossover for weather safety projects."
+    },
+    {
+      "name": "Environmental News",
+      "emoji": "\ud83d\udcf0",
+      "url": "https://vervenveda.com/solanar.github.io/apps/environmental_news_index.html",
+      "levels": [
+        103,
+        104,
+        105
+      ],
+      "desc": "Age-aware world weather and environmental news."
+    },
+    {
+      "name": "PLERA Search",
+      "emoji": "\ud83d\udd0e",
+      "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+      "levels": [
+        103,
+        104,
+        105
+      ],
+      "desc": "Research and source discovery."
+    },
+    {
+      "name": "NAIB Mentor",
+      "emoji": "N",
+      "url": "https://artist1970.github.io/noema-ai.github.io/",
+      "levels": [
+        103,
+        104,
+        105
+      ],
+      "desc": "Mentor support for questions, evidence, and research organization."
+    }
+  ]
+}
