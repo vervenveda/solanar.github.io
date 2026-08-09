@@ -1,0 +1,24 @@
+# Year II Validation
+
+- Year II weeks: 36
+- Semester III weeks: 18
+- Semester IV weeks: 18
+- Professional forms: 22
+- Tools/resources: 14
+- Daily 80% prerequisite gates: PASS
+- Weekly 80% mastery gate: PASS
+- Required forms gate: PASS
+- Mentor-verified practical gate: PASS
+- Six-week unit checkpoint gate: PASS
+- Semester III → IV gate: PASS
+- Year I → Year II prerequisite gate: PASS
+- Final written/practical/portfolio/oral four-part 80% gate: PASS
+- NAIB on every index page: PASS
+- 28-second ticker on every index page: PASS
+- JavaScript index.html: PASS
+- JavaScript semester-3/index.html: PASS
+- JavaScript semester-4/index.html: PASS
+- JavaScript forms/index.html: PASS
+- JavaScript tools/index.html: PASS
+- JavaScript final/index.html: PASS
+- Secrets/private credentials: none included

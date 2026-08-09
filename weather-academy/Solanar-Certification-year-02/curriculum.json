@@ -1,0 +1,2063 @@
+{
+  "program": {
+    "title": "Solanar Professional Meteorology Certificate",
+    "track": "Professional Meteorologist / Operational Meteorology",
+    "year": 2,
+    "year_weeks": 36,
+    "program_weeks": "37\u201372",
+    "semesters": [
+      "III",
+      "IV"
+    ],
+    "mastery_threshold": 80,
+    "year_2_credit_equivalent": 35,
+    "two_year_credit_equivalent": 67,
+    "prerequisite": "Successful completion of Solanar Professional Meteorology Certificate Year I or documented equivalent preparation."
+  },
+  "semester_3": {
+    "courses": [
+      {
+        "code": "ATM 231",
+        "title": "Dynamical Meteorology I",
+        "credits": 4,
+        "description": "Scale analysis; rotating-fluid dynamics; geostrophic and gradient wind; thermal wind; vorticity, divergence, vertical motion, baroclinicity and quasigeostrophic diagnosis."
+      },
+      {
+        "code": "ATM 241",
+        "title": "Synoptic & Mesoscale Analysis I",
+        "credits": 4,
+        "description": "Fronts, cyclogenesis, jet dynamics, potential-vorticity thinking, mesoscale boundaries and integrated surface/upper-air diagnosis."
+      },
+      {
+        "code": "MAT 251",
+        "title": "Ordinary Differential Equations for Atmospheric Science",
+        "credits": 3,
+        "description": "First- and second-order ODEs, systems, stability, numerical integration and atmospheric applications."
+      },
+      {
+        "code": "ATM 251",
+        "title": "Radar, Satellite & Remote Sensing II",
+        "credits": 3,
+        "description": "Doppler radar, dual-polarization concepts, multispectral satellite analysis, derived products, sampling limits and quality control."
+      },
+      {
+        "code": "ATM 261",
+        "title": "Numerical Weather Prediction I",
+        "credits": 2,
+        "description": "Model formulation, grids, discretization, initialization, parameterization, verification and forecast-system limitations."
+      },
+      {
+        "code": "OPS 231",
+        "title": "Operational Forecast Laboratory I",
+        "credits": 2,
+        "description": "Daily analysis, forecast preparation, uncertainty, verification, briefing and decision-support practice."
+      }
+    ],
+    "weeks": [
+      {
+        "year_week": 1,
+        "program_week": 37,
+        "title": "Scale Analysis & Equations of Atmospheric Motion",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Derive the force terms in the horizontal momentum equations and use scale analysis to identify dominant balances at synoptic and mesoscale scales."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Review first-order ordinary differential equations, dimensional analysis, nondimensional numbers and characteristic time/length scales."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Diagnose which forces matter most in contrasting synoptic, tropical and mesoscale flow regimes."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare observed winds with model pressure/geopotential fields and identify where simple balance assumptions fail."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Produce a 24-hour forecast discussion that explicitly states the assumed dynamical balance and where ageostrophic effects may matter."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "forecast-shift-log"
+        ],
+        "tools": [
+          "solanar-platform",
+          "meted",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "dynamics",
+          "scale-analysis",
+          "forecast-reasoning"
+        ]
+      },
+      {
+        "year_week": 2,
+        "program_week": 38,
+        "title": "Geostrophic, Gradient & Cyclostrophic Wind",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Develop geostrophic, gradient and cyclostrophic balances and connect curvature and pressure-gradient forces to real flow."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Solve linear first-order ODEs and vector-component problems; calculate geostrophic wind from height/pressure gradients."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Compare observed wind with geostrophic/gradient-wind estimates around highs, lows and strongly curved flow."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use upper-air analyses and model fields to identify supergradient/subgradient and ageostrophic regions."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Brief expected wind evolution and identify locations where balanced-wind assumptions are least reliable."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "solanar-platform",
+          "ncep-models",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "balanced-flow",
+          "wind-diagnosis",
+          "quantitative-analysis"
+        ]
+      },
+      {
+        "year_week": 3,
+        "program_week": 39,
+        "title": "Hydrostatic Balance, Thickness & Thermal Wind",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Connect hydrostatic balance, hypsometric thickness and thermal-wind relationships to horizontal temperature gradients and vertical shear."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Solve separable ODEs and hydrostatic integrations; calculate thickness and thermal-wind vectors."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze thickness, temperature advection and vertical shear on a multi-level synoptic case."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare sounding and model-derived thermal-wind structure with satellite cloud patterns."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Create a baroclinic-zone briefing with expected jet/front evolution and temperature-advection impacts."
+          }
+        ],
+        "forms": [
+          "upper-air-professional",
+          "synoptic-diagnostic"
+        ],
+        "tools": [
+          "solanar-planetarium",
+          "goes",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "hydrostatic",
+          "thermal-wind",
+          "baroclinicity"
+        ]
+      },
+      {
+        "year_week": 4,
+        "program_week": 40,
+        "title": "Vorticity, Divergence & Vertical Motion",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Develop relative/planetary/absolute vorticity, divergence and stretching/tilting concepts and link them to vertical motion."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Work systems of ODEs and finite-difference estimates of divergence and vorticity from gridded wind data."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Compute qualitative vorticity/divergence tendencies from upper-air fields and connect them to ascent/descent."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use model vorticity, divergence and vertical-motion products while documenting diagnostic limitations."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Issue a forecast discussion connecting upper forcing to sensible weather without treating one diagnostic as deterministic."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "model-diagnostic"
+        ],
+        "tools": [
+          "ncep-models",
+          "solanar-platform",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "vorticity",
+          "divergence",
+          "vertical-motion"
+        ]
+      },
+      {
+        "year_week": 5,
+        "program_week": 41,
+        "title": "Quasigeostrophic Diagnosis & Forcing for Ascent",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Use QG height-tendency/omega concepts, differential vorticity advection and thermal advection to diagnose large-scale vertical motion."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply second-order ODE concepts, boundary conditions and qualitative elliptic-equation reasoning to atmospheric diagnosis."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Construct a multi-field QG ascent/descent diagnosis from 500-hPa vorticity, thickness and temperature advection."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare QG diagnosis with model omega, precipitation and satellite evolution."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Prepare a precipitation/ceiling forecast tied to physically consistent forcing rather than model precipitation alone."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "model-diagnostic",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "ncep-models",
+          "goes",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "qg-diagnosis",
+          "forcing",
+          "precipitation-forecast"
+        ]
+      },
+      {
+        "year_week": 6,
+        "program_week": 42,
+        "title": "UNIT V CHECKPOINT \u2014 Dynamics & Diagnostic Reasoning",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Synthesize Weeks 1\u20135: scale analysis, balanced flow, thermal wind, vorticity/divergence and QG vertical-motion diagnosis."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Cumulative ODE/vector/differential-diagnostic assessment with atmospheric applications."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Complete an unseen synoptic case with defensible force/vertical-motion diagnosis."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Cross-check model, radar/satellite and observations for consistency and identify contradictions."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Deliver a 7-minute technical forecast briefing and defend the dynamical reasoning. Unit checkpoint \u226580% required."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "forecast-briefing",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "solanar-platform",
+          "ncep-models",
+          "goes",
+          "naib"
+        ],
+        "competencies": [
+          "integration",
+          "diagnosis",
+          "oral-defense"
+        ]
+      },
+      {
+        "year_week": 7,
+        "program_week": 43,
+        "title": "Frontogenesis, Air-Mass Transformation & Frontal Circulations",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study kinematic frontogenesis/frontolysis, deformation, convergence, tilting and ageostrophic frontal circulations."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply deformation tensors/vector gradients and ODE stability ideas to frontal strengthening/weakening."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze a surface/upper-air frontal zone and diagnose temperature/moisture advection and frontogenesis."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use radar/satellite and model cross-sections to evaluate frontal slope, clouds and precipitation bands."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Forecast frontal timing, precipitation type/intensity and wind shifts with explicit timing uncertainty."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "radar-analysis-pro",
+          "satellite-analysis-pro"
+        ],
+        "tools": [
+          "nws-radar",
+          "goes",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "frontogenesis",
+          "frontal-circulation",
+          "timing"
+        ]
+      },
+      {
+        "year_week": 8,
+        "program_week": 44,
+        "title": "Extratropical Cyclogenesis & Life Cycles",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Connect baroclinic development, upper waves, surface pressure falls, occlusion and cyclone life-cycle frameworks."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Use coupled first-order systems and tendency reasoning to connect upper forcing with surface response."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Track cyclone evolution across successive analyses and identify deepening, occlusion and deformation zones."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare deterministic/ensemble cyclone tracks and satellite signatures of development."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Produce a 48-hour cyclone forecast with wind, precipitation and uncertainty corridors."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "model-diagnostic",
+          "ensemble-brief"
+        ],
+        "tools": [
+          "goes",
+          "ncep-models",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "cyclogenesis",
+          "baroclinic-development",
+          "ensemble-track"
+        ]
+      },
+      {
+        "year_week": 9,
+        "program_week": 45,
+        "title": "Jet Streaks, Ageostrophic Circulations & Rapid Development",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Diagnose straight/curved jet streaks, entrance/exit regions, ageostrophic flow and coupling with lower-level baroclinic zones."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Use vector projections and second-order differential relationships to quantify along-/cross-jet components."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze jet-level wind, divergence and surface development in a rapidly evolving case."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare water-vapor imagery, model tropopause/jet fields and observed cyclone deepening."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Brief high-impact wind and precipitation risks associated with jet/front coupling."
+          }
+        ],
+        "forms": [
+          "upper-air-professional",
+          "synoptic-diagnostic",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "goes",
+          "ncep-models",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "jet-dynamics",
+          "ageostrophic-flow",
+          "rapid-development"
+        ]
+      },
+      {
+        "year_week": 10,
+        "program_week": 46,
+        "title": "Potential Vorticity & Dynamic Tropopause Thinking",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Introduce Ertel potential vorticity, conservation/invertibility concepts and dynamic-tropopause interpretation."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Work conservation-law ODEs and transformations; relate stratification and vorticity to PV changes."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Identify PV anomalies and tropopause folds in upper-air/model analyses and connect them to surface development."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare water-vapor imagery with PV/tropopause products and stratospheric intrusions."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Use PV thinking as one component of a multi-source forecast diagnosis and state limitations."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "satellite-analysis-pro",
+          "model-diagnostic"
+        ],
+        "tools": [
+          "goes",
+          "ncep-models",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "potential-vorticity",
+          "tropopause",
+          "multi-source-synthesis"
+        ]
+      },
+      {
+        "year_week": 11,
+        "program_week": 47,
+        "title": "Mesoscale Boundaries, Convergence & Terrain Effects",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study drylines, sea-breeze fronts, outflow boundaries, terrain circulations and mesoscale convergence zones."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply coordinate transformations, slope/gradient calculations and time-scale analysis to mesoscale motion."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Map mesoscale boundaries from surface observations and identify favored zones for ascent/convective initiation."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use high-resolution model guidance, radar and satellite loops to track boundary evolution."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Issue a short-fuse mesoscale forecast emphasizing boundary timing and uncertainty."
+          }
+        ],
+        "forms": [
+          "mesoscale-analysis",
+          "radar-analysis-pro",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "spc-meso",
+          "nws-radar",
+          "goes",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "mesoscale-boundaries",
+          "terrain",
+          "short-range-forecast"
+        ]
+      },
+      {
+        "year_week": 12,
+        "program_week": 48,
+        "title": "UNIT VI CHECKPOINT \u2014 Synoptic & Mesoscale Weather Systems",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Synthesize Weeks 7\u201311: fronts, cyclogenesis, jets, PV and mesoscale boundaries."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Cumulative vector/ODE/diagnostic calculations from an unseen weather-system case."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Complete a full surface-to-tropopause analysis and defend the expected evolution."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Reconcile radar, satellite, observations, deterministic models and ensembles."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Deliver an operational forecast shift briefing. Unit checkpoint \u226580% required."
+          }
+        ],
+        "forms": [
+          "synoptic-diagnostic",
+          "mesoscale-analysis",
+          "forecast-shift-log"
+        ],
+        "tools": [
+          "solanar-platform",
+          "spc-meso",
+          "goes",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "synoptic-integration",
+          "mesoscale-integration",
+          "decision-support"
+        ]
+      },
+      {
+        "year_week": 13,
+        "program_week": 49,
+        "title": "Doppler Radar: Velocity, Sampling & Storm Motion",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Advance radial-velocity interpretation, aliasing, range folding, beam geometry, storm-relative concepts and sampling limitations."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Use vector projections and trigonometry to relate true motion/wind to radial velocity and storm motion."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze paired reflectivity/velocity data and distinguish convergence, divergence, rotation and artifacts."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use NWS radar products and MetEd cases to document evidence versus interpretation."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Prepare a radar-based nowcast with explicit uncertainty and no unsupported warning claims."
+          }
+        ],
+        "forms": [
+          "radar-analysis-pro",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "nws-radar",
+          "meted",
+          "spc-meso",
+          "naib"
+        ],
+        "competencies": [
+          "doppler-radar",
+          "sampling",
+          "nowcasting"
+        ]
+      },
+      {
+        "year_week": 14,
+        "program_week": 50,
+        "title": "Dual-Polarization Radar & Hydrometeor Classification",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study ZDR, correlation coefficient, differential phase/KDP and conceptual hydrometeor classification."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Interpret logarithmic ratios, gradients and uncertainty; compare multi-variable radar signatures."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Evaluate dual-pol signatures for heavy rain, hail, melting layer and nonmeteorological returns."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Cross-check radar interpretation with surface reports, satellite and environmental profiles."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Build a heavy-rain/hail decision-support briefing with evidence hierarchy and confidence."
+          }
+        ],
+        "forms": [
+          "radar-dualpol",
+          "upper-air-professional",
+          "impact-brief"
+        ],
+        "tools": [
+          "nws-radar",
+          "spc-meso",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "dual-pol",
+          "hydrometeors",
+          "quality-control"
+        ]
+      },
+      {
+        "year_week": 15,
+        "program_week": 51,
+        "title": "Multispectral Satellite Meteorology",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Advance visible, infrared, water-vapor, near-IR and multispectral-composite interpretation for clouds, moisture and dynamics."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Relate radiance/brightness temperature, weighting functions and spatial/temporal sampling to interpretation."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze cloud-top evolution, moisture gradients, fog/low cloud and upper-level features in multispectral imagery."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use NOAA GOES imagery and compare with radar/model fields to identify consistency and gaps."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Create a satellite-led nowcast and explain which conclusions are observations versus derived interpretation."
+          }
+        ],
+        "forms": [
+          "satellite-analysis-pro",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "goes",
+          "nws-radar",
+          "solanar-planetarium",
+          "naib"
+        ],
+        "competencies": [
+          "satellite",
+          "multispectral",
+          "observation-vs-inference"
+        ]
+      },
+      {
+        "year_week": 16,
+        "program_week": 52,
+        "title": "NWP Foundations: Discretization, Resolution & Parameterization",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study primitive-equation modeling conceptually, grids, time stepping, truncation error, stability and parameterized processes."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply numerical Euler/Runge\u2013Kutta ideas to ODEs; examine numerical stability and error growth."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Compare model solutions at different resolutions and identify features that are resolved versus parameterized."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Inspect model fields for convection, boundary-layer, cloud and precipitation parameterization impacts."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Write a model-guidance memo that documents resolution limits and avoids treating output as ground truth."
+          }
+        ],
+        "forms": [
+          "model-diagnostic",
+          "model-comparison-pro"
+        ],
+        "tools": [
+          "ncep-models",
+          "meted",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "nwp",
+          "numerical-methods",
+          "parameterization"
+        ]
+      },
+      {
+        "year_week": 17,
+        "program_week": 53,
+        "title": "Initialization, Data Assimilation & Ensemble Forecasting",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Introduce observation operators, background/analysis concepts, data assimilation, perturbations and ensemble design."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Use probability distributions, spread, rank concepts and ODE sensitivity to initial conditions."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Compare analyses and ensemble members to observations; identify sensitive forecast elements."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use operational ensemble guidance to assess track/timing/threshold probabilities."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Deliver a probabilistic forecast briefing with plausible alternatives and decision thresholds."
+          }
+        ],
+        "forms": [
+          "ensemble-brief",
+          "model-comparison-pro",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "ncep-models",
+          "meted",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "data-assimilation",
+          "ensembles",
+          "probability"
+        ]
+      },
+      {
+        "year_week": 18,
+        "program_week": 54,
+        "title": "SEMESTER III COMPREHENSIVE \u2014 Analysis & Forecast Operations",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Cumulative dynamics, synoptic/mesoscale diagnosis, remote sensing and NWP synthesis."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Cumulative ODE, vector, diagnostic and numerical-method examination."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Complete an unseen multi-scale case from observations through forecast reasoning."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Integrate radar, satellite, deterministic and ensemble guidance and document contradictions."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Complete a simulated forecast shift, written discussion and oral defense. Semester III requires \u226580% at every component."
+          }
+        ],
+        "forms": [
+          "forecast-shift-log",
+          "synoptic-diagnostic",
+          "model-comparison-pro",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "solanar-platform",
+          "nws-radar",
+          "goes",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "semester-integration",
+          "forecast-operations",
+          "oral-defense"
+        ]
+      }
+    ]
+  },
+  "semester_4": {
+    "courses": [
+      {
+        "code": "ATM 232",
+        "title": "Dynamical Meteorology II",
+        "credits": 3,
+        "description": "Waves, instability, potential vorticity, ageostrophic circulations, jet/front dynamics and multiscale interactions."
+      },
+      {
+        "code": "ATM 242",
+        "title": "High-Impact Weather",
+        "credits": 4,
+        "description": "Deep convection, supercells, tornadoes, hail, damaging wind, winter weather, fire weather and warning decision science."
+      },
+      {
+        "code": "ATM 252",
+        "title": "Tropical, Aviation & Marine Meteorology",
+        "credits": 3,
+        "description": "Tropical cyclones, aviation hazards, marine boundary layer, fog, waves, coastal weather and specialized services."
+      },
+      {
+        "code": "ATM 262",
+        "title": "NWP II, Ensembles & Data Assimilation",
+        "credits": 3,
+        "description": "Data assimilation, ensemble design, probabilistic guidance, calibration, post-processing, bias and model diagnostics."
+      },
+      {
+        "code": "HYD 242",
+        "title": "Hydrometeorology & Boundary-Layer Applications",
+        "credits": 2,
+        "description": "QPF, runoff/flood response, land-atmosphere exchange, terrain, boundary-layer processes and applied hazards."
+      },
+      {
+        "code": "OPS 242",
+        "title": "Operational Forecasting Practicum & Capstone",
+        "credits": 2,
+        "description": "Multi-hazard forecast shifts, partner briefings, verification, forecast discussions, capstone operations and oral defense."
+      }
+    ],
+    "weeks": [
+      {
+        "year_week": 19,
+        "program_week": 55,
+        "title": "Convective Initiation, CAPE/CIN & Storm Environment",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Diagnose buoyancy, parcel choice, CAPE/CIN, lapse rates, moisture depth, forcing and convective initiation failure modes."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Calculate parcel/environment temperature differences, layer lapse rates and simplified buoyancy/CAPE relationships."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze soundings, surface boundaries and forcing to assess initiation timing and conditionality."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use radar/satellite/SPC mesoscale products and convection-allowing models to track pre-storm evolution."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Issue a conditional thunderstorm forecast with explicit triggers, failure modes and confidence."
+          }
+        ],
+        "forms": [
+          "sounding-hodograph",
+          "mesoscale-analysis",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "spc-meso",
+          "nws-radar",
+          "goes",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "convection",
+          "cape-cin",
+          "conditional-forecast"
+        ]
+      },
+      {
+        "year_week": 20,
+        "program_week": 56,
+        "title": "Deep Convection, Supercells & Hodographs",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study storm modes, vertical shear, hodographs, storm-relative flow, mesocyclones and supercell structure."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Compute shear vectors, storm-relative wind concepts and qualitative helicity relationships."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Classify storm environment and expected mode using soundings/hodographs and boundary orientation."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Track developing convection with radar, satellite and high-resolution model guidance."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Produce a severe-weather briefing separating environmental potential from observed storm behavior."
+          }
+        ],
+        "forms": [
+          "sounding-hodograph",
+          "radar-dualpol",
+          "severe-decision-log"
+        ],
+        "tools": [
+          "spc-meso",
+          "nws-radar",
+          "goes",
+          "naib"
+        ],
+        "competencies": [
+          "supercells",
+          "shear",
+          "storm-mode"
+        ]
+      },
+      {
+        "year_week": 21,
+        "program_week": 57,
+        "title": "Tornado, Hail & Damaging-Wind Decision Science",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Integrate environmental and radar evidence for tornado, hail and wind hazards; study warning decision uncertainty and false-alarm tradeoffs."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply probability, base-rate and conditional-risk reasoning to hazard decisions."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze an archived severe-weather event and identify signal evolution, reports and decision points."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use radar/mesoanalysis/satellite evidence while documenting artifacts and uncertainty."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Complete a simulated warning/impact decision log and partner briefing; official-warning language is clearly separated from training simulation."
+          }
+        ],
+        "forms": [
+          "severe-decision-log",
+          "radar-dualpol",
+          "impact-brief"
+        ],
+        "tools": [
+          "nws-radar",
+          "spc-meso",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "severe-weather",
+          "decision-science",
+          "communication"
+        ]
+      },
+      {
+        "year_week": 22,
+        "program_week": 58,
+        "title": "Winter Weather, Precipitation Type & Bands",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study snow/ice microphysics, warm noses, wet-bulb effects, frontogenesis, deformation bands and mesoscale snow processes."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Calculate thickness/wet-bulb approximations, thermal profiles and simple snow/liquid ratios with uncertainty."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Diagnose precipitation type, banding potential and transition zones from soundings/cross-sections."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare radar, satellite and ensemble guidance for band placement and precipitation-type uncertainty."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Prepare a winter-weather impact forecast including confidence ranges and bust scenarios."
+          }
+        ],
+        "forms": [
+          "winter-weather-analysis",
+          "upper-air-professional",
+          "ensemble-brief"
+        ],
+        "tools": [
+          "wpc",
+          "nws-radar",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "winter-weather",
+          "ptype",
+          "banding"
+        ]
+      },
+      {
+        "year_week": 23,
+        "program_week": 59,
+        "title": "Boundary Layer, Fire Weather & Complex Terrain",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study turbulent mixing, stability, diurnal boundary-layer evolution, downslope/upslope flow, gap winds and fire-weather ingredients."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply flux/gradient concepts, Richardson-number intuition and terrain-adjusted wind reasoning."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze surface/upper-air data for mixing height, humidity recovery, wind shifts and terrain effects."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use high-resolution guidance, satellite fire/smoke context and observations while respecting hotspot limitations."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Produce a fire-weather/terrain briefing focused on wind, humidity, stability and timing."
+          }
+        ],
+        "forms": [
+          "fire-weather-forecast",
+          "upper-air-professional",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "solanar-platform",
+          "goes",
+          "ncep-models",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "boundary-layer",
+          "fire-weather",
+          "terrain"
+        ]
+      },
+      {
+        "year_week": 24,
+        "program_week": 60,
+        "title": "UNIT VII CHECKPOINT \u2014 High-Impact Midlatitude Weather",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Synthesize Weeks 19\u201323: convection, severe hazards, winter weather, boundary layer and terrain."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Cumulative thermodynamic, kinematic and probabilistic calculations."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Complete an unseen high-impact case and identify competing hazards and uncertainties."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Integrate radar, satellite, observations and model/ensemble guidance."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Deliver a multi-hazard decision-support briefing. Unit checkpoint \u226580% required."
+          }
+        ],
+        "forms": [
+          "impact-brief",
+          "forecast-shift-log",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "solanar-platform",
+          "nws-radar",
+          "spc-meso",
+          "wpc",
+          "naib"
+        ],
+        "competencies": [
+          "high-impact",
+          "multi-hazard",
+          "decision-support"
+        ]
+      },
+      {
+        "year_week": 25,
+        "program_week": 61,
+        "title": "Tropical Meteorology & Tropical Cyclone Genesis",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study tropical thermodynamics, easterly waves, vorticity, moisture, shear, ocean coupling and genesis environments."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply angular momentum, vorticity and thermodynamic calculations to simplified tropical systems."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze a pre-genesis disturbance from satellite, surface/upper-air and environmental data."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare ensemble/genesis guidance and satellite organization trends."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Prepare a tropical disturbance outlook-style training brief without representing it as an official NHC product."
+          }
+        ],
+        "forms": [
+          "tropical-analysis",
+          "satellite-analysis-pro",
+          "ensemble-brief"
+        ],
+        "tools": [
+          "nhc",
+          "goes",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "tropical-genesis",
+          "satellite",
+          "ensemble"
+        ]
+      },
+      {
+        "year_week": 26,
+        "program_week": 62,
+        "title": "Tropical Cyclone Structure, Track, Intensity & Hazards",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study warm-core structure, eyewall/rainbands, steering, beta effects, shear, ocean heat, rapid intensity change and hazard asymmetry."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Use vector steering, pressure-wind reasoning and probabilistic track/intensity interpretation."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze an active/archive cyclone with reconnaissance/satellite/model information where available."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare official NHC products with model/ensemble guidance and identify why guidance is not the official forecast."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Deliver a partner-focused tropical hazard briefing covering wind, surge, rain and tornado risk."
+          }
+        ],
+        "forms": [
+          "tropical-analysis",
+          "impact-brief",
+          "model-comparison-pro"
+        ],
+        "tools": [
+          "nhc",
+          "goes",
+          "ncep-models",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "tropical-cyclone",
+          "track-intensity",
+          "hazards"
+        ]
+      },
+      {
+        "year_week": 27,
+        "program_week": 63,
+        "title": "Aviation Meteorology & Terminal/En-Route Hazards",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study ceilings/visibility, convection, turbulence, icing, wind shear, mountain waves, jet-stream hazards and aviation forecast products."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply density/pressure, wind components, freezing-level and probability calculations to flight-weather problems."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze METAR/TAF-style observations plus sounding/radar/satellite evidence for an aviation route/terminal."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use Aviation Weather Center products with model and observational context."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Create a training aviation weather brief with timing, confidence and operational impacts."
+          }
+        ],
+        "forms": [
+          "aviation-brief",
+          "upper-air-professional",
+          "forecast-briefing"
+        ],
+        "tools": [
+          "awc",
+          "nws-radar",
+          "goes",
+          "naib"
+        ],
+        "competencies": [
+          "aviation",
+          "icing-turbulence",
+          "terminal-weather"
+        ]
+      },
+      {
+        "year_week": 28,
+        "program_week": 64,
+        "title": "Marine Meteorology, Coastal Weather & Waves",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study marine boundary layer, pressure/wind over water, stability, fog, coastal jets, convection and wave-generation concepts."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Calculate wind-wave relationships conceptually, fetch/duration effects and marine pressure/wind diagnostics."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze a coastal/offshore case including fronts, fog, gale potential and sea-state evolution."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use Ocean Prediction Center, satellite, buoy/observation and model guidance."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Produce a marine forecast brief emphasizing wind, waves, visibility and hazardous transitions."
+          }
+        ],
+        "forms": [
+          "marine-forecast",
+          "forecast-briefing",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "opc",
+          "goes",
+          "ncep-models",
+          "naib"
+        ],
+        "competencies": [
+          "marine",
+          "coastal",
+          "waves"
+        ]
+      },
+      {
+        "year_week": 29,
+        "program_week": 65,
+        "title": "Hydrometeorology, QPF & Flood Forecast Support",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study precipitation efficiency, training convection, terrain enhancement, antecedent conditions, runoff response and flash-flood concepts."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Apply basin-average precipitation, recurrence/probability and simple runoff/threshold calculations."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze QPF, radar estimates, soil/river context and observed rainfall for a flood-risk case."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use Weather Prediction Center and National Water Prediction Service products with radar/model guidance."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Create a flood decision-support briefing that separates meteorological forecast from hydrologic official products."
+          }
+        ],
+        "forms": [
+          "hydromet-flood",
+          "impact-brief",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "wpc",
+          "water-noaa",
+          "nws-radar",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "hydrometeorology",
+          "qpf",
+          "flood-support"
+        ]
+      },
+      {
+        "year_week": 30,
+        "program_week": 66,
+        "title": "UNIT VIII CHECKPOINT \u2014 Specialized Forecast Services",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Synthesize tropical, aviation, marine and hydrometeorological forecasting."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Cumulative vector/probability/diagnostic calculations across specialized services."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Complete an unseen scenario requiring service-specific analysis and hazard prioritization."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use the appropriate official center products and observational/model evidence."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Deliver two audience-specific briefings from the same meteorological evidence. Unit checkpoint \u226580% required."
+          }
+        ],
+        "forms": [
+          "impact-brief",
+          "forecast-shift-log",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "nhc",
+          "awc",
+          "opc",
+          "wpc",
+          "water-noaa",
+          "naib"
+        ],
+        "competencies": [
+          "specialized-services",
+          "audience",
+          "hazards"
+        ]
+      },
+      {
+        "year_week": 31,
+        "program_week": 67,
+        "title": "NWP II: Model Physics, Bias & Post-Processing",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Examine microphysics, convection, boundary-layer and radiation schemes; identify systematic model biases and post-processing needs."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Use error statistics, regression/calibration concepts and bias correction on a small forecast dataset."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Compare multiple model forecasts against observations and quantify recurring error modes."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Inspect deterministic and ensemble guidance for physics-dependent differences."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Write a model-bias memo and adjust a forecast only when supported by evidence."
+          }
+        ],
+        "forms": [
+          "model-diagnostic",
+          "model-comparison-pro",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "ncep-models",
+          "meted",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "model-physics",
+          "bias",
+          "post-processing"
+        ]
+      },
+      {
+        "year_week": 32,
+        "program_week": 68,
+        "title": "Advanced Ensembles, Data Assimilation & Predictability",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study ensemble perturbations, data-assimilation cycles, spread-error relationships, sensitivity and predictability limits."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Calculate Brier-score style probability error, reliability concepts and ensemble summary statistics."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Evaluate an ensemble forecast for spread, clustering, outliers and observation consistency."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Use ensemble probabilities/plumes/spaghetti-style fields and compare with deterministic runs."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Issue a probabilistic decision-support forecast with threshold-based scenarios."
+          }
+        ],
+        "forms": [
+          "ensemble-brief",
+          "model-comparison-pro",
+          "verification-scorecard"
+        ],
+        "tools": [
+          "ncep-models",
+          "meted",
+          "solanar-platform",
+          "naib"
+        ],
+        "competencies": [
+          "ensembles",
+          "predictability",
+          "probabilistic-forecast"
+        ]
+      },
+      {
+        "year_week": 33,
+        "program_week": 69,
+        "title": "Impact-Based Forecasting & Decision Support Services",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Translate meteorological hazards into impact-relevant information while preserving uncertainty and role boundaries."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Use decision thresholds, expected-value concepts and contingency tables to evaluate forecast usefulness."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Build an impact matrix for multiple partners with different vulnerabilities and lead-time needs."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Integrate official products, observations, forecast guidance and partner context without altering authoritative warnings."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Conduct a simulated partner briefing, questions-and-answers session and update cycle."
+          }
+        ],
+        "forms": [
+          "impact-brief",
+          "forecast-shift-log"
+        ],
+        "tools": [
+          "solanar-platform",
+          "plera",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "decision-support",
+          "impacts",
+          "partner-communication"
+        ]
+      },
+      {
+        "year_week": 34,
+        "program_week": 70,
+        "title": "Forecast Verification, Calibration & Continuous Improvement",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Study deterministic and probabilistic verification, bias, MAE/RMSE, contingency tables, reliability, resolution and skill."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Calculate verification metrics and interpret when a metric can mislead."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Verify a multi-day forecast set by variable/hazard and diagnose systematic failure modes."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Compare model and human forecast performance using consistent verification periods."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Write an after-action forecast review with specific corrective learning objectives."
+          }
+        ],
+        "forms": [
+          "verification-scorecard",
+          "model-comparison-pro"
+        ],
+        "tools": [
+          "solanar-platform",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "verification",
+          "calibration",
+          "continuous-improvement"
+        ]
+      },
+      {
+        "year_week": 35,
+        "program_week": 71,
+        "title": "Operational Forecast Office Practicum",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Integrate the entire two-year curriculum under a simulated forecast-office workflow and shift handoff."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Complete rapid quantitative diagnostics selected from dynamics, thermodynamics, probability and verification."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Perform surface/upper-air, radar, satellite, model and ensemble analysis under a fixed briefing deadline."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Maintain a source/valid-time log and resolve conflicting guidance through documented reasoning."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Complete a full forecast shift: analysis \u2192 forecast \u2192 discussion \u2192 partner brief \u2192 verification plan \u2192 handoff."
+          }
+        ],
+        "forms": [
+          "forecast-shift-log",
+          "synoptic-diagnostic",
+          "radar-analysis-pro",
+          "satellite-analysis-pro",
+          "model-comparison-pro",
+          "impact-brief"
+        ],
+        "tools": [
+          "solanar-platform",
+          "nws-radar",
+          "goes",
+          "ncep-models",
+          "spc-meso",
+          "naib"
+        ],
+        "competencies": [
+          "operations",
+          "time-management",
+          "handoff"
+        ]
+      },
+      {
+        "year_week": 36,
+        "program_week": 72,
+        "title": "YEAR II CAPSTONE \u2014 Professional Meteorologist Qualification Review",
+        "days": [
+          {
+            "day": "Monday",
+            "strand": "Dynamics / Theory",
+            "lesson": "Complete a cumulative meteorology examination spanning dynamics, synoptic/mesoscale analysis, physical meteorology, remote sensing, NWP and specialized operations."
+          },
+          {
+            "day": "Tuesday",
+            "strand": "Quantitative Methods",
+            "lesson": "Complete quantitative ODE/dynamics/thermodynamics/probability/verification problems without averaging away weak domains."
+          },
+          {
+            "day": "Wednesday",
+            "strand": "Analysis Laboratory",
+            "lesson": "Analyze an unseen multi-hazard case and document the full evidence chain."
+          },
+          {
+            "day": "Thursday",
+            "strand": "Remote Sensing / NWP",
+            "lesson": "Integrate radar, satellite, observations, deterministic/ensemble guidance and official center products."
+          },
+          {
+            "day": "Friday",
+            "strand": "Operational Forecast Shift",
+            "lesson": "Complete the final simulated operational shift, written forecast discussion, decision-support briefing, portfolio defense and oral examination. Every component \u226580%."
+          }
+        ],
+        "forms": [
+          "capstone-shift-packet",
+          "verification-scorecard",
+          "impact-brief"
+        ],
+        "tools": [
+          "solanar-platform",
+          "nws-radar",
+          "goes",
+          "ncep-models",
+          "meted",
+          "naib"
+        ],
+        "competencies": [
+          "capstone",
+          "professional-competency",
+          "oral-defense"
+        ]
+      }
+    ]
+  },
+  "forms": [
+    {
+      "id": "forecast-shift-log",
+      "name": "Operational Forecast Shift Log",
+      "desc": "Shift start, situational awareness, forecast decisions, updates, partner needs, handoff and verification plan."
+    },
+    {
+      "id": "synoptic-diagnostic",
+      "name": "Synoptic Diagnostic Worksheet",
+      "desc": "Surface through tropopause analysis, forcing, advection, vertical motion and evolution."
+    },
+    {
+      "id": "mesoscale-analysis",
+      "name": "Mesoscale Analysis Worksheet",
+      "desc": "Boundaries, instability, convergence, terrain and short-range evolution."
+    },
+    {
+      "id": "radar-analysis-pro",
+      "name": "Professional Doppler Radar Analysis",
+      "desc": "Reflectivity, velocity, storm motion, sampling, signatures and confidence."
+    },
+    {
+      "id": "radar-dualpol",
+      "name": "Dual-Polarization Radar Analysis",
+      "desc": "ZDR, CC, KDP/differential phase concepts, hydrometeor evidence and limitations."
+    },
+    {
+      "id": "satellite-analysis-pro",
+      "name": "Multispectral Satellite Analysis",
+      "desc": "Visible, IR, water vapor and other channels with feature motion and uncertainty."
+    },
+    {
+      "id": "upper-air-professional",
+      "name": "Upper-Air & Thermodynamic Analysis",
+      "desc": "Sounding, wind profile, stability, moisture, shear and parcel diagnosis."
+    },
+    {
+      "id": "sounding-hodograph",
+      "name": "Sounding & Hodograph Severe-Weather Analysis",
+      "desc": "Instability, shear, storm-relative flow and convective-mode assessment."
+    },
+    {
+      "id": "model-diagnostic",
+      "name": "NWP Diagnostic Worksheet",
+      "desc": "Model fields, dynamics, parameterization, resolution and known limitations."
+    },
+    {
+      "id": "model-comparison-pro",
+      "name": "Model & Ensemble Comparison",
+      "desc": "Guidance clustering, spread, bias, scenarios, confidence and forecast decision."
+    },
+    {
+      "id": "ensemble-brief",
+      "name": "Probabilistic / Ensemble Forecast Brief",
+      "desc": "Threshold probabilities, clusters, alternatives, confidence and decision triggers."
+    },
+    {
+      "id": "forecast-briefing",
+      "name": "Professional Forecast Briefing",
+      "desc": "Technical forecast, uncertainty, hazards, impacts and valid times."
+    },
+    {
+      "id": "severe-decision-log",
+      "name": "Severe Weather Decision Log",
+      "desc": "Environmental evidence, radar evolution, uncertainty and simulated decision rationale."
+    },
+    {
+      "id": "winter-weather-analysis",
+      "name": "Winter Weather Analysis",
+      "desc": "Thermal profile, precipitation type, banding, QPF, impacts and bust scenarios."
+    },
+    {
+      "id": "fire-weather-forecast",
+      "name": "Fire Weather & Boundary-Layer Forecast",
+      "desc": "Wind, RH, mixing, stability, terrain, timing and confidence."
+    },
+    {
+      "id": "tropical-analysis",
+      "name": "Tropical Cyclone Analysis",
+      "desc": "Structure, environment, steering, intensity factors, model spread and hazards."
+    },
+    {
+      "id": "aviation-brief",
+      "name": "Aviation Weather Brief",
+      "desc": "Ceiling, visibility, convection, icing, turbulence, wind shear and route/terminal impacts."
+    },
+    {
+      "id": "marine-forecast",
+      "name": "Marine Weather Forecast Worksheet",
+      "desc": "Wind, waves, fog, fronts, convection and coastal/offshore hazards."
+    },
+    {
+      "id": "hydromet-flood",
+      "name": "Hydrometeorology & Flood Support Worksheet",
+      "desc": "QPF, rainfall rates, antecedent conditions, hydrologic context and uncertainty."
+    },
+    {
+      "id": "impact-brief",
+      "name": "Impact-Based Decision Support Brief",
+      "desc": "Hazards, timing, confidence, partner impacts, thresholds and update triggers."
+    },
+    {
+      "id": "verification-scorecard",
+      "name": "Forecast Verification Scorecard",
+      "desc": "Bias, error, hits/misses/false alarms, probabilistic skill and corrective actions."
+    },
+    {
+      "id": "capstone-shift-packet",
+      "name": "Capstone Operational Shift Packet",
+      "desc": "Complete evidence package for the final professional forecast-office simulation."
+    }
+  ],
+  "tools": [
+    {
+      "id": "solanar-platform",
+      "name": "Solanar Platform",
+      "icon": "\ud83c\udf10",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Platform_index.html",
+      "type": "Solanar",
+      "desc": "Integrated weather/hazard workspace and briefing environment."
+    },
+    {
+      "id": "solanar-planetarium",
+      "name": "Solanar Planetarium",
+      "icon": "\ud83c\udf0c",
+      "url": "https://vervenveda.com/solanar.github.io/apps/Solanar_Planetarium_index.html",
+      "type": "Solanar",
+      "desc": "Atmosphere, upper-air, hazard and observation context."
+    },
+    {
+      "id": "naib",
+      "name": "NAIB Mentor",
+      "icon": "N",
+      "url": "https://artist1970.github.io/noema-ai.github.io/",
+      "type": "Mentor",
+      "desc": "Mastery repair, questioning, portfolio and forecast reasoning support."
+    },
+    {
+      "id": "plera",
+      "name": "PLERA Search",
+      "icon": "\ud83d\udd0e",
+      "url": "https://vervenveda.github.io/PLERASearch.github.io/",
+      "type": "Research",
+      "desc": "Research and source-discovery support."
+    },
+    {
+      "id": "nws-radar",
+      "name": "NWS Radar",
+      "icon": "\ud83d\udce1",
+      "url": "https://radar.weather.gov/",
+      "type": "Official",
+      "desc": "U.S. National Weather Service radar viewer."
+    },
+    {
+      "id": "goes",
+      "name": "NOAA GOES Image Viewer",
+      "icon": "\ud83d\udef0",
+      "url": "https://www.star.nesdis.noaa.gov/goes/",
+      "type": "Official",
+      "desc": "NOAA/NESDIS geostationary satellite imagery."
+    },
+    {
+      "id": "spc-meso",
+      "name": "SPC Mesoanalysis",
+      "icon": "\ud83c\udf2a",
+      "url": "https://www.spc.noaa.gov/exper/mesoanalysis/",
+      "type": "Official",
+      "desc": "Storm Prediction Center mesoscale environmental analysis."
+    },
+    {
+      "id": "ncep-models",
+      "name": "NCEP Model Guidance / NOMADS",
+      "icon": "\ud83e\uddee",
+      "url": "https://nomads.ncep.noaa.gov/",
+      "type": "Official",
+      "desc": "NOAA/NCEP numerical model data and guidance access."
+    },
+    {
+      "id": "wpc",
+      "name": "Weather Prediction Center",
+      "icon": "\ud83c\udf27",
+      "url": "https://www.wpc.ncep.noaa.gov/",
+      "type": "Official",
+      "desc": "U.S. quantitative precipitation, winter and medium-range forecast products."
+    },
+    {
+      "id": "nhc",
+      "name": "National Hurricane Center",
+      "icon": "\ud83c\udf00",
+      "url": "https://www.nhc.noaa.gov/",
+      "type": "Official",
+      "desc": "Official U.S. tropical cyclone analysis and forecasts."
+    },
+    {
+      "id": "awc",
+      "name": "Aviation Weather Center",
+      "icon": "\u2708\ufe0f",
+      "url": "https://aviationweather.gov/",
+      "type": "Official",
+      "desc": "Operational aviation weather observations and forecast products."
+    },
+    {
+      "id": "opc",
+      "name": "Ocean Prediction Center",
+      "icon": "\ud83c\udf0a",
+      "url": "https://ocean.weather.gov/",
+      "type": "Official",
+      "desc": "Marine weather analyses, warnings and forecasts."
+    },
+    {
+      "id": "water-noaa",
+      "name": "National Water Prediction Service",
+      "icon": "\ud83d\udca7",
+      "url": "https://water.noaa.gov/",
+      "type": "Official",
+      "desc": "Water prediction, river and flood information."
+    },
+    {
+      "id": "meted",
+      "name": "UCAR COMET MetEd",
+      "icon": "\ud83c\udf93",
+      "url": "https://www.meted.ucar.edu/",
+      "type": "Professional Training",
+      "desc": "Scenario-based meteorology and Earth-system training modules."
+    }
+  ]
+}
