@@ -139,6 +139,186 @@ a{color:inherit}
 .unitToggle button.active{background:#1a5c87}
 .status{min-height:22px;color:var(--muted);font-size:.83rem;margin-top:7px}
 
+
+/* kids weather gateway */
+.weatherWorld{
+  margin-top:14px;
+  border:1px solid var(--line);
+  border-radius:25px;
+  padding:18px;
+  background:
+    radial-gradient(circle at 7% 0,#ffffff1d,transparent 16rem),
+    radial-gradient(circle at 95% 8%,#ffe36f1f,transparent 17rem),
+    linear-gradient(135deg,#143c68,#173f62 46%,#163d54);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.weatherWorldHead{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:14px;
+  align-items:center;
+  margin-bottom:14px
+}
+.weatherWorldHead small{
+  display:block;
+  color:var(--accent2);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-weight:950;
+  font-size:.68rem
+}
+.weatherWorldHead h2{
+  margin:4px 0 5px;
+  font:600 clamp(1.9rem,4vw,3.5rem) Georgia,serif;
+  color:#fff
+}
+.weatherWorldHead p{
+  margin:0;
+  max-width:850px;
+  color:#d2e7f5;
+  line-height:1.55
+}
+.worldBadge{
+  min-width:115px;
+  min-height:115px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  border:3px solid #ffffff42;
+  background:radial-gradient(circle at 35% 28%,#fff8bc,#65d8ff 27%,#318bb5 55%,#1e557e 72%);
+  box-shadow:0 0 34px #55dcff33;
+  font-size:3.4rem
+}
+.gatewayGroup{margin-top:15px}
+.gatewayGroupTitle{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 8px;
+  color:var(--warm);
+  font:700 1.05rem/1.2 Georgia,serif
+}
+.weatherGatewayGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px
+}
+.weatherLaunch{
+  position:relative;
+  min-height:170px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:10px;
+  padding:15px;
+  border:2px solid #ffffff28;
+  border-radius:19px;
+  color:#fff;
+  text-decoration:none;
+  overflow:hidden;
+  box-shadow:0 10px 25px #0002;
+  transition:transform .18s ease,border-color .18s ease,filter .18s ease
+}
+.weatherLaunch:after{
+  content:"";
+  position:absolute;
+  width:105px;
+  height:105px;
+  right:-30px;
+  bottom:-38px;
+  border-radius:50%;
+  background:#ffffff12
+}
+.weatherLaunch:hover,.weatherLaunch:focus-visible{
+  transform:translateY(-3px);
+  border-color:#fff;
+  filter:brightness(1.08)
+}
+.launchTop{
+  display:flex;
+  justify-content:space-between;
+  align-items:start;
+  gap:10px
+}
+.launchEmoji{
+  font-size:2.8rem;
+  line-height:1;
+  filter:drop-shadow(0 5px 8px #0003)
+}
+.launchAge{
+  padding:5px 8px;
+  border-radius:999px;
+  background:#061a3188;
+  border:1px solid #ffffff35;
+  font-size:.66rem;
+  font-weight:950;
+  white-space:nowrap
+}
+.weatherLaunch strong{
+  display:block;
+  font:700 1.22rem/1.1 Georgia,serif;
+  color:#fff
+}
+.weatherLaunch span.launchDesc{
+  display:block;
+  margin-top:5px;
+  color:#f0f8ff;
+  font-size:.79rem;
+  line-height:1.4
+}
+.launchGo{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-size:.74rem;
+  font-weight:950;
+  color:#fff3b0
+}
+.theme-sun{background:linear-gradient(135deg,#e98f39,#d45f73)}
+.theme-rainbow{background:linear-gradient(135deg,#4577cb,#784eb6)}
+.theme-moon{background:linear-gradient(135deg,#303663,#6c4f9b)}
+.theme-real{background:linear-gradient(135deg,#2380ae,#2c9d83)}
+.theme-compass{background:linear-gradient(135deg,#298db0,#3aa27e)}
+.theme-wizard{background:linear-gradient(135deg,#7653b7,#db668e)}
+.theme-match{background:linear-gradient(135deg,#2576a8,#26a6b5)}
+.theme-planet{background:linear-gradient(135deg,#334e9b,#7656a7)}
+.theme-cloud{background:linear-gradient(135deg,#6757ba,#d06c9f)}
+.theme-news{background:linear-gradient(135deg,#145a7e,#258b74)}
+.gatewayFooter{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:13px
+}
+.gatewayFooter a{
+  display:inline-flex;
+  min-height:42px;
+  align-items:center;
+  justify-content:center;
+  padding:9px 13px;
+  border:1px solid #ffffff2e;
+  border-radius:999px;
+  background:#061a31a8;
+  color:#fff;
+  text-decoration:none;
+  font-weight:850;
+  font-size:.78rem
+}
+.gatewayFooter a:hover{background:#0c3558;border-color:var(--accent)}
+
+@media(max-width:980px){
+  .weatherGatewayGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .weatherWorld{padding:13px}
+  .weatherWorldHead{grid-template-columns:1fr}
+  .worldBadge{display:none}
+  .weatherGatewayGrid{grid-template-columns:1fr}
+  .weatherLaunch{min-height:145px}
+}
+
 /* missions */
 .adventureBar{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:14px}
 .questCard,.badgeCard{
@@ -358,6 +538,8 @@ body[data-grade="912"]{
   <div class="tickerTrack">
     <div class="tickerGroup">
       <span id="tickerWeather">🌦️ Pick a place to begin your sky adventure!</span><span class="tickerDot">✦</span>
+      <span>🌈 Open Kids Weather World</span><span class="tickerDot">✦</span>
+      <span>🌈 Open Kids Weather World</span><span class="tickerDot">✦</span>
       <span>☁️ Watch clouds change</span><span class="tickerDot">✦</span>
       <span>⚡ Learn storm safety</span><span class="tickerDot">✦</span>
       <span>🌈 Earn SkyLab badges</span><span class="tickerDot">✦</span>
@@ -396,10 +578,11 @@ body[data-grade="912"]{
 
       <div class="links">
         <a class="link" href="../index.html">☀️ Solanar Home</a>
-        <a class="link" href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_wizard_index.html">🪄 Weather Wizard</a>
+        <a class="link" href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_for_tots_index.html">🪄 Weather Wizard</a>
         <div class="menuWrap">
           <button class="skyMenuBtn" id="skyMenuBtn" type="button" aria-expanded="false" aria-controls="skyMenu">☰ Sky Menu</button>
           <nav class="skyMenu" id="skyMenu" aria-label="SkyLab menu">
+            <a href="#kidsWeatherWorld">🌈 Kids Weather World</a>
             <a href="#todaySky">🌤️ Today’s Sky</a>
             <a href="#radarLab">📡 Radar Lab</a>
             <a href="#weatherSchool">🧠 Weather School</a>
@@ -430,6 +613,189 @@ body[data-grade="912"]{
   </div>
   <div class="status" id="status">Choose a place to begin your weather adventure.</div>
 </header>
+
+
+<section class="weatherWorld" id="kidsWeatherWorld" aria-labelledby="kidsWeatherWorldTitle">
+  <div class="weatherWorldHead">
+    <div>
+      <small>Khaemenes · Solanar Kids Weather Network</small>
+      <h2 id="kidsWeatherWorldTitle">🌈 Kids Weather World</h2>
+      <p>
+        Pick an adventure! Start with pretend weather and matching games, explore real forecasts,
+        follow the Moon, learn directions, or grow into world weather and environmental news.
+      </p>
+    </div>
+    <div class="worldBadge" aria-hidden="true">🌦️</div>
+  </div>
+
+  <div class="gatewayGroup">
+    <h3 class="gatewayGroupTitle">🧸 Preschool Sky Garden</h3>
+    <div class="weatherGatewayGrid">
+
+      <a class="weatherLaunch theme-rainbow"
+         href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_for_tots_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🪄</span><span class="launchAge">Preschool</span>
+        </div>
+        <div>
+          <strong>Weather Wizard</strong>
+          <span class="launchDesc">Build pretend weather scenes, meet weather friends, notice sky changes, and learn safe weather words.</span>
+        </div>
+        <span class="launchGo">Open Weather Wizard →</span>
+      </a>
+
+      <a class="weatherLaunch theme-sun"
+         href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">☀️</span><span class="launchAge">Pre-K</span>
+        </div>
+        <div>
+          <strong>Sunny’s Weather Adventure</strong>
+          <span class="launchDesc">Animated weather scenes, observation practice, simple safety ideas, and learning checks.</span>
+        </div>
+        <span class="launchGo">Start Sunny’s Adventure →</span>
+      </a>
+
+      <a class="weatherLaunch theme-moon"
+         href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_moon_phase_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🌙</span><span class="launchAge">Pre-K</span>
+        </div>
+        <div>
+          <strong>Sunny’s Moon Adventure</strong>
+          <span class="launchDesc">Explore Moon phases with child-friendly observations, phase names, and night-sky safety guidance.</span>
+        </div>
+        <span class="launchGo">Visit the Moon →</span>
+      </a>
+
+      <a class="weatherLaunch theme-real"
+         href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/apps/weather_solonarium_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🌤️</span><span class="launchAge">Young Explorer</span>
+        </div>
+        <div>
+          <strong>Solanar Kid Weather</strong>
+          <span class="launchDesc">Real child-friendly weather with hourly and 7-day outlooks, sunrise, sunset, Moon phase, and learning games.</span>
+        </div>
+        <span class="launchGo">Check Real Weather →</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="gatewayGroup">
+    <h3 class="gatewayGroupTitle">🌻 Kinder Garden Weather Games</h3>
+    <div class="weatherGatewayGrid">
+
+      <a class="weatherLaunch theme-compass"
+         href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_compass_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🧭</span><span class="launchAge">Kinder Garden</span>
+        </div>
+        <div>
+          <strong>Compass Explorer</strong>
+          <span class="launchDesc">Practice directions and orientation with a colorful interactive compass.</span>
+        </div>
+        <span class="launchGo">Explore Directions →</span>
+      </a>
+
+      <a class="weatherLaunch theme-wizard"
+         href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_wizard_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🧙‍♀️</span><span class="launchAge">Kindergarten Science</span>
+        </div>
+        <div>
+          <strong>Weather Wizard Lab</strong>
+          <span class="launchDesc">A kindergarten science lab for experimenting with weather scenes and conditions.</span>
+        </div>
+        <span class="launchGo">Enter the Weather Lab →</span>
+      </a>
+
+      <a class="weatherLaunch theme-match"
+         href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/weather-match_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🌦️</span><span class="launchAge">Game</span>
+        </div>
+        <div>
+          <strong>Weather Match</strong>
+          <span class="launchDesc">Play a weather matching game and practice recognizing weather symbols and patterns.</span>
+        </div>
+        <span class="launchGo">Play Weather Match →</span>
+      </a>
+
+      <a class="weatherLaunch theme-planet"
+         href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/Weather_planetarium_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🪐</span><span class="launchAge">Kid Mode</span>
+        </div>
+        <div>
+          <strong>Solanar Planetarium · Kid Mode</strong>
+          <span class="launchDesc">Friendly weather, a simple today view, 6-hour outlook, Moon phase, and read-aloud.</span>
+        </div>
+        <span class="launchGo">Open Kid Planetarium →</span>
+      </a>
+
+      <a class="weatherLaunch theme-cloud"
+         href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/apps/kindergarten_math_cloud_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">☁️</span><span class="launchAge">Sky + Math</span>
+        </div>
+        <div>
+          <strong>Kindergarten Math Cloud</strong>
+          <span class="launchDesc">A cloud-themed kindergarten math curriculum with interactive practice and playful learning.</span>
+        </div>
+        <span class="launchGo">Visit Math Cloud →</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="gatewayGroup">
+    <h3 class="gatewayGroupTitle">🚀 Growing Weather Explorers</h3>
+    <div class="weatherGatewayGrid">
+
+      <a class="weatherLaunch theme-news" href="environmental_news_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">📰</span><span class="launchAge">K–12 Levels</span>
+        </div>
+        <div>
+          <strong>World Weather &amp; Environmental News</strong>
+          <span class="launchDesc">Explore world weather and environmental stories with age-appropriate reading levels and mentor questions.</span>
+        </div>
+        <span class="launchGo">Explore Weather News →</span>
+      </a>
+
+      <a class="weatherLaunch theme-real" href="#todaySky">
+        <div class="launchTop">
+          <span class="launchEmoji">🌈</span><span class="launchAge">You Are Here</span>
+        </div>
+        <div>
+          <strong>Kids SkyLab</strong>
+          <span class="launchDesc">Use live weather, forecasts, radar, missions, badges, science questions, and your sky journal.</span>
+        </div>
+        <span class="launchGo">Continue in SkyLab ↓</span>
+      </a>
+
+      <a class="weatherLaunch theme-planet" href="Solanar_Planetarium_index.html">
+        <div class="launchTop">
+          <span class="launchEmoji">🔭</span><span class="launchAge">With a Grown-Up</span>
+        </div>
+        <div>
+          <strong>Advanced Solanar Planetarium</strong>
+          <span class="launchDesc">For older learners ready for atmosphere data, hazard trackers, official alerts, and night-sky observing conditions.</span>
+        </div>
+        <span class="launchGo">Grow Into Planetarium →</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="gatewayFooter">
+    <a href="https://vervenveda.github.io/Khaemenes_Preschool.github.io/">🧸 Visit the Crèche</a>
+    <a href="https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/">🌻 Visit Kinder Garden</a>
+    <a href="../index.html">☀️ Solanar Observatory</a>
+  </div>
+</section>
 
 <div class="adventureBar">
   <section class="questCard" aria-labelledby="missionTitle">
