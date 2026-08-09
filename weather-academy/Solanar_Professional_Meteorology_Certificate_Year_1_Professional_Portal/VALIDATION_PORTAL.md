@@ -1,0 +1,22 @@
+# Portal Validation
+
+- index.html: ticker PASS; NAIB PASS
+- semester-1/index.html: ticker PASS; NAIB PASS
+- semester-2/index.html: ticker PASS; NAIB PASS
+- forms/index.html: ticker PASS; NAIB PASS
+- tools/index.html: ticker PASS; NAIB PASS
+- index.html: JavaScript PASS
+- semester-1/index.html: JavaScript PASS
+- semester-2/index.html: JavaScript PASS
+- forms/index.html: JavaScript PASS
+- tools/index.html: JavaScript PASS
+- Professional forms: 11
+- Applied tools/resources: 13
+- Weekly form/tool mappings: 36 / 36
+- Semester II prerequisite gate: PASS
+- Weekly six-strand ≥80% mastery structure: PASS
+- Required professional form completion gate: PASS
+- Weekly 10-question assessment gate: PASS
+- Six-week unit checkpoint gate: PASS
+- Year I completion record gate: PASS
+- Secrets/private credentials: none included
