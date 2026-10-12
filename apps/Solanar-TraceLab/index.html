@@ -61,4 +61,5 @@ $("saveProject").onclick=()=>{const blob=new Blob([JSON.stringify({schema:"solan
 function setZoom(z){zoom=Math.max(.4,Math.min(2.5,z));$("stage").style.transform=`scale(${zoom})`;$("wrap").style.paddingBottom=`${Math.max(0,(zoom-1)*H)}px`;$("zoomVal").textContent=Math.round(zoom*100)+"%"}$("zoomIn").onclick=()=>setZoom(zoom+.1);$("zoomOut").onclick=()=>setZoom(zoom-.1);$("zoomReset").onclick=()=>setZoom(1);
 scaleText();redraw();
 })();
-</script></body></html>
+</script><script src="https://vervenveda.com/assets/vnv-beta-link.js" defer></script>
+</body></html>
