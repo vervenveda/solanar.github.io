@@ -9,7 +9,7 @@ import os
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.request import Request, urlopen
+from urllib.request import Request, HTTPRedirectHandler, build_opener
 
 FEEDS = {
     "nasa-earth": "https://earthobservatory.nasa.gov/feeds/earth-observatory.rss",
@@ -23,6 +23,14 @@ CACHE_SECONDS = 600
 MAX_BYTES = 512 * 1024
 _cache = {}
 _lock = threading.Lock()
+
+
+class NoRedirect(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise ValueError('Upstream redirects are disabled')
+
+
+OPENER = build_opener(NoRedirect)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -59,8 +67,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.respond(200, entry[1], "application/xml; charset=utf-8", {"X-Procksee-Cache": "HIT"})
         try:
             request = Request(FEEDS[feed], headers={"User-Agent": "Procksee/0.1 (Solanar weather learning; contact: vervenveda@proton.me)", "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml"})
-            # No user-supplied destinations. Restrict redirects to HTTPS and approved hosts in production.
-            with urlopen(request, timeout=7) as response:
+            # No user-supplied destinations; all redirects are rejected.
+            with OPENER.open(request, timeout=7) as response:
                 if response.url.split("/")[0] != "https:":
                     raise ValueError("Non-HTTPS redirect denied")
                 data = response.read(MAX_BYTES + 1)
