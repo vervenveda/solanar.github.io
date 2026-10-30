@@ -10,4 +10,5 @@ body{margin:0;background:#e9edf1;color:#111;font-family:Arial,sans-serif}.paper{
 const FORMKEY="solanar.form."+location.pathname;
 document.querySelectorAll("input,textarea,select").forEach((el,i)=>{el.dataset.k=el.name||("f"+i);const saved=localStorage.getItem(FORMKEY+"."+el.dataset.k);if(saved!==null){if(el.type==="checkbox")el.checked=saved==="1";else el.value=saved}el.addEventListener("input",()=>localStorage.setItem(FORMKEY+"."+el.dataset.k,el.type==="checkbox"?(el.checked?"1":"0"):el.value))});
 function clearForm(){if(!confirm("Clear saved entries on this form?"))return;document.querySelectorAll("input,textarea,select").forEach(el=>{localStorage.removeItem(FORMKEY+"."+el.dataset.k);if(el.type==="checkbox")el.checked=false;else el.value=""})}
-</script></body></html>
+</script><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+</body></html>

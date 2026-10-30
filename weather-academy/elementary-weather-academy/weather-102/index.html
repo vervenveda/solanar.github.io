@@ -209,7 +209,8 @@ function printWorksheet(wk,di){
  <p>Name: __________________________ Date: ________________</p>
  <div class="lab"><strong>Daily Lab:</strong> ${md(d.lab)}</div><h3>Worksheet</h3><ol>${d.worksheet.map(p=>`<li>${esc(p)}<div class="line"></div><div class="line"></div></li>`).join("")}</ol>
  <h3>Observation / Diagram Space</h3><div class="box"></div><h3>Claim · Evidence · Reasoning</h3><p>Claim:</p><div class="line"></div><p>Evidence:</p><div class="line"></div><p>Reasoning:</p><div class="line"></div>
- <button onclick="print()">Print Worksheet</button></body></html>`);
+ <button onclick="print()">Print Worksheet</button><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+</body></html>`);
  win.document.close();
 }
 function openTool(url,title){

@@ -23,4 +23,5 @@ oceanBtn.onclick=()=>{const a=n("tau1"),b=n("tau2"),q=n("frac");let h="";for(let
 function randn(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
 ensBtn.onclick=()=>{const N=Math.max(2,Math.min(500,Math.round(n("members")))),mu=n("signal"),sd=Math.max(.001,n("sigma"));const x=Array.from({length:N},()=>mu+sd*randn()),m=x.reduce((a,b)=>a+b,0)/N,s=Math.sqrt(x.reduce((a,b)=>a+(b-m)**2,0)/(N-1));ensOut.innerHTML=`${N} members · sample mean <strong>${m.toFixed(3)}</strong> · sample spread <strong>${s.toFixed(3)}</strong>. Repeat to observe sampling variability.`};
 ebmBtn.click();fbBtn.click();oceanBtn.click();
-</script></body></html>
+</script><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+</body></html>

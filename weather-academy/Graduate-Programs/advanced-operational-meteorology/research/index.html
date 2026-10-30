@@ -13,4 +13,5 @@ function openResource(url,title){const m=document.getElementById("toolModal");do
 function closeResource(){document.getElementById("toolModal").classList.remove("open");document.getElementById("modalFrame").src="about:blank"}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-popup]");if(b){e.preventDefault();openResource(b.href||b.dataset.url,b.dataset.title||b.textContent.trim())}});
 document.getElementById("modalClose")?.addEventListener("click",closeResource);document.getElementById("toolModal")?.addEventListener("click",e=>{if(e.target.id==="toolModal")closeResource()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeResource()});
-</script></body></html>
+</script><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+</body></html>
