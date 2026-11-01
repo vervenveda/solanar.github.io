@@ -328,22 +328,7 @@ footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid va
     </div>
   </details>
 </div>
-<header class="siteHeader">
-<div class="shell nav">
-<a class="brand" href="#top">
-<span aria-hidden="true" class="mark"></span>
-<span><strong>Solanar Observatory</strong><small>Weather · Learning · Research</small></span>
-</a>
-<div class="headerActions">
-<div aria-label="Choose Solanar view" class="roleMini">
-<button data-role-set="student" type="button">Student</button>
-<button class="active" data-role-set="family" type="button">Family</button>
-<button data-role-set="professional" type="button">Professional</button>
-<button data-role-set="research" type="button">Research</button>
-</div>
-<div class="menuWrap">
-<button aria-expanded="false" class="menuBtn" id="menuBtn" type="button">☰ Explore</button>
-<nav class="mega" id="megaMenu">
+<div class="menuWrap solanar-standalone-menu"><nav class="mega" id="megaMenu">
 <div class="menuCol">
 <h3>Observe</h3>
 <a href="#weather">🌦 Current Weather</a>
@@ -380,11 +365,7 @@ footer{margin-top:25px;padding:32px 0;background:#02080d;border-top:1px solid va
 <a href="https://vervenveda.com/Khaemenes_Academy.github.io/" rel="noopener" target="_blank">Khaemenes Academy</a>
 <a href="https://vervenveda.com/" rel="noopener" target="_blank">Verve N Veda</a>
 </div>
-</nav>
-</div>
-</div>
-</div>
-</header>
+</nav></div>
 <main>
 <section class="hero">
 <div class="shell">
@@ -687,14 +668,20 @@ function setRole(role){
  try{localStorage.setItem("solanar.root.role.v3",role)}catch{}
 }
 document.querySelectorAll("[data-role-set]").forEach(b=>b.addEventListener("click",()=>setRole(b.dataset.roleSet)));
+document.addEventListener("click",e=>{
+  const explore=e.target.closest?.('a[href="#solanar-explore"]');
+  if(!explore)return;
+  e.preventDefault();
+  $("megaMenu").classList.toggle("open");
+});
 try{setRole(localStorage.getItem("solanar.root.role.v3")||"family")}catch{setRole("family")}
 
 /* menu */
-$("menuBtn").addEventListener("click",e=>{
- const open=$("megaMenu").classList.toggle("open");$("menuBtn").setAttribute("aria-expanded",String(open));e.stopPropagation();
+$("menuBtn")?.addEventListener("click",e=>{
+ const open=$("megaMenu").classList.toggle("open");$("menuBtn")?.setAttribute("aria-expanded",String(open));e.stopPropagation();
 });
 document.addEventListener("click",e=>{
- if(!e.target.closest(".menuWrap")){$("megaMenu").classList.remove("open");$("menuBtn").setAttribute("aria-expanded","false")}
+ if(!e.target.closest(".menuWrap")){$("megaMenu").classList.remove("open");$("menuBtn")?.setAttribute("aria-expanded","false")}
 });
 
 /* popup */
@@ -905,12 +892,12 @@ $("geoBtn").addEventListener("click",()=>{
 <script src="https://vervenveda.com/assets/vnv-support.js" defer></script>
 <script defer src="https://vervenveda.com/assets/vnv-external-landing.js"></script>
 
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script>VNV_HEADER.mount({"title":"Solanar Observatory","subtitle":"Weather · Learning · Research","icon":"S","home":"#top","actions":[{"label":"Weather","href":"#weather"},{"label":"Learn","href":"#early"},{"label":"Academy","href":"weather-academy/"},{"label":"Research","href":"apps/Solanar-TraceLab/"},{"label":"Explore","href":"#solanar-explore"}]});</script>
 <script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Solanar Quick Links",max:14});</script>
-
-<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
-<script>VNV_HEADER.mount({replaceLegacy:true});</script>
+<script>VNV_HEADER.mount({"title":"Solanar Observatory","subtitle":"Weather · Learning · Research","icon":"S","home":"#top","actions":[{"label":"Weather","href":"#weather"},{"label":"Learn","href":"#early"},{"label":"Academy","href":"weather-academy/"},{"label":"Research","href":"apps/Solanar-TraceLab/"},{"label":"Explore","href":"#solanar-explore"}]});</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 </body>
 </html>
